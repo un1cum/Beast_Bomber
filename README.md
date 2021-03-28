@@ -1,4 +1,4 @@
-# BoMbEr sms|email|WhatsApp|telegram|dos
+# BoMbEr sms|email|WhatsApp|dos
 
 install:
 
