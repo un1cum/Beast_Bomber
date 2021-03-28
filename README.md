@@ -1,6 +1,6 @@
 # BoMbEr sms|email|WhatsApp|dos attack
 
-install:
+Install:
 
 git clone https://github.com/HuErGa/BoMbEr
 
