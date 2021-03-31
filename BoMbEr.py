@@ -13,6 +13,8 @@ import progressbar
 import time
 import threading
 import user_agent
+import colorama
+from colorama import Fore, Back
 
 from os import name, system
 from os.path import exists, isfile
@@ -22,11 +24,26 @@ from user_agent import generate_user_agent
 from requests import get, post
 from threading import Thread
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager 
+from webdriver_manager.chrome import ChromeDriverManager
 
+colorama.init()
 
-
-print('''╭━━━━┳╮     ╭━━╮╭━━━┳━━━┳━━━━╮╭━━╮   ╭━╮╭━┳╮ ╭━━━╮
+print(Fore.GREEN + "Customize the BoMbEr color")
+print(Fore.GREEN + "1-Green|2-Blue|3-Yellow|4-Red|")
+a=int(input(">> "))
+if a == 1:
+	b = Fore.GREEN
+elif a == 2:
+	b = Fore.BLUE
+elif a == 3:
+	b = Fore.YELLOW 
+elif a == 4:
+	b = Fore.RED 
+else:
+	print(Fore.RED + "ERROR: Invalid value")
+	input()
+	exit(0)
+print(b + '''╭━━━━┳╮     ╭━━╮╭━━━┳━━━┳━━━━╮╭━━╮   ╭━╮╭━┳╮ ╭━━━╮
 ┃╭╮╭╮┃┃     ┃╭╮┃┃╭━━┫╭━╮┃╭╮╭╮┃┃╭╮┃   ┃ ╰╯ ┃┃ ┃╭━━╯
 ╰╯┃┃╰┫╰━┳━━╮┃╰╯╰┫╰━━┫╰━━╋╯┃┃╰╯┃╰╯╰┳━━┫╭╮╭╮┃╰━┫╰━━┳━╮
   ┃┃ ┃╭╮┃┃━┫┃╭━╮┃╭━━┻━━╮┃ ┃┃  ┃╭━╮┃╭╮┃┃┃┃┃┃╭╮┃╭━━┫╭╯
