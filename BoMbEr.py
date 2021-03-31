@@ -2136,7 +2136,7 @@ def dosfinal():
 					if port_for_fast == 65536:
 						port_for_fast = 1
 			except:
-				print("Server "+ip+" lost!")
+				print("Attaking"+ip)
 
 def pb():
 	toolbar_width = 40
