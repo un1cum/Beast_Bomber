@@ -105,8 +105,8 @@ def emailbomber():
 	    def email(self):
 	        try:
 	            print('\nSetting up email')
-	            self.server = str(input('Enter email server | or select premade options - 1:Gmail 2:Yahoo 3:Outlook: '))
-	            premade = ['1', '2', '3']
+	            self.server = str(input('Enter email server | or select premade options - 1:Gmail 2:Yahoo 3:Outlook 4:Yandex: '))
+	            premade = ['1', '2', '3', '4']
 	            default_port = True
 	            if self.server not in premade:
 	                default_port = False
@@ -121,6 +121,8 @@ def emailbomber():
 	                self.server = 'smtp.mail.yahoo.com'
 	            elif self.server == '3':
 	                self.server = 'smtp-mail.outlook.com'
+	            elif self.server == '4':
+	            	self.server = 'smtp.yandex.ru'
 
 	            self.fromAddr = str(input('Enter from address: '))
 	            self.fromPwd = str(input('Enter from password: '))
@@ -2136,7 +2138,7 @@ def dosfinal():
 					if port_for_fast == 65536:
 						port_for_fast = 1
 			except:
-				print("Attaking"+ip)
+				print("Attaking "+ip)
 
 def pb():
 	toolbar_width = 40
