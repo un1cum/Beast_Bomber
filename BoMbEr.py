@@ -3,7 +3,6 @@ import smtplib
 import sys
 import services
 import random
-import telebot
 import os
 import os.path
 import requests
