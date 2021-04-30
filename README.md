@@ -11,5 +11,6 @@ python3 BoMbEr.py
 
 Authors:
 
+https://github.com/HuErGa
 https://github.com/ncorbuk
 https://github.com/cludeex
