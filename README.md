@@ -14,3 +14,4 @@ Authors:
 https://github.com/HuErGa
 https://github.com/ncorbuk
 https://github.com/cludeex
+https://github.com/Nikait
