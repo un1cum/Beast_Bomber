@@ -8,6 +8,7 @@ cd BoMbEr
 
 python3 BoMbEr.py
 
+P.s if you want to support me, you can send money to my qiwi: qiwi.com/n/HERAMANT
 
 Authors:
 
