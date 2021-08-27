@@ -1,4 +1,4 @@
-# BoMbEr sms|email|WhatsApp|dos attack ![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)
+# BoMbEr sms|email|WhatsApp|dos attack ![Tweet](https://twitter.com/intent/tweet?text=Wow:&url=http%3A%2F%2Fshields.io)
 
 Install:
 
