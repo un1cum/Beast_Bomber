@@ -8,6 +8,8 @@ cd BoMbEr
 
 python3 BoMbEr.py
 
+
+
 Join my discord server https://discord.gg/c-h-i-l-l
 
 P.s if you want to support me, you can send money to my qiwi: qiwi.com/n/HERAMANT
