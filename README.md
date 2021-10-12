@@ -20,3 +20,15 @@ https://github.com/HuErGa
 https://github.com/ncorbuk
 https://github.com/cludeex
 https://github.com/Nikait
+
+My other works:
+
+https://github.com/HuErGa/BOMBER2.0
+
+https://github.com/HuErGa/MassEmailMailing
+
+https://github.com/HuErGa/pasgen
+
+https://github.com/HuErGa/DiscordMusicBot
+
+https://github.com/HuErGa/discord_bot_constructor
