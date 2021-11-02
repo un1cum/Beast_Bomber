@@ -16,7 +16,7 @@ If you want to support me, you can send money to my qiwi: qiwi.com/n/HERAMANT
 
 Authors:
 
-https://github.com/HuErGa
+https://github.com/ebankoff
 
 https://github.com/ncorbuk
 
@@ -29,8 +29,6 @@ My other works:
 https://github.com/HuErGa/BOMBER2.0
 
 https://github.com/HuErGa/MassEmailMailing
-
-https://github.com/HuErGa/pasgen
 
 https://github.com/HuErGa/DiscordMusicBot
 
