@@ -26,6 +26,8 @@ https://github.com/Nikait
 
 My other works:
 
+https://github.com/ebankoff/proxy_scraper
+
 https://github.com/HuErGa/BOMBER2.0
 
 https://github.com/HuErGa/MassEmailMailing
