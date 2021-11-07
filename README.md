@@ -16,7 +16,7 @@ Install:
 
 * Join my discord server https://discord.gg/c-h-i-l-l
 
-If you want to support me, you can send money to my qiwi: qiwi.com/n/HERAMANT
+If you want to support me, you can send money to my qiwi: https://qiwi.com/n/HERAMANT
 
 | Authors |
 |----------------|
