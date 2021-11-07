@@ -15,7 +15,6 @@ Join my discord server https://discord.gg/c-h-i-l-l
 
 If you want to support me, you can send money to my qiwi: qiwi.com/n/HERAMANT
 
-<!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/ebankoff" data-show-count="true" aria-label="Follow @ebankoff on GitHub">Follow @ebankoff</a>
 
 Authors:
