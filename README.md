@@ -4,14 +4,6 @@
 ![wtf](https://i.ibb.co/xSnN8Wt/BOMBER.png "BoMbEr")
 
 
-| Authors |
-|----------------|
-| https://github.com/ebankoff|
-| https://github.com/cludeex | 
-| https://github.com/ncorbuk | 
-| https://github.com/Nikait  | 
-
-
 Install:
 
 You must have chrome driver installed: https://chromedriver.chromium.org
@@ -26,12 +18,9 @@ Join my discord server https://discord.gg/c-h-i-l-l
 
 If you want to support me, you can send money to my qiwi: qiwi.com/n/HERAMANT
 
-Authors:
-
-https://github.com/ebankoff
-
-https://github.com/ncorbuk
-
-https://github.com/cludeex
-
-https://github.com/Nikait
+| Authors |
+|----------------|
+| https://github.com/ebankoff|
+| https://github.com/cludeex | 
+| https://github.com/ncorbuk | 
+| https://github.com/Nikait  | 
