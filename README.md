@@ -1,4 +1,4 @@
-# BoMbEr sms|email|WhatsApp|dos attack ![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)
+# BoMbEr sms|email|WhatsApp|dos attack
 
 
 ![wtf](https://i.ibb.co/ChbFCPS/Comp-1-00000.png "BoMbEr")
