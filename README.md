@@ -6,15 +6,15 @@
 
 Install:
 
-You must have chrome driver installed: https://chromedriver.chromium.org
+* You must have chrome driver installed: https://chromedriver.chromium.org
 
-git clone https://github.com/HuErGa/BoMbEr
+* git clone https://github.com/HuErGa/BoMbEr
 
-cd BoMbEr
+* cd BoMbEr
 
-python3 BoMbEr.py
+* python3 BoMbEr.py
 
-Join my discord server https://discord.gg/c-h-i-l-l
+* Join my discord server https://discord.gg/c-h-i-l-l
 
 If you want to support me, you can send money to my qiwi: qiwi.com/n/HERAMANT
 
