@@ -4,7 +4,7 @@
 ![wtf](https://i.ibb.co/xSnN8Wt/BOMBER.png "BoMbEr")
 
 
-Install:
+`Install:`
 
 * You must have chrome driver installed: https://chromedriver.chromium.org
 
@@ -16,7 +16,7 @@ Install:
 
 * Join my discord server https://discord.gg/c-h-i-l-l
 
-If you want to support me, you can send money to my qiwi: https://qiwi.com/n/HERAMANT
+`If you want to support me, you can send money to my qiwi:` https://qiwi.com/n/HERAMANT
 
 | Authors |
 |----------------|
