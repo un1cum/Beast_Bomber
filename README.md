@@ -4,6 +4,14 @@
 ![wtf](https://i.ibb.co/xSnN8Wt/BOMBER.png "BoMbEr")
 
 
+| Authors |
+|----------------|
+| https://github.com/ebankoff|
+| https://github.com/cludeex | 
+| https://github.com/ncorbuk | 
+| https://github.com/Nikait  | 
+
+
 Install:
 
 You must have chrome driver installed: https://chromedriver.chromium.org
