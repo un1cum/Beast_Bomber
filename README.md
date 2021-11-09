@@ -1,6 +1,6 @@
 # BoMbEr sms|email|WhatsApp|dos attack 
 
-[![Dependabot](https://badgen.net/badge/Dependabot/enabled/blue?icon=dependabot)](https://dependabot.com/)
+[![Dependabot](https://badgen.net/badge/icon/discord?icon=discord&label)](https://discord.gg/c-h-i-l-l)
 
 ![wtf](https://i.ibb.co/ChbFCPS/Comp-1-00000.png "BoMbEr") 
 
