@@ -1,6 +1,6 @@
 # BoMbEr sms|email|WhatsApp|dos attack 
 
-[![Dependabot](https://badgen.net/badge/discord/server/yellow?icon=github)](https://discord.gg/c-h-i-l-l) [![Dependabot](https://badgen.net/badge/telegram/channel/yellow?icon=telegram&label)](https://discord.gg/c-h-i-l-l)
+[![Dependabot](https://badgen.net/badge/discord/server/yellow?icon=github)](https://discord.gg/c-h-i-l-l) [![Dependabot](https://badgen.net/badge/telegram/telegram/yellow?icon=telegram&label)](https://discord.gg/c-h-i-l-l)
 
 ![wtf](https://i.ibb.co/ChbFCPS/Comp-1-00000.png "BoMbEr") 
 
