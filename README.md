@@ -1,5 +1,6 @@
-# BoMbEr sms|email|WhatsApp|dos attack ![wtf](https://badgen.net/badge/:subject/:status/:color?icon=github)
+# BoMbEr sms|email|WhatsApp|dos attack 
 
+![wtf](https://badgen.net/badge/:subject/:status/:red?icon=github)
 
 ![wtf](https://i.ibb.co/ChbFCPS/Comp-1-00000.png "BoMbEr") 
 
