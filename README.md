@@ -1,6 +1,6 @@
 # BoMbEr sms|email|WhatsApp|dos attack 
 
-![wtf](https://badgen.net/badge/author/ebankoff/red?icon=github)
+[![Dependabot](https://badgen.net/badge/Dependabot/enabled/blue?icon=dependabot)](https://dependabot.com/)
 
 ![wtf](https://i.ibb.co/ChbFCPS/Comp-1-00000.png "BoMbEr") 
 
