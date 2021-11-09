@@ -4,10 +4,9 @@
 
 ![wtf](https://i.ibb.co/ChbFCPS/Comp-1-00000.png "BoMbEr") 
 
+* You must have chrome driver installed: https://chromedriver.chromium.org
 
 `Install:`
-
-* You must have chrome driver installed: https://chromedriver.chromium.org
 
 * git clone https://github.com/HuErGa/BoMbEr
 
