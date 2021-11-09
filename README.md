@@ -1,6 +1,6 @@
 # BoMbEr sms|email|WhatsApp|dos attack 
 
-![wtf](https://badgen.net/badge/author/ebankoff/red?icon=github?label=https://github.com/ebankoff)
+![wtf](https://badgen.net/badge/author/ebankoff/red?label=https://github.com/ebankoff)
 
 ![wtf](https://i.ibb.co/ChbFCPS/Comp-1-00000.png "BoMbEr") 
 
