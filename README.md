@@ -1,7 +1,7 @@
-# BoMbEr sms|email|WhatsApp|dos attack
+# BoMbEr sms|email|WhatsApp|dos attack ![wtf](https://badgen.net/badge/:subject/:status/:color?icon=github)
 
 
-![wtf](https://i.ibb.co/ChbFCPS/Comp-1-00000.png "BoMbEr") ![wtf](https://badgen.net/badge/:subject/:status/:color?icon=github)
+![wtf](https://i.ibb.co/ChbFCPS/Comp-1-00000.png "BoMbEr") 
 
 
 `Install:`
