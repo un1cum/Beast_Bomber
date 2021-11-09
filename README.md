@@ -14,14 +14,3 @@
 * cd BoMbEr
 
 * python3 BoMbEr.py
-
-* Join my discord server https://discord.gg/c-h-i-l-l
-
-* If you want to support me, you can send money to my qiwi: https://qiwi.com/n/HERAMANT
-
-| Authors |
-|----------------|
-| https://github.com/ebankoff|
-| https://github.com/cludeex | 
-| https://github.com/ncorbuk | 
-| https://github.com/Nikait  | 
