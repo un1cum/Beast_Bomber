@@ -8,7 +8,7 @@
 
 `Install:`
 
-* git clone https://github.com/HuErGa/BoMbEr
+* git clone https://github.com/ebankoff/BoMbEr
 
 * cd BoMbEr
 
