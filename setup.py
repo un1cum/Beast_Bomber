@@ -65,54 +65,43 @@ def main():
 		print("\nSetup...")
 
 		try:
-			os.system('pip uninstall colorama')
 			os.system('pip install colorama')
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format('Installed') + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('colorama'))
 
-			os.system('pip uninstall about-time')
 			os.system('pip install about-time')
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format('Installed') + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('about-time'))
 
-			os.system('pip uninstall progressbar')
 			os.system('pip install progressbar')
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format('Installed') + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('progressbar'))
 
-			os.system('pip uninstall progress')
 			os.system('pip install progress')
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format('Installed') + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('progress'))
 
-			os.system('pip uninstall datetime')
 			os.system('pip install datetime')
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format('Installed') + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('datetime'))
 
-			os.system('pip uninstall requests')
 			os.system('pip install requests')
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format('Installed') + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('requests'))
 
-			os.system('pip uninstall selenium')
 			os.system('pip install selenium')
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format('Installed') + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('selenium'))
 
-			os.system('pip uninstall webdriver-manager')
 			os.system('pip install webdriver-manager')
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format('Installed') + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('webdriver-manager'))
 
-			os.system('pip uninstall wheel')
 			os.system('pip install wheel')
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format('Installed') + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('wheel'))
 
-			os.system('pip uninstall user-agent')
 			os.system('pip install user-agent')
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format('Installed') + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('user-agent'))
 
-			os.system('pip uninstall asyncio')
 			os.system('pip install asyncio')
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format('Installed') + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('asyncio'))
 
 			print("\033[32m{}" .format("\nSetup is COMPLETE!"))
 
 		except:
-			pass
+			print("\033[31m{}" .format("\nSETUP FAILED!"))
 
 		ex()
 
