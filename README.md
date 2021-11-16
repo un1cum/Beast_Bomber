@@ -19,17 +19,13 @@
 
 `Installation`
 - 1 way
-  - pip install BoMbEr
+  - pip install ebankoff-bomber
 
 - 2 way
   - git clone https://github.com/ebankoff/BoMbEr
 
 `First setup`
-- 1 way
-  - cd BoMbEr
-  - Python3 setup.py
-
-- 2 way - pip install `library name`
+- For 1 way - pip install library name
   - about-time
   - progressbar
   - progress
@@ -41,9 +37,16 @@
   - user-agent
   - asyncio
 
+- For 2 way
+  - cd BoMbEr
+  - Python3 setup.py
 
 `Launch`
-* cd BoMbEr
-* Python3 BoMbEr.py
+- For 1 way
+  - BoMbEr
+  - 
+- For 2 way
+  - cd BoMbEr
+  - Python3 BoMbEr.py
 
 ![wtf](https://i.ibb.co/H2Jw3ct/Screenshot-1.png "BoMbEr") 
