@@ -47,9 +47,6 @@ pb()
 print("")
 
 try:
-	os.system('pip install colorama')
-	print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format('Installed') + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('colorama'))
-
 	os.system('pip install about-time')
 	print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format('Installed') + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('about-time'))
 
