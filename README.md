@@ -44,7 +44,7 @@
 `Launch`
 - For 1 way
   - BoMbEr
-  - 
+  
 - For 2 way
   - cd BoMbEr
   - Python3 BoMbEr.py
