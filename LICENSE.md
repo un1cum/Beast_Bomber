@@ -1,5 +1,5 @@
-GNU GENERAL PUBLIC LICENSE
-Version 3, 29 June 2007
+                                                                  `GNU GENERAL PUBLIC LICENSE
+                                                                    Version 3, 29 June 2007`
 
 The original code made by Eban'ko can be found at https://github.com/ebankoff/BoMbEr
 
