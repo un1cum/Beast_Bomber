@@ -46,3 +46,5 @@
 `Launch`
 * cd BoMbEr
 * Python3 BoMbEr.py
+
+![wtf](https://i.ibb.co/H2Jw3ct/Screenshot-1.png "BoMbEr") 
