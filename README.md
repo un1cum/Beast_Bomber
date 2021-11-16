@@ -8,12 +8,12 @@
 * SMS spammer
 * Whatsapp spammer
 * Discord spammer - new!
-* Dos attack
+* DOS attack
 
 `Updated`
 * SMS spammer
 * Whatsapp spammer
-* Dos attack
+* DOS attack
 
 `To be added`
 * Twitter spammer
