@@ -112,7 +112,7 @@ def main():
 			print("\033[32m{}" .format("\nSetup is COMPLETE!"))
 
 		except:
-			print("\033[31m{}" .format("\nSetup FAILED!"))
+			pass
 
 		ex()
 
