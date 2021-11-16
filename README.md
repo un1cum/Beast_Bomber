@@ -1,12 +1,8 @@
-# BoMbEr 2.0 SMS|Email|WhatsApp|Discord|DOS attack 
+# BoMbEr SMS|Email|WhatsApp|Discord|DOS attack 
 
 [![Dependabot](https://badgen.net/badge/ebankoff/ebankoff/red?icon=github&label)](https://github.com/ebankoff) [![Dependabot](https://badgen.net/badge/cludeex/cludeex/red?icon=github&label)](https://github.com/cludeex) [![Dependabot](https://badgen.net/badge/ncorbuk/ncorbuk/red?icon=github&label)](https://github.com/ncorbuk) [![Dependabot](https://badgen.net/badge/Nikait/Nikait/red?icon=github&label)](https://github.com/Nikait) [![Dependabot](https://badgen.net/badge/telegram/telegram/yellow?icon=telegram&label)](https://t.me/cozyyrooom)
 
 ![wtf](https://i.ibb.co/ChbFCPS/Comp-1-00000.png "BoMbEr") 
-
-
-Introducing BoMbEr 2.0!
-This is an improved version of BoMbEr
 
 `Possibilities`
 * SMS spammer
