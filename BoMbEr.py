@@ -1,21 +1,21 @@
-'''
+"""
 ╔═════════════════════════════════════════════════════════════════════════════════╗
-║				                                                  ║
-║		                     BoMbEr 2.0                                   ║
+║                                                                                 ║
+║                                    BoMbEr 2.0                                   ║
 ║  Authors:                                                                       ║
 ║  https://github.com/ebankoff                                                    ║
-║  https://github.com/cludeex		                                          ║
+║  https://github.com/cludeex                                                     ║
 ║  https://github.com/ncorbuk                                                     ║
-║  https://github.com/Nikait							  ║
-║                                                   				  ║
-║  The authors of this program are not responsible for its use!                   ║
-║  When placing this code on third-party resources, please indicate the authors!  ║ 
+║  https://github.com/Nikait                                                      ║
 ║                                                                                 ║
-║  			        All rights reserved.                              ║
-║			    Copyright (C) 2021 ebankoff                           ║                                           								  
-║		                                                                  ║
+║  The authors of this program are not responsible for its use!                   ║
+║  When placing this code on third-party resources, please indicate the authors!  ║
+║                                                                                 ║
+║                               All rights reserved.                              ║
+║                           Copyright (C) 2021 ebankoff                           ║
+║                                                                                 ║
 ╚═════════════════════════════════════════════════════════════════════════════════╝
-'''
+"""
 
 #--------------------------------------(main)--------------------------------------
 
