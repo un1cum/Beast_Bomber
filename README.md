@@ -5,6 +5,7 @@
 
 `Possibilities`
 * SMS spammer
+* Email spammer
 * Whatsapp spammer
 * Discord spammer - new!
 * DOS attack
