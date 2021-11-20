@@ -51,7 +51,7 @@
 
 # Discord spammer
 
-In discord spammer, you need to enter the ID that is in the link:
+In discord spammer, you need to enter the ID that is in the link, for example:
 
 ![wtf3](https://i.ibb.co/F58DRxJ/Screenshot-1.png "dscrd") 
 
