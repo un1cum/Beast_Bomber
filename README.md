@@ -58,3 +58,5 @@ If you see something like this:
 This means that you don't have the library that is specified in the error, in this case: "_ctypes". You need to enter in the terminal or cmd:
 
 * pip install the name of the required library(example: pip install colorama)
+
+[![wtf2](https://w7.pngwing.com/pngs/400/107/png-transparent-donation-computer-icons-encapsulated-postscript-donate-miscellaneous-text-rectangle-thumbnail.png)
