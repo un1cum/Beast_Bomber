@@ -49,4 +49,12 @@
   - cd BoMbEr
   - Python3 BoMbEr.py
 
+#Problems and their solutions
+
+`If you see something like this:`
+![wtf2](https://i.ibb.co/XWNtL0S/Screenshot-1.png "no module named") 
+
+`This means that you don't have the library that is specified in the error, in this case: "_ctypes". You need to enter in the terminal or cmd:` 
+* pip install the name of the required library(example: pip install colorama)
+
 ![wtf](https://i.ibb.co/H2Jw3ct/Screenshot-1.png "BoMbEr") 
