@@ -29,7 +29,7 @@
   - git clone https://github.com/ebankoff/BoMbEr
 
 `First setup`
-- For 1 way - pip install library name
+- You need to install these pip libraries(pip install library name)
   - about-time
   - progressbar
   - progress
@@ -40,10 +40,6 @@
   - wheel
   - user-agent
   - asyncio
-
-- For 2 way
-  - cd BoMbEr
-  - Python3 setup.py
 
 `Launch`
 - For 1 way
