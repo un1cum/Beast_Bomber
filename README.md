@@ -15,6 +15,9 @@
 * Whatsapp spammer
 * DOS attack
 
+`Fixed`
+* Discord spammer
+
 `To be added`
 * Twitter spammer
 
