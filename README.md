@@ -49,7 +49,7 @@
   - cd BoMbEr
   - Python3 BoMbEr.py
 
-#Problems and their solutions
+# Problems and their solutions
 
 `If you see something like this:`
 ![wtf2](https://i.ibb.co/XWNtL0S/Screenshot-1.png "no module named") 
