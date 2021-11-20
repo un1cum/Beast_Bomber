@@ -59,4 +59,4 @@ This means that you don't have the library that is specified in the error, in th
 
 * pip install the name of the required library(example: pip install colorama)
 
-[![wtf2](https://w7.pngwing.com/pngs/400/107/png-transparent-donation-computer-icons-encapsulated-postscript-donate-miscellaneous-text-rectangle-thumbnail.png)
+[![wtf2](https://i.ibb.co/n7XX4dz/pngwing-com.png)](https://qiwi.com/n/HERAMANT)
