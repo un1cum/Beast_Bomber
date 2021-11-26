@@ -8,6 +8,7 @@
 * Email spammer
 * Whatsapp spammer
 * Discord spammer - new!
+* Telegram spammer - new!
 * DOS attack
 
 `Updated`
