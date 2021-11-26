@@ -86,12 +86,14 @@ def pb4():
 	spinner.finish()
 
 def logo():
-		print("\033[31m{}" .format('╔══╗   ╔═╗╔═╦╗ ╔═══╗'), "\033[32m {}" .format('  ╔═══╗╔═══╗'))
-		print("\033[31m{}" .format('║╔╗║   ║ ╚╝ ║║ ║╔══╝'), "\033[32m {}" .format('  ║╔═╗║║╔═╗║'))
-		print("\033[31m{}" .format('║╚╝╚╦══╣╔╗╔╗║╚═╣╚══╦═╗'), "\033[32m {}" .format(' ╚╔╝║║║ ║║'))
-		print("\033[31m{}" .format('║╔═╗║╔╗║║║║║║╔╗║╔══╣╔╝'), "\033[32m {}" .format('╔═╝╔╝║║ ║║'))
-		print("\033[31m{}" .format('║╚═╝║╚╝║║║║║║╚╝║╚══╣║'), "\033[32m {}" .format(' ║ ╚═╦╣╚═╝║'))
-		print("\033[31m{}" .format('╚═══╩══╩╝╚╝╚╩══╩═══╩╝'), "\033[32m {}" .format(' ╚═══╩╩═══╝'))
+		print("\033[31m\033[0m{}" .format('╔══╗   ╔═╗╔═╦╗ ╔═══╗'), "\033[35m\033[5m{}" .format('  ╔═══╗╔═══╗'))
+		print("\033[31m\033[0m{}" .format('║╔╗║   ║ ╚╝ ║║ ║╔══╝'), "\033[35m\033[5m{}" .format('  ║╔═╗║║╔═╗║'))
+		print("\033[31m\033[0m{}" .format('║╚╝╚╦══╣╔╗╔╗║╚═╣╚══╦═╗'), "\033[35m\033[5m{}" .format(' ╚╔╝║║║ ║║'))
+		print("\033[31m\033[0m{}" .format('║╔═╗║╔╗║║║║║║╔╗║╔══╣╔╝'), "\033[35m\033[5m{}" .format('╔═╝╔╝║║ ║║'))
+		print("\033[31m\033[0m{}" .format('║╚═╝║╚╝║║║║║║╚╝║╚══╣║'), "\033[35m\033[5m{}" .format(' ║ ╚═╦╣╚═╝║'))
+		print("\033[31m\033[0m{}" .format('╚═══╩══╩╝╚╝╚╩══╩═══╩╝'), "\033[35m\033[5m{}" .format(' ╚═══╩╩═══╝'))
+		print("\033[41m\033[37m\033[5m{}" .format('''\nCreated by Eban'ko - https://github.com/ebankoff\n'''))
+		print("\033[43m\033[35m\033[5m{}" .format('''There could have been your ad here)'''))
 
 def check_internet():
 	try:
@@ -9700,20 +9702,15 @@ def dscrd():
 		ex()
 
 def main():
-	print("\033[33m{}" .format('''
-╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮
-┃ 0 ┃ Update the program            ┃
-┃ 1 ┃ Email                         ┃
-┃ 2 ┃ SMS                           ┃
-┃ 3 ┃ DOS ATTACK                    ┃
-┃ 4 ┃ WhatsApp                      ┃          
-┃ 5 ┃ Discord                       ┃
-┃ 6 ┃ Clear the program cache       ┃                
-╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
-	'''))
+	print('''\033[0m\033[40m\033[36m
+[0] Update the program   [4] WhatsApp
+[1] Email                [5] Discord
+[2] SMS                  [6] Clear the program cache
+[3] DOS ATTACK
+	''')
 
 	try:
-		ans=int(input("> "))
+		ans=int(input("\033[33m{}" .format("> ")))
 		print("")
 
 		if ans==0:
