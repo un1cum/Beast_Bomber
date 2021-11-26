@@ -9763,45 +9763,50 @@ def main():
 [3] DOS ATTACK           [7] Clear the program cache
 	''')
 
-	ans=int(input("\033[33m{}" .format("> ")))
-	print("")
+	try:
+		ans=int(input("\033[33m{}" .format("> ")))
+		print("")
 
-	if ans==0:
-		check_internet()
-		os.system('git clone https://github.com/ebankoff/BoMbEr')
-		pb3()
-		print("\033[32m{}" .format('Success!'))
-		print("\033[31m{}" .format('To complete the update, you need to restart the program'))
-		ex()
-	elif ans==1:
-		check_internet()
-		emailbomber()
-	elif ans==2:
-		check_internet()
-		smsbomber()
-	elif ans==3:
-		check_internet()
-		dos()
-	elif ans==4:
-		check_internet()
-		wtsap()
-	elif ans==5:
-		check_internet()
-		dscrd()
-	elif ans==6:
-		check_internet()
-		telega()
-	elif ans==7:
-		try:
-			pb4()
-			shutil.rmtree('__pycache__')
-			print('Success!')
+		if ans==0:
+			check_internet()
+			os.system('git clone https://github.com/ebankoff/BoMbEr')
+			pb3()
+			print("\033[32m{}" .format('Success!'))
+			print("\033[31m{}" .format('To complete the update, you need to restart the program'))
 			ex()
-		except:
-			print("\033[31m{}" .format('ERROR: The program cache is already empty!'))
+		elif ans==1:
+			check_internet()
+			emailbomber()
+		elif ans==2:
+			check_internet()
+			smsbomber()
+		elif ans==3:
+			check_internet()
+			dos()
+		elif ans==4:
+			check_internet()
+			wtsap()
+		elif ans==5:
+			check_internet()
+			dscrd()
+		elif ans==6:
+			check_internet()
+			telega()
+		elif ans==7:
+			try:
+				pb4()
+				shutil.rmtree('__pycache__')
+				print('Success!')
+				ex()
+			except:
+				print("\033[31m{}" .format('ERROR: The program cache is already empty!'))
+				ex()
+		else:
+			print("\033[31m{}" .format('ERROR: INVALID VALUE!'))
 			ex()
-	else:
-		print("\033[31m{}" .format('ERROR: INVALID VALUE!'))
+
+	except:
+		print("\033[31m{}" .format('ERROR!'))
 		ex()
 
 if __name__=='__main__':
