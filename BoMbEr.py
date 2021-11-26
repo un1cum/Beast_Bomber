@@ -135,7 +135,7 @@ def ex():
 			'''))
 		print("Press Enter to exit")
 		input()
-		exit(0)
+		exit()
 	elif param == 'no':
 		if platform=='win32':
 			os.system("cls")
