@@ -117,18 +117,15 @@ def ex():
 	param=input('Exit? yes/no: ')
 	if param == 'yes':
 		print("\033[36m{}" .format('''
-╔═════════════════════════════════════════════════════════════════════════╗
-║                                                                         ║
-║                         Thanks for using BoMbEr!                        ║    
-║      I would be grateful if you star on this repository on GitHub:      ║    
-║                   https://github.com/ebankoff/BoMbEr                    ║
-║                                                                         ║
-║           You can support me by sending any amount to my Qiwi:          ║
-║                           qiwi.com/n/HERAMANT                           ║
-║                                                                         ║
-║                       Copyright (C) 2021 ebankoff                       ║  
-║                                                                         ║
-╚═════════════════════════════════════════════════════════════════════════╝
+                                                                         
+                         Thanks for using BoMbEr!                            
+      I would be grateful if you star on this repository on GitHub:          
+                   https://github.com/ebankoff/BoMbEr                    
+                                                                         
+          You can support me by sending any amount to my Qiwi:          
+                           qiwi.com/n/HERAMANT                           
+                                                                         
+                       Copyright (C) 2021 ebankoff                                                                            
 			'''))
 		print("Press Enter to exit")
 		input()
