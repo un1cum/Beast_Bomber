@@ -36,6 +36,7 @@ import user_agent
 import progressbar
 from time import sleep
 from threading import *
+from sys import platform
 from asyncio import sleep
 from os import name, system
 from progress.bar import Bar
@@ -54,7 +55,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import StaleElementReferenceException 
 
-os.system("cls")
+if platform=='win32':
+	os.system("cls")
+
+else:
+	os.system("clear")
+
 now = datetime.datetime.now()
 
 def pb1():              
@@ -131,7 +137,11 @@ def ex():
 		input()
 		exit(0)
 	elif param == 'no':
-		os.system("cls")
+		if platform=='win32':
+			os.system("cls")
+
+		else:
+			os.system("clear")
 		main()
 	else:
 		print('ERROR: invalid value')
