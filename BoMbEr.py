@@ -86,14 +86,14 @@ def pb4():
 	spinner.finish()
 
 def logo():
-		print("\033[31m\033[0m{}" .format('╔══╗   ╔═╗╔═╦╗ ╔═══╗'), "\033[35m\033[5m{}" .format('  ╔═══╗╔═══╗'))
-		print("\033[31m\033[0m{}" .format('║╔╗║   ║ ╚╝ ║║ ║╔══╝'), "\033[35m\033[5m{}" .format('  ║╔═╗║║╔═╗║'))
-		print("\033[31m\033[0m{}" .format('║╚╝╚╦══╣╔╗╔╗║╚═╣╚══╦═╗'), "\033[35m\033[5m{}" .format(' ╚╔╝║║║ ║║'))
-		print("\033[31m\033[0m{}" .format('║╔═╗║╔╗║║║║║║╔╗║╔══╣╔╝'), "\033[35m\033[5m{}" .format('╔═╝╔╝║║ ║║'))
-		print("\033[31m\033[0m{}" .format('║╚═╝║╚╝║║║║║║╚╝║╚══╣║'), "\033[35m\033[5m{}" .format(' ║ ╚═╦╣╚═╝║'))
-		print("\033[31m\033[0m{}" .format('╚═══╩══╩╝╚╝╚╩══╩═══╩╝'), "\033[35m\033[5m{}" .format(' ╚═══╩╩═══╝'))
-		print("\033[41m\033[37m\033[5m{}" .format('''\nCreated by Eban'ko - https://github.com/ebankoff\n'''))
-		print("\033[43m\033[35m\033[5m{}" .format('''There could have been your ad here)'''))
+	print("\033[31m\033[0m{}" .format('╔══╗   ╔═╗╔═╦╗ ╔═══╗'), "\033[35m\033[5m{}" .format('  ╔═══╗╔═══╗'))
+	print("\033[31m\033[0m{}" .format('║╔╗║   ║ ╚╝ ║║ ║╔══╝'), "\033[35m\033[5m{}" .format('  ║╔═╗║║╔═╗║'))
+	print("\033[31m\033[0m{}" .format('║╚╝╚╦══╣╔╗╔╗║╚═╣╚══╦═╗'), "\033[35m\033[5m{}" .format(' ╚╔╝║║║ ║║'))
+	print("\033[31m\033[0m{}" .format('║╔═╗║╔╗║║║║║║╔╗║╔══╣╔╝'), "\033[35m\033[5m{}" .format('╔═╝╔╝║║ ║║'))
+	print("\033[31m\033[0m{}" .format('║╚═╝║╚╝║║║║║║╚╝║╚══╣║'), "\033[35m\033[5m{}" .format(' ║ ╚═╦╣╚═╝║'))
+	print("\033[31m\033[0m{}" .format('╚═══╩══╩╝╚╝╚╩══╩═══╩╝'), "\033[35m\033[5m{}" .format(' ╚═══╩╩═══╝'))
+	print("\033[41m\033[37m\033[5m{}" .format('''\nCreated by Eban'ko - https://github.com/ebankoff\n'''))
+	print("\033[43m\033[35m\033[5m{}" .format('''There could have been your ad here)'''))
 
 def check_internet():
 	try:
@@ -134,6 +134,7 @@ def ex():
 		input()
 		exit(0)
 	elif param == 'no':
+		os.system("cls")
 		main()
 	else:
 		print('ERROR: invalid value')
