@@ -17,6 +17,7 @@
 
 `Fixed`
 * Discord spammer
+* Whatsapp spammer
 
 `To be added`
 * Twitter spammer
