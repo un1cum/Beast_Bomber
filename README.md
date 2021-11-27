@@ -49,7 +49,7 @@
   
 - For 2 way
   - cd BoMbEr
-  - Python3 BoMbEr.py
+  - python3 BoMbEr.py
 
 # Discord spammer
 
