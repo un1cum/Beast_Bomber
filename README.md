@@ -31,6 +31,7 @@
   - git clone https://github.com/ebankoff/BoMbEr
 
 `First setup`
+- You must have support for "less secure apps" set to "turn on" on your Gmail. Here is the link to do so: https://www.google.com/settings/security/lesssecureapps
 - You need to install these pip libraries(pip install library name)
   - about-time
   - progressbar
