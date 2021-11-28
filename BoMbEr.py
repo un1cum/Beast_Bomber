@@ -47,7 +47,6 @@ from colorama import Fore, Back
 from os.path import exists, isfile
 from random import choice, randint
 from progress.spinner import Spinner
-from user_agent import generate_user_agent
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
@@ -9278,6 +9277,7 @@ heads = [
 	"Accept":'*/*'
 	}
 ]
+headers = random.choice(heads)
 
 def pb1():              
 	spinner = Spinner('Checking the Internet connection ', max=20)
@@ -9315,6 +9315,7 @@ def logo():
 	print("\033[31m\033[0m{}" .format('║╚═╝║╚╝║║║║║║╚╝║╚══╣║'), "\033[35m\033[5m{}" .format(' ║ ╚═╦╣╚═╝║'))
 	print("\033[31m\033[0m{}" .format('╚═══╩══╩╝╚╝╚╩══╩═══╩╝'), "\033[35m\033[5m{}" .format(' ╚═══╩╩═══╝'))
 	print("\033[41m\033[37m\033[5m{}" .format('''\nCreated by Eban'ko - https://github.com/ebankoff\n'''))
+	print("\033[41m\033[37m\033[5m{}" .format('''License - Apache 2.0\n'''))
 	print("\033[43m\033[35m\033[5m{}" .format('''There could have been your ad here)'''))
 
 def check_internet():
@@ -9340,14 +9341,15 @@ def ex():
 	if param == 'yes':
 		print("\033[36m{}" .format('''
 																		 
-						 Thanks for using BoMbEr!                            
-	  I would be grateful if you star on this repository on GitHub:          
-				   https://github.com/ebankoff/BoMbEr                    
-																		 
-		  You can support me by sending any amount to my Qiwi:          
-						   qiwi.com/n/HERAMANT                           
-																		 
-					   Copyright (C) 2021 ebankoff                                                                            
+                       Thanks for using BoMbEr!
+       I would be grateful if you star on this repository on GitHub:
+                    https://github.com/ebankoff/BoMbEr
+
+          You can support me by sending any amount to my Qiwi:
+                         qiwi.com/n/HERAMANT
+
+
+                    Copyright (C) 2021 ebankoff                                                                            
 			'''))
 		print("Press Enter to exit")
 		input()
@@ -9470,9 +9472,10 @@ def smsbomber():
 	try:
 		code=input('Enter your country code without +: ')
 		number = code+input(f'Enter the number for attack: {code}')
+		number9 = number[1:]
 		time2 = int(input('Attak time in seconds: '))
 		print('\nStarting...\n')
-		settings.attack(number, time2)
+		settings.attack(number, number9, time2)
 		print("\033[32m {}" .format("\nFinished!"))
 		ex()
 	except:
@@ -9489,7 +9492,6 @@ def dos():
 ╚═══╩═══╩═══╝ ╚╝ ╚╝ ╚╝   ╚╝ ╚╝ ╚╩═══╩╝╚═╝
 		'''))
 
-	headers = random.choice(heads)
 	t = time.monotonic()
 
 	print('''1 - IP 
@@ -9769,9 +9771,9 @@ def main():
 
 		if ans==0:
 			check_internet()
-			os.system('git clone https://github.com/ebankoff/BoMbEr')
 			pb3()
-			print("\033[32m{}" .format('Success!'))
+			print("Now you can start Chernobyl with this command: chernobyl")
+			os.system("pip uninstall ebankoff-bomber && pip install ebankoff-bomber")
 			print("\033[31m{}" .format('To complete the update, you need to restart the program'))
 			ex()
 		elif ans==1:

