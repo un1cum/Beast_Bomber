@@ -101,7 +101,7 @@ This means that you don't have the library that is specified in the error, in th
 
 `Первая настройка`
 - У Вас должна быть включена функция "Ненадежные приложения, у которых есть доступ к аккаунту". Её можно включить перейдя по ссылке: https://www.google.com/settings/security/lesssecureapps
-- У вас должны быть установлены эти библиотеки pip (pip install library name):
+- У вас должны быть установлены эти библиотеки pip (pip install имя библиотеки):
   - about-time
   - progressbar
   - progress
