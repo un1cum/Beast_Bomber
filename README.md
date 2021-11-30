@@ -8,19 +8,19 @@
 `Possibilities`
 * SMS spammer
 * Email spammer
-* Whatsapp spammer
+* WhatsApp spammer
 * Discord spammer - new!
 * Telegram spammer - new!
 * DOS attack
 
 `Updated`
 * SMS spammer
-* Whatsapp spammer
+* WhatsApp spammer
 * DOS attack
 
 `Fixed`
 * Discord spammer
-* Whatsapp spammer
+* WhatsApp spammer
 
 `To be added`
 * Twitter spammer
@@ -75,19 +75,19 @@ This means that you don't have the library that is specified in the error, in th
 `Возможности`
 * SMS спаммер
 * Email спаммер
-* Whatsapp спаммер
+* WhatsApp спаммер
 * Discord спаммер - новое!
 * Telegram спаммер - новое!
 * DOS аттака(заметьте, не DDOS!)
 
 `Обновлено`
 * SMS спаммер
-* Whatsapp спаммер
+* WhatsApp спаммер
 * DOS аттака
 
 `Исправлено`
 * Discord спаммер
-* Whatsapp спаммер
+* WhatsApp спаммер
 
 `Будет добавлено`
 * Twitter спаммер
