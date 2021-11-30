@@ -78,7 +78,7 @@ This means that you don't have the library that is specified in the error, in th
 * WhatsApp спаммер
 * Discord спаммер - новое!
 * Telegram спаммер - новое!
-* DOS аттака(заметьте, не DDOS!)
+* DOS аттака (заметьте, не DDOS!)
 
 `Обновлено`
 * SMS спаммер
