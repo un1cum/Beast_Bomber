@@ -34,7 +34,7 @@
 
 `First setup`
 - You must have support for "less secure apps" set to "turn on" on your Gmail. Here is the link to do so: https://www.google.com/settings/security/lesssecureapps
-- You need to install these pip libraries(pip install library name)
+- You need to install these pip libraries (pip install library name)
   - about-time
   - progressbar
   - progress
@@ -68,7 +68,7 @@ If you see something like this:
 
 This means that you don't have the library that is specified in the error, in this case: "_ctypes". You need to enter in the terminal or cmd:
 
-* pip install the name of the required library(example: pip install _ctypes)
+* pip install the name of the required library (example: pip install _ctypes)
 
 # RU
 
@@ -101,7 +101,7 @@ This means that you don't have the library that is specified in the error, in th
 
 `Первая настройка`
 - У Вас должна быть включена функция "Ненадежные приложения, у которых есть доступ к аккаунту". Её можно включить перейдя по ссылке: https://www.google.com/settings/security/lesssecureapps
-- У вас должны быть установлены эти библиотеки pip(pip install library name):
+- У вас должны быть установлены эти библиотеки pip (pip install library name):
   - about-time
   - progressbar
   - progress
@@ -135,7 +135,7 @@ This means that you don't have the library that is specified in the error, in th
 
 Это озночает, что у вас отсутствует нужная библиотека pip, в этом случае: "_ctypes". Откройте терминал, cmd или что там у вас и пишите:
 
-* pip install имя отсутствующей библиотеки(пример: pip install _ctypes)
+* pip install имя отсутствующей библиотеки (пример: pip install _ctypes)
 
 # Donate for coffee
 
