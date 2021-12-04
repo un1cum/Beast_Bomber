@@ -11,7 +11,7 @@
 * WhatsApp spammer
 * Discord spammer - new!
 * Telegram spammer - new!
-* DOS attack
+* DOS attack (NOT DDOS!)
 
 `Updated`
 * SMS spammer
