@@ -137,7 +137,7 @@ This means that you don't have the library that is specified in the error, in th
 
 ![wtf3](https://i.ibb.co/F58DRxJ/Screenshot-1.png "dscrd") 
 
-# DOS аттака
+# DOS атака
 
 **Результаты тестов на https://dstat.cc**
 
