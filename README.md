@@ -60,16 +60,6 @@ In discord spammer, you need to enter the ID that is in the link, for example:
 
 ![wtf3](https://i.ibb.co/F58DRxJ/Screenshot-1.png "dscrd") 
 
-# Problems and their solutions
-
-If you see something like this:
-
-![wtf4](https://i.ibb.co/XWNtL0S/Screenshot-1.png "no module named") 
-
-This means that you don't have the library that is specified in the error, in this case: "_ctypes". You need to enter in the terminal or cmd:
-
-* pip install the name of the required library (example: pip install _ctypes)
-
 # DOS attack
 
 **Test results at https://dstat.cc**
@@ -79,6 +69,16 @@ This means that you don't have the library that is specified in the error, in th
 
 * Threads - 50
 * Attack time - 30 seconds
+
+# Problems and their solutions
+
+If you see something like this:
+
+![wtf4](https://i.ibb.co/XWNtL0S/Screenshot-1.png "no module named") 
+
+This means that you don't have the library that is specified in the error, in this case: "_ctypes". You need to enter in the terminal or cmd:
+
+* pip install the name of the required library (example: pip install _ctypes)
 
 # RU
 
