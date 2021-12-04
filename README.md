@@ -160,3 +160,5 @@ This means that you don't have the library that is specified in the error, in th
 # Donate for coffee
 
 [![wtf2](https://i.ibb.co/g327VDz/coffee.png)](https://qiwi.com/n/HERAMANT)
+
+[![wtf2](https://i.ibb.co/ryDytyR/Comp-1-00000.png)
