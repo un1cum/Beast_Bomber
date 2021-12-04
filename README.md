@@ -145,7 +145,7 @@ This means that you don't have the library that is specified in the error, in th
 ![wtf6](https://i.ibb.co/dcSsLwP/Screenshot-1.png "DOS")
 
 * Потоки - 50
-* Время атаки - 30 seconds
+* Время атаки - 30 секунд
 
 # Проблемы и их решения
 
