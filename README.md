@@ -70,6 +70,16 @@ This means that you don't have the library that is specified in the error, in th
 
 * pip install the name of the required library (example: pip install _ctypes)
 
+# DOS attack
+
+**Test results at https://dstat.cc**
+
+![wtf5](https://i.ibb.co/3vgTGY6/Screenshot.jpg "DOS") 
+![wtf6](https://i.ibb.co/dcSsLwP/Screenshot-1.png "DOS")
+
+* Threads - 50
+* Attack time - 30 seconds
+
 # RU
 
 `Возможности`
@@ -126,6 +136,16 @@ This means that you don't have the library that is specified in the error, in th
 В discord спаммере, вам нужно ввести ID, который находится в самой ссылке, например:
 
 ![wtf3](https://i.ibb.co/F58DRxJ/Screenshot-1.png "dscrd") 
+
+# DOS аттака
+
+**Результаты тестов на https://dstat.cc**
+
+![wtf5](https://i.ibb.co/3vgTGY6/Screenshot.jpg "DOS") 
+![wtf6](https://i.ibb.co/dcSsLwP/Screenshot-1.png "DOS")
+
+* Потоки - 50
+* Время атаки - 30 seconds
 
 # Проблемы и их решения
 
