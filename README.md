@@ -62,7 +62,7 @@ In discord spammer, you need to enter the ID that is in the link, for example:
 
 # DOS attack
 
-**Test results at https://dstat.cc**
+**Test results from https://dstat.cc**
 
 ![wtf5](https://i.ibb.co/3vgTGY6/Screenshot.jpg "DOS") 
 ![wtf6](https://i.ibb.co/dcSsLwP/Screenshot-1.png "DOS")
