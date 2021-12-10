@@ -2,7 +2,7 @@
 ╔═════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                 ║
 ║                                    BoMbEr 2.0                                   ║
-║  Authors:                                                                       ║
+║  Author:                                                                        ║
 ║  https://github.com/ebankoff                                                    ║                                                  
 ║                                                                                 ║
 ║  The authors of this program are not responsible for its use!                   ║
