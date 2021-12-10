@@ -80,6 +80,10 @@ This means that you don't have the library that is specified in the error, in th
 
 * pip install the name of the required library (example: pip install _ctypes)
 
+# Donate for coffee
+
+[![wtf2](https://i.ibb.co/ryDytyR/Comp-1-00000.png)](https://qiwi.com/n/HERAMANT)
+
 # RU
 
 `Возможности`
@@ -157,6 +161,6 @@ This means that you don't have the library that is specified in the error, in th
 
 * pip install имя отсутствующей библиотеки (пример: pip install _ctypes)
 
-# Donate for coffee
+# Автору на кофе
 
 [![wtf2](https://i.ibb.co/ryDytyR/Comp-1-00000.png)](https://qiwi.com/n/HERAMANT)
