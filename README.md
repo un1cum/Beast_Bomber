@@ -84,6 +84,9 @@ This means that you don't have the library that is specified in the error, in th
 
 [![wtf2](https://i.ibb.co/ryDytyR/Comp-1-00000.png)](https://qiwi.com/n/HERAMANT)
 
+* Bitcoin - 36HawtyF7yFVjhjwMdnoozeLLEBjPyMpit
+* Ethirium - 0x5d27523e0D66ffB54e23E539c13b9Ac7A8720bFB
+
 # RU
 
 `Возможности`
@@ -164,3 +167,6 @@ This means that you don't have the library that is specified in the error, in th
 # Автору на кофе
 
 [![wtf2](https://i.ibb.co/ryDytyR/Comp-1-00000.png)](https://qiwi.com/n/HERAMANT)
+
+* Bitcoin - 36HawtyF7yFVjhjwMdnoozeLLEBjPyMpit
+* Ethirium - 0x5d27523e0D66ffB54e23E539c13b9Ac7A8720bFB
