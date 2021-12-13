@@ -82,10 +82,13 @@ This means that you don't have the library that is specified in the error, in th
 
 # Donate for coffee
 
+`Qiwi:`
+
 [![wtf2](https://i.ibb.co/ryDytyR/Comp-1-00000.png)](https://qiwi.com/n/HERAMANT)
 
-* Bitcoin - 36HawtyF7yFVjhjwMdnoozeLLEBjPyMpit
-* Ethereum - 0x5d27523e0D66ffB54e23E539c13b9Ac7A8720bFB
+`Others:`
+* **Bitcoin - 36HawtyF7yFVjhjwMdnoozeLLEBjPyMpit**
+* **Ethereum - 0x5d27523e0D66ffB54e23E539c13b9Ac7A8720bFB**
 
 # RU
 
@@ -166,7 +169,10 @@ This means that you don't have the library that is specified in the error, in th
 
 # Автору на кофе
 
+`Qiwi:`
+
 [![wtf2](https://i.ibb.co/ryDytyR/Comp-1-00000.png)](https://qiwi.com/n/HERAMANT)
 
-* Bitcoin - 36HawtyF7yFVjhjwMdnoozeLLEBjPyMpit
-* Ethereum - 0x5d27523e0D66ffB54e23E539c13b9Ac7A8720bFB
+`Others:`
+* **Bitcoin - 36HawtyF7yFVjhjwMdnoozeLLEBjPyMpit**
+* **Ethereum - 0x5d27523e0D66ffB54e23E539c13b9Ac7A8720bFB**
