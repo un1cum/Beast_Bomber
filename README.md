@@ -3,7 +3,7 @@
 
 [![Button](https://badgen.net/badge/ebankoff/ebankoff/red?icon=github&label)](https://github.com/ebankoff) [![Button](https://badgen.net/badge/telegram/telegram/yellow?icon=telegram&label)](https://t.me/cozyyrooom) [![Button](https://badgen.net/badge/discord/discord/yellow?icon=discord&label)](https://discord.gg/UVEjx6UjNT) [![Button](https://badgen.net/badge/icon/qiwi/orange?icon=bitcoin&label)](https://qiwi.com/n/HERAMANT) [![Button](https://badgen.net/badge/fork/fork/purple?icon=github&label)](https://github.com/ebankoff/BoMbEr/fork) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20over%20170%20free%20design%20blocks%20based%20on%20Bootstrap%204&url=https://www.froala.com/design-blocks&via=froala&hashtags=bootstrap,design,templates,blocks,developers)
 
-# EN
+# 📌 EN
 
 `Possibilities`
 * SMS spammer
@@ -54,13 +54,13 @@
   - cd BoMbEr
   - python3 BoMbEr.py
 
-# Discord spammer
+# 📌 Discord spammer
 
 In discord spammer, you need to enter the ID that is in the link, for example:
 
 ![wtf3](https://i.ibb.co/F58DRxJ/Screenshot-1.png "dscrd") 
 
-# DOS attack
+# 📌 DOS attack
 
 **Test results from https://dstat.cc**
 
@@ -70,7 +70,7 @@ In discord spammer, you need to enter the ID that is in the link, for example:
 * Threads - 50
 * Attack time - 30 seconds
 
-# Problems and their solutions
+# 📌 Problems and their solutions
 
 If you see something like this:
 
@@ -80,7 +80,7 @@ This means that you don't have the library that is specified in the error, in th
 
 * pip install the name of the required library (example: pip install _ctypes)
 
-# Donate for coffee
+# 📌 Donate for coffee
 
 `Qiwi:`
 
@@ -90,7 +90,7 @@ This means that you don't have the library that is specified in the error, in th
 * **Bitcoin - 36HawtyF7yFVjhjwMdnoozeLLEBjPyMpit**
 * **Ethereum - 0x5d27523e0D66ffB54e23E539c13b9Ac7A8720bFB**
 
-# RU
+# 📌 RU
 
 `Возможности`
 * SMS спаммер
@@ -141,13 +141,13 @@ This means that you don't have the library that is specified in the error, in th
   - cd BoMbEr
   - python3 BoMbEr.py
 
-# Discord спаммер
+# 📌 Discord спаммер
 
 В discord спаммере, вам нужно ввести ID, который находится в самой ссылке, например:
 
 ![wtf3](https://i.ibb.co/F58DRxJ/Screenshot-1.png "dscrd") 
 
-# DOS атака
+# 📌 DOS атака
 
 **Результаты тестов на https://dstat.cc**
 
@@ -157,7 +157,7 @@ This means that you don't have the library that is specified in the error, in th
 * Потоки - 50
 * Время атаки - 30 секунд
 
-# Проблемы и их решения
+# 📌 Проблемы и их решения
 
 Если у вас похожая ошибка:
 
@@ -167,7 +167,7 @@ This means that you don't have the library that is specified in the error, in th
 
 * pip install имя отсутствующей библиотеки (пример: pip install _ctypes)
 
-# Автору на кофе
+# 📌 Автору на кофе
 
 `Qiwi:`
 
