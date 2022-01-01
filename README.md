@@ -6,7 +6,7 @@
 # 📌 EN
 
 `Possibilities`
-* SMS spammer
+* SMS spammer(works better with proxy)
 * Email spammer
 * WhatsApp spammer
 * Discord spammer
@@ -68,7 +68,7 @@ This means that you don't have the library that is specified in the error, in th
 # 📌 RU
 
 `Возможности`
-* SMS спаммер
+* SMS спаммер(работает лучше с proxy)
 * Email спаммер
 * WhatsApp спаммер
 * Discord спаммер
