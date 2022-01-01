@@ -9,65 +9,40 @@
 * SMS spammer
 * Email spammer
 * WhatsApp spammer
-* Discord spammer - new!
-* Telegram spammer - new!
-* DOS attack (NOT DDOS!)
+* Discord spammer
+* Telegram spammer
+* DoS attack (NOT DDoS!)
 
 `Updated`
 * SMS spammer
-* WhatsApp spammer
-* DOS attack
-
-`Fixed`
+* Email spammer
 * Discord spammer
-* WhatsApp spammer
-
-`To be added`
-* Twitter spammer
+* DoS attack
 
 `Installation`
-- 1 way
-  - pip install ebankoff-bomber
-
-- 2 way
-  - git clone https://github.com/ebankoff/BoMbEr
+* git clone https://github.com/ebankoff/BoMbEr
 
 `First setup`
 - You must have support for "less secure apps" set to "turn on" on your Gmail. Here is the link to do so: https://www.google.com/settings/security/lesssecureapps
-- You need to install these pip libraries (pip install library name)
-  - about-time
-  - progressbar
-  - progress
-  - datetime
-  - requests
-  - selenium
-  - webdriver-manager
-  - wheel
-  - user-agent
-  - asyncio
+- BoMbEr has external dependencies, in order to install them you just need to write: pip install -r requirements.txt(this file comes with BoMbEr)
 
 `Launch`
-- For 1 way
-  - BoMbEr
-  
-- For 2 way
-  - cd BoMbEr
-  - python3 BoMbEr.py
+* cd BoMbEr
+* python3 BoMbEr.py
 
 # 📌 Discord spammer
 
-In discord spammer, you need to enter the ID that is in the link, for example:
+To use Discord spammer, you need a preferably empty account that is on the same server as the person you want to spam to. Also, the account must have 2FA turned off. To find the account token, you need to open the developer's tools and in the network tab to find "science" and copy the token in it, here is a screenshot:
 
-![wtf3](https://i.ibb.co/F58DRxJ/Screenshot-1.png "dscrd") 
+![wtf3](https://i.ibb.co/Wt7kThC/Screenshot-3.jpg "discord") 
 
-# 📌 DOS attack
+# 📌 DoS attack
 
 **Test results from https://dstat.cc**
 
-![wtf5](https://i.ibb.co/3vgTGY6/Screenshot.jpg "DOS") 
-![wtf6](https://i.ibb.co/dcSsLwP/Screenshot-1.png "DOS")
+![wtf5](https://i.ibb.co/9GMkDGP/Screenshot-1.png "DoS") 
 
-* Threads - 50
+* Threads - 40
 * Attack time - 30 seconds
 
 # 📌 Problems and their solutions
@@ -86,7 +61,7 @@ This means that you don't have the library that is specified in the error, in th
 
 [![wtf2](https://i.ibb.co/ryDytyR/Comp-1-00000.png)](https://qiwi.com/n/HERAMANT)
 
-`Others:`
+`Crypto:`
 * **Bitcoin - 36HawtyF7yFVjhjwMdnoozeLLEBjPyMpit**
 * **Ethereum - 0x5d27523e0D66ffB54e23E539c13b9Ac7A8720bFB**
 
@@ -96,65 +71,40 @@ This means that you don't have the library that is specified in the error, in th
 * SMS спаммер
 * Email спаммер
 * WhatsApp спаммер
-* Discord спаммер - новое!
-* Telegram спаммер - новое!
-* DOS аттака (заметьте, не DDOS!)
+* Discord спаммер
+* Telegram спаммер
+* DoS аттака (заметьте, не DDoS!)
 
 `Обновлено`
 * SMS спаммер
-* WhatsApp спаммер
-* DOS аттака
-
-`Исправлено`
+* Email спаммер
+* DoS аттака
 * Discord спаммер
-* WhatsApp спаммер
-
-`Будет добавлено`
-* Twitter спаммер
 
 `Установка`
-- 1 путь
-  - pip install ebankoff-bomber
-
-- 2 путь
-  - git clone https://github.com/ebankoff/BoMbEr
+* git clone https://github.com/ebankoff/BoMbEr
 
 `Первая настройка`
 - У Вас должна быть включена функция "Ненадежные приложения, у которых есть доступ к аккаунту". Её можно включить перейдя по ссылке: https://www.google.com/settings/security/lesssecureapps
-- У вас должны быть установлены эти библиотеки pip (pip install имя библиотеки):
-  - about-time
-  - progressbar
-  - progress
-  - datetime
-  - requests
-  - selenium
-  - webdriver-manager
-  - wheel
-  - user-agent
-  - asyncio
+- У BoMbEr есть внешние зависимости, для того, чтобы их установить, вам достаточно написать: pip install -r requirements.txt(этот файл идет с BoMbEr)
 
 `Запуск`
-- Для 1 пути
-  - BoMbEr
-  
-- Для 2 пути
-  - cd BoMbEr
-  - python3 BoMbEr.py
+* cd BoMbEr
+* python3 BoMbEr.py
 
 # 📌 Discord спаммер
 
-В discord спаммере, вам нужно ввести ID, который находится в самой ссылке, например:
+Чтобы пользоваться спамером Discord, вам нужен желательно пустой аккаунт, который находится на одном сервере с человеком, которому вы хотите заспамить дм. Так же на аккаунте должен быть выключен 2FA. Чтобы узнать токен аккаунта, вам нужно открыть инструмены разработчика и во вкладке network найти "science" и в нем скопировать токен, вот скрин:
 
-![wtf3](https://i.ibb.co/F58DRxJ/Screenshot-1.png "dscrd") 
+![wtf3](https://i.ibb.co/Wt7kThC/Screenshot-3.jpg "discord") 
 
-# 📌 DOS атака
+# 📌 DoS атака
 
 **Результаты тестов на https://dstat.cc**
 
-![wtf5](https://i.ibb.co/3vgTGY6/Screenshot.jpg "DOS") 
-![wtf6](https://i.ibb.co/dcSsLwP/Screenshot-1.png "DOS")
+![wtf5](https://i.ibb.co/9GMkDGP/Screenshot-1.png "DoS") 
 
-* Потоки - 50
+* Потоки - 40
 * Время атаки - 30 секунд
 
 # 📌 Проблемы и их решения
@@ -173,6 +123,6 @@ This means that you don't have the library that is specified in the error, in th
 
 [![wtf2](https://i.ibb.co/ryDytyR/Comp-1-00000.png)](https://qiwi.com/n/HERAMANT)
 
-`Others:`
+`Крипта:`
 * **Bitcoin - 36HawtyF7yFVjhjwMdnoozeLLEBjPyMpit**
 * **Ethereum - 0x5d27523e0D66ffB54e23E539c13b9Ac7A8720bFB**
