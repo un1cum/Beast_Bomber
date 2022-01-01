@@ -194,6 +194,7 @@ def whatsapp(name, count, msg, cn):
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED') + "\033[37m {}" .format('|') + "\033[36m {}" .format(cn) + "\033[37m {}" .format('|') + "\033[35m {}" .format(name))
 
 def main():
+	shutil.rmtree('__pycache__')
 	if platform == 'win32':
 		os.system("cls")
 	else:
@@ -222,7 +223,7 @@ def main():
 	''')
 
 	try:
-		ans = input('\033[0m\033[40m\033[35m → \033[32m')
+		ans = input('\033[0m\033[40m\033[35m → \033[36m')
 
 		if ans == '0':
 			if platform == 'win32':
@@ -248,11 +249,11 @@ def main():
 			''')
 			emails = []
 			passwords = []
-			to = str(input('Enter target email: '))
-			amount = int(input('How many send from every address: '))
-			subj = str(input('Enter subject: '))
-			mes = str(input('Enter message: '))
-			server = input('Select emails server - 1:Gmail 2:Yahoo 3:Outlook 4:Yandex: ')
+			to = str(input(Fore.YELLOW + Style.BRIGHT +'Enter target email:\033[36m '))
+			amount = int(input(Fore.YELLOW + Style.BRIGHT +'How many send from every address:\033[36m '))
+			subj = str(input(Fore.YELLOW + Style.BRIGHT +'Enter subject:\033[36m '))
+			mes = str(input(Fore.YELLOW + Style.BRIGHT +'Enter message:\033[36m '))
+			server = input(Fore.YELLOW + Style.BRIGHT +'Select emails server - 1:Gmail 2:Yahoo 3:Outlook 4:Yandex:\033[36m ')
 			ans4 = ""
 			ans5 = ""
 			with open(r"emails.txt", "r", encoding="utf-8") as file:
@@ -299,17 +300,17 @@ def main():
 ║╚═╝║║║║║║╚═╝║
 ╚═══╩╝╚╝╚╩═══╝
 			''')
-			prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no: ").lower()
-			code = input(Fore.YELLOW + Style.BRIGHT + "Target country code: +")
-			number = code + input(Fore.YELLOW + Style.BRIGHT + f"Target number: {code}")
-			tm = int(input(Fore.YELLOW + Style.BRIGHT + "Time attack(in seconds): "))
-			thr = int(input(Fore.YELLOW + Style.BRIGHT + "Number of threads: "))
+			prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no:\033[36m ").lower()
+			code = input(Fore.YELLOW + Style.BRIGHT + "Target country code: \033[36m+")
+			number = code + input(Fore.YELLOW + Style.BRIGHT + f"Target number: \033[36m{code}")
+			tm = int(input(Fore.YELLOW + Style.BRIGHT + "Time attack(in seconds):\033[36m "))
+			thr = int(input(Fore.YELLOW + Style.BRIGHT + "Number of threads:\033[36m "))
 			for i in range(thr):
 				th = Thread(target=sms, args=(prx, number, tm,))
 				th.start()
-				print(str(i + 1) + " thread started!")
+				print(f"\033[35m[\033[36m{str(i + 1)}\033[35m]" + Fore.CYAN + " thread started")
 
-			print(Fore.GREEN + "Attacking...")
+			print(Fore.GREEN + "\nAttacking...")
 			th.join()
 
 			print(Fore.GREEN + '''
@@ -336,13 +337,13 @@ def main():
             ╚══╝
 			''')
 			
-			name = input("Victim name: ")
-			count = int(input("Number of messages: "))
-			msg = input("Message: ")
+			name = input(Fore.YELLOW + Style.BRIGHT + "Victim name:\033[36m ")
+			count = int(input(Fore.YELLOW + Style.BRIGHT + "Number of messages:\033[36m "))
+			msg = input(Fore.YELLOW + Style.BRIGHT + "Message:\033[36m ")
 			cn = 0
 			print("")
-			print("YOU HAVE 35 SECONDS TO LOG IN!")
-			input("Press Enter to start")
+			print(Fore.YELLOW + Style.BRIGHT + "YOU HAVE 35 SECONDS TO LOG IN!")
+			input(Fore.YELLOW + Style.BRIGHT + "Press Enter to start")
 			telega(name, count, msg, cn)
 			print(Fore.GREEN + '''
 ===============================
@@ -365,15 +366,15 @@ def main():
 ╔╝╚╝║╚╝║╚═╝║
 ╚═══╩══╩═══╝
 				''')
-			prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no: ").lower()
-			url = input("URL: ")
-			tm = int(input("Attack time in seconds: "))
-			threads = int(input("Threads: "))
+			prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no:\033[36m ").lower()
+			url = input(Fore.YELLOW + Style.BRIGHT + "URL:\033[36m ")
+			tm = int(input(Fore.YELLOW + Style.BRIGHT + "Attack time in seconds:\033[36m "))
+			threads = int(input(Fore.YELLOW + Style.BRIGHT + "Threads:\033[36m "))
 
 			for i in range(threads):
 				th = threading.Thread(target=dos, args=(url, tm, prx,))
 				th.start()
-				print(str(i + 1) + " thread started!")
+				print(f"\033[35m[\033[36m{str(i + 1)}\033[35m]" + Fore.CYAN + " thread started")
 
 			th.join()
 			time.sleep(4)
@@ -407,14 +408,14 @@ def main():
                     ║║ ║║
                     ╚╝ ╚╝
 			''')
-			name = input("Victim name: ")
-			count = int(input("Number of messages: "))
-			msg = input("Message: ")
+			name = input(Fore.YELLOW + Style.BRIGHT + "Victim name:\033[36m ")
+			count = int(input(Fore.YELLOW + Style.BRIGHT + "Number of messages:\033[36m "))
+			msg = input(Fore.YELLOW + Style.BRIGHT + "Message:\033[36m ")
 			cn=0
 
 			print("")
-			print("YOU HAVE 15 SECONDS TO LOG IN!")
-			input("Press Enter to start")
+			print(Fore.YELLOW + Style.BRIGHT + "YOU HAVE 15 SECONDS TO LOG IN!")
+			input(Fore.YELLOW + Style.BRIGHT + "Press Enter to start")
 			whatsapp(name, count, msg, cn)
 			print("")
 			print(Fore.GREEN + '''
@@ -438,13 +439,13 @@ def main():
 ╔╝╚╝║╠══║╚═╣╚╝║║║╚╝║
 ╚═══╩╩══╩══╩══╩╝╚══╝
 			''')
-			prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no: ").lower()
-			idd = input("Target ID: ")
-			tkn = input("Account token: ")
-			cnt = int(input("Number of messages: "))
-			msg = input("Message: ")
+			prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no:\033[36m ").lower()
+			idd = input(Fore.YELLOW + Style.BRIGHT + "Target ID:\033[36m ")
+			tkn = input(Fore.YELLOW + Style.BRIGHT + "Account token:\033[36m ")
+			cnt = int(input(Fore.YELLOW + Style.BRIGHT + "Number of messages:\033[36m "))
+			msg = input(Fore.YELLOW + Style.BRIGHT + "Message:\033[36m ")
 			print("")
-			input("Press Enter to start")
+			input(Fore.YELLOW + Style.BRIGHT + "Press Enter to start")
 			discord(tkn, idd, msg, cnt, prx)
 			print("")
 			print(Fore.GREEN + '''
