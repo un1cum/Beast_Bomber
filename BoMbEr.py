@@ -194,7 +194,6 @@ def whatsapp(name, count, msg, cn):
 			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED') + "\033[37m {}" .format('|') + "\033[36m {}" .format(cn) + "\033[37m {}" .format('|') + "\033[35m {}" .format(name))
 
 def main():
-	shutil.rmtree('__pycache__')
 	if platform == 'win32':
 		os.system("cls")
 	else:
