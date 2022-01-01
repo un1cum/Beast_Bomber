@@ -45,6 +45,12 @@ To use Discord spammer, you need a preferably empty account that is on the same 
 * Threads - 40
 * Attack time - 30 seconds
 
+# 📌 Email spammer
+
+For the email spammer, you need to specify an email and password(email:password) in the emails.txt file. You can specify more than one (each email:password on a new line) to spam from multiple addresses at once.
+
+![wtf5](https://i.ibb.co/kcsqN5T/Screenshot-4.png "email") 
+
 # 📌 Problems and their solutions
 
 If you see something like this:
@@ -106,6 +112,12 @@ This means that you don't have the library that is specified in the error, in th
 
 * Потоки - 40
 * Время атаки - 30 секунд
+
+# 📌 Email спамер
+
+Для спамера электронной почты необходимо указать email и пароль(email:пароль) в файле emails.txt. Можно указать несколько (каждый email:пароль в новой строке), чтобы спамить сразу с нескольких адресов.
+
+![wtf5](https://i.ibb.co/kcsqN5T/Screenshot-4.png "email") 
 
 # 📌 Проблемы и их решения
 
