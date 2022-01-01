@@ -68,8 +68,7 @@ This means that you don't have the library that is specified in the error, in th
 [![wtf2](https://i.ibb.co/ryDytyR/Comp-1-00000.png)](https://qiwi.com/n/HERAMANT)
 
 `Crypto:`
-* **Bitcoin - 36HawtyF7yFVjhjwMdnoozeLLEBjPyMpit**
-* **Ethereum - 0x5d27523e0D66ffB54e23E539c13b9Ac7A8720bFB**
+* **Payeer: P1063409412**
 
 # 📌 RU
 
@@ -136,5 +135,4 @@ This means that you don't have the library that is specified in the error, in th
 [![wtf2](https://i.ibb.co/ryDytyR/Comp-1-00000.png)](https://qiwi.com/n/HERAMANT)
 
 `Крипта:`
-* **Bitcoin - 36HawtyF7yFVjhjwMdnoozeLLEBjPyMpit**
-* **Ethereum - 0x5d27523e0D66ffB54e23E539c13b9Ac7A8720bFB**
+* **Payeer: P1063409412**
