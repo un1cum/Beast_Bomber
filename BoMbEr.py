@@ -122,7 +122,7 @@ def ex():
 			'''))
 		print("Press Enter to exit")
 		input()
-		sys.exit()
+		os.abort()
 	elif param == 'no':
 		main()
 
