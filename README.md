@@ -69,9 +69,9 @@ This means that you don't have the library that is specified in the error, in th
 
 `Crypto:`
 * **Payeer: P1063409412**
-* **smart chain: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
-* **bitcoin: bc1qxfvstf99kyuc5x5uugxtsh3m6w3a73ruzfav7e**
-* **ethereum: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
+* **Smart chain: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
+* **Bitcoin: bc1qxfvstf99kyuc5x5uugxtsh3m6w3a73ruzfav7e**
+* **Ethereum: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
 
 # 📌 RU
 
@@ -139,6 +139,6 @@ This means that you don't have the library that is specified in the error, in th
 
 `Крипта:`
 * **Payeer: P1063409412**
-* **smart chain: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
-* **bitcoin: bc1qxfvstf99kyuc5x5uugxtsh3m6w3a73ruzfav7e**
-* **ethereum: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
+* **Smart chain: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
+* **Bitcoin: bc1qxfvstf99kyuc5x5uugxtsh3m6w3a73ruzfav7e**
+* **Ethereum: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
