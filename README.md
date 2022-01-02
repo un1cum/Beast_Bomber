@@ -40,7 +40,7 @@ To use Discord spammer, you need a preferably empty account that is on the same 
 
 **Test results from https://dstat.cc**
 
-![wtf5](https://i.ibb.co/9GMkDGP/Screenshot-1.png "DoS") 
+[![wtf5](https://i.ibb.co/9GMkDGP/Screenshot-1.png "DoS")](https://dstat.cc)
 
 * Threads - 40
 * Attack time - 30 seconds
@@ -110,7 +110,7 @@ This means that you don't have the library that is specified in the error, in th
 
 **Результаты тестов на https://dstat.cc**
 
-![wtf5](https://i.ibb.co/9GMkDGP/Screenshot-1.png "DoS") 
+[![wtf5](https://i.ibb.co/9GMkDGP/Screenshot-1.png "DoS")](https://dstat.cc)
 
 * Потоки - 40
 * Время атаки - 30 секунд
