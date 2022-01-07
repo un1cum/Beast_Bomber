@@ -5,6 +5,8 @@
 
 # 📌 EN
 
+**BoMbEr has his own Telegram bot!!! You can try it out right now: https://t.me/ebankoff_BoMbEr_bot**
+
 `Possibilities`
 * SMS spammer(works better with proxy)
 * Email spammer
@@ -74,6 +76,8 @@ This means that you don't have the library that is specified in the error, in th
 * **Ethereum: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
 
 # 📌 RU
+
+У BoMbEr появился свой Telegram бот!!! Вы можете опробовать его уже прямо сейчас: https://t.me/ebankoff_BoMbEr_bot
 
 `Возможности`
 * SMS спаммер(работает лучше с proxy)
