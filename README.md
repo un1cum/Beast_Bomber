@@ -32,6 +32,10 @@
 * cd BoMbEr
 * python3 BoMbEr.py
 
+# 📌 SMS spammer
+
+There is a new feature in the SMS spammer. Now you can attack multiple numbers at once! To do this you need to add numbers to the "numbers.txt" file
+
 # 📌 Discord spammer
 
 To use Discord spammer, you need a preferably empty account that is on the same server as the person you want to spam to. Also, the account must have 2FA turned off. To find the account token, you need to open the developer's tools and in the network tab to find "science" and copy the token in it, here is a screenshot:
@@ -103,6 +107,10 @@ This means that you don't have the library that is specified in the error, in th
 `Запуск`
 * cd BoMbEr
 * python3 BoMbEr.py
+
+# 📌 SMS спаммер
+
+В смс спамере появилась новая функция. Теперь вы можете атаковать несколько номеров одновременно! Для этого вам нужно добавить номера в файл "numbers.txt"
 
 # 📌 Discord спаммер
 
