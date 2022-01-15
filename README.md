@@ -6,6 +6,7 @@
 # 📌 EN
 
 ⚠️ **BoMbEr has his own Telegram bot!!! You can try it out right now: https://t.me/ebankoff_BoMbEr_bot** ⚠️
+
 ⚠️ **BoMbEr has his own discord bot! Invite link: https://discord.com/api/oauth2/authorize?client_id=931934489641361408&permissions=414568669120&scope=bot%20applications.commands** ⚠️
 
 `Possibilities`
