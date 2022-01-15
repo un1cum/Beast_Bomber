@@ -7,7 +7,7 @@
 
 ⚠️ **BoMbEr has his own Telegram bot!!! You can try it out right now: https://t.me/ebankoff_BoMbEr_bot** ⚠️
 
-⚠️ **BoMbEr has his own discord bot! Invite link: https://discord.com/api/oauth2/authorize?client_id=931934489641361408&permissions=414568669120&scope=bot%20applications.commands** ⚠️
+⚠️ **BoMbEr has his own discord bot!!! Invite link: https://discord.com/api/oauth2/authorize?client_id=931934489641361408&permissions=414568669120&scope=bot%20applications.commands** ⚠️
 
 `Possibilities`
 * SMS spammer(works better with proxy)
@@ -84,7 +84,8 @@ This means that you don't have the library that is specified in the error, in th
 # 📌 RU
 
 ⚠️ **У BoMbEr появился свой Telegram бот!!! Вы можете опробовать его уже прямо сейчас: https://t.me/ebankoff_BoMbEr_bot** ⚠️
-⚠️ **У BoMbEr появился свой discord бот! Инвайт ссылка: https://discord.com/api/oauth2/authorize?client_id=931934489641361408&permissions=414568669120&scope=bot%20applications.commands** ⚠️
+
+⚠️ **У BoMbEr появился свой discord бот!!! Инвайт ссылка: https://discord.com/api/oauth2/authorize?client_id=931934489641361408&permissions=414568669120&scope=bot%20applications.commands** ⚠️
 
 `Возможности`
 * SMS спаммер(работает лучше с proxy)
