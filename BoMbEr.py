@@ -28,27 +28,35 @@ import random
 import shutil
 import socket
 import ctypes
+import fnmatch
 import smtplib
 import os.path
 import asyncio
+import platform
 import requests
 import colorama
 import datetime
 import threading
 import user_agent
 import progressbar
+#======================#
+sys.path.append('Core')
+#======================#
 from sms import sms
-from dos import dos
+from dos1 import dos
 from time import sleep
 from threading import *
+from email1 import email
 from sys import platform
+from telega import telega
 from asyncio import sleep
 from getpass import getpass
 from os import name, system
-from discord import discord
+from discord1 import discord
 from progress.bar import Bar
 from threading import Thread
 from functools import reduce
+from whatsapp import whatsapp
 from bs4 import BeautifulSoup
 from requests import get, post
 from selenium import webdriver
@@ -130,95 +138,34 @@ def ex():
 		print('ERROR: invalid value')
 		ex()
 
-def email(emails, passwords, to, amount, subj, mes, server):
-	if server == '1':
-		server = smtplib.SMTP('smtp.gmail.com', 587)
-		server.starttls()
-	elif server == '2':
-		server = smtplib.SMTP('smtp.mail.yahoo.com', 465)
-		server.starttls()
-	elif server == '3':
-		server = smtplib.SMTP('smtp-mail.outlook.com', 587)
-		server.starttls()
-	elif server == '4':
-		server = smtplib.SMTP('smtp.yandex.ru', 465)
-		server.starttls()
-	
-	server.login(emails, passwords)
-
-	for i in range(amount):
-		server.sendmail(emails, to, subj, mes)
-
-def telega(name, count, msg, cn):
-	try:
-		driver = webdriver.Chrome(ChromeDriverManager().install()) 
-		driver.get("https://web.telegram.org/k")
-		time.sleep(35)
-		search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
-		search.send_keys(name, Keys.RETURN)
-		time.sleep(8)
-		search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
-		driver.implicitly_wait(10)
-		ActionChains(driver).move_to_element(search2).click(search2).perform()
-		time.sleep(15)
-		msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
-
-		for i in range(count):
-			msgBox.send_keys(msg, Keys.RETURN)
-			cn+=1
-			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'ATTACK') + "\033[37m {}" .format('|') + "\033[36m {}" .format(cn) + "\033[37m {}" .format('|') + "\033[35m {}" .format(name))
-
-		print("\033[32m {}" .format("Successful!"))
-		print(f"{cn} messages were sent to {name}")
-		ex()
-	except:
-		print("\033[31m{}" .format('ERROR!'))
-		ex()
-
-def whatsapp(name, count, msg, cn):
-	driver = webdriver.Chrome(ChromeDriverManager().install()) 
-	driver.get("https://web.whatsapp.com")
-	time.sleep(15)
-	search = driver.find_element(By.XPATH, "//*[@id='side']/div[1]/div/label/div/div[2]")
-	search.send_keys(name, Keys.RETURN)
-	time.sleep(15)
-	msgBox = driver.find_element(By.XPATH,"//*[@id='main']/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]")
-
-	for i in range(count):
-		try:
-			msgBox.send_keys(msg, Keys.RETURN)
-			cn+=1
-			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[36m {}" .format(cn) + "\033[37m {}" .format('|') + "\033[35m {}" .format(name))
-		except:
-			cn+=1
-			print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED') + "\033[37m {}" .format('|') + "\033[36m {}" .format(cn) + "\033[37m {}" .format('|') + "\033[35m {}" .format(name))
-
 def main():
 	if platform == 'win32':
 		os.system("cls")
 	else:
 		os.system("clear")
 
-	print(Fore.YELLOW + Style.BRIGHT + '''╔══╗   ╔═╗╔═╦╗ ╔═══╗
-║╔╗║   ║ ╚╝ ║║ ║╔══╝
-║╚╝╚╦══╣╔╗╔╗║╚═╣╚══╦═╗
-║╔═╗║╔╗║║║║║║╔╗║╔══╣╔╝
-║╚═╝║╚╝║║║║║║╚╝║╚══╣║
-╚═══╩══╩╝╚╝╚╩══╩═══╩╝
+	print(Fore.YELLOW + Style.BRIGHT + '''┏━━┓   ┏━┓┏━┳┓ ┏━━━┓
+┃┏┓┃   ┃ ┗┛ ┃┃ ┃┏━━┛
+┃┗┛┗┳━━┫┏┓┏┓┃┗━┫┗━━┳━┓
+┃┏━┓┃┏┓┃┃┃┃┃┃┏┓┃┏━━┫┏┛
+┃┗━┛┃┗┛┃┃┃┃┃┃┗┛┃┗━━┫┃
+┗━━━┻━━┻┛┗┛┗┻━━┻━━━┻┛
 		''')
 	print("\033[0m" + Fore.CYAN + "================================================")
 	print(Fore.YELLOW + "Created by Eban'ko - https://github.com/ebankoff")
+	print(Fore.YELLOW + f"OS: {platform}")
 	print(Fore.CYAN + "================================================")
 
 	print('''
 \033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m0\033[0m\033[40m\033[35m]\033[31m Exit
-\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m1\033[0m\033[40m\033[35m] Email bomber
-\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m2\033[0m\033[40m\033[35m] SMS bomber
-\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m3\033[0m\033[40m\033[35m] Telegram bomber
-\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m4\033[0m\033[40m\033[35m] DoS bomber
-\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m5\033[0m\033[40m\033[35m] WhatsApp bomber
-\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m6\033[0m\033[40m\033[35m] Discord bomber
+\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m1\033[0m\033[40m\033[35m]\033[33m Email bomber
+\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m2\033[0m\033[40m\033[35m]\033[33m SMS bomber
+\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m3\033[0m\033[40m\033[35m]\033[33m Telegram bomber
+\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m4\033[0m\033[40m\033[35m]\033[33m DoS bomber
+\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m5\033[0m\033[40m\033[35m]\033[33m WhatsApp bomber
+\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m6\033[0m\033[40m\033[35m]\033[33m Discord bomber
 \033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m7\033[0m\033[40m\033[35m]\033[36m Clear program cache
+\033[0m\033[40m\033[35m[\033[0m\033[40m\033[32m8\033[0m\033[40m\033[35m]\033[31m ♥ \033[36mDonate \033[31m♥
 	''')
 
 	try:
@@ -239,12 +186,12 @@ def main():
 			else:
 				os.system("clear")
 			print(Fore.YELLOW + Style.BRIGHT +'''
-╔═══╦═╗╔═╦═══╦══╦╗
-║╔══╣ ╚╝ ║╔═╗╠╣╠╣║
-║╚══╣╔╗╔╗║║ ║║║║║║
-║╔══╣║║║║║╚═╝║║║║║ ╔╗
-║╚══╣║║║║║╔═╗╠╣╠╣╚═╝║
-╚═══╩╝╚╝╚╩╝ ╚╩══╩═══╝
+┏━━━┓      ┏┓
+┃┏━━┛      ┃┃
+┃┗━━┳┓┏┳━━┳┫┃
+┃┏━━┫┗┛┃┏┓┣┫┃
+┃┗━━┫┃┃┃┏┓┃┃┗┓
+┗━━━┻┻┻┻┛┗┻┻━┛
 			''')
 			emails = []
 			passwords = []
@@ -291,49 +238,81 @@ def main():
 				os.system("cls")
 			else:
 				os.system("clear")
+
 			print(Fore.YELLOW + Style.BRIGHT +'''
-╔═══╦═╗╔═╦═══╗
-║╔═╗║ ╚╝ ║╔═╗║
-║╚══╣╔╗╔╗║╚══╗
-╚══╗║║║║║╠══╗║
-║╚═╝║║║║║║╚═╝║
-╚═══╩╝╚╝╚╩═══╝
+┏━━━┳━┓┏━┳━━━┓
+┃┏━┓┃ ┗┛ ┃┏━┓┃
+┃┗━━┫┏┓┏┓┃┗━━┓
+┗━━┓┃┃┃┃┃┣━━┓┃
+┃┗━┛┃┃┃┃┃┃┗━┛┃
+┗━━━┻┛┗┛┗┻━━━┛
 			''')
-			prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no:\033[36m ").lower()
-			code = input(Fore.YELLOW + Style.BRIGHT + "Target country code: \033[36m+")
-			number = code + input(Fore.YELLOW + Style.BRIGHT + f"Target number: \033[36m{code}")
-			tm = int(input(Fore.YELLOW + Style.BRIGHT + "Time attack(in seconds):\033[36m "))
-			thr = int(input(Fore.YELLOW + Style.BRIGHT + "Number of threads:\033[36m "))
-			for i in range(thr):
-				th = Thread(target=sms, args=(prx, number, tm,))
-				th.start()
-				print(f"\033[35m[\033[36m{str(i + 1)}\033[35m]" + Fore.CYAN + " thread started")
+			ans = input('Attack one phone(1) or more(2)? 1/2: ')
+			if ans == '1':
+				prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no:\033[36m ").lower()
+				code = input(Fore.YELLOW + Style.BRIGHT + "Target country code: \033[36m+")
+				number = code + input(Fore.YELLOW + Style.BRIGHT + f"Target number: \033[36m{code}")
+				tm = int(input(Fore.YELLOW + Style.BRIGHT + "Time attack(in seconds):\033[36m "))
+				thr = int(input(Fore.YELLOW + Style.BRIGHT + "Number of threads:\033[36m "))
+				for i in range(thr):
+					th = Thread(target=sms, args=(prx, number, tm, code,))
+					th.start()
+					print(f"\033[35m[\033[36m{str(i + 1)}\033[35m]" + Fore.CYAN + " thread started")
 
-			print(Fore.GREEN + "\nAttacking...")
-			th.join()
+				print(Fore.GREEN + "\nAttacking...")
+				time.sleep(tm+10)
 
-			print(Fore.GREEN + '''
+				print(Fore.GREEN + '''
 ===============================
             SUCCESS
 ===============================
-			''')
+				''')
+
+			elif ans == '2':
+				numbers = []
+				with open("numbers.txt", "r", encoding="utf-8") as file:
+					for line in file:
+						numbers.append(line)
+				numbers = [line.rstrip() for line in numbers]
+				print(f'Found {len(numbers)} numbers')
+				prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no:\033[36m ").lower()
+				tm = int(input(Fore.YELLOW + Style.BRIGHT + "Time attack(in seconds):\033[36m "))
+				thr = int(input(Fore.YELLOW + Style.BRIGHT + "Number of threads:\033[36m "))
+				for y in range(len(numbers)):
+					for i in range(thr):
+						th = Thread(target=sms, args=(prx, number, tm, code,))
+						th.start()
+						print(f"\033[35m[\033[36m{str(i + 1)}\033[35m]" + Fore.CYAN + f" thread for the number {numbers[y]} is running")
+
+				print(Fore.GREEN + "\nAttacking...")
+				time.sleep(tm+10)
+
+				print(Fore.GREEN + '''
+===============================
+            SUCCESS
+===============================
+				''')
+
+			else:
+				print(Fore.RED + '\nERROR!')
+
 			ex()
 
 		elif ans == '3':
 			if platform == 'win32':
 				os.system("cls")
-
 			else:
 				os.system("clear")
+
 			print(Fore.YELLOW + Style.BRIGHT +'''
-╔════╗ ╔╗
-║╔╗╔╗║ ║║
-╚╝║║╠╩═╣║╔══╦══╦═╦══╦╗╔╗
-  ║║║ ═╣║║ ═╣╔╗║╔╣╔╗║╚╝║
-  ║║║ ═╣╚╣ ═╣╚╝║║║╔╗║║║║
-  ╚╝╚══╩═╩══╩═╗╠╝╚╝╚╩╩╩╝
-            ╔═╝║
-            ╚══╝
+┏━━━━┓ ┏┓
+┃┏┓┏┓┃ ┃┃
+┗┛┃┃┣┻━┫┃┏━━┳━━┳━┳━━┳┓┏┓
+  ┃┃┃ ━┫┃┃ ━┫┏┓┃┏┫┏┓┃┗┛┃
+  ┃┃┃ ━┫┗┫ ━┫┗┛┃┃┃┏┓┃┃┃┃
+  ┗┛┗━━┻━┻━━┻━┓┣┛┗┛┗┻┻┻┛
+            ┏━┛┃
+            ┗━━┛
 			''')
 			
 			name = input(Fore.YELLOW + Style.BRIGHT + "Victim name:\033[36m ")
@@ -354,16 +333,16 @@ def main():
 		elif ans == '4':
 			if platform == 'win32':
 				os.system("cls")
-
 			else:
 				os.system("clear")
+
 			print(Fore.YELLOW + Style.BRIGHT + '''
-╔═══╗  ╔═══╗
-╚╗╔╗║  ║╔═╗║
- ║║║╠══╣╚══╗
- ║║║║╔╗╠══╗║
-╔╝╚╝║╚╝║╚═╝║
-╚═══╩══╩═══╝
+┏━━━┓  ┏━━━┓
+┗┓┏┓┃  ┃┏━┓┃
+ ┃┃┃┣━━┫┗━━┓
+ ┃┃┃┃┏┓┣━━┓┃
+┏┛┗┛┃┗┛┃┗━┛┃
+┗━━━┻━━┻━━━┛
 				''')
 			prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no:\033[36m ").lower()
 			url = input(Fore.YELLOW + Style.BRIGHT + "URL:\033[36m ")
@@ -380,7 +359,6 @@ def main():
 
 			if platform == 'win32':
 				os.system("cls")
-
 			else:
 				os.system("clear")
 
@@ -394,18 +372,18 @@ def main():
 		elif ans == '5':
 			if platform == 'win32':
 				os.system("cls")
-
 			else:
 				os.system("clear")
+
 			print(Fore.YELLOW + Style.BRIGHT +'''
-╔╗╔╗╔╦╗    ╔╗   ╔═══╗
-║║║║║║║   ╔╝╚╗  ║╔═╗║
-║║║║║║╚═╦═╩╗╔╬══╣║ ║╠══╦══╗
-║╚╝╚╝║╔╗║╔╗║║║══╣╚═╝║╔╗║╔╗║
-╚╗╔╗╔╣║║║╔╗║╚╬══║╔═╗║╚╝║╚╝║
- ╚╝╚╝╚╝╚╩╝╚╩═╩══╩╝ ╚╣╔═╣╔═╝
-                    ║║ ║║
-                    ╚╝ ╚╝
+┏┓┏┓┏┳┓    ┏┓   ┏━━━┓
+┃┃┃┃┃┃┃   ┏┛┗┓  ┃┏━┓┃
+┃┃┃┃┃┃┗━┳━┻┓┏╋━━┫┃ ┃┣━━┳━━┓
+┃┗┛┗┛┃┏┓┃┏┓┃┃┃━━┫┗━┛┃┏┓┃┏┓┃
+┗┓┏┓┏┫┃┃┃┏┓┃┗╋━━┃┏━┓┃┗┛┃┗┛┃
+ ┗┛┗┛┗┛┗┻┛┗┻━┻━━┻┛ ┗┫┏━┫┏━┛
+                    ┃┃ ┃┃
+                    ┗┛ ┗┛
 			''')
 			name = input(Fore.YELLOW + Style.BRIGHT + "Victim name:\033[36m ")
 			count = int(input(Fore.YELLOW + Style.BRIGHT + "Number of messages:\033[36m "))
@@ -427,16 +405,16 @@ def main():
 		elif ans == '6':
 			if platform == 'win32':
 				os.system("cls")
-
 			else:
 				os.system("clear")
+
 			print(Fore.YELLOW + Style.BRIGHT +'''
-╔═══╗             ╔╗
-╚╗╔╗║             ║║
- ║║║╠╦══╦══╦══╦═╦═╝║
- ║║║╠╣══╣╔═╣╔╗║╔╣╔╗║
-╔╝╚╝║╠══║╚═╣╚╝║║║╚╝║
-╚═══╩╩══╩══╩══╩╝╚══╝
+┏━━━┓             ┏┓
+┗┓┏┓┃             ┃┃
+ ┃┃┃┣┳━━┳━━┳━━┳━┳━┛┃
+ ┃┃┃┣┫━━┫┏━┫┏┓┃┏┫┏┓┃
+┏┛┗┛┃┣━━┃┗━┫┗┛┃┃┃┗┛┃
+┗━━━┻┻━━┻━━┻━━┻┛┗━━┛
 			''')
 			prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no:\033[36m ").lower()
 			idd = input(Fore.YELLOW + Style.BRIGHT + "Target ID:\033[36m ")
@@ -455,16 +433,33 @@ def main():
 			ex()
 
 		elif ans == '7':
-			shutil.rmtree('__pycache__')
-			print("SUCCESS!")
+			try:
+				shutil.rmtree('Core/__pycache__')
+				print("SUCCESS!")
+			except:
+				print('The program cache is already empty')
+			ex()
+
+		elif ans == '8':
+			if platform == 'win32':
+				os.system("cls")
+			else:
+				os.system("clear")
+			print(Fore.YELLOW + "===========================================================")
+			print(Fore.CYAN + """Payeer: P1063409412
+Qiwi: https://qiwi.com/n/HERAMANT
+Smart chain: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1
+Bitcoin: bc1qxfvstf99kyuc5x5uugxtsh3m6w3a73ruzfav7e
+Ethereum: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1""")
+			print(Fore.YELLOW + "===========================================================\n")
 			ex()
 
 		else:
-			print(Fore.RED + 'ERROR!')
+			print(Fore.RED + '\nERROR!')
 			ex()
 
 	except:
-		print(Fore.RED + 'ERROR!')
+		print(Fore.RED + '\nERROR!')
 		ex()
 
 if __name__=='__main__':
