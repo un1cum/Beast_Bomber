@@ -16,7 +16,7 @@
 * DoS attack (NOT DDoS!)
 
 `Updated`
-* SMS spammer - added new services!
+* SMS spammer - **added new services!**
 * Email spammer
 * Discord spammer
 * DoS attack
@@ -92,7 +92,7 @@ This means that you don't have the library that is specified in the error, in th
 * DoS аттака (заметьте, не DDoS!)
 
 `Обновлено`
-* SMS спаммер - добавлены новые сервисы!
+* SMS спаммер - **добавлены новые сервисы!**
 * Email спаммер
 * DoS аттака
 * Discord спаммер
