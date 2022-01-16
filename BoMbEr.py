@@ -247,7 +247,7 @@ def main():
 ┃┗━┛┃┃┃┃┃┃┗━┛┃
 ┗━━━┻┛┗┛┗┻━━━┛
 			''')
-			ans = input('Attack one phone(1) or more(2)? 1/2: ')
+			ans = input(Fore.YELLOW + Style.BRIGHT + 'Attack one phone(1) or more(2)? 1/2:\033[36m ')
 			if ans == '1':
 				prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no:\033[36m ").lower()
 				code = input(Fore.YELLOW + Style.BRIGHT + "Target country code: \033[36m+")
