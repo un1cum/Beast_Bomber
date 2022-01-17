@@ -6,7 +6,6 @@ requests
 progress
 colorama
 selenium
-functools
 user_agent
 about-time
 progressbar
