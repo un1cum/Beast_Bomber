@@ -30,22 +30,25 @@ from os.path import exists, isfile
 
 if platform == 'win32':
 	ctypes.windll.kernel32.SetConsoleTitleW("Preparing to launch the program...")
-	
-os.system('pip install configparser')
-import configparser
-ans = ""
-config_path = os.path.join(sys.path[0], r'core/settings.ini')
-config = configparser.ConfigParser()
-config.read(config_path)
-ans = config.get('settings', 'value')
-if ans != 'Configured':
-	try:
-		os.system('pip install bs4 && pip install emoji && pip install wheel && pip install asyncio && pip install requests && pip install progress && pip install colorama && pip install selenium && pip install user_agent && pip install about-time && pip install progressbar && pip install beautifulsoup4 && pip install selenium_stealth && pip install webdriver-manager')
-		config['settings']['value'] = 'Configured'
-		with open(r'core/settings.ini', 'w') as configfile:
-			config.write(configfile)
-	except:
-		pass
+
+try:
+	os.system('pip install configparser')
+	import configparser
+	ans = ""
+	config_path = os.path.join(sys.path[0], r'core/settings.ini')
+	config = configparser.ConfigParser()
+	config.read(config_path)
+	ans = config.get('settings', 'value')
+	if ans != 'Configured':
+		try:
+			os.system('pip install bs4 && pip install emoji && pip install wheel && pip install asyncio && pip install requests && pip install progress && pip install colorama && pip install selenium && pip install user_agent && pip install about-time && pip install progressbar && pip install beautifulsoup4 && pip install selenium_stealth && pip install webdriver-manager')
+			config['settings']['value'] = 'Configured'
+			with open(r'core/settings.ini', 'w') as configfile:
+				config.write(configfile)
+		except:
+			pass
+except:
+	pass
 
 if platform == 'win32':
 	os.system("cls")
