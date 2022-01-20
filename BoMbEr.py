@@ -21,25 +21,52 @@
 
 import os
 import sys
+import ctypes
+import os.path
+import platform
+from sys import platform
+from os import name, system
+from os.path import exists, isfile
+
+if platform == 'win32':
+	ctypes.windll.kernel32.SetConsoleTitleW("Preparing to launch the program...")
+	
+os.system('pip install configparser')
+import configparser
+ans = ""
+config_path = os.path.join(sys.path[0], 'core/settings.ini')
+config = configparser.ConfigParser()
+config.read(config_path)
+ans = config.get('settings', 'value')
+if ans != 'Configured':
+	try:
+		os.system('pip install bs4 && pip install emoji && pip install wheel && pip install asyncio && pip install requests && pip install progress && pip install colorama && pip install selenium && pip install user_agent && pip install about-time && pip install progressbar && pip install beautifulsoup4 && pip install selenium_stealth && pip install webdriver-manager')
+		config['settings']['value'] = 'Configured'
+		with open('core/settings.ini', 'w') as configfile:
+			config.write(configfile)
+	except:
+		pass
+
+if platform == 'win32':
+	os.system("cls")
+else:
+	os.system("clear")
+
 import time
 import json
 import emoji
 import random
 import shutil
 import socket
-import ctypes
 import fnmatch
 import smtplib
-import os.path
 import asyncio
-import platform
 import requests
 import colorama
 import datetime
 import threading
 import user_agent
 import progressbar
-import configparser
 #======================#
 sys.path.append('Core')
 #======================#
@@ -48,12 +75,10 @@ from dos1 import dos
 from time import sleep
 from threading import *
 from email1 import email
-from sys import platform
 from telega import telega
 from asyncio import sleep
 from freeprx import freeprx
 from getpass import getpass
-from os import name, system
 from discord1 import discord
 from progress.bar import Bar
 from threading import Thread
@@ -62,7 +87,6 @@ from whatsapp import whatsapp
 from bs4 import BeautifulSoup
 from requests import get, post
 from selenium import webdriver
-from os.path import exists, isfile
 from random import choice, randint
 from bs4 import BeautifulSoup as bs
 from selenium_stealth import stealth
@@ -571,25 +595,6 @@ def main():
 		ex()
 
 if __name__=='__main__':
-	if platform == 'win32':
-		ctypes.windll.kernel32.SetConsoleTitleW("Preparing to launch the program...")
-	ans = ""
-	config_path = os.path.join(sys.path[0], 'core/settings.ini')
-	config = configparser.ConfigParser()
-	config.read(config_path)
-	ans = config.get('settings', 'value')
-	if ans != 'Configured':
-		try:
-			os.system('pip install bs4 && pip install emoji && pip install wheel && pip install asyncio && pip install requests && pip install progress && pip install colorama && pip install selenium && pip install user_agent && pip install about-time && pip install progressbar && pip install beautifulsoup4 && pip install selenium_stealth && pip install webdriver-manager')
-			config['settings']['value'] = 'Configured'
-			with open('core/settings.ini', 'w') as configfile:
-				config.write(configfile)
-		except:
-			pass
-	if platform == 'win32':
-		os.system("cls")
-	else:
-		os.system("clear")
 	if platform == 'win32':
 		ctypes.windll.kernel32.SetConsoleTitleW("BoMbEr💣")
 	pb()
