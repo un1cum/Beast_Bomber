@@ -1,1 +1,1 @@
-user:pass@xx.xx.xx.xx:xx
+user:pass@ip:port or ip:port
