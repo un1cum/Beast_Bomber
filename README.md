@@ -26,7 +26,9 @@
 
 `First setup`
 - You must have support for "less secure apps" set to "turn on" on your Gmail. Here is the link to do so: https://www.google.com/settings/security/lesssecureapps
-- BoMbEr has external dependencies, in order to install them you just need to write: pip install -r requirements.txt(this file comes with BoMbEr)
+- The program will configure everything else on its own. If the automatic setup fails, you can set it up manually. Along with BoMbEr comes a requirements.txt file. This file contains external dependencies. To install them, you need to open cmd/terminal and write: pip install -r requirements.txt 
+
+**The setup is done!**
 
 `Launch`
 * cd BoMbEr
@@ -102,7 +104,9 @@ This means that you don't have the library that is specified in the error, in th
 
 `Первая настройка`
 - У Вас должна быть включена функция "Ненадежные приложения, у которых есть доступ к аккаунту". Её можно включить перейдя по ссылке: https://www.google.com/settings/security/lesssecureapps
-- У BoMbEr есть внешние зависимости, для того, чтобы их установить, вам достаточно написать: pip install -r requirements.txt(этот файл идет с BoMbEr)
+- Все остальное программа настроит самостоятельно. Если автоматическая настройка не удалась, вы можете настроить все вручную. Вместе с BoMbEr идет файл requirements.txt. Этот файл содержит внешние зависимости. Чтобы установить их, нужно открыть cmd/terminal и написать: pip install -r requirements.txt
+
+**Настройка завершена!**
 
 `Запуск`
 * cd BoMbEr
