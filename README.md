@@ -13,7 +13,7 @@
 * WhatsApp spammer
 * Discord spammer
 * Telegram spammer
-* DoS attack (NOT DDoS!)
+* DoS attack
 
 `Updated`
 * SMS spammer
@@ -86,7 +86,7 @@ This means that you don't have the library that is specified in the error, in th
 * WhatsApp спаммер
 * Discord спаммер
 * Telegram спаммер
-* DoS аттака (заметьте, не DDoS!)
+* DoS аттака
 
 `Обновлено`
 * SMS спаммер
