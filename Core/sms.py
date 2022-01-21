@@ -176,7 +176,6 @@ def sms(prx, number, tm, code):
 						"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
 					}
 					requests.get(f"https://oapi.raiffeisen.ru/api/sms-auth/public/v1.0/phone/code?number={number}", headers=header, proxies = proxies)
-					input('OK!')
 				except:
 					pass
 
@@ -964,7 +963,6 @@ def sms(prx, number, tm, code):
 						"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
 					}
 					requests.get(f"https://oapi.raiffeisen.ru/api/sms-auth/public/v1.0/phone/code?number={number}", headers=header)
-					input('OK!')
 				except:
 					pass
 
