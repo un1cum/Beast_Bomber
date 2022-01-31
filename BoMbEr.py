@@ -181,6 +181,12 @@ def ex():
 		ex()
 
 def main():
+	if platform == 'win32':
+		os.system("cls")
+
+	else:
+		os.system("clear")
+
 	print(Fore.CYAN + '''┏━━┓   ┏━┓┏━┳┓ ┏━━━┓
 ┃┏┓┃   ┃ ┗┛ ┃┃ ┃┏━━┛
 ┃┗┛┗┳━━┫┏┓┏┓┃┗━┫┗━━┳━┓
@@ -591,6 +597,8 @@ def main():
 
 		elif ans == '8':
 			try:
+				print(' ')
+				pb()
 				shutil.rmtree('Core/__pycache__')
 				print(Fore.GREEN + '''\n
 ===============================
