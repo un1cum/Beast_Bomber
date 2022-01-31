@@ -181,24 +181,55 @@ def ex():
 		ex()
 
 def main():
+	print(Fore.CYAN + '''┏━━┓   ┏━┓┏━┳┓ ┏━━━┓
+┃┏┓┃   ┃ ┗┛ ┃┃ ┃┏━━┛
+┃┗┛┗┳━━┫┏┓┏┓┃┗━┫┗━━┳━┓
+┃┏━┓┃┏┓┃┃┃┃┃┃┏┓┃┏━━┫┏┛
+┃┗━┛┃┗┛┃┃┃┃┃┃┗┛┃┗━━┫┃
+┗━━━┻━━┻┛┗┛┗┻━━┻━━━┻┛
+		''')
+	time.sleep(.6)
+
 	if platform == 'win32':
 		os.system("cls")
 	else:
 		os.system("clear")
 
-	print(Fore.YELLOW + Style.BRIGHT + '''   ░░░░░░░░░░░░░░░░░  ''')
-	print(Fore.YELLOW + Style.BRIGHT + ''' ░░░░░░░░░░░░░░░░░░░░░''')
-	print(Fore.YELLOW + Style.BRIGHT + '''░└┐░░░░░░\033[31mBoMbEr\033[33m░░░░░┌┘░''')
-	print(Fore.YELLOW + Style.BRIGHT + '''░░└┐░░░░░░░░░░░░░░░┌┘░░''')
-	print(Fore.YELLOW + Style.BRIGHT + '''░░┌┘\033[31m▄▄▄▄▄\033[33m░░░░░\033[31m▄▄▄▄▄\033[33m└┐░░''')
-	print(Fore.YELLOW + Style.BRIGHT + ''' ░│\033[31m██████▌\033[33m░░░\033[31m▐██████\033[33m│░''')
-	print(Fore.YELLOW + Style.BRIGHT + ''' ░│\033[31m▐███▀▀\033[33m░░ ░░\033[31m▀▀███▌\033[33m│░''')
-	print(Fore.YELLOW + Style.BRIGHT + ''' ─┘░░░░░░░   ░░░░░░░└─''')
-	print(Fore.YELLOW + Style.BRIGHT + ''' ░░░▄▄▄ ░░   ░░ ▄▄▄░░░''')
-	print(Fore.YELLOW + Style.BRIGHT + '''   ─┘██▌░░░░░░░▐██└─''')
-	print(Fore.YELLOW + Style.BRIGHT + '''   ░░▐█─┬┬┬┬┬┬┬─█▌░░''')
-	print(Fore.YELLOW + Style.BRIGHT + '''    ░░▀┬┼┼┼┼┼┼┼┬▀░░''')
-	print(Fore.YELLOW + Style.BRIGHT + '''       └┴┴┴┴┴┴┴┘''')
+	print(Fore.RED + '''┏━━┓   ┏━┓┏━┳┓ ┏━━━┓
+┃┏┓┃   ┃ ┗┛ ┃┃ ┃┏━━┛
+┃┗┛┗┳━━┫┏┓┏┓┃┗━┫┗━━┳━┓
+┃┏━┓┃┏┓┃┃┃┃┃┃┏┓┃┏━━┫┏┛
+┃┗━┛┃┗┛┃┃┃┃┃┃┗┛┃┗━━┫┃
+┗━━━┻━━┻┛┗┛┗┻━━┻━━━┻┛
+		''')
+	time.sleep(.6)
+
+	if platform == 'win32':
+		os.system("cls")
+	else:
+		os.system("clear")
+
+	print(Fore.GREEN + '''┏━━┓   ┏━┓┏━┳┓ ┏━━━┓
+┃┏┓┃   ┃ ┗┛ ┃┃ ┃┏━━┛
+┃┗┛┗┳━━┫┏┓┏┓┃┗━┫┗━━┳━┓
+┃┏━┓┃┏┓┃┃┃┃┃┃┏┓┃┏━━┫┏┛
+┃┗━┛┃┗┛┃┃┃┃┃┃┗┛┃┗━━┫┃
+┗━━━┻━━┻┛┗┛┗┻━━┻━━━┻┛
+		''')
+	time.sleep(.6)
+
+	if platform == 'win32':
+		os.system("cls")
+	else:
+		os.system("clear")
+
+	print(Fore.YELLOW + Style.BRIGHT + '''┏━━┓   ┏━┓┏━┳┓ ┏━━━┓
+┃┏┓┃   ┃ ┗┛ ┃┃ ┃┏━━┛
+┃┗┛┗┳━━┫┏┓┏┓┃┗━┫┗━━┳━┓
+┃┏━┓┃┏┓┃┃┃┃┃┃┏┓┃┏━━┫┏┛
+┃┗━┛┃┗┛┃┃┃┃┃┃┗┛┃┗━━┫┃
+┗━━━┻━━┻┛┗┛┗┻━━┻━━━┻┛
+		''')
 		
 	print("\033[0m" + Fore.CYAN + "================================================")
 	print(Fore.YELLOW + "Created by Eban'ko - https://github.com/ebankoff")
