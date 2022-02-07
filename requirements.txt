@@ -2,11 +2,13 @@ bs4
 numpy
 emoji
 wheel
+pandas
 asyncio
 requests
 progress
 colorama
 selenium
+matplotlib
 user_agent
 about-time
 progressbar
