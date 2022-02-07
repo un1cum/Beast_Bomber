@@ -1,4 +1,5 @@
 bs4
+numpy
 emoji
 wheel
 asyncio
