@@ -41,7 +41,7 @@ try:
 	ans = config.get('settings', 'value')
 	if ans != 'Configured':
 		try:
-			os.system('pip install pandas && pip install numpy && pip install bs4 && pip install emoji && pip install wheel && pip install asyncio && pip install requests && pip install progress && pip install colorama && pip install selenium && pip install user_agent && pip install about-time && pip install progressbar && pip install beautifulsoup4 && pip install selenium_stealth && pip install webdriver-manager')
+			os.system('pip install matplotlib && pip install pandas && pip install numpy && pip install bs4 && pip install emoji && pip install wheel && pip install asyncio && pip install requests && pip install progress && pip install colorama && pip install selenium && pip install user_agent && pip install about-time && pip install progressbar && pip install beautifulsoup4 && pip install selenium_stealth && pip install webdriver-manager')
 			config['settings']['value'] = 'Configured'
 			with open(r'core/config.ini', 'w') as configfile:
 				config.write(configfile)
