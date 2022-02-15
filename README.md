@@ -5,7 +5,7 @@
 
 # 📌 EN
 
-⚠️ **BoMbEr has his own Telegram bot!!! You can try it out right now: https://t.me/ebankoff_BoMbEr_bot** ⚠️
+**BoMbEr in Telegram: https://t.me/beast_bomberr_bot**
 
 `Possibilities`
 * SMS spammer(works better with proxy)
@@ -78,7 +78,7 @@ This means that you don't have the library that is specified in the error, in th
 
 # 📌 RU
 
-⚠️ **У BoMbEr появился свой Telegram бот!!! Вы можете опробовать его уже прямо сейчас: https://t.me/ebankoff_BoMbEr_bot** ⚠️
+**BoMbEr в Telegram: https://t.me/beast_bomberr_bot**
 
 `Возможности`
 * SMS спаммер(работает лучше с proxy)
