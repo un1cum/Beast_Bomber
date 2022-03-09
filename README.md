@@ -5,7 +5,7 @@
 
 # 📌 EN
 
-⚠️**Please read the instructions before using BoMbEr to avoid stupid questions!**⚠️
+**⚠️Please read the instructions before using BoMbEr to avoid stupid questions!⚠️**
 
 **BoMbEr in Telegram: https://t.me/beast_bomberr_bot**
 
@@ -80,7 +80,7 @@ This means that you don't have the library that is specified in the error, in th
 
 # 📌 RU
 
-⚠️**Пожалуйста, прочитайте инструкцию перед использованием BoMbEr, чтобы избежать глупых вопросов!**⚠️
+**⚠️Пожалуйста, прочитайте инструкцию перед использованием BoMbEr, чтобы избежать глупых вопросов!⚠️**
 
 **BoMbEr в Telegram: https://t.me/beast_bomberr_bot**
 
