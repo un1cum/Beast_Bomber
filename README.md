@@ -5,7 +5,7 @@
 
 # 📌 EN
 
-**⚠️Please read the instructions before using BoMbEr to avoid stupid questions!⚠️**
+**⚠️Please read the instructions before using BoMbEr to avoid stupid questions⚠️**
 
 **BoMbEr in Telegram: https://t.me/beast_bomberr_bot**
 
