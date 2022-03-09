@@ -5,9 +5,9 @@
 
 # 📌 EN
 
-**BoMbEr in Telegram: https://t.me/beast_bomberr_bot**
-
 ⚠️ **Please read the instructions before using BoMbEr to avoid stupid questions!** ⚠️
+
+**BoMbEr in Telegram: https://t.me/beast_bomberr_bot**
 
 `Possibilities`
 * SMS spammer(works better with proxy)
@@ -80,9 +80,9 @@ This means that you don't have the library that is specified in the error, in th
 
 # 📌 RU
 
-**BoMbEr в Telegram: https://t.me/beast_bomberr_bot**
-
 ⚠️ **Пожалуйста, прочитайте инструкцию перед использованием BoMbEr, чтобы избежать глупых вопросов!** ⚠️
+
+**BoMbEr в Telegram: https://t.me/beast_bomberr_bot**
 
 `Возможности`
 * SMS спаммер(работает лучше с proxy)
