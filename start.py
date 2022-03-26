@@ -115,7 +115,7 @@ def ex():
 		print(Fore.CYAN + 
 		'               Thanks for using Beast bomber!'
 		'\nI would be grateful if you star on this repository on GitHub:'
-		'\n           https://github.com/ebankoff/BeastBomber'
+		'\n           https://github.com/ebankoff/Beast_Bomber'
 		'\n    You can support me by sending any amount to my Qiwi:'	
 		'\n                  qiwi.com/n/HERAMANT'	
 		'\n'
