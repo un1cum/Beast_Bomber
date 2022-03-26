@@ -25,8 +25,8 @@
 **The setup is done!**
 
 `Launch`
-* cd bomber
-* python3 BoMbEr.py
+* cd Beast_Bomber
+* python3 start.py
 
 # 📌 Discord spammer
 
@@ -92,8 +92,8 @@ This means that you don't have the library that is specified in the error, in th
 **Настройка завершена!**
 
 `Запуск`
-* cd bomber
-* python3 BoMbEr.py
+* cd Beast_Bomber
+* python3 start.py
 
 # 📌 Discord спамер
 
