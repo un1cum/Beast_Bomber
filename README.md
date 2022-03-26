@@ -1,13 +1,11 @@
 # [![wtf](https://i.ibb.co/bgZ04WD/Comp-1-00000.png "BoMbEr")](https://github.com/ebankoff) 
-# BoMbEr💥 
+# Beast Bomber💥 
 
 [![Button](https://badgen.net/badge/ebankoff/ebankoff/red?icon=github&label)](https://github.com/ebankoff) [![Button](https://badgen.net/badge/telegram/telegram/yellow?icon=telegram&label)](https://t.me/The_W_T_F) [![Button](https://badgen.net/badge/icon/qiwi/orange?icon=bitcoin&label)](https://qiwi.com/n/HERAMANT) [![Button](https://badgen.net/badge/fork/fork/purple?icon=github&label)](https://github.com/ebankoff/BoMbEr/fork) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20over%20170%20free%20design%20blocks%20based%20on%20Bootstrap%204&url=https://www.froala.com/design-blocks&via=froala&hashtags=bootstrap,design,templates,blocks,developers)
 
 # 📌 EN
 
-**⚠️Please read the instructions before using BoMbEr to avoid stupid questions!⚠️**
-
-**BoMbEr in Telegram: https://t.me/beast_bomberr_bot**
+**Beast Bomber in Telegram: https://t.me/beast_bomberr_bot**
 
 `Possibilities`
 * SMS spammer(works better with proxy)
@@ -15,12 +13,6 @@
 * WhatsApp spammer
 * Discord spammer
 * Telegram spammer
-* DoS attack
-
-`Updated`
-* SMS spammer
-* Email spammer
-* Discord spammer
 * DoS attack
 
 `Installation`
@@ -74,15 +66,13 @@ This means that you don't have the library that is specified in the error, in th
 [![wtf2](https://i.ibb.co/ryDytyR/Comp-1-00000.png)](https://qiwi.com/n/HERAMANT)
 
 `Crypto:`
-* **BNB: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
+* **Smart chain: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
 * **Bitcoin: bc1qxfvstf99kyuc5x5uugxtsh3m6w3a73ruzfav7e**
 * **Ethereum: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
 
 # 📌 RU
 
-**⚠️Прочитайте инструкцию перед использованием BoMbEr, чтобы избежать глупых вопросов!⚠️**
-
-**BoMbEr в Telegram: https://t.me/beast_bomberr_bot**
+**Beast Bomber в Telegram: https://t.me/beast_bomberr_bot**
 
 `Возможности`
 * SMS спаммер(работает лучше с proxy)
@@ -91,12 +81,6 @@ This means that you don't have the library that is specified in the error, in th
 * Discord спаммер
 * Telegram спаммер
 * DoS аттака
-
-`Обновлено`
-* SMS спаммер
-* Email спаммер
-* DoS аттака
-* Discord спаммер
 
 `Установка`
 * git clone https://github.com/ebankoff/BoMbEr
@@ -149,6 +133,6 @@ This means that you don't have the library that is specified in the error, in th
 [![wtf2](https://i.ibb.co/ryDytyR/Comp-1-00000.png)](https://qiwi.com/n/HERAMANT)
 
 `Крипта:`
-* **BNB: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
+* **Smart chain: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
 * **Bitcoin: bc1qxfvstf99kyuc5x5uugxtsh3m6w3a73ruzfav7e**
 * **Ethereum: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
