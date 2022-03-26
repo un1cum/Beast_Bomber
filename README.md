@@ -16,7 +16,7 @@
 * DoS attack
 
 `Installation`
-* git clone https://github.com/ebankoff/BoMbEr
+* git clone https://github.com/ebankoff/Beast_Bomber
 
 `First setup`
 - You must have support for "less secure apps" set to "turn on" on your Gmail. Here is the link to do so: https://www.google.com/settings/security/lesssecureapps
@@ -83,7 +83,7 @@ This means that you don't have the library that is specified in the error, in th
 * DoS аттака
 
 `Установка`
-* git clone https://github.com/ebankoff/BoMbEr
+* git clone https://github.com/ebankoff/Beast_Bomber
 
 `Первая настройка`
 - У Вас должна быть включена функция "Ненадежные приложения, у которых есть доступ к аккаунту". Её можно включить перейдя по ссылке: https://www.google.com/settings/security/lesssecureapps
