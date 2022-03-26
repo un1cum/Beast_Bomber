@@ -122,7 +122,7 @@ This means that you don't have the library that is specified in the error, in th
 
 ![wtf4](https://i.ibb.co/XWNtL0S/Screenshot-1.png "no module named") 
 
-Это озночает, что у вас отсутствует нужная библиотека pip, в этом случае: "_ctypes". Откройте терминал, cmd или что там у вас и пишите:
+Это означает, что у вас отсутствует нужная библиотека pip, в этом случае: "_ctypes". Откройте терминал, cmd или что там у вас и пишите:
 
 * pip install имя отсутствующей библиотеки (пример: pip install _ctypes)
 
