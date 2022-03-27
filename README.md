@@ -75,11 +75,11 @@ This means that you don't have the library that is specified in the error, in th
 **Beast Bomber в Telegram: https://t.me/beast_bomberr_bot**
 
 `Возможности`
-* SMS спаммер(работает лучше с proxy)
-* Email спаммер
-* WhatsApp спаммер
-* Discord спаммер
-* Telegram спаммер
+* SMS спамер(работает лучше с proxy)
+* Email спамер
+* WhatsApp спамер
+* Discord спамер
+* Telegram спамер
 * DoS аттака
 
 `Установка`
