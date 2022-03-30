@@ -9,7 +9,7 @@
 ║  When posting this code on other resources, please indicate the author!         ║
 ║                                                                                 ║
 ║                               All rights reserved.                              ║
-║                           Copyright (C) 2021 ebankoff                           ║
+║                           Copyright (C) 2022 ebankoff                           ║
 ║                                                                                 ║
 ╚═════════════════════════════════════════════════════════════════════════════════╝
 """
