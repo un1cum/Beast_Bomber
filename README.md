@@ -6,6 +6,7 @@
 # 📌 EN
 
 **Beast Bomber in Telegram: https://t.me/beast_bomberr_bot**
+**Beast Bomber in GitLab: https://gitlab.com/ebankoff/Beast_Bomber**
 
 `Possibilities`
 * SMS spammer(works better with proxy)
@@ -73,6 +74,7 @@ This means that you don't have the library that is specified in the error, in th
 # 📌 RU
 
 **Beast Bomber в Telegram: https://t.me/beast_bomberr_bot**
+**Beast Bomber на GitLab: https://gitlab.com/ebankoff/Beast_Bomber**
 
 `Возможности`
 * SMS спамер(работает лучше с proxy)
