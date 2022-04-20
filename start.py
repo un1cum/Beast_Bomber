@@ -36,7 +36,10 @@ try:
 	ans = config.get('config', 'first_setup')
 	if ans != 'yes':
 		try:
-			os.system('pip install lxml && pip install matplotlib && pip install pandas && pip install numpy && pip install bs4 && pip install emoji && pip install wheel && pip install asyncio && pip install requests && pip install progress && pip install colorama && pip install selenium && pip install user_agent && pip install about-time && pip install progressbar && pip install beautifulsoup4 && pip install selenium_stealth && pip install webdriver-manager')
+			os.system('pip install lxml && pip install matplotlib && pip install pandas && pip install numpy && pip install bs4 && pip install emoji' 
+				'&& pip install wheel && pip install asyncio && pip install requests && pip install progress' 
+				'&& pip install colorama && pip install selenium && pip install user_agent && pip install about-time && pip install progressbar' 
+				'&& pip install beautifulsoup4 && pip install selenium_stealth && pip install webdriver-manager')
 			config['config']['first_setup'] = 'yes'
 			with open(r'core/config.ini', 'w') as configfile:
 				config.write(configfile)
@@ -69,7 +72,7 @@ colorama.init()
 
 def pb():
 	tm = 2
-	text2 =  Fore.YELLOW + Style.BRIGHT + "{}"
+	text2 =  Fore.YELLOW + "{}"
 	t = time.monotonic()
 	while time.monotonic() - t < tm:
 		print(text2.format('\033[36mProcessing...') + '\r', end='')
@@ -104,7 +107,7 @@ def check_internet():
 
 
 def ex():
-	param = input(Fore.YELLOW + Style.BRIGHT + 'Exit? yes/no: ')
+	param = input(Fore.WHITE + 'Exit? yes/no: ')
 
 	if param == 'yes':
 		if platform == 'win32':
@@ -112,10 +115,10 @@ def ex():
 		else:
 			os.system("clear")
 
-		print(Fore.CYAN + 
+		print(Fore.WHITE + 
 		'               Thanks for using Beast bomber!'
 		'\nI would be grateful if you star on this repository on GitHub:'
-		'\n           https://github.com/ebankoff/Beast_Bomber'
+		'\n           https://github.com/ebankoff/BeastBomber'
 		'\n    You can support me by sending any amount to my Qiwi:'	
 		'\n                  qiwi.com/n/HERAMANT'	
 		'\n'
@@ -138,7 +141,7 @@ def main():
 	else:
 		os.system("clear")
 
-	print(Fore.CYAN + 
+	print(Fore.RED + 
 		'┏━━┓         ┏┓  ┏━━┓      ┏┓'
 		'\n┃┏┓┃        ┏┛┗┓ ┃┏┓┃      ┃┃'
 		'\n┃┗┛┗┳━━┳━━┳━┻┓┏┛ ┃┗┛┗┳━━┳┓┏┫┗━┳━━┳━┓'
@@ -148,27 +151,27 @@ def main():
 	)
 
 	print(
-		Fore.CYAN + '\n=================================================',
-		Fore.YELLOW + '\nCreated by ebankoff - https://github.com/ebankoff',
-		Fore.YELLOW + f'\nOS: {platform}',
-		Fore.CYAN + '\n================================================='
+		Fore.WHITE + '\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
+		Fore.RED + '\nCreated by ebankoff - https://github.com/ebankoff',
+		Fore.RED + f'\nOS: {platform}',
+		Fore.WHITE + '\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'
 	)
 
 	print(
-		Fore.MAGENTA + '\n[' + Fore.GREEN + '0' + Fore.MAGENTA + ']' + Fore.RED + ' Exit',
-		Fore.MAGENTA + '\n[' + Fore.GREEN + '1' + Fore.MAGENTA + ']' + Fore.YELLOW + Style.BRIGHT + ' Email spam',
-		Fore.MAGENTA + '\n[' + Fore.GREEN + '2' + Fore.MAGENTA + ']' + Fore.YELLOW + Style.BRIGHT + ' SMS spam',
-		Fore.MAGENTA + '\n[' + Fore.GREEN + '3' + Fore.MAGENTA + ']' + Fore.YELLOW + Style.BRIGHT + ' Telegram spam',
-		Fore.MAGENTA + '\n[' + Fore.GREEN + '4' + Fore.MAGENTA + ']' + Fore.YELLOW + Style.BRIGHT + ' DoS attack',
-		Fore.MAGENTA + '\n[' + Fore.GREEN + '5' + Fore.MAGENTA + ']' + Fore.YELLOW + Style.BRIGHT + ' WhatsApp spam',
-		Fore.MAGENTA + '\n[' + Fore.GREEN + '6' + Fore.MAGENTA + ']' + Fore.YELLOW + Style.BRIGHT + ' Discord spam',
-		Fore.MAGENTA + '\n[' + Fore.GREEN + '7' + Fore.MAGENTA + ']' + Fore.YELLOW + Style.BRIGHT + ' Get free proxies',
-		Fore.MAGENTA + '\n[' + Fore.GREEN + '8' + Fore.MAGENTA + ']' + Fore.YELLOW + Style.BRIGHT + ' Clear program cache',
-		Fore.MAGENTA + '\n[' + Fore.GREEN + '9' + Fore.MAGENTA + ']' + Fore.YELLOW + Style.BRIGHT + ' \033[31m♥ Donate \033[31m♥'
+		Fore.RED + '\n[' + Fore.WHITE + '0' + Fore.RED + ']' + Fore.WHITE + ' Exit',
+		Fore.RED + '\n[' + Fore.WHITE + '1' + Fore.RED + ']' + Fore.WHITE + ' Email spam',
+		Fore.RED + '\n[' + Fore.WHITE + '2' + Fore.RED + ']' + Fore.WHITE + ' SMS spam',
+		Fore.RED + '\n[' + Fore.WHITE + '3' + Fore.RED + ']' + Fore.WHITE + ' Telegram spam',
+		Fore.RED + '\n[' + Fore.WHITE + '4' + Fore.RED + ']' + Fore.WHITE + ' DoS attack',
+		Fore.RED + '\n[' + Fore.WHITE + '5' + Fore.RED + ']' + Fore.WHITE + ' WhatsApp spam',
+		Fore.RED + '\n[' + Fore.WHITE + '6' + Fore.RED + ']' + Fore.WHITE + ' Discord spam',
+		Fore.RED + '\n[' + Fore.WHITE + '7' + Fore.RED + ']' + Fore.WHITE + ' Get free proxies',
+		Fore.RED + '\n[' + Fore.WHITE + '8' + Fore.RED + ']' + Fore.WHITE + ' Clear program cache',
+		Fore.RED + '\n[' + Fore.WHITE + '9' + Fore.RED + ']' + Fore.WHITE + ' \033[31m♥ Donate \033[31m♥'
 	)
 
 	try:
-		ans = input(Fore.MAGENTA + '\n → ' + Fore.CYAN)
+		ans = input(Fore.RED + '\n → ' + Fore.CYAN)
 
 		if ans == '0':
 			if platform == 'win32':
@@ -191,11 +194,11 @@ def main():
 				emails = []
 				passwords = []
 
-				to = str(input(Fore.YELLOW + Style.BRIGHT + 'Enter target email: \033[36m'))
-				amount = int(input(Fore.YELLOW + Style.BRIGHT + 'How many send from every address: \033[36m'))
-				subj = str(input(Fore.YELLOW + Style.BRIGHT + 'Enter subject: \033[36m'))
-				mes = str(input(Fore.YELLOW + Style.BRIGHT + 'Enter message: \033[36m'))
-				server = input(Fore.YELLOW + Style.BRIGHT + 'Select emails server - 1:Gmail 2:Yahoo 3:Outlook 4:Yandex: \033[36m')
+				to = str(input(Fore.WHITE + 'Enter target email: \033[36m'))
+				amount = int(input(Fore.WHITE + 'How many send from every address: \033[36m'))
+				subj = str(input(Fore.WHITE + 'Enter subject: \033[36m'))
+				mes = str(input(Fore.WHITE + 'Enter message: \033[36m'))
+				server = input(Fore.WHITE + 'Select emails server - 1:Gmail 2:Yahoo 3:Outlook 4:Yandex: \033[36m')
 
 				with open(r"input/emails.txt", "r", encoding="utf-8") as file:
 					for line in file:
@@ -221,7 +224,7 @@ def main():
 				print('\n')
 
 				tm = amount
-				text2 =  Fore.YELLOW + Style.BRIGHT + "{}"
+				text2 =  Fore.YELLOW + "{}"
 				t = time.monotonic()
 
 				while time.monotonic() - t < tm:
@@ -240,7 +243,7 @@ def main():
 					print(text2.format('\033[35mAttacking') + '\r', end='')
 					time.sleep(.08)
 
-				print(Fore.GREEN + '\n━━━━━━━━━━Success━━━━━━━━━━\n')
+				print(Fore.WHITE + '\n━━━━━━━━━━Success━━━━━━━━━━\n')
 
 			except:
 				print(Fore.RED + '\n━━━━━━━━━━━Error━━━━━━━━━━━\n')
@@ -253,7 +256,7 @@ def main():
 			else:
 				os.system("clear")
 
-			print(Fore.YELLOW + Style.BRIGHT + 
+			print(Fore.WHITE + 
 				'┏━━━┓┏━┓┏━┓┏━━━┓'
 				'\n┃┏━┓┃┃ ┗┛ ┃┃┏━┓┃'
 				'\n┃┗━━┫┃┏┓┏┓┃┃┗━━┫'
@@ -262,7 +265,7 @@ def main():
 				'\n┗━━━┛┗┛┗┛┗┛┗━━━┛'
 			)
 
-			print(Fore.YELLOW + Style.BRIGHT + 
+			print(Fore.WHITE + 
 				'\n\033[36m==============================='
 				'\n     \033[32mSupported \033[33mcountries'
 				'\n          \033[35mRU    \033[35mBY'
@@ -272,16 +275,16 @@ def main():
 			)
 
 			try:
-				prx = input(Fore.YELLOW + Style.BRIGHT + "\nProxy? yes/no: \033[36m").lower()
-				code = input(Fore.YELLOW + Style.BRIGHT + "Target country code: \033[36m+")
+				prx = input(Fore.WHITE + "\nProxy? yes/no: \033[36m").lower()
+				code = input(Fore.WHITE + "Target country code: \033[36m+")
 
 				if code != '380' and code != '44' and code != '7' and code != '1' and code != '375':
 					print('You entered the wrong value, or the country is not supported')
 					ex()
 
-				number = code + input(Fore.YELLOW + Style.BRIGHT + f"Target number: \033[36m{code}")
-				tm = int(input(Fore.YELLOW + Style.BRIGHT + "Time attack(in seconds): \033[36m"))
-				thr = int(input(Fore.YELLOW + Style.BRIGHT + "Number of threads: \033[36m"))
+				number = code + input(Fore.WHITE + f"Target number: \033[36m{code}")
+				tm = int(input(Fore.WHITE + "Time attack(in seconds): \033[36m"))
+				thr = int(input(Fore.WHITE + "Number of threads: \033[36m"))
 
 				if thr < 0:
 					thr = 1
@@ -294,7 +297,7 @@ def main():
 					time.sleep(.02)
 
 				print('\n')
-				text2 =  Fore.YELLOW + Style.BRIGHT + "{}"
+				text2 =  Fore.WHITE + "{}"
 				t = time.monotonic()
 				while time.monotonic() - t < tm:
 					print(text2.format('\033[36mAttacking') + '\r', end='')
@@ -312,7 +315,7 @@ def main():
 					print(text2.format('\033[35mAttacking') + '\r', end='')
 					time.sleep(.08)
 
-				print(Fore.GREEN + '\n━━━━━━━━━━Success━━━━━━━━━━\n')
+				print(Fore.WHITE + '\n━━━━━━━━━━Success━━━━━━━━━━\n')
 
 			except:
 				print(Fore.RED + '\n━━━━━━━━━━━Error━━━━━━━━━━━\n')
@@ -325,7 +328,7 @@ def main():
 			else:
 				os.system("clear")
 
-			print(Fore.YELLOW + Style.BRIGHT + 
+			print(Fore.WHITE + 
 				'┏━━━━┓ ┏┓'
 				'\n┃┏┓┏┓┃ ┃┃'
 				'\n┗┛┃┃┣┻━┫┃┏━━┳━━┳━┳━━┳┓┏┓'
@@ -337,16 +340,16 @@ def main():
 			)
 
 			try:
-				prx = input(Fore.YELLOW + Style.BRIGHT + "\nProxy? yes/no: \033[36m").lower()
-				name = input(Fore.YELLOW + Style.BRIGHT + "Victim name: \033[36m")
-				count = int(input(Fore.YELLOW + Style.BRIGHT + "Number of messages: \033[36m"))
-				msg = input(Fore.YELLOW + Style.BRIGHT + "Message: \033[36m")
+				prx = input(Fore.WHITE + "\nProxy? yes/no: \033[36m").lower()
+				name = input(Fore.WHITE + "Victim name: \033[36m")
+				count = int(input(Fore.WHITE + "Number of messages: \033[36m"))
+				msg = input(Fore.WHITE + "Message: \033[36m")
 				cn = 0
 				print("")
-				input(Fore.YELLOW + Style.BRIGHT + "Press Enter to start")
+				input(Fore.WHITE + "Press Enter to start")
 				telegram(name, count, msg, cn, prx)
 
-				print(Fore.GREEN + '\n━━━━━━━━━━Success━━━━━━━━━━\n')
+				print(Fore.WHITE + '\n━━━━━━━━━━Success━━━━━━━━━━\n')
 
 			except:
 				print(Fore.RED + '\n━━━━━━━━━━━Error━━━━━━━━━━━\n')
@@ -359,7 +362,7 @@ def main():
 			else:
 				os.system("clear")
 
-			print(Fore.YELLOW + Style.BRIGHT + 
+			print(Fore.WHITE + 
 				'┏━━━┓  ┏━━━┓'
 				'\n┗┓┏┓┃  ┃┏━┓┃'
 				'\n ┃┃┃┣━━┫┗━━┓'
@@ -369,10 +372,10 @@ def main():
 			)
 
 			try:
-				prx = input(Fore.YELLOW + Style.BRIGHT + "\nProxy? yes/no: \033[36m").lower()
-				url = input(Fore.YELLOW + Style.BRIGHT + "URL:n\033[36m")
-				tm = int(input(Fore.YELLOW + Style.BRIGHT + "Attack time in seconds: \033[36m"))
-				threads = int(input(Fore.YELLOW + Style.BRIGHT + "Threads: \033[36m"))
+				prx = input(Fore.WHITE + "\nProxy? yes/no: \033[36m").lower()
+				url = input(Fore.WHITE + "URL:n\033[36m")
+				tm = int(input(Fore.WHITE + "Attack time in seconds: \033[36m"))
+				threads = int(input(Fore.WHITE + "Threads: \033[36m"))
 
 				text = "\033[35m[\033[36m{}\033[35m]" + Fore.CYAN + " threads started"
 
@@ -384,7 +387,7 @@ def main():
 
 				print('\n')
 
-				text2 =  Fore.YELLOW + Style.BRIGHT + "{}"
+				text2 =  Fore.YELLOW + "{}"
 				t = time.monotonic()
 				while time.monotonic() - t < tm:
 					print(text2.format('\033[36mAttacking') + '\r', end='')
@@ -402,7 +405,7 @@ def main():
 					print(text2.format('\033[35mAttacking') + '\r', end='')
 					time.sleep(.08)
 				
-				print(Fore.GREEN + '\n━━━━━━━━━━Success━━━━━━━━━━\n')
+				print(Fore.WHITE + '\n━━━━━━━━━━Success━━━━━━━━━━\n')
 
 			except:
 				print(Fore.RED + '\n━━━━━━━━━━━Error━━━━━━━━━━━\n')
@@ -415,7 +418,7 @@ def main():
 			else:
 				os.system("clear")
 
-			print(Fore.YELLOW + Style.BRIGHT +
+			print(Fore.WHITE +
 				'┏┓┏┓┏┳┓    ┏┓   ┏━━━┓'
 				'\n┃┃┃┃┃┃┃   ┏┛┗┓  ┃┏━┓┃'
 				'\n┃┃┃┃┃┃┗━┳━┻┓┏╋━━┫┃ ┃┣━━┳━━┓'
@@ -427,17 +430,17 @@ def main():
 			)
 
 			try:
-				prx = input(Fore.YELLOW + Style.BRIGHT + "\nProxy? yes/no: \033[36m").lower()
-				name = input(Fore.YELLOW + Style.BRIGHT + "Victim name: \033[36m")
-				count = int(input(Fore.YELLOW + Style.BRIGHT + "Number of messages: \033[36m"))
-				msg = input(Fore.YELLOW + Style.BRIGHT + "Message: \033[36m")
+				prx = input(Fore.WHITE + "\nProxy? yes/no: \033[36m").lower()
+				name = input(Fore.WHITE + "Victim name: \033[36m")
+				count = int(input(Fore.WHITE + "Number of messages: \033[36m"))
+				msg = input(Fore.WHITE + "Message: \033[36m")
 				cn=0
 
 				print("")
-				input(Fore.YELLOW + Style.BRIGHT + "Press Enter to start")
+				input(Fore.WHITE + "Press Enter to start")
 				whatsapp(name, count, msg, cn, prx)
 
-				print(Fore.GREEN + '\n━━━━━━━━━━Success━━━━━━━━━━\n')
+				print(Fore.WHITE + '\n━━━━━━━━━━Success━━━━━━━━━━\n')
 
 			except:
 				print(Fore.RED + '\n━━━━━━━━━━━Error━━━━━━━━━━━\n')
@@ -450,7 +453,7 @@ def main():
 			else:
 				os.system("clear")
 
-			print(Fore.YELLOW + Style.BRIGHT + 
+			print(Fore.WHITE + 
 				'┏━━━┓             ┏┓'
 				'\n┗┓┏┓┃             ┃┃'
 				'\n ┃┃┃┣┳━━┳━━┳━━┳━┳━┛┃'
@@ -460,15 +463,15 @@ def main():
 			)
 
 			try:
-				prx = input(Fore.YELLOW + Style.BRIGHT + "\nProxy? yes/no: \033[36m").lower()
-				idd = input(Fore.YELLOW + Style.BRIGHT + "Target ID: \033[36m")
-				tkn = input(Fore.YELLOW + Style.BRIGHT + "Account token: \033[36m")
-				cnt = int(input(Fore.YELLOW + Style.BRIGHT + "Number of messages: \033[36m"))
-				msg = input(Fore.YELLOW + Style.BRIGHT + "Message: \033[36m")
-				input(Fore.YELLOW + Style.BRIGHT + "\nPress Enter to start")
+				prx = input(Fore.WHITE + "\nProxy? yes/no: \033[36m").lower()
+				idd = input(Fore.WHITE + "Target ID: \033[36m")
+				tkn = input(Fore.WHITE + "Account token: \033[36m")
+				cnt = int(input(Fore.WHITE + "Number of messages: \033[36m"))
+				msg = input(Fore.WHITE + "Message: \033[36m")
+				input(Fore.WHITE + "\nPress Enter to start")
 				discord(tkn, idd, msg, cnt, prx)
 				
-				print(Fore.GREEN + '\n━━━━━━━━━━Success━━━━━━━━━━\n')
+				print(Fore.WHITE + '\n━━━━━━━━━━Success━━━━━━━━━━\n')
 
 			except:
 				print(Fore.RED + '\n━━━━━━━━━━━Error━━━━━━━━━━━\n')
@@ -481,7 +484,7 @@ def main():
 				pb()
 				freeprx()
 				print('')
-				print(Fore.GREEN + '\n━━━━━━━━━━━Proxies saved━━━━━━━━━━━')
+				print(Fore.WHITE + '\n━━━━━━━━━━━Proxies saved━━━━━━━━━━━')
 				print('')
 
 			except:
@@ -495,7 +498,7 @@ def main():
 				pb()
 				shutil.rmtree('core/__pycache__')
 				print('')
-				print(Fore.GREEN + '\n━━━━━━━━━━Success━━━━━━━━━━\n')
+				print(Fore.WHITE + '\n━━━━━━━━━━Success━━━━━━━━━━\n')
 
 			except:
 				print(Fore.RED + '\n━━━━━━━━━━━The program cache is already empty━━━━━━━━━━━')
@@ -509,13 +512,13 @@ def main():
 				os.system("clear")
 
 			print(
-				Fore.YELLOW + Style.BRIGHT + "===========================================================",
+				Fore.WHITE + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
 				'\n\033[35m▸ \033[36mPayeer: P1063409412',
 				'\n\033[35m▸ \033[36mQiwi: https://qiwi.com/n/HERAMANT',
 				'\n\033[35m▸ \033[36mBNB: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1',
 				'\n\033[35m▸ \033[36mBitcoin: bc1qxfvstf99kyuc5x5uugxtsh3m6w3a73ruzfav7e',
 				'\n\033[35m▸ \033[36mEthereum: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1',
-				Fore.YELLOW + Style.BRIGHT + '\n===========================================================\n'
+				Fore.WHITE + '\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n'
 			)
 
 			ex()
