@@ -175,6 +175,6 @@
 
    END OF TERMS AND CONDITIONS
 
-   Copyright © ebankoff
+   Copyright © 2022 ebankoff
 
    http://www.apache.org/licenses/LICENSE-2.0
