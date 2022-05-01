@@ -28,7 +28,7 @@
 
 `Launch`
 * cd Beast_Bomber
-* start.py
+* python3 start.py
 
 # 📌 Discord spammer
 
@@ -97,7 +97,7 @@ This means that you don't have the library that is specified in the error, in th
 
 `Запуск`
 * cd Beast_Bomber
-* start.py
+* python3 start.py
 
 # 📌 Discord спамер
 
