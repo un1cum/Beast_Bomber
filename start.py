@@ -373,7 +373,7 @@ def main():
 
 			try:
 				prx = input(Fore.WHITE + "\nProxy? yes/no: \033[36m").lower()
-				url = input(Fore.WHITE + "URL:n\033[36m")
+				url = input(Fore.WHITE + "URL: \033[36m")
 				tm = int(input(Fore.WHITE + "Attack time in seconds: \033[36m"))
 				threads = int(input(Fore.WHITE + "Threads: \033[36m"))
 
