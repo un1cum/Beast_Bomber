@@ -9,6 +9,8 @@
 
 **Beast Bomber in GitLab: https://gitlab.com/ebankoff/Beast_Bomber**
 
+**See also: https://github.com/ebankoff/CleanerPRO** 
+
 `Possibilities`
 * SMS spammer(works better with proxy)
 * Email spammer
@@ -77,6 +79,8 @@ This means that you don't have the library that is specified in the error, in th
 **Beast Bomber в Telegram: https://t.me/beast_bomberr_bot (на доработке)**
 
 **Beast Bomber на GitLab: https://gitlab.com/ebankoff/Beast_Bomber**
+
+**См. также: https://github.com/ebankoff/CleanerPRO**
 
 `Возможности`
 * SMS спамер(работает лучше с proxy)
