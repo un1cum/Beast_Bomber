@@ -1,7 +1,7 @@
 # [![wtf](https://i.ibb.co/fQXbBHj/Untitled-2.png "BeastBomber")](https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PLrpgO-fUNO4OKpFbFXb2cQlF72Yj3ppJv) 
 # Beast Bomber💥 
 
-[![Button](https://badgen.net/badge/patreon/patreon/red?icon=patreon&label)](https://www.patreon.com/ebankoff) [![Button](https://badgen.net/badge/ebankoff/ebankoff/white?icon=github&label)](https://github.com/ebankoff) [![Button](https://badgen.net/badge/Beast_Bomber/Beast_Bomber/white?icon=gitlab&label)](https://gitlab.com/ebankoff/Beast_Bomber) [![Button](https://badgen.net/badge/telegram/telegram/blue?icon=telegram&label)](https://t.me/The_W_T_F) [![Button](https://badgen.net/badge/icon/qiwi/orange?icon=bitcoin&label)](https://qiwi.com/n/HERAMANT) [![Button](https://badgen.net/badge/fork/fork/purple?icon=github&label)](https://github.com/ebankoff/Beast_Bomber/fork) [![Button](https://badgen.net/badge/fork/fork/purple?icon=gitlab&label)](https://gitlab.com/ebankoff/Beast_Bomber/fork) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20over%20170%20free%20design%20blocks%20based%20on%20Bootstrap%204&url=https://www.froala.com/design-blocks&via=froala&hashtags=bootstrap,design,templates,blocks,developers)
+[![Button](https://badgen.net/badge/patreon/patreon/red?icon=patreon&label)](https://www.patreon.com/ebankoff) [![Button](https://badgen.net/badge/ebankoff/ebankoff/white?icon=github&label)](https://github.com/ebankoff) [![Button](https://badgen.net/badge/Beast_Bomber/Beast_Bomber/white?icon=gitlab&label)](https://gitlab.com/ebankoff/Beast_Bomber) [![Button](https://badgen.net/badge/telegram/telegram/blue?icon=telegram&label)](https://t.me/The_W_T_F) [![Button](https://badgen.net/badge/fork/fork/purple?icon=github&label)](https://github.com/ebankoff/Beast_Bomber/fork) [![Button](https://badgen.net/badge/fork/fork/purple?icon=gitlab&label)](https://gitlab.com/ebankoff/Beast_Bomber/fork) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20over%20170%20free%20design%20blocks%20based%20on%20Bootstrap%204&url=https://www.froala.com/design-blocks&via=froala&hashtags=bootstrap,design,templates,blocks,developers)
 
 # 📌 EN
 
@@ -64,10 +64,6 @@ This means that you don't have the library that is specified in the error, in th
 * pip install the name of the required library (example: pip install _ctypes)
 
 # 📌 Donate for coffee
-
-`Qiwi`
-
-[![wtf2](https://i.ibb.co/ryDytyR/Comp-1-00000.png)](https://qiwi.com/n/HERAMANT)
 
 `Crypto wallets`
 * **Smart chain: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
@@ -135,10 +131,6 @@ This means that you don't have the library that is specified in the error, in th
 * pip install имя отсутствующей библиотеки (пример: pip install _ctypes)
 
 # 📌 Автору на кофе
-
-`Qiwi`
-
-[![wtf2](https://i.ibb.co/ryDytyR/Comp-1-00000.png)](https://qiwi.com/n/HERAMANT)
 
 `Крипта`
 * **Smart chain: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
