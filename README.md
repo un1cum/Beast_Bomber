@@ -51,6 +51,8 @@ To use Discord spammer, you need a preferably empty account that is on the same 
 
 For the email spammer, you need to specify an email and password (email:password) in the emails.txt file. You can specify more than one (each email:password on a new line) to spam from multiple addresses at once. It is better to use accounts Yahoo, as they work best.
 
+IMPORTANT: you must specify a specially generated password for less secure applications, not a regular password for your account.
+
 ![wtf5](https://i.ibb.co/kcsqN5T/Screenshot-4.png "email") 
 
 # 📌 Problems and their solutions
@@ -116,7 +118,9 @@ This means that you don't have the library that is specified in the error, in th
 
 # 📌 Email спамер
 
-Для спамера электронной почты необходимо указать email и пароль (email:пароль) в файле emails.txt. Можно указать несколько (каждый email:пароль в новой строке), чтобы спамить сразу с нескольких адресов. Лучше использовать аккаунты Yahoo, т.к они работают лучше всего.
+Для спама электронной почты необходимо указать email и пароль (email:пароль) в файле emails.txt. Можно указать несколько (каждый email:пароль в новой строке), чтобы спамить сразу с нескольких адресов. Лучше использовать аккаунты Yahoo, т.к они работают лучше всего.
+
+ВАЖНО: необходимо указывать не обычный пароль от аккаунта, а специально сгенерированный для доступа небезопасных приложений.
 
 ![wtf5](https://i.ibb.co/kcsqN5T/Screenshot-4.png "email") 
 
