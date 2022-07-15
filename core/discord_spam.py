@@ -58,6 +58,7 @@ def discord(token, target, mes, cnt, prx):
 
 		proxy = [line.rstrip() for line in proxy]
 		for i in range(cnt):
+			now = datetime.datetime.now()
 			try:
 				proxies = {'http': 'http://' + random.choice(proxy), 'https': 'http://' + random.choice(proxy)}
 				payload = {'recipient_id': target}
@@ -67,14 +68,14 @@ def discord(token, target, mes, cnt, prx):
 					"tts": False
 				}
 				j = json.loads(r1.content)
-				r2 = requests.post(f"https://discord.com/api/v9/channels/{j['id']}/messages", headers = header, json = payload, proxies = proxies)
-				now = datetime.datetime.now()
+				requests.post(f"https://discord.com/api/v9/channels/{j['id']}/messages", headers = header, json = payload, proxies = proxies)
 				print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[36m {}" .format(i) + "\033[37m {}" .format('|') + "\033[35m {}" .format(target))
 			except:
 				print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED') + "\033[37m {}" .format('|') + "\033[36m {}" .format(i) + "\033[37m {}" .format('|') + "\033[35m {}" .format(target))
 
 	else:
 		for i in range(cnt):
+			now = datetime.datetime.now()
 			try:
 				payload = {'recipient_id': target}
 				r1 = requests.post(f'https://discord.com/api/v9/users/@me/channels', headers = header, json = payload)
@@ -83,8 +84,7 @@ def discord(token, target, mes, cnt, prx):
 					"tts": False
 				}
 				j = json.loads(r1.content)
-				r2 = requests.post(f"https://discord.com/api/v9/channels/{j['id']}/messages", headers = header, json = payload)
-				now = datetime.datetime.now()
+				requests.post(f"https://discord.com/api/v9/channels/{j['id']}/messages", headers = header, json = payload)
 				print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[32m {}" .format(f'SUCCESS') + "\033[37m {}" .format('|') + "\033[36m {}" .format(i) + "\033[37m {}" .format('|') + "\033[35m {}" .format(target))
 			except:
 				print("\033[34m{}" .format(now.strftime('%Y-%m-%d / %H:%M:%S')) + "\033[37m {}" .format('|') + "\033[31m {}" .format(f'FAILED') + "\033[37m {}" .format('|') + "\033[36m {}" .format(i) + "\033[37m {}" .format('|') + "\033[35m {}" .format(target))

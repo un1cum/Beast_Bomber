@@ -48,7 +48,7 @@ def telegram(name, count, msg, cn, prx):
 			}
 		})
 		chrome_options.add_argument("--disable-popup-blocking")
-		driver = webdriver.Chrome('core/chromedriver', chrome_options=chrome_options)
+		driver = webdriver.Chrome(chromedriver.install(), chrome_options=chrome_options)
 		driver.set_window_size(1200, 700)
 
 		webdriver.DesiredCapabilities.CHROME['proxy']={
@@ -69,7 +69,7 @@ def telegram(name, count, msg, cn, prx):
 			fix_hairline=True,
 		)
 
-		driver.get("https://web.telegram.org/z")
+		driver.get("https://web.telegram.org/k/")
 
 		search = WebDriverWait(driver, 35).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='telegram-search-input']")))
 		time.sleep(8)
@@ -126,7 +126,7 @@ def telegram(name, count, msg, cn, prx):
 			fix_hairline=True,
 		)
 
-		driver.get("https://web.telegram.org/z")
+		driver.get("https://web.telegram.org/k/")
 
 		search = WebDriverWait(driver, 35).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='telegram-search-input']")))
 		time.sleep(8)
