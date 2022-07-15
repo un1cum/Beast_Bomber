@@ -23,7 +23,7 @@
 * git clone https://github.com/ebankoff/Beast_Bomber
 
 `First setup`
-- You must have support for "less secure apps" set to "turn on" on your Gmail. Here is the link to do so: https://www.google.com/settings/security/lesssecureapps
+- For email spam to work correctly, you must have the "less secure apps" feature enabled.
 - The program will configure everything else on its own. If the automatic setup fails, you can set it up manually. Along with Beast Bomber comes a requirements.txt file. This file contains external dependencies. To install them, you need to open cmd/terminal and write: **pip install -r requirements.txt**
 
 **The setup is done!**
@@ -49,7 +49,7 @@ To use Discord spammer, you need a preferably empty account that is on the same 
 
 # 📌 Email spammer
 
-For the email spammer, you need to specify an email and password (email:password) in the emails.txt file. You can specify more than one (each email:password on a new line) to spam from multiple addresses at once.
+For the email spammer, you need to specify an email and password (email:password) in the emails.txt file. You can specify more than one (each email:password on a new line) to spam from multiple addresses at once. It is better to use accounts Yahoo, as they work best.
 
 ![wtf5](https://i.ibb.co/kcsqN5T/Screenshot-4.png "email") 
 
@@ -90,7 +90,7 @@ This means that you don't have the library that is specified in the error, in th
 * git clone https://github.com/ebankoff/Beast_Bomber
 
 `Первая настройка`
-- У Вас должна быть включена функция "Ненадежные приложения, у которых есть доступ к аккаунту". Её можно включить перейдя по ссылке: https://www.google.com/settings/security/lesssecureapps
+- Для корректной работы email спама, у Вас должна быть включена функция "Ненадежные приложения, у которых есть доступ к аккаунту".
 - Все остальное программа настроит самостоятельно. Если автоматическая настройка не удалась, вы можете настроить все вручную. Вместе с Beast Bomber идет файл requirements.txt. Этот файл содержит внешние зависимости. Чтобы установить их, нужно открыть cmd/terminal и написать: **pip install -r requirements.txt**
 
 **Настройка завершена!**
@@ -116,7 +116,7 @@ This means that you don't have the library that is specified in the error, in th
 
 # 📌 Email спамер
 
-Для спамера электронной почты необходимо указать email и пароль (email:пароль) в файле emails.txt. Можно указать несколько (каждый email:пароль в новой строке), чтобы спамить сразу с нескольких адресов.
+Для спамера электронной почты необходимо указать email и пароль (email:пароль) в файле emails.txt. Можно указать несколько (каждый email:пароль в новой строке), чтобы спамить сразу с нескольких адресов. Лучше использовать аккаунты Yahoo, т.к они работают лучше всего.
 
 ![wtf5](https://i.ibb.co/kcsqN5T/Screenshot-4.png "email") 
 
