@@ -65,6 +65,16 @@ This means that you don't have the library that is specified in the error, in th
 
 * pip install the name of the required library (example: pip install _ctypes)
 
+# 📌 Contributors
+
+| Sr.No. | Name | Date of contribution |
+|--------|------|----------------------|
+|1|[ebankoff](https://github.com/ebankoff)|Jul 16, 2022|
+|2|[PalkerCode](https://github.com/PalkerCode)|Apr 10, 2022|
+|3|[hiikion](https://github.com/hiikion)|Jul 4, 2022|
+
+**Thank you all for your contributions to the project!**
+
 # 📌 Donate for coffee
 
 `Crypto wallets`
@@ -133,6 +143,17 @@ This means that you don't have the library that is specified in the error, in th
 Это означает, что у вас отсутствует нужная библиотека pip, в этом случае: "_ctypes". Откройте терминал, cmd или что там у вас и пишите:
 
 * pip install имя отсутствующей библиотеки (пример: pip install _ctypes)
+
+
+# 📌 Вклады в проект
+
+| Строка | Имя | Дата вклада |
+|--------|------|----------------------|
+|1|[ebankoff](https://github.com/ebankoff)|Июль 16, 2022|
+|2|[PalkerCode](https://github.com/PalkerCode)|Апрель 10, 2022|
+|3|[hiikion](https://github.com/hiikion)|Июль 4, 2022|
+
+**Спасибо всем за ваши вклады в проект!**
 
 # 📌 Автору на кофе
 
