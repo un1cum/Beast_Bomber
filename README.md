@@ -24,6 +24,7 @@
 
 `First setup`
 - For email spam to work correctly, you must have the "less secure apps" feature enabled.
+- For telegram and whatsapp spammer to work correctly, you must download the [chrome driver](https://chromedriver.chromium.org/downloads) corresponding to the version of the chrome browser that is installed (if not, install it) on your pc, then unpack the contents of the archive into the core bomber folder. 
 - The program will configure everything else on its own. If the automatic setup fails, you can set it up manually. Along with Beast Bomber comes a requirements.txt file. This file contains external dependencies. To install them, you need to open cmd/terminal and write: **pip install -r requirements.txt**
 
 **The setup is done!**
@@ -103,6 +104,7 @@ This means that you don't have the library that is specified in the error, in th
 
 `Первая настройка`
 - Для корректной работы email спама, у Вас должна быть включена функция "Ненадежные приложения, у которых есть доступ к аккаунту".
+- Для корректной работы telegram и whatsapp спамера вы должны скачать [chrome driver](https://chromedriver.chromium.org/downloads), соответствующий версии chrome браузера, который установлен(если нет, установите) на вашем пк, затем распакуйте содержимое архива в папку core бомбера. 
 - Все остальное программа настроит самостоятельно. Если автоматическая настройка не удалась, вы можете настроить все вручную. Вместе с Beast Bomber идет файл requirements.txt. Этот файл содержит внешние зависимости. Чтобы установить их, нужно открыть cmd/terminal и написать: **pip install -r requirements.txt**
 
 **Настройка завершена!**
