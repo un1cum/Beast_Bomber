@@ -40,7 +40,7 @@ try:
 					  'pip install about-time && pip install progressbar && pip install beautifulsoup4 && '
 					  'pip install selenium_stealth && pip install webdriver-manager')
 			config['config']['first_setup'] = 'yes'
-			with open(r'../../Desktop/Desktop/Documents/python/GitHub/beast_bomber/core/config.ini', 'w') as configfile:
+			with open(r'core/config.ini', 'w') as configfile:
 				config.write(configfile)
 		except:
 			pass
