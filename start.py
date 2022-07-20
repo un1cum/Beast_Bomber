@@ -27,8 +27,7 @@ if platform == 'win32':
 try:
 	os.system('pip install configparser')
 	import configparser
-	config_path = os.path.join(sys.path[0], r'../../Desktop/Desktop/Documents/python/GitHub/beast_bomber/'
-											r'core/config.ini')
+	config_path = os.path.join(sys.path[0], r'core/config.ini')
 	config = configparser.ConfigParser()
 	config.read(config_path)
 	ans = config.get('config', 'first_setup')
