@@ -18,6 +18,7 @@
 * Discord spammer
 * Telegram spammer
 * DoS attack
+* Multilanguage
 
 `Installation`
 * git clone https://github.com/ebankoff/Beast_Bomber
@@ -32,6 +33,10 @@
 `Launch`
 * cd Beast_Bomber
 * python3 start.py
+
+# 📌 SMS spammer
+
+You can write your key from [anticaptcha](https://anti-captcha.com) to increase the effectiveness of spam
 
 # 📌 Discord spammer
 
@@ -98,6 +103,7 @@ This means that you don't have the library that is specified in the error, in th
 * Discord спамер
 * Telegram спамер
 * DoS атака
+* Поддержка двух языков
 
 `Установка`
 * git clone https://github.com/ebankoff/Beast_Bomber
@@ -112,6 +118,10 @@ This means that you don't have the library that is specified in the error, in th
 `Запуск`
 * cd Beast_Bomber
 * python3 start.py
+
+# 📌 СМС спамер
+
+Вы можете указать Ваш ключ от сервиса [anticaptcha](https://anti-captcha.com), чтобы увеличить эффективность спама
 
 # 📌 Discord спамер
 
