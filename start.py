@@ -826,6 +826,8 @@ def main():
 
 			else:
 				print(Fore.RED + '\n━━━━━━━━━━━Error━━━━━━━━━━━\n')
+				
+			ex()
 
 	except:
 		if lang == 'ru':
