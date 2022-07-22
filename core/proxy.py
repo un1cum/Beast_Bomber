@@ -75,7 +75,7 @@ def get_proxies():
 
 	cnt=0
 
-	with open(r"proxies.txt", "a", encoding="utf-8") as file:
+	with open(r"input\\proxies.txt", "a", encoding="utf-8") as file:
 		for child in soup.recursiveChildGenerator():    
 			if child.name=='td':
 				if cnt == 0:
