@@ -84,9 +84,10 @@ This means that you don't have the library that is specified in the error, in th
 # 📌 Donate for coffee
 
 `Crypto wallets`
-* **Smart chain: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
-* **Bitcoin: bc1qxfvstf99kyuc5x5uugxtsh3m6w3a73ruzfav7e**
-* **Ethereum: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
+* **BNB: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
+* **BTC: bc1qxfvstf99kyuc5x5uugxtsh3m6w3a73ruzfav7e**
+* **ETH: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
+* **LTC: ltc1qudx4ge8zvncqpdtl5mshfqjxzyvg43f27ysqjt**
 
 # 📌 RU
 
@@ -170,6 +171,7 @@ This means that you don't have the library that is specified in the error, in th
 # 📌 Автору на кофе
 
 `Крипта`
-* **Smart chain: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
-* **Bitcoin: bc1qxfvstf99kyuc5x5uugxtsh3m6w3a73ruzfav7e**
-* **Ethereum: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
+* **BNB: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
+* **BTC: bc1qxfvstf99kyuc5x5uugxtsh3m6w3a73ruzfav7e**
+* **ETH: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
+* **LTC: ltc1qudx4ge8zvncqpdtl5mshfqjxzyvg43f27ysqjt**
