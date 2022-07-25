@@ -39,12 +39,7 @@ try:
 
 	if ans != 'yes':
 		try:
-			os.system('pip install lxml && pip install matplotlib && pip install pandas && pip install numpy && '
-					  'pip install bs4 && pip install emoji && pip install anticaptchaofficial' 
-					  '&& pip install wheel && pip install asyncio && pip install requests && pip install progress' 
-					  '&& pip install colorama && pip install selenium && pip install user_agent && '
-					  'pip install about-time && pip install progressbar && pip install beautifulsoup4 && '
-					  'pip install selenium_stealth && pip install webdriver-manager')
+			os.system('pip install lxml matplotlib pandas numpy bs4 emoji anticaptchaofficial wheel asyncio requests progress colorama selenium user_agent about-time progressbar beautifulsoup4 selenium_stealth webdriver-manager pycountry pythonping')
 			config['config']['first_setup'] = 'yes'
 			with open(r'core\\config.ini', 'w') as configfile:
 				config.write(configfile)
