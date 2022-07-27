@@ -3,6 +3,12 @@
 
 [![Button](https://badgen.net/badge/patreon/patreon/red?icon=patreon&label)](https://www.patreon.com/ebankoff) [![Button](https://badgen.net/badge/ebankoff/ebankoff/white?icon=github&label)](https://github.com/ebankoff) [![Button](https://badgen.net/badge/Beast_Bomber/Beast_Bomber/white?icon=gitlab&label)](https://gitlab.com/ebankoff/Beast_Bomber) [![Button](https://badgen.net/badge/telegram/telegram/blue?icon=telegram&label)](https://t.me/The_W_T_F) [![Button](https://badgen.net/badge/fork/fork/purple?icon=github&label)](https://github.com/ebankoff/Beast_Bomber/fork) [![Button](https://badgen.net/badge/fork/fork/purple?icon=gitlab&label)](https://gitlab.com/ebankoff/Beast_Bomber/fork) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20over%20170%20free%20design%20blocks%20based%20on%20Bootstrap%204&url=https://www.froala.com/design-blocks&via=froala&hashtags=bootstrap,design,templates,blocks,developers)
 
+# 📌 Menu
+
+📌 [EN](https://github.com/ebankoff/Beast_Bomber#-en)
+
+📌 [RU](https://github.com/ebankoff/Beast_Bomber#-ru)
+
 # 📌 EN
 
 🔥🔥🔥 **Beast Bomber in Telegram: https://t.me/beast_bomberr_bot** 🔥🔥🔥
