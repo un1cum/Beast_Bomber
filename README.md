@@ -80,7 +80,7 @@ This means that you don't have the library that is specified in the error, in th
 |3|[hiikion](https://github.com/hiikion)|Jul 4, 2022|
 |4|[NameNami](https://github.com/NameNami)|Jul 27, 2022|
 
-**Thank you all for your contributions to the project!**
+**Thank you all for your contributions to the project ❤️**
 
 # 📌 Donate for coffee
 
@@ -168,7 +168,7 @@ This means that you don't have the library that is specified in the error, in th
 |3|[hiikion](https://github.com/hiikion)|Июль 4, 2022|
 |4|[NameNami](https://github.com/NameNami)|Июль 27, 2022|
 
-**Спасибо всем за ваши вклады в проект!**
+**Спасибо всем за ваши вклады в проект ❤️**
 
 # 📌 Автору на кофе
 
