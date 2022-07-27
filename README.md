@@ -42,7 +42,7 @@ You can write your key from [anticaptcha](https://anti-captcha.com) to increase 
 
 To use Discord spammer, you need a preferably empty account that is on the same server as the person you want to spam to. Also, the account must have 2FA turned off. To find the account token, you need to open the developer's tools and in the network tab to find "science" and copy the token in it, here is a screenshot:
 
-![wtf3](https://i.ibb.co/Wt7kThC/Screenshot-3.jpg "discord") 
+![Untitled](https://user-images.githubusercontent.com/80776324/181159259-a35c8485-134e-4e5e-a53f-6eed020c46e3.png)
 
 # 📌 DoS attack
 
@@ -128,7 +128,7 @@ This means that you don't have the library that is specified in the error, in th
 
 Чтобы пользоваться спамером Discord, вам нужен желательно пустой аккаунт, который находится на одном сервере с человеком, которому вы хотите заспамить дм. Так же на аккаунте должен быть выключен 2FA. Чтобы узнать токен аккаунта, вам нужно открыть инструмены разработчика и во вкладке network найти "science" и в нем скопировать токен, вот скрин:
 
-![wtf3](https://i.ibb.co/Wt7kThC/Screenshot-3.jpg "discord") 
+![Untitled](https://user-images.githubusercontent.com/80776324/181159274-1a5feb6b-157b-45d1-9bf1-e9e0dc09a362.png)
 
 # 📌 DoS атака
 
