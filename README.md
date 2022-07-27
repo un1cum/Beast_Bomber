@@ -78,6 +78,7 @@ This means that you don't have the library that is specified in the error, in th
 |1|[ebankoff](https://github.com/ebankoff)|Jul 23, 2022|
 |2|[PalkerCode](https://github.com/PalkerCode)|Apr 10, 2022|
 |3|[hiikion](https://github.com/hiikion)|Jul 4, 2022|
+|4|[NameNami](https://github.com/NameNami)|Jul 27, 2022|
 
 **Thank you all for your contributions to the project!**
 
@@ -165,6 +166,7 @@ This means that you don't have the library that is specified in the error, in th
 |1|[ebankoff](https://github.com/ebankoff)|Июль 23, 2022|
 |2|[PalkerCode](https://github.com/PalkerCode)|Апрель 10, 2022|
 |3|[hiikion](https://github.com/hiikion)|Июль 4, 2022|
+|4|[NameNami](https://github.com/NameNami)|Июль 27, 2022|
 
 **Спасибо всем за ваши вклады в проект!**
 
