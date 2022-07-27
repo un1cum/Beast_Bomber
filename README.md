@@ -6,8 +6,8 @@
 # 📌 Menu
 
 📌 [EN](https://github.com/ebankoff/Beast_Bomber#-en)
-- [СМС спамер](https://github.com/ebankoff/Beast_Bomber#-смс-спамер)
-- [Discord спамер](https://github.com/ebankoff/Beast_Bomber#-discord-спамер)
+- [SMS spammer](https://github.com/ebankoff/Beast_Bomber#-смс-спамер)
+- [Discord spammer](https://github.com/ebankoff/Beast_Bomber#-discord-спамер)
 - [DoS attack](https://github.com/ebankoff/Beast_Bomber#-dos-attack)
 - [Email spammer](https://github.com/ebankoff/Beast_Bomber#-email-spammer)
 - [Problems and their solutions](https://github.com/ebankoff/Beast_Bomber#-problems-and-their-solutions)
@@ -15,8 +15,8 @@
 - [Donate for coffee](https://github.com/ebankoff/Beast_Bomber#-donate-for-coffee)
 
 📌 [RU](https://github.com/ebankoff/Beast_Bomber#-ru)
-- [SMS spammer](https://github.com/ebankoff/Beast_Bomber#-sms-spammer)
-- [Discord spammer](https://github.com/ebankoff/Beast_Bomber#-discord-spammer)
+- [СМС спамер](https://github.com/ebankoff/Beast_Bomber#-sms-spammer)
+- [Discord спамер](https://github.com/ebankoff/Beast_Bomber#-discord-spammer)
 - [DoS атака](https://github.com/ebankoff/Beast_Bomber#-dos-атака)
 - [Email спамер](https://github.com/ebankoff/Beast_Bomber#-email-спамер)
 - [Проблемы и их решения](https://github.com/ebankoff/Beast_Bomber#-проблемы-и-их-решения)
