@@ -13,6 +13,7 @@ matplotlib
 user_agent
 about-time
 progressbar
+proxy_checking
 beautifulsoup4
 selenium_stealth
 webdriver-manager
