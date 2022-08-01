@@ -4530,6 +4530,27 @@ def sms(prx, number, tm, code, key):
 				except:
 					pass
 				try:
+					num = number
+					num2 = ""
+					num2 += '+'
+					num2 += '7'
+					num2 += ' '
+					num2 += '('
+					num2 += num[1]
+					num2 += num[2]
+					num2 += num[3]
+					num2 += ')'
+					num2 += ' '
+					num2 += num[4]
+					num2 += num[5]
+					num2 += num[6]
+					num2 += '-'
+					num2 += num[7]
+					num2 += num[8]
+					num2 += '-'
+					num2 += num[9]
+					num2 += num[10]
+
 					header = {
 						'accept': '*/*',
 						'accept-encoding': 'gzip, deflate, br',
@@ -4554,7 +4575,7 @@ def sms(prx, number, tm, code, key):
 					payload = {
 						'sessid': '31f28c262375f7778780adcd4c1d18ca',
 						'TYPE': 'auth',
-						'PHONE': '+7 (911) 038-56-33',
+						'PHONE': num2,
 						'auth_agree': '1'
 					}
 
@@ -5585,6 +5606,27 @@ def sms(prx, number, tm, code, key):
 				except:
 					pass
 				try:
+					num = number
+					num2 = ""
+					num2 += '+'
+					num2 += '7'
+					num2 += ' '
+					num2 += '('
+					num2 += num[1]
+					num2 += num[2]
+					num2 += num[3]
+					num2 += ')'
+					num2 += ' '
+					num2 += num[4]
+					num2 += num[5]
+					num2 += num[6]
+					num2 += '-'
+					num2 += num[7]
+					num2 += num[8]
+					num2 += '-'
+					num2 += num[9]
+					num2 += num[10]
+
 					header = {
 						'accept': '*/*',
 						'accept-encoding': 'gzip, deflate, br',
@@ -5609,7 +5651,7 @@ def sms(prx, number, tm, code, key):
 					payload = {
 						'sessid': '31f28c262375f7778780adcd4c1d18ca',
 						'TYPE': 'auth',
-						'PHONE': '+7 (911) 038-56-33',
+						'PHONE': num2,
 						'auth_agree': '1'
 					}
 
