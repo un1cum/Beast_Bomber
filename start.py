@@ -39,7 +39,7 @@ try:
 
 	if ans != 'yes':
 		try:
-			os.system('pip install lxml matplotlib pandas numpy bs4 emoji anticaptchaofficial wheel asyncio requests progress colorama selenium user_agent about-time progressbar beautifulsoup4 selenium_stealth webdriver-manager pycountry pythonping')
+			os.system('pip install proxy_checking lxml matplotlib pandas numpy bs4 emoji anticaptchaofficial wheel asyncio requests progress colorama selenium user_agent about-time progressbar beautifulsoup4 selenium_stealth webdriver-manager pycountry pythonping')
 			config['config']['first_setup'] = 'yes'
 			with open(r'core\\config.ini', 'w') as configfile:
 				config.write(configfile)
