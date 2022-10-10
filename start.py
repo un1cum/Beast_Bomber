@@ -18,7 +18,6 @@ import os
 import sys
 import ctypes
 import os.path
-import platform
 from sys import platform
 
 try:
