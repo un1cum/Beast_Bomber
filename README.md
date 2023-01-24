@@ -4,7 +4,7 @@
 
 # Beast Bomber 💣
   
-​​​​​​</br>[![Button](https://badgen.net/badge/patreon/patreon/white?icon=patreon&label)](https://www.patreon.com/ebankoff) [![Button](https://badgen.net/badge/un1cum/un1cum/white?icon=github&label)](https://github.com/ebankoff) [![Button](https://badgen.net/badge/fork/fork/white?icon=github&label)](https://github.com/un1cum/Beast_Bomber/fork) [![Tweet](https://badgen.net/badge/tweet/tweet/white?icon=twitter&label)](https://twitter.com/intent/tweet?text=Get%20over%20170%20free%20design%20blocks%20based%20on%20Bootstrap%204&url=https://www.froala.com/design-blocks&via=froala&hashtags=bootstrap,design,templates,blocks,developers)
+​​​​​​</br>[![Button](https://badgen.net/badge/patreon/patreon/white?icon=patreon&label)](https://www.patreon.com/ebankoff) [![Button](https://badgen.net/badge/un1cum/un1cum/white?icon=github&label)](https://github.com/ebankoff) [![Button](https://badgen.net/badge/fork/fork/white?icon=github&label)](https://github.com/un1cum/Beast_Bomber/fork)
 
 </div>
 
