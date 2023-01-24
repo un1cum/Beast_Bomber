@@ -34,6 +34,8 @@
 
 🔥🔥🔥 **Beast Bomber in Telegram: https://t.me/beast_bomberr_bot** 🔥🔥🔥
 
+![screenshot](https://user-images.githubusercontent.com/80776324/214398611-d862b400-9ebb-4c51-ac7f-80643849301a.png)
+
 `Possibilities`
 * SMS attack
 * Email attack
@@ -75,7 +77,7 @@ To start a Discord attack, you need to specify the **target ID**, it can be foun
 
 **Test results from https://dstat.cc**
 
-![screenshot](https://user-images.githubusercontent.com/80776324/214390403-1b4dd6c1-9e30-4aff-98ed-06a0d46f9647.png)
+![screenshot](https://user-images.githubusercontent.com/80776324/214398918-81d488c7-e23a-4dc3-864b-3b82b1c55571.png)
 
 | Threads | Attack time |
 |---------|-------------|
@@ -124,6 +126,8 @@ This means that you don't have the library that is specified in the error, in th
 
 🔥🔥🔥 **Beast Bomber в Telegram: https://t.me/beast_bomberr_bot** 🔥🔥🔥
 
+![screenshot](https://user-images.githubusercontent.com/80776324/214398819-4cf892ba-aa55-456f-86ed-584dde45ab20.png)
+
 `Возможности`
 * SMS атака
 * Email атака
@@ -165,7 +169,7 @@ cd Beast_Bomber && python beast.py
 
 **Результаты теста с https://dstat.cc**
 
-![screenshot](https://user-images.githubusercontent.com/80776324/214390403-1b4dd6c1-9e30-4aff-98ed-06a0d46f9647.png)
+![screenshot](https://user-images.githubusercontent.com/80776324/214398918-81d488c7-e23a-4dc3-864b-3b82b1c55571.png)
 
 | Потоки  | Время атаки |
 |---------|-------------|
