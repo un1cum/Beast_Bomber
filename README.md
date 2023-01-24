@@ -2,95 +2,101 @@
 
 <div align="center">
 
-# Beast Bomber💥
+# Beast Bomber 💣
   
 ​​​​​​</br>[![Button](https://badgen.net/badge/patreon/patreon/white?icon=patreon&label)](https://www.patreon.com/ebankoff) [![Button](https://badgen.net/badge/un1cum/un1cum/white?icon=github&label)](https://github.com/ebankoff) [![Button](https://badgen.net/badge/fork/fork/white?icon=github&label)](https://github.com/un1cum/Beast_Bomber/fork) [![Tweet](https://badgen.net/badge/tweet/tweet/white?icon=twitter&label)](https://twitter.com/intent/tweet?text=Get%20over%20170%20free%20design%20blocks%20based%20on%20Bootstrap%204&url=https://www.froala.com/design-blocks&via=froala&hashtags=bootstrap,design,templates,blocks,developers)
 
 </div>
 
-# 📌 Menu
+# 📌 Menu / Меню
 
-📌 [EN](https://github.com/ebankoff/Beast_Bomber#-en)
-- [SMS spammer](https://github.com/ebankoff/Beast_Bomber#-sms-spammer)
-- [Discord spammer](https://github.com/ebankoff/Beast_Bomber#-discord-spammer)
-- [DoS attack](https://github.com/ebankoff/Beast_Bomber#-dos-attack)
-- [Email spammer](https://github.com/ebankoff/Beast_Bomber#-email-spammer)
-- [Problems and their solutions](https://github.com/ebankoff/Beast_Bomber#-problems-and-their-solutions)
-- [Contributors](https://github.com/ebankoff/Beast_Bomber#-contributors)
-- [Donate for coffee](https://github.com/ebankoff/Beast_Bomber#-donate-for-coffee)
+📌 [EN](https://github.com/un1cum/Beast_Bomber#-en)
+- [SMS attack](https://github.com/un1cum/Beast_Bomber#-sms-attack)
+- [Discord attack](https://github.com/un1cum/Beast_Bomber#-discord-attack)
+- [DDoS attack](https://github.com/un1cum/Beast_Bomber#-ddos-attack)
+- [Email attack](https://github.com/un1cum/Beast_Bomber#-email-attack)
+- [Telegram attack](https://github.com/un1cum/Beast_Bomber#-telegram-attack)
+- [Problems and their solutions](https://github.com/un1cum/Beast_Bomber#-problems-and-their-solutions)
+- [Contributors](https://github.com/un1cum/Beast_Bomber#-contributors)
+- [Donate for coffee](https://github.com/un1cum/Beast_Bomber#-donate-for-coffee)
 
-📌 [RU](https://github.com/ebankoff/Beast_Bomber#-ru)
-- [СМС спамер](https://github.com/ebankoff/Beast_Bomber#-смс-спамер)
-- [Discord спамер](https://github.com/ebankoff/Beast_Bomber#-discord-спамер)
-- [DoS атака](https://github.com/ebankoff/Beast_Bomber#-dos-атака)
-- [Email спамер](https://github.com/ebankoff/Beast_Bomber#-email-спамер)
-- [Проблемы и их решения](https://github.com/ebankoff/Beast_Bomber#-проблемы-и-их-решения)
-- [Вклады в проект](https://github.com/ebankoff/Beast_Bomber#-вклады-в-проект)
-- [Автору на кофе](https://github.com/ebankoff/Beast_Bomber#-автору-на-кофе)
+📌 [RU](https://github.com/un1cum/Beast_Bomber#-ru)
+- [СМС атака](https://github.com/un1cum/Beast_Bomber#-смс-атака)
+- [Discord атака](https://github.com/un1cum/Beast_Bomber#-discord-атака)
+- [DDoS атака](https://github.com/un1cum/Beast_Bomber#-ddos-атака)
+- [Email атака](https://github.com/un1cum/Beast_Bomber#-email-атака)
+- [Telegram attack](https://github.com/un1cum/Beast_Bomber#-telegram-атака)
+- [Проблемы и их решения](https://github.com/un1cum/Beast_Bomber#-проблемы-и-их-решения)
+- [Вклады в проект](https://github.com/un1cum/Beast_Bomber#-вклады-в-проект)
+- [Автору на кофе](https://github.com/un1cum/Beast_Bomber#-автору-на-кофе)
 
 # 📌 EN
 
 🔥🔥🔥 **Beast Bomber in Telegram: https://t.me/beast_bomberr_bot** 🔥🔥🔥
 
-**Beast Bomber in GitLab: https://gitlab.com/ebankoff/Beast_Bomber**
-
-**See also: https://github.com/ebankoff/CleanerPRO** 
-
 `Possibilities`
-* SMS spammer(works better with proxy)
-* Email spammer
-* WhatsApp spammer
-* Discord spammer
-* Telegram spammer
-* DoS attack
+* SMS attack
+* Email attack
+* Discord attack
+* Telegram attack
+* DDoS attack
 * Multilanguage
 
 `Installation`
-* git clone https://github.com/ebankoff/Beast_Bomber
+```
+git clone https://github.com/un1cum/Beast_Bomber
+```
+
+**P.S - If you don't have git, you need to install it: https://git-scm.com/downloads**
 
 `First setup`
-- For email spam to work correctly, you must have the "less secure apps" feature enabled.
-- For telegram and whatsapp spammer to work correctly, you must download the [chrome driver](https://chromedriver.chromium.org/downloads) corresponding to the version of the chrome browser that is installed (if not, install it) on your pc, then unpack the contents of the archive into the core bomber folder. 
-- The program will configure everything else on its own. If the automatic setup fails, you can set it up manually. Along with Beast Bomber comes a requirements.txt file. This file contains external dependencies. To install them, you need to open cmd/terminal and write: **pip install -r requirements.txt**
+- To get started, you need to install the necessary Python libraries: ``pip install -r requirements.txt``
+- For a DDoS attack to work correctly, you need to enter **proxies** into the input\proxies.txt file or automatically parse them using the built-in function
+- For the Telegram attack to work, you need to put the Telegram accounts in **tdata** format (each account in a separate folder) in the input\telegram_accounts folder
+- To make email spam work, you need to put email accounts in the format **email:password** in the input\email_accounts.txt file
+- For discord spam to work, you must place **tokens** from discord accounts in the file input\discord_accounts.txt
 
 **The setup is done!**
 
 `Launch`
-* cd Beast_Bomber
-* python3 start.py
+```
+cd Beast_Bomber && python beast.py
+```
 
-# 📌 SMS spammer
+# 📌 SMS attack
 
-You can write your key from [anticaptcha](https://anti-captcha.com) to increase the effectiveness of spam
+There are many spam services at your disposal! Beast Bomber supports **Russian and Kazakh** phone numbers.
 
-# 📌 Discord spammer
+# 📌 Discord attack
 
-To use Discord spammer, you need a preferably empty account that is on the same server as the person you want to spam to. Also, the account must have 2FA turned off. To find the account token, you need to open the developer's tools and in the network tab to find "science" and copy the token in it, here is a screenshot:
+To start a Discord attack, you need to specify the **target ID**, it can be found in the url of the discord dialog in your browser.
 
-![Untitled](https://user-images.githubusercontent.com/80776324/181159259-a35c8485-134e-4e5e-a53f-6eed020c46e3.png)
-
-# 📌 DoS attack
+# 📌 DDoS attack
 
 **Test results from https://dstat.cc**
 
-[![wtf5](https://i.ibb.co/9GMkDGP/Screenshot-1.png "DoS")](https://dstat.cc)
+![screenshot](https://user-images.githubusercontent.com/80776324/214390403-1b4dd6c1-9e30-4aff-98ed-06a0d46f9647.png)
 
-* Threads - 40
-* Attack time - 30 seconds
+| Threads | Attack time |
+|---------|-------------|
+|   40    | 60 seconds  |
 
-# 📌 Email spammer
+# 📌 Email attack
 
-For the email spammer, you need to specify an email and password (email:password) in the emails.txt file. You can specify more than one (each email:password on a new line) to spam from multiple addresses at once. It is better to use accounts Yahoo, as they work best.
+Beast Bomber supports the following email services (from which spam will be sent): **mail.ru, yahoo, rambler.**
 
-IMPORTANT: you must specify a specially generated password for less secure applications, not a regular password for your account.
+# 📌 Telegram attack
 
-![wtf5](https://i.ibb.co/kcsqN5T/Screenshot-4.png "email") 
+The attack occurs as follows:
+
+
+Beast Bomber logs into the accounts that you put in your input\telegram_accounts folder and sends the message you write from them.
 
 # 📌 Problems and their solutions
 
 If you see something like this:
 
-![wtf4](https://i.ibb.co/XWNtL0S/Screenshot-1.png "no module named") 
+![screenshot](https://i.ibb.co/XWNtL0S/Screenshot-1.png "no module named") 
 
 This means that you don't have the library that is specified in the error, in this case: "_ctypes". You need to enter in the terminal or cmd:
 
@@ -114,75 +120,73 @@ This means that you don't have the library that is specified in the error, in th
 * **ETH: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
 * **LTC: ltc1qudx4ge8zvncqpdtl5mshfqjxzyvg43f27ysqjt**
 
-<div align="center">
-
-​​​​​​</br>[![](https://i.ibb.co/vPFFxvx/qr-code.gif)](https://www.donationalerts.com/r/ebankoff)
-
-</div>
-
 # 📌 RU
 
 🔥🔥🔥 **Beast Bomber в Telegram: https://t.me/beast_bomberr_bot** 🔥🔥🔥
 
-**Beast Bomber на GitLab: https://gitlab.com/ebankoff/Beast_Bomber**
-
-**См. также: https://github.com/ebankoff/CleanerPRO**
-
 `Возможности`
-* SMS спамер(работает лучше с proxy)
-* Email спамер
-* WhatsApp спамер
-* Discord спамер
-* Telegram спамер
-* DoS атака
-* Поддержка двух языков
+* SMS атака
+* Email атака
+* Discord атака
+* Telegram атака
+* DDoS атака
+* Мультиязычность
 
-`Установка`
-* git clone https://github.com/ebankoff/Beast_Bomber
+``Установка``
+```
+git clone https://github.com/un1cum/Beast_Bomber
+```
 
-`Первая настройка`
-- Для корректной работы email спама, у Вас должна быть включена функция "Ненадежные приложения, у которых есть доступ к аккаунту".
-- Для корректной работы telegram и whatsapp спамера вы должны скачать [chrome driver](https://chromedriver.chromium.org/downloads), соответствующий версии chrome браузера, который установлен(если нет, установите) на вашем пк, затем распакуйте содержимое архива в папку core бомбера. 
-- Все остальное программа настроит самостоятельно. Если автоматическая настройка не удалась, вы можете настроить все вручную. Вместе с Beast Bomber идет файл requirements.txt. Этот файл содержит внешние зависимости. Чтобы установить их, нужно открыть cmd/terminal и написать: **pip install -r requirements.txt**
+**P.S. - Если у вас нет git, вам нужно установить его: https://git-scm.com/downloads**.
+
+`Первая установка`
+- Чтобы начать работу, вам нужно установить необходимые библиотеки Python: ``pip install -r requirements.txt``
+- Для корректной работы DDoS атаки необходимо поместить прокси в файл input\proxies.txt или автоматически спарсить их с помощью встроенной функции
+- Чтобы атака Telegram работала, необходимо поместить аккаунты Telegram в формате **tdata** (каждый аккаунт в отдельной папке) в папку input\telegram_accounts
+- Чтобы спам по электронной почте работал, вам нужно поместить учетные записи электронной почты в формате **email:пароль** в файл input\email_accounts.txt
+- Для того, чтобы работал спам в Discord, вы должны поместить **токены** от аккаунтов Discord в файл input\discord_accounts.txt
 
 **Настройка завершена!**
 
-`Запуск`
-* cd Beast_Bomber
-* python3 start.py
+``Запуск``
+```
+cd Beast_Bomber && python beast.py
+```
 
-# 📌 СМС спамер
+# 📌 SMS атака
 
-Вы можете указать Ваш ключ от сервиса [anticaptcha](https://anti-captcha.com), чтобы увеличить эффективность спама
+В вашем распоряжении множество спам сервисов! Beast Bomber поддерживает **русские и казахские** номера телефонов.
 
-# 📌 Discord спамер
+# 📌 Discord атака
 
-Чтобы пользоваться спамером Discord, вам нужен желательно пустой аккаунт, который находится на одном сервере с человеком, которому вы хотите заспамить дм. Так же на аккаунте должен быть выключен 2FA. Чтобы узнать токен аккаунта, вам нужно открыть инструмены разработчика и во вкладке network найти "science" и в нем скопировать токен, вот скрин:
+Чтобы начать атаку Discord, вам нужно указать **ID цели**, его можно найти в url диалога discord в вашем браузере.
 
-![Untitled](https://user-images.githubusercontent.com/80776324/181159274-1a5feb6b-157b-45d1-9bf1-e9e0dc09a362.png)
+# 📌 DDoS атака
 
-# 📌 DoS атака
+**Результаты теста с https://dstat.cc**
 
-**Результаты тестов на https://dstat.cc**
+![screenshot](https://user-images.githubusercontent.com/80776324/214390403-1b4dd6c1-9e30-4aff-98ed-06a0d46f9647.png)
 
-[![wtf5](https://i.ibb.co/9GMkDGP/Screenshot-1.png "DoS")](https://dstat.cc)
+| Потоки  | Время атаки |
+|---------|-------------|
+|   40    |  60 секунд  |
 
-* Потоки - 40
-* Время атаки - 30 секунд
+# 📌 Email атака
 
-# 📌 Email спамер
+Beast Bomber поддерживает следующие почтовые сервисы (с которых будет рассылаться спам): **mail.ru, yahoo, rambler.**.
 
-Для спама электронной почты необходимо указать email и пароль (email:пароль) в файле emails.txt. Можно указать несколько (каждый email:пароль в новой строке), чтобы спамить сразу с нескольких адресов. Лучше использовать аккаунты Yahoo, т.к они работают лучше всего.
+# 📌 Telegram атака
 
-ВАЖНО: необходимо указывать не обычный пароль от аккаунта, а специально сгенерированный для доступа небезопасных приложений.
+Атака происходит следующим образом:
 
-![wtf5](https://i.ibb.co/kcsqN5T/Screenshot-4.png "email") 
+
+Beast Bomber входит в аккаунты, которые вы поместили в папку input\telegram_accounts и отправляет от них сообщение, которое вы указали.
 
 # 📌 Проблемы и их решения
 
 Если у вас похожая ошибка:
 
-![wtf4](https://i.ibb.co/XWNtL0S/Screenshot-1.png "no module named") 
+![screenshot](https://i.ibb.co/XWNtL0S/Screenshot-1.png "no module named") 
 
 Это означает, что у вас отсутствует нужная библиотека pip, в этом случае: "_ctypes". Откройте терминал, cmd или что там у вас и пишите:
 
@@ -206,9 +210,3 @@ This means that you don't have the library that is specified in the error, in th
 * **BTC: bc1qxfvstf99kyuc5x5uugxtsh3m6w3a73ruzfav7e**
 * **ETH: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
 * **LTC: ltc1qudx4ge8zvncqpdtl5mshfqjxzyvg43f27ysqjt**
-
-<div align="center">
-
-​​​​​​</br>[![](https://i.ibb.co/vPFFxvx/qr-code.gif)](https://www.donationalerts.com/r/ebankoff)
-
-</div>
