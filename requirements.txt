@@ -1,0 +1,10 @@
+colorama~=0.4.6
+fade~=0.0.9
+Telethon~=1.26.1
+requests~=2.28.2
+beautifulsoup4~=4.11.1
+fake-useragent~=1.1.1
+lxml~=4.9.2
+opentele~=1.15.1
+httpagentparser~=1.9.5
+ua-parser~=0.16.1
