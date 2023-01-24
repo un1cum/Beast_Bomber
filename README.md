@@ -21,7 +21,7 @@
 - [Donate for coffee](https://github.com/un1cum/Beast_Bomber#-donate-for-coffee)
 
 📌 [RU](https://github.com/un1cum/Beast_Bomber#-ru)
-- [СМС атака](https://github.com/un1cum/Beast_Bomber#-смс-атака)
+- [СМС атака](https://github.com/un1cum/Beast_Bomber#-sms-атака)
 - [Discord атака](https://github.com/un1cum/Beast_Bomber#-discord-атака)
 - [DDoS атака](https://github.com/un1cum/Beast_Bomber#-ddos-атака)
 - [Email атака](https://github.com/un1cum/Beast_Bomber#-email-атака)
