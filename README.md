@@ -49,7 +49,9 @@
 git clone https://github.com/un1cum/Beast_Bomber
 ```
 
-**P.S - If you don't have git, you need to install it: https://git-scm.com/downloads**
+`P.S`
+- If you don't have git, you need to install it: https://git-scm.com/downloads
+- If you install Beast Bomber manually, without git, be sure to delete the .gitkeep file in the input\telegram_accounts folder
 
 `First setup`
 - To get started, you need to install the necessary Python libraries: ``pip install -r requirements.txt``
@@ -141,7 +143,9 @@ This means that you don't have the library that is specified in the error, in th
 git clone https://github.com/un1cum/Beast_Bomber
 ```
 
-**P.S. - Если у вас нет git, вам нужно установить его: https://git-scm.com/downloads**.
+`P.S`
+- Если у вас нет git, вам нужно установить его: https://git-scm.com/downloads
+- Если будете устанавливать Beast Bomber вручную, без git, то обязательно удаляйте файл .gitkeep в папке input\telegram_accounts
 
 `Первая установка`
 - Чтобы начать работу, вам нужно установить необходимые библиотеки Python: ``pip install -r requirements.txt``
