@@ -54,7 +54,10 @@ git clone https://github.com/un1cum/Beast_Bomber
 - If you install Beast Bomber manually, without git, be sure to delete the .gitkeep file in the input\telegram_accounts folder
 
 `First setup`
-- To get started, you need to install the necessary Python libraries: ``pip install -r requirements.txt``
+- To get started, you need to install the necessary Python libraries. Go to the Beast_Bomber folder and enter this command in cmd or terminal:  
+```
+pip install -r requirements.txt
+```
 - For a DDoS attack to work correctly, you need to enter **proxies** into the input\proxies.txt file or automatically parse them using the built-in function
 - For the Telegram attack to work, you need to put the Telegram accounts in **tdata** format (each account in a separate folder) in the input\telegram_accounts folder
 - To make email spam work, you need to put email accounts in the format **email:password** in the input\email_accounts.txt file
@@ -64,7 +67,7 @@ git clone https://github.com/un1cum/Beast_Bomber
 
 `Launch`
 ```
-cd Beast_Bomber && python beast.py
+python beast.py
 ```
 
 # 📌 SMS attack
@@ -148,7 +151,10 @@ git clone https://github.com/un1cum/Beast_Bomber
 - Если будете устанавливать Beast Bomber вручную, без git, то обязательно удаляйте файл .gitkeep в папке input\telegram_accounts
 
 `Первая установка`
-- Чтобы начать работу, вам нужно установить необходимые библиотеки Python: ``pip install -r requirements.txt``
+- Чтобы начать работу, вам нужно установить необходимые библиотеки Python. Зайдите в папку Beast_Bomber и введите в cmd или terminal эту команду: 
+```
+pip install -r requirements.txt
+```
 - Для корректной работы DDoS атаки необходимо поместить прокси в файл input\proxies.txt или автоматически спарсить их с помощью встроенной функции
 - Чтобы атака Telegram работала, необходимо поместить аккаунты Telegram в формате **tdata** (каждый аккаунт в отдельной папке) в папку input\telegram_accounts
 - Чтобы спам по электронной почте работал, вам нужно поместить учетные записи электронной почты в формате **email:пароль** в файл input\email_accounts.txt
@@ -158,7 +164,7 @@ git clone https://github.com/un1cum/Beast_Bomber
 
 ``Запуск``
 ```
-cd Beast_Bomber && python beast.py
+python beast.py
 ```
 
 # 📌 SMS атака
