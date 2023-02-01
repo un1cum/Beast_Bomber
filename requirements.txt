@@ -8,3 +8,4 @@ lxml~=4.9.2
 opentele~=1.15.1
 httpagentparser~=1.9.5
 ua-parser~=0.16.1
+aiohttp~=3.8.3
