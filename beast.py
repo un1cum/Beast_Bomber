@@ -34,22 +34,6 @@ from core.telegram_spam.telegram import *
 init()
 
 
-def ports():
-    ip = socket.gethostbyname(socket.gethostname())
-    av_ports = []
-
-    for port in range(65535):
-        try:
-            serv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            serv.bind((ip, port))
-        except:
-            av_ports.append(port)
-
-        serv.close()
-
-    return av_ports
-
-
 class BeastBomber:
     def __init__(self):
         self.js_file = ''
@@ -239,12 +223,12 @@ The author would appreciate it if you would put a star on
 
                 if qsn == "yes":
                     text_e = f"""
-    ╔══════════[Attack info]══════════╗
-        Threads: {str(threads)}        
-        Time: {str(time_a)}            
-        Target: {phone}      
-        Proxy: {proxy}               
-    ╚═════════════════════════════════╝"""
+╔══════════[Attack info]══════════╗
+    Threads: {str(threads)}        
+    Time: {str(time_a)}            
+    Target: {phone}      
+    Proxy: {proxy}               
+╚═════════════════════════════════╝"""
 
                     if proxy == 'yes':
                         proxy_r = 'да'
@@ -252,12 +236,12 @@ The author would appreciate it if you would put a star on
                         proxy_r = 'нет'
 
                     text_r = f"""
-    ╔═════════[Инфо об атаке]═════════╗
-        Потоки: {str(threads)}        
-        Время: {str(time_a)}          
-        Цель: {phone}    
-        Прокси: {proxy_r}             
-    ╚═════════════════════════════════╝"""
+╔═════════[Инфо об атаке]═════════╗
+    Потоки: {str(threads)}        
+    Время: {str(time_a)}          
+    Цель: {phone}    
+    Прокси: {proxy_r}             
+╚═════════════════════════════════╝"""
 
                     if self.lang == "ru":
                         print(fade.fire(text_r))
@@ -372,17 +356,17 @@ The author would appreciate it if you would put a star on
 
                 if qsn == "yes":
                     text_e = f"""
-    ╔══════════[Attack info]══════════╗
-        Threads: {str(threads)}        
-        Time: {str(time_a)}            
-        Target: {target}                
-    ╚═════════════════════════════════╝"""
+╔══════════[Attack info]══════════╗
+    Threads: {str(threads)}        
+    Time: {str(time_a)}            
+    Target: {target}                
+╚═════════════════════════════════╝"""
                     text_r = f"""
-    ╔═════════[Инфо об атаке]═════════╗
-        Потоки: {str(threads)}        
-        Время: {str(time_a)}          
-        Цель: {target}                 
-    ╚═════════════════════════════════╝"""
+╔═════════[Инфо об атаке]═════════╗
+    Потоки: {str(threads)}        
+    Время: {str(time_a)}          
+    Цель: {target}                 
+╚═════════════════════════════════╝"""
 
                     if self.lang == "ru":
                         print(fade.fire(text_r))
@@ -473,15 +457,15 @@ The author would appreciate it if you would put a star on
 
                 if qsn == "yes":
                     text_e = f"""
-    ╔══════════[Attack info]══════════╗
-        Time: {str(time_a)}            
-        Target: {target}                
-    ╚═════════════════════════════════╝"""
+╔══════════[Attack info]══════════╗
+    Time: {str(time_a)}            
+    Target: {target}                
+╚═════════════════════════════════╝"""
                     text_r = f"""
-    ╔═════════[Инфо об атаке]═════════╗
-        Время: {str(time_a)}          
-        Цель: {target}                 
-    ╚═════════════════════════════════╝"""
+╔═════════[Инфо об атаке]═════════╗
+    Время: {str(time_a)}          
+    Цель: {target}                 
+╚═════════════════════════════════╝"""
 
                     if self.lang == "ru":
                         print(fade.fire(text_r))
@@ -595,17 +579,17 @@ The author would appreciate it if you would put a star on
 
                 if qsn == "yes":
                     text_e = f"""
-    ╔══════════[Attack info]══════════╗
-        Threads: {str(threads)}        
-        Time: {str(time_a)}            
-        Target: {target}                
-    ╚═════════════════════════════════╝"""
+╔══════════[Attack info]══════════╗
+    Threads: {str(threads)}        
+    Time: {str(time_a)}            
+    Target: {target}                
+╚═════════════════════════════════╝"""
                     text_r = f"""
-    ╔═════════[Инфо об атаке]═════════╗
-        Потоки: {str(threads)}        
-        Время: {str(time_a)}          
-        Цель: {target}                 
-    ╚═════════════════════════════════╝"""
+╔═════════[Инфо об атаке]═════════╗
+    Потоки: {str(threads)}        
+    Время: {str(time_a)}          
+    Цель: {target}                 
+╚═════════════════════════════════╝"""
 
                     if self.lang == "ru":
                         print(fade.fire(text_r))
@@ -651,8 +635,6 @@ The author would appreciate it if you would put a star on
                     os.system("clear")
 
                 logo_ddos()
-
-                av_ports = ports()
 
                 if self.lang == "ru":
                     print(Fore.LIGHTCYAN_EX + 'Напишите exit для отмены\n')
@@ -724,7 +706,7 @@ The author would appreciate it if you would put a star on
                     else:
                         print(fade.fire(text_e))
 
-                    start_ddos(threads, time_a, target, av_ports)
+                    start_ddos(threads, time_a, target)
 
                     text = "{}"
                     t = time.monotonic()
