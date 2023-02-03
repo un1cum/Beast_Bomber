@@ -52,6 +52,7 @@ git clone https://github.com/un1cum/Beast_Bomber
 `P.S`
 - If you don't have git, you need to install it: https://git-scm.com/downloads
 - If you install Beast Bomber manually, without git, be sure to delete the .gitkeep file in the input\telegram_accounts folder
+- 
 
 `First setup`
 - To get started, you need to install the necessary Python libraries. Go to the Beast_Bomber folder and enter this command in cmd or terminal:  
@@ -101,13 +102,23 @@ Beast Bomber logs into the accounts that you put in your input\telegram_accounts
 
 # 📌 Problems and their solutions
 
-If you see something like this:
+``If you see something like this:``
 
 ![screenshot](https://i.ibb.co/XWNtL0S/Screenshot-1.png "no module named") 
 
 This means that you don't have the library that is specified in the error, in this case: "_ctypes". You need to enter in the terminal or cmd:
 
 * pip install the name of the required library (example: pip install _ctypes)
+
+``If you install Beast Bomber on the termux:``
+
+You may have a problem installing the **opentele** library, to fix it enter the following command: 
+
+```
+pkg install pyqt5 python-pyqtwebengine
+```
+
+then reinstall the **opentele** library.
 
 # 📌 Contributors
 
@@ -198,7 +209,7 @@ Beast Bomber входит в аккаунты, которые вы помест�
 
 # 📌 Проблемы и их решения
 
-Если у вас похожая ошибка:
+``Если у вас похожая ошибка:``
 
 ![screenshot](https://i.ibb.co/XWNtL0S/Screenshot-1.png "no module named") 
 
@@ -206,6 +217,15 @@ Beast Bomber входит в аккаунты, которые вы помест�
 
 * pip install имя отсутствующей библиотеки (пример: pip install _ctypes)
 
+``Если вы устанавливаете Beast Bomber на termux:``
+
+У вас может возникнуть пробоема с установкой библиотеки **opentele**, чтобы исправить её, введите следующую команду: 
+
+```
+pkg install pyqt5 python-pyqtwebengine
+```
+
+затем повторите установку **opentele**.
 
 # 📌 Вклады в проект
 
