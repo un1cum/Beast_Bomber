@@ -1,6 +1,6 @@
 colorama~=0.4.6
 fade~=0.0.9
-Telethon~=1.26.1
+telethon~=1.27.0
 requests~=2.28.2
 beautifulsoup4~=4.11.1
 fake-useragent~=1.1.1
