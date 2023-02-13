@@ -5,6 +5,7 @@
 # Beast Bomber 💣
   
 ​​​​​​</br>[![Button](https://badgen.net/badge/patreon/patreon/white?icon=patreon&label)](https://www.patreon.com/un1cum) [![Button](https://badgen.net/badge/un1cum/un1cum/white?icon=github&label)](https://github.com/un1cum) [![Button](https://badgen.net/badge/fork/fork/white?icon=github&label)](https://github.com/un1cum/Beast_Bomber/fork)
+​​​​​​</br>[![Button](https://badgen.net/badge/replit/replit/white?icon=bitcoin-lightning&label)](https://replit.com/@un1cum/Beast-Bomber)
 
 </div>
 
