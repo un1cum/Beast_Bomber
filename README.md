@@ -32,7 +32,8 @@
 
 # 📌 EN
 
-🔥🔥🔥 **Beast Bomber in Telegram: https://t.me/beast_bomberr_bot** 🔥🔥🔥
+📌 **Beast Bomber in Telegram: https://t.me/beast_bomberr_bot**
+📌 **Beast Bomber in replit: https://replit.com/@un1cum/Beast-Bomber#main.py**
 
 ![screenshot](https://user-images.githubusercontent.com/80776324/214398611-d862b400-9ebb-4c51-ac7f-80643849301a.png)
 
@@ -140,7 +141,8 @@ then reinstall the **opentele** library.
 
 # 📌 RU
 
-🔥🔥🔥 **Beast Bomber в Telegram: https://t.me/beast_bomberr_bot** 🔥🔥🔥
+📌 **Beast Bomber в Telegram: https://t.me/beast_bomberr_bot**
+📌 **Beast Bomber на replit: https://replit.com/@un1cum/Beast-Bomber#main.py**
 
 ![screenshot](https://user-images.githubusercontent.com/80776324/214398819-4cf892ba-aa55-456f-86ed-584dde45ab20.png)
 
