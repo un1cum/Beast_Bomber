@@ -5,7 +5,7 @@
 # Beast Bomber 💣
   
 ​​​​​​</br>[![Button](https://badgen.net/badge/patreon/patreon/white?icon=patreon&label)](https://www.patreon.com/un1cum) [![Button](https://badgen.net/badge/un1cum/un1cum/white?icon=github&label)](https://github.com/un1cum) [![Button](https://badgen.net/badge/fork/fork/white?icon=github&label)](https://github.com/un1cum/Beast_Bomber/fork)
-​​​​​​</br>[![Button](https://badgen.net/badge/replit/replit/white?icon=bitcoin-lightning&label)](https://replit.com/@un1cum/Beast-Bomber)
+​​​​​​</br>[![Button](https://badgen.net/badge/replit/replit/white?icon=bitcoin-lightning&label)](https://replit.com/@un1cum/Beast-Bomber) [![Button](https://badgen.net/badge/discord/discord/white?icon=discord&label)](https://discord.gg/qkK4NG4ARU)
 
 </div>
 
@@ -36,6 +36,8 @@
 📌 **Beast Bomber in Telegram: https://t.me/beast_bomberr_bot**
 
 📌 **Beast Bomber in replit: https://replit.com/@un1cum/Beast-Bomber**
+
+📌 **Discord server: https://discord.gg/qkK4NG4ARU**
 
 ![screenshot](https://user-images.githubusercontent.com/80776324/214398611-d862b400-9ebb-4c51-ac7f-80643849301a.png)
 
@@ -146,6 +148,8 @@ then reinstall the **opentele** library.
 📌 **Beast Bomber в Telegram: https://t.me/beast_bomberr_bot**
 
 📌 **Beast Bomber на replit: https://replit.com/@un1cum/Beast-Bomber**
+
+📌 **Discord сервер: https://discord.gg/qkK4NG4ARU**
 
 ![screenshot](https://user-images.githubusercontent.com/80776324/214398819-4cf892ba-aa55-456f-86ed-584dde45ab20.png)
 
