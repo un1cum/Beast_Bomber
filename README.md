@@ -137,6 +137,12 @@ then reinstall the **opentele** library.
 
 # 📌 Donate for coffee
 
+`Patreon`
+* **URL: https://www.patreon.com/un1cum**
+
+`Boosty`
+* **URL: https://boosty.to/un1cum**
+
 `Crypto wallets`
 * **BNB: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
 * **BTC: bc1qxfvstf99kyuc5x5uugxtsh3m6w3a73ruzfav7e**
@@ -247,6 +253,12 @@ pkg install pyqt5 python-pyqtwebengine
 **Спасибо всем за ваши вклады в проект ❤️**
 
 # 📌 Автору на кофе
+
+`Patreon`
+* **Ссылка: https://www.patreon.com/un1cum**
+
+`Boosty`
+* **Ссылка: https://boosty.to/un1cum**
 
 `Крипта`
 * **BNB: 0x96a0B6E4274771D5f3F8e59564b58C35D74D8Cc1**
