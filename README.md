@@ -11,25 +11,25 @@
 
 # 📌 Menu / Меню
 
-📌 [EN](https://github.com/un1cum/Beast_Bomber#-en)
-- [SMS attack](https://github.com/un1cum/Beast_Bomber#-sms-attack)
-- [Discord attack](https://github.com/un1cum/Beast_Bomber#-discord-attack)
-- [DDoS attack](https://github.com/un1cum/Beast_Bomber#-ddos-attack)
-- [Email attack](https://github.com/un1cum/Beast_Bomber#-email-attack)
-- [Telegram attack](https://github.com/un1cum/Beast_Bomber#-telegram-attack)
-- [Problems and their solutions](https://github.com/un1cum/Beast_Bomber#-problems-and-their-solutions)
-- [Contributors](https://github.com/un1cum/Beast_Bomber#-contributors)
-- [Donate for coffee](https://github.com/un1cum/Beast_Bomber#-donate-for-coffee)
+📌 [<kbd>EN</kbd>](#-en)
+- [<kbd>SMS attack</kbd>](#-sms-attack)
+- [<kbd>Discord attack</kbd>](#-discord-attack)
+- [<kbd>DDoS attack</kbd>](#-ddos-attack)
+- [<kbd>Email attack</kbd>](#-email-attack)
+- [<kbd>Telegram attack</kbd>](#-telegram-attack)
+- [<kbd>Problems and their solutions</kbd>](#-problems-and-their-solutions)
+- [<kbd>Contributors</kbd>](#-contributors)
+- [<kbd>Donate for coffee</kbd>](#-donate-for-coffee)
 
-📌 [RU](https://github.com/un1cum/Beast_Bomber#-ru)
-- [СМС атака](https://github.com/un1cum/Beast_Bomber#-sms-атака)
-- [Discord атака](https://github.com/un1cum/Beast_Bomber#-discord-атака)
-- [DDoS атака](https://github.com/un1cum/Beast_Bomber#-ddos-атака)
-- [Email атака](https://github.com/un1cum/Beast_Bomber#-email-атака)
-- [Telegram attack](https://github.com/un1cum/Beast_Bomber#-telegram-атака)
-- [Проблемы и их решения](https://github.com/un1cum/Beast_Bomber#-проблемы-и-их-решения)
-- [Вклады в проект](https://github.com/un1cum/Beast_Bomber#-вклады-в-проект)
-- [Автору на кофе](https://github.com/un1cum/Beast_Bomber#-автору-на-кофе)
+📌 [<kbd>RU</kbd>](#-ru)
+- [<kbd>СМС атака</kbd>](#-sms-атака)
+- [<kbd>Discord атака</kbd>](#-discord-атака)
+- [<kbd>DDoS атака</kbd>](#-ddos-атака)
+- [<kbd>Email атака</kbd>](#-email-атака)
+- [<kbd>Telegram attack</kbd>](#-telegram-атака)
+- [<kbd>Проблемы и их решения</kbd>](#-проблемы-и-их-решения)
+- [<kbd>Вклады в проект</kbd>](#-вклады-в-проект)
+- [<kbd>Автору на кофе</kbd>](#-автору-на-кофе)
 
 # 📌 EN
 
