@@ -41,25 +41,7 @@ def sms_attack(number, time_a):
         user = ua.random
 
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
-
+            num2 = f"+7({number[1:4]}){number[4:7]}-{number[7:9]}-{number[9:]}"
             header = {
                 'Accept': 'application/json, text/javascript, */*; q=0.01',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -83,23 +65,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += '7'
-            num2 += ' '
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += '-'
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = f"7 {number[1:4]}-{number[4:7]}-{number[7:9]}-{number[9:]}"
 
             header = {
                 'accept': 'application/json',
@@ -311,30 +277,8 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += ' '
-            num2 += '-'
-            num2 += ' '
-            num2 += num[7]
-            num2 += num[8]
-            num2 += ' '
-            num2 += '-'
-            num2 += ' '
-            num2 += num[9]
-            num2 += num[10]
+            num2 = f"+7 ({number[1:4]}) {number[4:7]} - {number[7:9]} - {number[9:]}"
+
 
             header = {
                 'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -375,26 +319,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'Accept': 'application/json, text/plain, */*',
@@ -421,26 +346,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'accept': 'application/json',
@@ -493,26 +399,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'accept': '*/*',
@@ -547,25 +434,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += '+'
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += ' '
-            num2 += num[7]
-            num2 += num[8]
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5} {6}{7}{8}{9}".format(*number)
 
             header = {
                 'accept': '*/*',
@@ -601,23 +470,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += '7'
-            num2 += ' '
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += '-'
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = f"7 {number[1:4]}-{number[4:7]}-{number[7:9]}-{number[9:]}"
 
             header = {
                 'accept': 'application/json',
@@ -672,26 +525,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += ' '
-            num2 += num[7]
-            num2 += num[8]
-            num2 += ' '
-            num2 += num[9]
-            num2 += num[10]
+            num2 = '+7 ({0}) {1}-{2}-{3}'.format(number[1:4], number[4:7], number[7:9], number[9:11])
 
             header = {
                 'accept': 'application/json',
@@ -748,26 +582,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += '+'
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = f"+7 ({number[1:4]}) {number[4:7]}-{number[7:]}"
 
             header = {
                 'Accept': 'application/json, text/plain, */*',
@@ -962,26 +777,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'accept': '*/*',
@@ -1117,22 +913,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += num[7]
-            num2 += num[8]
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7({}{}{}){}{}{}{}".format(number[1], number[2], number[3], number[4], number[5], number[6], number[7]+number[8]+number[9]+number[10])
 
             lib = '1234567890qwertyuiopasdfghjklzxcvbnm'
             lib2 = [
@@ -1245,24 +1026,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = f"+7({number[1:4]}){number[4:7]}-{number[7:9]}-{number[9:]}"
 
             header = {
                 'accept': 'application/json, text/plain, */*',
@@ -1287,26 +1051,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'accept': '*/*',
@@ -1432,24 +1177,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += ' '
-            num2 += num[7]
-            num2 += num[8]
-            num2 += ' '
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 {} {} {} {} {}{}".format(num[1:4], num[4:7], num[7:9], num[9:11])
 
             header = {
                 'accept': 'application/json, text/plain, */*',
@@ -1505,26 +1233,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'accept': '*/*',
@@ -1748,26 +1457,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'accept': '*/*',
@@ -1911,26 +1601,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'Accept': 'application/json, text/plain, */*',
@@ -2015,23 +1686,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += '7'
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = f"+7({number[1:4]}){number[4:7]}-{number[7:]}"
 
             header = {
                 'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -2090,26 +1745,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -2193,26 +1829,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'Accept': '*/*',
@@ -2300,26 +1917,7 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'Accept': '*/*',
@@ -2536,24 +2134,7 @@ def sms_attack2(number, time_a):
         }
 
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = f"+7({number[1:4]}){number[4:7]}-{number[7:9]}-{number[9:]}"
 
             header = {
                 'Accept': 'application/json, text/javascript, */*; q=0.01',
@@ -2579,23 +2160,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += '7'
-            num2 += ' '
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += '-'
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = f"7 {number[1:4]}-{number[4:7]}-{number[7:9]}-{number[9:]}"
 
             header = {
                 'accept': 'application/json',
@@ -2823,30 +2388,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += ' '
-            num2 += '-'
-            num2 += ' '
-            num2 += num[7]
-            num2 += num[8]
-            num2 += ' '
-            num2 += '-'
-            num2 += ' '
-            num2 += num[9]
-            num2 += num[10]
+            num2 = f"+7 ({number[1:4]}) {number[4:7]} - {number[7:9]} - {number[9:]}"
 
             header = {
                 'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -2887,26 +2429,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'Accept': 'application/json, text/plain, */*',
@@ -2943,26 +2466,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'accept': 'application/json',
@@ -3015,26 +2519,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'accept': '*/*',
@@ -3069,25 +2554,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += '+'
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += ' '
-            num2 += num[7]
-            num2 += num[8]
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5} {6}{7}{8}{9}".format(*number)
 
             header = {
                 'accept': '*/*',
@@ -3124,23 +2591,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += '7'
-            num2 += ' '
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += '-'
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = f"7 {number[1:4]}-{number[4:7]}-{number[7:9]}-{number[9:]}"
 
             header = {
                 'accept': 'application/json',
@@ -3198,26 +2649,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += ' '
-            num2 += num[7]
-            num2 += num[8]
-            num2 += ' '
-            num2 += num[9]
-            num2 += num[10]
+            num2 = '+7 ({0}) {1}-{2}-{3}'.format(number[1:4], number[4:7], number[7:9], number[9:11])
 
             header = {
                 'accept': 'application/json',
@@ -3274,26 +2706,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += '+'
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = f"+7 ({number[1:4]}) {number[4:7]}-{number[7:]}"
 
             header = {
                 'Accept': 'application/json, text/plain, */*',
@@ -3490,26 +2903,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'accept': '*/*',
@@ -3647,22 +3041,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += num[7]
-            num2 += num[8]
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7({}{}{}){}{}{}{}".format(number[1], number[2], number[3], number[4], number[5], number[6], number[7]+number[8]+number[9]+number[10])
 
             lib = '1234567890qwertyuiopasdfghjklzxcvbnm'
             lib2 = [
@@ -3780,24 +3159,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = f"+7({number[1:4]}){number[4:7]}-{number[7:9]}-{number[9:]}"
 
             header = {
                 'accept': 'application/json, text/plain, */*',
@@ -3823,26 +3185,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'accept': '*/*',
@@ -3971,24 +3314,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += ' '
-            num2 += num[7]
-            num2 += num[8]
-            num2 += ' '
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 {} {} {} {} {}{}".format(num[1:4], num[4:7], num[7:9], num[9:11])
 
             header = {
                 'accept': 'application/json, text/plain, */*',
@@ -4046,26 +3372,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'accept': '*/*',
@@ -4291,26 +3598,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'accept': '*/*',
@@ -4456,26 +3744,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'Accept': 'application/json, text/plain, */*',
@@ -4562,23 +3831,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += '7'
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = f"+7({number[1:4]}){number[4:7]}-{number[7:]}"
 
             header = {
                 'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -4638,26 +3891,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -4744,26 +3978,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'Accept': '*/*',
@@ -4852,26 +4067,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += '('
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ')'
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
 
             header = {
                 'Accept': '*/*',
@@ -5034,24 +4230,7 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
+            num2 = f"+7 ({number[1:4]}) {number[4:7]}-{number[7:]}"
 
             header = {
                 'accept': '*/*',
