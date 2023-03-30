@@ -204,70 +204,43 @@ def validate_port(port):
 
 
 def update_proxies():
-    js_file = ''
-
-    with open(os.path.abspath('core/config.json'), 'r') as file:
-        for line in file:
-            js_file += str(line)
-
-    js_file = json.loads(js_file)
-    lang = js_file["language"]
-    
-    f = open(os.path.abspath('input/proxies.txt'), 'w+')
-    f.seek(0)
-    f.close()
-
-    if platform == 'win32':
-        os.system("cls")
-    else:
-        os.system("clear")
-
-    logo_proxies()
-
+    proxies = []
     ua = UserAgent()
     user = ua.random
 
+    # Scrape free-proxy-list.net
     res = requests.get('https://free-proxy-list.net', headers={'User-Agent': user})
     soup = BeautifulSoup(res.text, "lxml")
 
-    cnt3 = 0
+    for row in soup.select('#proxylisttable tbody tr'):
+        cols = row.select('td')
+        if cols:
+            ip = cols[0].text
+            port = cols[1].text
+            if validate_ip(ip) and validate_port(port):
+                proxies.append(f'{ip}:{port}')
 
-    try:
-        with open(os.path.abspath("input/proxies.txt"), "a", encoding="utf-8") as file:
-            for child in soup.recursiveChildGenerator():
-                if child.name == 'td':
-                    if cnt3 == 0:
-                        if not validate_ip(child.text):
-                            break
-                        file.write(child.text)
-                        file.write(':')
-                    if cnt3 == 1:
-                        file.write(child.text)
-                        file.write('\n')
-
-                    cnt3 = (cnt3 + 1) % 8
-    except:
-        pass
-
+    # Scrape hidemy.name
     try:
         res = requests.get('https://hidemy.name/ru/proxy-list', headers={'User-Agent': user})
         soup = BeautifulSoup(res.text, "lxml")
 
-        with open(os.path.abspath("input/proxies.txt"), "a", encoding="utf-8") as file:
-            for child in soup.recursiveChildGenerator():
-                if child.name == 'td':
-                    if validate_ip(child.text):
-                        file.write(child.text)
-                        file.write(':')
-                    if validate_port(child.text):
-                        file.write(child.text)
-                        file.write('\n')
+        for row in soup.select('#content-section-2 tr'):
+            cols = row.select('td')
+            if cols and len(cols) >= 3:
+                ip = cols[0].text
+                port = cols[1].text
+                if validate_ip(ip) and validate_port(port):
+                    proxies.append(f'{ip}:{port}')
     except:
         pass
 
-    if lang == "ru":
-        print(Fore.LIGHTGREEN_EX + 'Готово')
-    else:
-        print(Fore.LIGHTGREEN_EX + 'Success')
+    # Save proxies to file
+    with open(os.path.abspath('input/proxies.txt'), 'w', encoding='utf-8') as file:
+        file.write('\n'.join(proxies))
 
+    # Print success message
+    lang = get_language()
+    message = 'Готово' if lang == 'ru' else 'Success'
+    print(Fore.LIGHTGREEN_EX + message)
     time.sleep(1)

