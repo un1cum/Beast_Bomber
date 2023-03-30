@@ -132,6 +132,7 @@ then reinstall the **opentele** library.
 |1|[PalkerCode](https://github.com/PalkerCode)|Apr 10, 2022|
 |2|[hiikion](https://github.com/hiikion)|Jul 4, 2022|
 |3|[NameNami](https://github.com/NameNami)|Jul 27, 2022|
+|4|[xpghard](https://github.com/xpghard)|March 30, 2023|
 
 **Thank you all for your contributions to the project ❤️**
 
@@ -249,6 +250,7 @@ pkg install pyqt5 python-pyqtwebengine
 |1|[PalkerCode](https://github.com/PalkerCode)|Апрель 10, 2022|
 |2|[hiikion](https://github.com/hiikion)|Июль 4, 2022|
 |3|[NameNami](https://github.com/NameNami)|Июль 27, 2022|
+|4|[xpghard](https://github.com/xpghard)|Март 30, 2023|
 
 **Спасибо всем за ваши вклады в проект ❤️**
 
