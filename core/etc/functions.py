@@ -181,66 +181,73 @@ def settings_menu_en():
 
 
 def validate_ip(ip):
-    a = ip.split('.')
-    if len(a) != 4:
+    try:
+        parts = list(map(int, ip.split('.')))
+        return len(parts) == 4 and all(0 <= p <= 255 for p in parts)
+    except ValueError:
         return False
-    for x in a:
-        if not x.isdigit():
-            return False
-        i = int(x)
-        if i < 0 or i > 255:
-            return False
-    return True
-
 
 def validate_port(port):
-    try:
-        if 1 <= int(port) <= 65535:
-            return True
-        else:
-            return False
-    except:
-        return False
+    return str(port).isdigit() and 1 <= int(port) <= 65535
 
 
 def update_proxies():
-    proxies = []
+    with open(os.path.abspath('core/config.json'), 'r') as file:
+        js_file = json.load(file)
+
+    lang = js_file["language"]
+
+    with open(os.path.abspath('input/proxies.txt'), 'w+') as f:
+        f.seek(0)
+        f.close()
+
+    if platform == 'win32':
+        os.system("cls")
+    else:
+        os.system("clear")
+
+    logo_proxies()
+
     ua = UserAgent()
     user = ua.random
 
-    # Scrape free-proxy-list.net
-    res = requests.get('https://free-proxy-list.net', headers={'User-Agent': user})
-    soup = BeautifulSoup(res.text, "lxml")
+    try:
+        res = requests.get('https://free-proxy-list.net', headers={'User-Agent': user})
+        soup = BeautifulSoup(res.text, "lxml")
+        cnt3 = 0
 
-    for row in soup.select('#proxylisttable tbody tr'):
-        cols = row.select('td')
-        if cols:
-            ip = cols[0].text
-            port = cols[1].text
-            if validate_ip(ip) and validate_port(port):
-                proxies.append(f'{ip}:{port}')
+        with open(os.path.abspath("input/proxies.txt"), "a", encoding="utf-8") as file:
+            for child in soup.recursiveChildGenerator():
+                if child.name == 'td':
+                    if cnt3 == 0:
+                        if not validate_ip(child.text):
+                            break
+                        file.write(f"{child.text}:")
+                    if cnt3 == 1:
+                        file.write(f"{child.text}\n")
 
-    # Scrape hidemy.name
+                    cnt3 = (cnt3 + 1) % 8
+    except requests.exceptions.RequestException as e:
+        print(f"Error occurred: {e}")
+
     try:
         res = requests.get('https://hidemy.name/ru/proxy-list', headers={'User-Agent': user})
         soup = BeautifulSoup(res.text, "lxml")
 
-        for row in soup.select('#content-section-2 tr'):
-            cols = row.select('td')
-            if cols and len(cols) >= 3:
-                ip = cols[0].text
-                port = cols[1].text
-                if validate_ip(ip) and validate_port(port):
-                    proxies.append(f'{ip}:{port}')
-    except:
-        pass
+        with open(os.path.abspath("input/proxies.txt"), "a", encoding="utf-8") as file:
+            for child in soup.recursiveChildGenerator():
+                if child.name == 'td':
+                    if validate_ip(child.text):
+                        file.write(f"{child.text}:")
+                    if validate_port(child.text):
+                        file.write(f"{child.text}\n")
+    except requests.exceptions.RequestException as e:
+        print(f"Error occurred: {e}")
 
-    # Save proxies to file
-    with open(os.path.abspath('input/proxies.txt'), 'w', encoding='utf-8') as file:
-        file.write('\n'.join(proxies))
+    if lang == "ru":
+        print(Fore.LIGHTGREEN_EX + 'Готово')
+    else:
+        print(Fore.LIGHTGREEN_EX + 'Success')
 
-    # Print success message
-    lang = get_language()
-    message = 'Готово' if lang == 'ru' else 'Success'
-    print(Fore.LIGHTGREEN_EX + message)
     time.sleep(1)
+

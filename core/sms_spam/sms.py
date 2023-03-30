@@ -50,9 +50,9 @@ def sms_attack(number, time_a):
         num6 = '+7 ({0}) {1}-{2}-{3}'.format(number[1:4], number[4:7], number[7:9], number[9:11])
         num7 = f"+7 ({number[1:4]}) {number[4:7]}-{number[7:]}"
         num8 = "+7({}{}{}){}{}{}{}".format(number[1], number[2], number[3], number[4], number[5], number[6],number[7] + number[8] + number[9] + number[10])
-        num9 = "+7 {} {} {} {} {}{}".format(number[1:4], number[4:7], number[7:9], number[9:11])
+        num9 = "+7 {} {} {} {}{}".format(number[1:4], number[4:7], number[7:9], number[9:11], number[11:])
         num10 = f"+7({number[1:4]}){number[4:7]}-{number[7:]}"
-        num11 = f"+7 {num[1:4]} {num[4:7]}-{num[7:9]}-{num[9:11]}"
+        num11 = f"+7 {number[1:4]} {number[4:7]}-{number[7:9]}-{number[9:11]}"
         num21, num22, num23, num24 = number[1:4], number[4:7], number[7:9], number[9:11]
 
         #email generator
