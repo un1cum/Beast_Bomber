@@ -26,7 +26,7 @@ from colorama import Fore, init
 from fake_useragent import UserAgent
 
 init()
-
+proxies_file = os.path.abspath('input/proxies.txt')
 
 def logo_main():
     text = """
@@ -181,41 +181,25 @@ def settings_menu_en():
 
 
 def validate_ip(ip):
-    a = ip.split('.')
-    if len(a) != 4:
+    try:
+        parts = list(map(int, ip.split('.')))
+        return len(parts) == 4 and all(0 <= p <= 255 for p in parts)
+    except ValueError:
         return False
-    for x in a:
-        if not x.isdigit():
-            return False
-        i = int(x)
-        if i < 0 or i > 255:
-            return False
-    return True
-
 
 def validate_port(port):
-    try:
-        if 1 <= int(port) <= 65535:
-            return True
-        else:
-            return False
-    except:
-        return False
+    return str(port).isdigit() and 1 <= int(port) <= 65535
 
 
 def update_proxies():
-    js_file = ''
-
     with open(os.path.abspath('core/config.json'), 'r') as file:
-        for line in file:
-            js_file += str(line)
+        js_file = json.load(file)
 
-    js_file = json.loads(js_file)
     lang = js_file["language"]
-    
-    f = open(os.path.abspath('input/proxies.txt'), 'w+')
-    f.seek(0)
-    f.close()
+
+    with open(os.path.abspath('input/proxies.txt'), 'w+') as f:
+        f.seek(0)
+        f.close()
 
     if platform == 'win32':
         os.system("cls")
@@ -227,43 +211,53 @@ def update_proxies():
     ua = UserAgent()
     user = ua.random
 
-    res = requests.get('https://free-proxy-list.net', headers={'User-Agent': user})
-    soup = BeautifulSoup(res.text, "lxml")
-
-    cnt3 = 0
-
     try:
-        with open(os.path.abspath("input/proxies.txt"), "a", encoding="utf-8") as file:
+        res = requests.get('https://free-proxy-list.net', headers={'User-Agent': user})
+        soup = BeautifulSoup(res.text, "lxml")
+        cnt3 = 0
+
+        with open(os.path.abspath(proxies_file), "a", encoding="utf-8") as file:
             for child in soup.recursiveChildGenerator():
                 if child.name == 'td':
                     if cnt3 == 0:
                         if not validate_ip(child.text):
                             break
-                        file.write(child.text)
-                        file.write(':')
+                        file.write(f"{child.text}:")
                     if cnt3 == 1:
-                        file.write(child.text)
-                        file.write('\n')
+                        file.write(f"{child.text}\n")
 
                     cnt3 = (cnt3 + 1) % 8
-    except:
-        pass
+    except requests.exceptions.RequestException as e:
+        print(f"Error occurred: {e}")
 
     try:
         res = requests.get('https://hidemy.name/ru/proxy-list', headers={'User-Agent': user})
         soup = BeautifulSoup(res.text, "lxml")
 
-        with open(os.path.abspath("input/proxies.txt"), "a", encoding="utf-8") as file:
+        with open(os.path.abspath(proxies_file), "a", encoding="utf-8") as file:
             for child in soup.recursiveChildGenerator():
                 if child.name == 'td':
                     if validate_ip(child.text):
-                        file.write(child.text)
-                        file.write(':')
+                        file.write(f"{child.text}:")
                     if validate_port(child.text):
-                        file.write(child.text)
-                        file.write('\n')
+                        file.write(f"{child.text}\n")
     except:
         pass
+    urls = ['https://raw.githubusercontent.com/mertguvencli/http-proxy-list/main/proxy-list/data.txt',
+            'https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt',
+            'https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt',
+            'https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/https/https.txt']
+    try:
+        with open(os.path.abspath(proxies_file), "w", encoding="utf-8") as file:
+            for url in urls:
+                res = requests.get(url, headers={'User-Agent': user})
+                proxy_list = res.text.strip().split('\n')
+                for proxy in proxy_list:
+                    if validate_ip(proxy.split(':')[0]) and validate_port(proxy.split(':')[1]):
+                        file.write(proxy)
+                        file.write('\n') 
+    except requests.exceptions.RequestException as e:
+        print(f"Error occurred: {e}")
 
     if lang == "ru":
         print(Fore.LIGHTGREEN_EX + 'Готово')
@@ -271,3 +265,4 @@ def update_proxies():
         print(Fore.LIGHTGREEN_EX + 'Success')
 
     time.sleep(1)
+
