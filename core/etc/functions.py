@@ -241,8 +241,8 @@ def update_proxies():
                         file.write(f"{child.text}:")
                     if validate_port(child.text):
                         file.write(f"{child.text}\n")
-    except:
-        pass
+    except requests.exceptions.RequestException as e:
+        print(f"Error occurred: {e}")
     urls = ['https://raw.githubusercontent.com/mertguvencli/http-proxy-list/main/proxy-list/data.txt',
             'https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt',
             'https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt',
