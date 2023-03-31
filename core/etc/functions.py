@@ -26,7 +26,7 @@ from colorama import Fore, init
 from fake_useragent import UserAgent
 
 init()
-
+proxies_file = os.path.abspath('input/proxies.txt')
 
 def logo_main():
     text = """
@@ -216,7 +216,7 @@ def update_proxies():
         soup = BeautifulSoup(res.text, "lxml")
         cnt3 = 0
 
-        with open(os.path.abspath("input/proxies.txt"), "a", encoding="utf-8") as file:
+        with open(os.path.abspath(proxies_file), "a", encoding="utf-8") as file:
             for child in soup.recursiveChildGenerator():
                 if child.name == 'td':
                     if cnt3 == 0:
@@ -234,13 +234,28 @@ def update_proxies():
         res = requests.get('https://hidemy.name/ru/proxy-list', headers={'User-Agent': user})
         soup = BeautifulSoup(res.text, "lxml")
 
-        with open(os.path.abspath("input/proxies.txt"), "a", encoding="utf-8") as file:
+        with open(os.path.abspath(proxies_file), "a", encoding="utf-8") as file:
             for child in soup.recursiveChildGenerator():
                 if child.name == 'td':
                     if validate_ip(child.text):
                         file.write(f"{child.text}:")
                     if validate_port(child.text):
                         file.write(f"{child.text}\n")
+    except requests.exceptions.RequestException as e:
+        print(f"Error occurred: {e}")
+    urls = ['https://raw.githubusercontent.com/mertguvencli/http-proxy-list/main/proxy-list/data.txt',
+            'https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt',
+            'https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt',
+            'https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/https/https.txt']
+    try:
+        with open(os.path.abspath(proxies_file), "w", encoding="utf-8") as file:
+            for url in urls:
+                res = requests.get(url, headers={'User-Agent': user})
+                proxy_list = res.text.strip().split('\n')
+                for proxy in proxy_list:
+                    if validate_ip(proxy.split(':')[0]) and validate_port(proxy.split(':')[1]):
+                        file.write(proxy)
+                        file.write('\n') 
     except requests.exceptions.RequestException as e:
         print(f"Error occurred: {e}")
 
