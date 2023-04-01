@@ -25,15 +25,10 @@ ua = UserAgent()
 
 
 def start_sms(number, threads, time_a, proxy):
-    if proxy == "no":
-        for _ in range(threads):
-            th = Thread(target=sms_attack, args=(number, time_a))
-            th.start()
-
-    else:
-        for _ in range(threads):
-            th = Thread(target=sms_attack2, args=(number, time_a))
-            th.start()
+    attack_func = sms_attack2 if proxy != "no" else sms_attack
+    for _ in range(threads):
+        th = Thread(target=attack_func, args=(number, time_a))
+        th.start()
 
 
 def sms_attack(number, time_a):
