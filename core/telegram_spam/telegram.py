@@ -19,33 +19,28 @@ from threading import Thread
 from opentele.td import TDesktop
 from opentele.api import UseCurrentSession
 
-accounts = os.listdir(os.path.abspath('input/telegram_accounts'))
-
-
 async def telegram_attack(target, time_a, mes):
+    clients = {}
+    accounts_dir = os.path.abspath('input/telegram_accounts')
+
+    for user in os.listdir(accounts_dir):
+        acc_dir = os.path.join(accounts_dir, user)
+        acc_file = os.path.join(acc_dir, 'tdata')
+        session_file = f"{acc_file}.session"
+        if session_file.endswith('.session - journal'):
+            session_file = session_file[:-17]
+        elif session_file.endswith('.session'):
+            session_file = session_file[:-8]
+
+        if os.path.exists(session_file):
+            tdesk = TDesktop(acc_file)
+            clients[user] = await tdesk.ToTelethon(session=session_file, flag=UseCurrentSession)
+
     t = time.monotonic()
-
     while time.monotonic() - t < time_a:
-        for user in accounts:
-            acc = os.path.abspath('input/telegram_accounts/' + user + '/tdata')
-            tempmas = os.listdir(os.path.abspath('input/telegram_accounts/' + user))
-
-            if acc[-8:] == '.session':
-                acc = acc.replace('.session', '')
-
-            if acc[-18:] == '.session - journal':
-                acc = acc.replace('.session - journal', '')
-
-            if f'{acc}.session' not in tempmas:
-                tdesk = TDesktop(acc)
-                client = await tdesk.ToTelethon(f"{acc}.session", UseCurrentSession)
-            else:
-                tdesk = TDesktop(acc)
-                client = await tdesk.ToTelethon(session=f"{acc}.session", flag=UseCurrentSession)
-
+        for user, client in clients.items():
             try:
-                await client.connect()
-                await client.send_message(target, mes)
-                await client.disconnect()
+                async with client:
+                    await client.send_message(target, mes)
             except:
                 pass
