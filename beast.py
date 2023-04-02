@@ -472,7 +472,8 @@ The author would appreciate it if you would put a star on
                     else:
                         print(fade.fire(text_e))
 
-                    asyncio.get_event_loop().run_until_complete(telegram_attack(target, time_a, message))
+                    loop = asyncio.get_event_loop()
+                    loop.run_until_complete(telegram_attack(target, time_a, message))
 
                     text = "{}"
                     t = time.monotonic()
