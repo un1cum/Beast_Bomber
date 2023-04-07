@@ -41,8 +41,6 @@
 
 ![screenshot](https://user-images.githubusercontent.com/80776324/214398611-d862b400-9ebb-4c51-ac7f-80643849301a.png)
 
-![tutorial](https://user-images.githubusercontent.com/80776324/230665884-f52bb3d8-b20d-4275-9afc-0f5068eeaf82.gif)
-
 
 `Possibilities`
 * SMS attack
@@ -54,6 +52,8 @@
 
 `Installation`
 
+![tutorial](https://user-images.githubusercontent.com/80776324/230665884-f52bb3d8-b20d-4275-9afc-0f5068eeaf82.gif)
+
 ```
 git clone https://github.com/un1cum/Beast_Bomber
 ```
@@ -61,7 +61,6 @@ git clone https://github.com/un1cum/Beast_Bomber
 `P.S`
 - If you don't have git, you need to install it: https://git-scm.com/downloads
 - If you install Beast Bomber manually, without git, be sure to delete the .gitkeep file in the input\telegram_accounts folder
-- 
 
 `First setup`
 
@@ -173,9 +172,6 @@ then reinstall the **opentele** library.
 
 ![screenshot](https://user-images.githubusercontent.com/80776324/214398819-4cf892ba-aa55-456f-86ed-584dde45ab20.png)
 
-![tutorial](https://user-images.githubusercontent.com/80776324/230665884-f52bb3d8-b20d-4275-9afc-0f5068eeaf82.gif)
-
-
 `Возможности`
 * SMS атака
 * Email атака
@@ -185,6 +181,9 @@ then reinstall the **opentele** library.
 * Мультиязычность
 
 ``Установка``
+
+![tutorial](https://user-images.githubusercontent.com/80776324/230665884-f52bb3d8-b20d-4275-9afc-0f5068eeaf82.gif)
+
 ```
 git clone https://github.com/un1cum/Beast_Bomber
 ```
