@@ -88,6 +88,9 @@ There are many spam services at your disposal! Beast Bomber supports **Russian a
 
 To start a Discord attack, you need to specify the **target ID**, it can be found in the url of the discord dialog in your browser.
 
+
+![discord](https://user-images.githubusercontent.com/80776324/230663913-d68dbf58-0738-4501-9539-17daf0d36753.png)
+
 # 📌 DDoS attack
 
 **Test results from https://dstat.cc**
@@ -208,6 +211,9 @@ python beast.py
 # 📌 Discord атака
 
 Чтобы начать атаку Discord, вам нужно указать **ID цели**, его можно найти в url диалога discord в вашем браузере.
+
+
+![discord](https://user-images.githubusercontent.com/80776324/230664016-2cb6d111-15fb-422e-ae3d-d38ead9bcbb2.png)
 
 # 📌 DDoS атака
 
