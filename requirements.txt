@@ -10,3 +10,4 @@ pythonping~=1.1.4
 httpagentparser~=1.9.5
 cloudscraper~=1.2.69
 opentele~=1.15.1
+ua-parser~=0.16.1
