@@ -50,6 +50,7 @@
 * Multilanguage
 
 `Installation`
+
 ```
 git clone https://github.com/un1cum/Beast_Bomber
 ```
@@ -60,7 +61,9 @@ git clone https://github.com/un1cum/Beast_Bomber
 - 
 
 `First setup`
+
 - To get started, you need to install the necessary Python libraries. Go to the Beast_Bomber folder and enter this command in cmd or terminal:  
+
 ```
 pip install -r requirements.txt
 ```
@@ -72,6 +75,7 @@ pip install -r requirements.txt
 **The setup is done!**
 
 `Launch`
+
 ```
 python beast.py
 ```
@@ -104,6 +108,9 @@ The attack occurs as follows:
 
 
 Beast Bomber logs into the accounts that you put in your input\telegram_accounts folder and sends the message you write from them.
+
+
+You can buy tdata telegram accounts here: [click](https://darkstore.biz/?search_triggered=true&category_id=43&group_id=&sort=-purchase_counter&feature=) **(not advertising)**
 
 # 📌 Problems and their solutions
 
@@ -222,6 +229,9 @@ Beast Bomber поддерживает следующие почтовые сер
 
 
 Beast Bomber входит в аккаунты, которые вы поместили в папку input\telegram_accounts и отправляет от них сообщение, которое вы указали.
+
+
+Купить telegram аккаунты в формате tdata можно тут: [тык](https://darkstore.biz/?search_triggered=true&category_id=43&group_id=&sort=-purchase_counter&feature=) **(не реклама)**
 
 # 📌 Проблемы и их решения
 
