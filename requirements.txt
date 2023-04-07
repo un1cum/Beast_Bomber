@@ -1,4 +1,5 @@
 fade~=0.0.9
+lxml~=4.9.2
 colorama~=0.4.5
 fake-useragent~=1.1.3
 aiohttp~=3.8.4
