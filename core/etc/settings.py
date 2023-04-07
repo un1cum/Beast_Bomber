@@ -1,3 +1,18 @@
+"""
+╔═════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                 ║
+║                                   Beast bomber                                  ║
+║  Author:                                                                        ║
+║  https://github.com/un1cum                                                      ║
+║                                                                                 ║
+║  The author of this program is not responsible for its use!                     ║
+║  When posting this code on other resources, please indicate the author!         ║
+║                                                                                 ║
+║                               All rights reserved.                              ║
+║                            Copyright (C) 2023 un1cum                            ║
+║                                                                                 ║
+╚═════════════════════════════════════════════════════════════════════════════════╝
+"""
 import os
 import fade
 import time
