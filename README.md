@@ -1,6 +1,6 @@
-# [![BeastBomber](https://i.ibb.co/t2D3Kxt/1.png "BeastBomber")](https://t.me/beast_bomberr_bot) 
-
 <div align="center">
+
+# [![beast](https://user-images.githubusercontent.com/80776324/230666266-f4516de9-cbc8-4d11-ad39-a7f6d1bfa00a.png)](https://t.me/beast_bomberr_bot)
 
 # Beast Bomber 💣
   
