@@ -87,11 +87,7 @@ docker run -it un1cum/beast_bomber
 
 ## 📌 Manual
 
-<div align="center">
-
-  ![tutorial](https://user-images.githubusercontent.com/80776324/230665884-f52bb3d8-b20d-4275-9afc-0f5068eeaf82.gif)
-
-</div>
+![tutorial](https://user-images.githubusercontent.com/80776324/230665884-f52bb3d8-b20d-4275-9afc-0f5068eeaf82.gif)
 
 `To run the beast bomber you need to download Python: https://www.python.org`
 
