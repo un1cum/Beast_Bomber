@@ -243,10 +243,10 @@ then reinstall the **opentele** library.
 # 📌 Установка
 
 📌 [<kbd>Методы</kbd>](#-methods)
-- [<kbd>Docker</kbd>](#-docker)
+- [<kbd>Докер</kbd>](#-докер)
 - [<kbd>Вручную</kbd>](#-вручную)
 
-## 📌 Docker
+## 📌 Докер
 
 <div align="center">
 
