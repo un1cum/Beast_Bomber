@@ -67,6 +67,8 @@
 
 </div>
 
+![tutorial](https://user-images.githubusercontent.com/80776324/230795737-8b7cf187-4f9b-4fa1-bd71-e4c21ebc038f.gif)
+
 `Image url: https://hub.docker.com/r/un1cum/beast_bomber`
 
 `If you don't have docker, you can install it using these instructions: https://docs.docker.com`
@@ -251,6 +253,8 @@ then reinstall the **opentele** library.
 ​​​​​​</br>[![docker_hub](https://badgen.net/badge/docker/docker/white?icon=docker&label)](https://hub.docker.com/r/un1cum/beast_bomber)
 
 </div>
+
+![tutorial](https://user-images.githubusercontent.com/80776324/230795737-8b7cf187-4f9b-4fa1-bd71-e4c21ebc038f.gif)
 
 `Ссылка на образ: https://hub.docker.com/r/un1cum/beast_bomber`
 
