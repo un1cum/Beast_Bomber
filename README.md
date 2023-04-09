@@ -274,6 +274,8 @@ docker run -it un1cum/beast_bomber
 
 **Готово!**
 
+## 📌 Вручную
+
 ![tutorial](https://user-images.githubusercontent.com/80776324/230665884-f52bb3d8-b20d-4275-9afc-0f5068eeaf82.gif)
 
 `Для работы beast bomber вам нужно установить Python: https://www.python.org`
