@@ -4,14 +4,15 @@
 
 # Beast Bomber 💣
   
-​​​​​​</br>[![Button](https://badgen.net/badge/patreon/patreon/white?icon=patreon&label)](https://www.patreon.com/un1cum) [![Button](https://badgen.net/badge/un1cum/un1cum/white?icon=github&label)](https://github.com/un1cum) [![Button](https://badgen.net/badge/fork/fork/white?icon=github&label)](https://github.com/un1cum/Beast_Bomber/fork)
-​​​​​​</br>[![Button](https://badgen.net/badge/replit/replit/white?icon=bitcoin-lightning&label)](https://replit.com/@un1cum/Beast-Bomber) [![Button](https://badgen.net/badge/discord/discord/white?icon=discord&label)](https://discord.gg/qkK4NG4ARU)
+​​​​​​</br> [![docker_hub](https://badgen.net/badge/docker/docker/white?icon=docker&label)](https://hub.docker.com/r/un1cum/beast_bomber) [![Button](https://badgen.net/badge/un1cum/un1cum/white?icon=github&label)](https://github.com/un1cum) [![Button](https://badgen.net/badge/fork/fork/white?icon=github&label)](https://github.com/un1cum/Beast_Bomber/fork)
+​​​​​​</br> [![Button](https://badgen.net/badge/patreon/patreon/white?icon=patreon&label)](https://www.patreon.com/un1cum) [![Button](https://badgen.net/badge/replit/replit/white?icon=bitcoin-lightning&label)](https://replit.com/@un1cum/Beast-Bomber) [![Button](https://badgen.net/badge/discord/discord/white?icon=discord&label)](https://discord.gg/qkK4NG4ARU)
 
 </div>
 
 # 📌 Menu / Меню
 
 📌 [<kbd>EN</kbd>](#-en)
+- [<kbd>Installation</kbd>](#-installation)
 - [<kbd>SMS attack</kbd>](#-sms-attack)
 - [<kbd>Discord attack</kbd>](#-discord-attack)
 - [<kbd>DDoS attack</kbd>](#-ddos-attack)
@@ -22,6 +23,7 @@
 - [<kbd>Donate for coffee</kbd>](#-donate-for-coffee)
 
 📌 [<kbd>RU</kbd>](#-ru)
+- [<kbd>Установка</kbd>](#-установка)
 - [<kbd>СМС атака</kbd>](#-sms-атака)
 - [<kbd>Discord атака</kbd>](#-discord-атака)
 - [<kbd>DDoS атака</kbd>](#-ddos-атака)
@@ -41,7 +43,6 @@
 
 ![screenshot](https://user-images.githubusercontent.com/80776324/214398611-d862b400-9ebb-4c51-ac7f-80643849301a.png)
 
-
 `Possibilities`
 * SMS attack
 * Email attack
@@ -50,9 +51,49 @@
 * DDoS attack
 * Multilanguage
 
-`Installation`
+# 📌 Installation
 
-![tutorial](https://user-images.githubusercontent.com/80776324/230665884-f52bb3d8-b20d-4275-9afc-0f5068eeaf82.gif)
+📌 [<kbd>Methods</kbd>](#-methods)
+- [<kbd>Docker</kbd>](#-docker)
+- [<kbd>Manual</kbd>](#-manual)
+
+## 📌 Docker
+
+<div align="center">
+
+![docker](https://user-images.githubusercontent.com/80776324/230794354-00b25763-fec2-4278-841a-1c624863ab60.png)
+
+​​​​​​</br>[![docker_hub](https://badgen.net/badge/docker/docker/white?icon=docker&label)](https://hub.docker.com/r/un1cum/beast_bomber)
+
+</div>
+
+`Image url: https://hub.docker.com/r/un1cum/beast_bomber`
+
+`If you don't have docker, you can install it using these instructions: https://docs.docker.com`
+
+- You need to enter the following command to download the image:
+
+```
+docker pull un1cum/beast_bomber
+```
+
+- To start the bomber, enter this command:
+
+```
+docker run -it un1cum/beast_bomber
+```
+
+**Done!**
+
+## 📌 Manual
+
+<div align="center">
+
+  ![tutorial](https://user-images.githubusercontent.com/80776324/230665884-f52bb3d8-b20d-4275-9afc-0f5068eeaf82.gif)
+
+</div>
+
+`To run the beast bomber you need to download Python: https://www.python.org`
 
 ```
 git clone https://github.com/un1cum/Beast_Bomber
@@ -69,18 +110,19 @@ git clone https://github.com/un1cum/Beast_Bomber
 ```
 pip install -r requirements.txt
 ```
+
 - For a DDoS attack to work correctly, you need to enter **proxies** into the input\proxies.txt file or automatically parse them using the built-in function
 - For the Telegram attack to work, you need to put the Telegram accounts in **tdata** format (each account in a separate folder) in the input\telegram_accounts folder
 - To make email spam work, you need to put email accounts in the format **email:password** in the input\email_accounts.txt file
 - For discord spam to work, you must place **tokens** from discord accounts in the file input\discord_accounts.txt
-
-**The setup is done!**
 
 `Launch`
 
 ```
 python beast.py
 ```
+
+**Done!**
 
 # 📌 SMS attack
 
@@ -198,9 +240,43 @@ then reinstall the **opentele** library.
 * DDoS атака
 * Мультиязычность
 
-``Установка``
+# 📌 Установка
+
+📌 [<kbd>Методы</kbd>](#-methods)
+- [<kbd>Docker</kbd>](#-docker)
+- [<kbd>Вручную</kbd>](#-вручную)
+
+## 📌 Docker
+
+<div align="center">
+
+![docker](https://user-images.githubusercontent.com/80776324/230794354-00b25763-fec2-4278-841a-1c624863ab60.png)
+
+​​​​​​</br>[![docker_hub](https://badgen.net/badge/docker/docker/white?icon=docker&label)](https://hub.docker.com/r/un1cum/beast_bomber)
+
+</div>
+
+`Ссылка на образ: https://hub.docker.com/r/un1cum/beast_bomber`
+
+`Если у вас нету docker, вы можете установить его, следуя официальным инструкциям: https://docs.docker.com`
+
+- Чтобы загрузить образ, введите следующую команду:
+
+```
+docker pull un1cum/beast_bomber
+```
+
+- Чтобы запустить бомбер, введите это:
+
+```
+docker run -it un1cum/beast_bomber
+```
+
+**Готово!**
 
 ![tutorial](https://user-images.githubusercontent.com/80776324/230665884-f52bb3d8-b20d-4275-9afc-0f5068eeaf82.gif)
+
+`Для работы beast bomber вам нужно установить Python: https://www.python.org`
 
 ```
 git clone https://github.com/un1cum/Beast_Bomber
@@ -220,12 +296,12 @@ pip install -r requirements.txt
 - Чтобы спам по электронной почте работал, вам нужно поместить учетные записи электронной почты в формате **email:пароль** в файл input\email_accounts.txt
 - Для того, чтобы работал спам в Discord, вы должны поместить **токены** от аккаунтов Discord в файл input\discord_accounts.txt
 
-**Настройка завершена!**
-
 ``Запуск``
 ```
 python beast.py
 ```
+
+**Готово!**
 
 # 📌 SMS атака
 
