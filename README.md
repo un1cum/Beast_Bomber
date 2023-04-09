@@ -125,7 +125,13 @@ You can buy tdata telegram accounts here: [click](https://darkstore.biz/?search_
 
 This means that you don't have the library that is specified in the error, in this case: "_ctypes". You need to enter in the terminal or cmd:
 
-* pip install the name of the required library (example: pip install _ctypes)
+* pip install <the name of the required library> 
+
+``Example:``
+
+```
+pip install _ctypes
+```
 
 ``If you install Beast Bomber on the termux:``
 
@@ -264,7 +270,13 @@ Beast Bomber входит в аккаунты, которые вы помест�
 
 Это означает, что у вас отсутствует нужная библиотека pip, в этом случае: "_ctypes". Откройте терминал, cmd или что там у вас и пишите:
 
-* pip install имя отсутствующей библиотеки (пример: pip install _ctypes)
+* pip install <имя отсутствующей библиотеки>
+
+``Пример:``
+
+```
+pip install _ctypes
+```
 
 ``Если вы устанавливаете Beast Bomber на termux:``
 
