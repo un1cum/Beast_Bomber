@@ -38,7 +38,7 @@ def logo_main():
 ║╚═╝║ ═╣╔╗╠══║╚╗║╚═╝║╚╝║║║║╚╝║ ═╣║ 
 ╚═══╩══╩╝╚╩══╩═╝╚═══╩══╩╩╩╩══╩══╩╝ 
             By un1cum
-  https://t.me/beast_bomberr_bot
+ https://t.me/beast_bomber_2_bot
     """
     print(fade.water(text))
 
