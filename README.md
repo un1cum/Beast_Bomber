@@ -35,7 +35,7 @@
 
 # 📌 EN
 
-📌 **Beast Bomber in Telegram: https://t.me/beast_bomberr_bot**
+📌 **Beast Bomber in Telegram: https://t.me/beast_bomber_2_bot**
 
 📌 **Beast Bomber in replit: https://replit.com/@un1cum/Beast-Bomber**
 
@@ -222,7 +222,7 @@ then reinstall the **opentele** library.
 
 # 📌 RU
 
-📌 **Beast Bomber в Telegram: https://t.me/beast_bomberr_bot**
+📌 **Beast Bomber в Telegram: https://t.me/beast_bomber_2_bot**
 
 📌 **Beast Bomber на replit: https://replit.com/@un1cum/Beast-Bomber**
 
