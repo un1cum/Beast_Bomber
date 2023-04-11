@@ -56,14 +56,14 @@ class BeastBomber:
                 text = """
         Спасибо за использование Beast bomber!
 Автор будет благодарен, если Вы поставите звезду на GitHub:
-        https://github.com/ebankoff/BeastBomber
+        https://github.com/un1cum/Beast_Bomber
               Copyright (C) 2023 un1cum """
             else:
                 text = """
             Thanks for using Beast bomber!
 The author would appreciate it if you would put a star on 
               this repository on GitHub:
-        https://github.com/ebankoff/BeastBomber
+        https://github.com/un1cum/Beast_Bomber
               Copyright (C) 2023 un1cum """
 
             print(fade.purplepink(text))
