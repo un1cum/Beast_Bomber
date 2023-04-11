@@ -41,7 +41,7 @@
 
 📌 **Discord server: https://discord.gg/beast-bomber-team | https://discord.gg/qkK4NG4ARU**
 
-![screenshot](https://user-images.githubusercontent.com/80776324/214398611-d862b400-9ebb-4c51-ac7f-80643849301a.png)
+![Screenshot_1](https://user-images.githubusercontent.com/80776324/231027275-749f1375-34c9-408c-9f7b-2f336a1a10d2.png)
 
 `Possibilities`
 * SMS attack
@@ -228,7 +228,7 @@ then reinstall the **opentele** library.
 
 📌 **Discord сервер: https://discord.gg/beast-bomber-team | https://discord.gg/qkK4NG4ARU**
 
-![screenshot](https://user-images.githubusercontent.com/80776324/214398819-4cf892ba-aa55-456f-86ed-584dde45ab20.png)
+![Screenshot_2](https://user-images.githubusercontent.com/80776324/231027466-e7715861-2145-4cb6-a996-464b3d3b1c7f.png)
 
 `Возможности`
 * SMS атака
