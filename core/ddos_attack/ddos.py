@@ -260,6 +260,7 @@ class DDoSAttack:
                 url4 += symb
 
             try:
+                url4 = url4.split('/')[0]
                 url = socket.gethostbyname(url4)
             except:
                 if self.lang == 'ru':
@@ -267,6 +268,7 @@ class DDoSAttack:
                 else:
                     text = 'An error occurred while processing the url, check that the data entered is correct.'
                 print(Back.RED + Fore.WHITE + text + Fore.RESET + Style.RESET_ALL)
+                time.sleep(2)
                 ok = False
 
         if ok is True:
