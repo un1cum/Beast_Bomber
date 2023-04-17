@@ -35,6 +35,12 @@
 
 # 📌 EN
 
+<div align="center">
+  
+  ## **Use this script for educational purposes only and do not abuse it. All responsibility for its use rests with YOU**
+
+</div>
+
 📌 **Beast Bomber in Telegram: https://t.me/idfhgsdwaefwe_caramel_bot**
 
 📌 **Beast Bomber in replit: https://replit.com/@un1cum/Beast-Bomber**
@@ -222,6 +228,12 @@ then reinstall the **opentele** library.
 
 # 📌 RU
 
+<div align="center">
+  
+  ## **Используйте данный скрипт только в образовательных целях и не злоупотребляйте этим. Вся ответственность за его использование ложиться НА ВАС**
+
+</div>
+  
 📌 **Beast Bomber в Telegram: https://t.me/idfhgsdwaefwe_caramel_bot**
 
 📌 **Beast Bomber на replit: https://replit.com/@un1cum/Beast-Bomber**
