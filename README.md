@@ -126,7 +126,7 @@
   python beast.py
   ```
 
-## 📌 First setup
+# 📌 First setup
 
 - For a DDoS attack to work correctly, you need to enter **proxies** into the input\proxies.txt file or automatically parse them using the built-in function
   - Proxies format: `ip:port` or `user:pass@ip:port`
@@ -325,7 +325,7 @@ then reinstall the **opentele** library.
   python beast.py
   ```
 
-## 📌 Первая настройка
+# 📌 Первая настройка
 
 - Для корректной работы DDoS атаки необходимо поместить прокси в файл input\proxies.txt или автоматически спарсить их с помощью встроенной функции
   - Формат прокси: `ip:port` или `user:pass@ip:port`
