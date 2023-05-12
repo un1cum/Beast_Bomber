@@ -14,6 +14,7 @@
 
 📌 [<kbd>EN</kbd>](#-en)
 - [<kbd>Installation</kbd>](#-installation)
+- [<kbd>First setup</kbd>](#-first-setup)
 - [<kbd>SMS attack</kbd>](#-sms-attack)
 - [<kbd>Discord attack</kbd>](#-discord-attack)
 - [<kbd>DDoS attack</kbd>](#-ddos-attack)
@@ -25,6 +26,7 @@
 
 📌 [<kbd>RU</kbd>](#-ru)
 - [<kbd>Установка</kbd>](#-установка)
+- [<kbd>Первая настройка</kbd>](#-первая-настройка)
 - [<kbd>СМС атака</kbd>](#-sms-атака)
 - [<kbd>Discord атака</kbd>](#-discord-атака)
 - [<kbd>DDoS атака</kbd>](#-ddos-атака)
@@ -82,15 +84,17 @@
 
 - You need to enter the following command to download the image:
 
-```
-docker pull un1cum/beast_bomber
-```
+
+  ```
+  docker pull un1cum/beast_bomber
+  ```
 
 - To start the bomber, enter this command:
 
-```
-docker run -it un1cum/beast_bomber
-```
+
+  ```
+  docker run -it un1cum/beast_bomber
+  ```
 
 **Done!**
 
@@ -98,35 +102,37 @@ docker run -it un1cum/beast_bomber
 
 ![tutorial](https://user-images.githubusercontent.com/80776324/230665884-f52bb3d8-b20d-4275-9afc-0f5068eeaf82.gif)
 
-`To run the beast bomber you need to download Python: https://www.python.org`
+- To run the beast bomber you need to download Python: https://www.python.org
 
-```
-git clone https://github.com/un1cum/Beast_Bomber
-```
 
-`P.S`
-- If you don't have git, you need to install it: https://git-scm.com/downloads
-- If you install Beast Bomber manually, without git, be sure to delete the .gitkeep file in the input\telegram_accounts folder
+  ```
+  git clone https://github.com/un1cum/Beast_Bomber
+  ```
 
-`First setup`
+- P.S
+  - If you don't have git, you need to install it: https://git-scm.com/downloads
+  - If you install Beast Bomber manually, without git, be sure to delete the .gitkeep file in the input\telegram_accounts folder
+  - To get started, you need to install the necessary Python libraries. Go to the Beast_Bomber folder and enter this command in cmd or terminal:  
 
-- To get started, you need to install the necessary Python libraries. Go to the Beast_Bomber folder and enter this command in cmd or terminal:  
 
-```
-pip install -r requirements.txt
-```
+    ```
+    pip install -r requirements.txt
+    ```
+
+- To start the bomber, enter this command:
+
+
+  ```
+  python beast.py
+  ```
+
+## 📌 First setup
 
 - For a DDoS attack to work correctly, you need to enter **proxies** into the input\proxies.txt file or automatically parse them using the built-in function
   - Proxies format: `ip:port` or `user:pass@ip:port`
 - For the Telegram attack to work, you need to put the Telegram accounts in **tdata** format (each account in a separate folder) in the input\telegram_accounts folder
 - To make email spam work, you need to put email accounts in the format **email:password** in the input\email_accounts.txt file
 - For discord spam to work, you must place **tokens** from discord accounts in the file input\discord_accounts.txt
-
-`Launch`
-
-```
-python beast.py
-```
 
 **Done!**
 
@@ -276,15 +282,17 @@ then reinstall the **opentele** library.
 
 - Чтобы загрузить образ, введите следующую команду:
 
-```
-docker pull un1cum/beast_bomber
-```
+
+  ```
+  docker pull un1cum/beast_bomber
+  ```
 
 - Чтобы запустить бомбер, введите это:
 
-```
-docker run -it un1cum/beast_bomber
-```
+
+  ```
+  docker run -it un1cum/beast_bomber
+  ```
 
 **Готово!**
 
@@ -292,31 +300,38 @@ docker run -it un1cum/beast_bomber
 
 ![tutorial](https://user-images.githubusercontent.com/80776324/230665884-f52bb3d8-b20d-4275-9afc-0f5068eeaf82.gif)
 
-`Для работы beast bomber вам нужно установить Python: https://www.python.org`
+- Для работы beast bomber вам нужно установить Python: https://www.python.org
 
-```
-git clone https://github.com/un1cum/Beast_Bomber
-```
 
-`P.S`
-- Если у вас нет git, вам нужно установить его: https://git-scm.com/downloads
-- Если будете устанавливать Beast Bomber вручную, без git, то обязательно удаляйте файл .gitkeep в папке input\telegram_accounts
+  ```
+  git clone https://github.com/un1cum/Beast_Bomber
+  ```
 
-`Первая установка`
-- Чтобы начать работу, вам нужно установить необходимые библиотеки Python. Зайдите в папку Beast_Bomber и введите в cmd или terminal эту команду: 
-```
-pip install -r requirements.txt
-```
+- P.S
+  - Если у вас нет git, вам нужно установить его: https://git-scm.com/downloads
+  - Если будете устанавливать Beast Bomber вручную, без git, то обязательно удаляйте файл .gitkeep в папке input\telegram_accounts
+  - Чтобы начать работу, вам нужно установить необходимые библиотеки Python. Зайдите в папку Beast_Bomber и введите в cmd или terminal эту команду: 
+
+
+    ```
+    pip install -r requirements.txt
+    ```
+    
+    
+- Чтобы запустить бомбер, введите это:
+
+
+  ```
+  python beast.py
+  ```
+
+## 📌 Первая настройка
+
 - Для корректной работы DDoS атаки необходимо поместить прокси в файл input\proxies.txt или автоматически спарсить их с помощью встроенной функции
   - Формат прокси: `ip:port` или `user:pass@ip:port`
 - Чтобы атака Telegram работала, необходимо поместить аккаунты Telegram в формате **tdata** (каждый аккаунт в отдельной папке) в папку input\telegram_accounts
 - Чтобы спам по электронной почте работал, вам нужно поместить учетные записи электронной почты в формате **email:пароль** в файл input\email_accounts.txt
 - Для того, чтобы работал спам в Discord, вы должны поместить **токены** от аккаунтов Discord в файл input\discord_accounts.txt
-
-``Запуск``
-```
-python beast.py
-```
 
 **Готово!**
 
