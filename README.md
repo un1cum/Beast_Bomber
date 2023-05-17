@@ -95,8 +95,6 @@
   docker run -it un1cum/beast_bomber
   ```
 
-**Done!**
-
 ## 📌 Manual
 
 ![tutorial](https://user-images.githubusercontent.com/80776324/230665884-f52bb3d8-b20d-4275-9afc-0f5068eeaf82.gif)
@@ -132,8 +130,6 @@
 - For the Telegram attack to work, you need to put the Telegram accounts in **tdata** format (each account in a separate folder) in the input\telegram_accounts folder
 - To make email spam work, you need to put email accounts in the format **email:password** in the input\email_accounts.txt file
 - For discord spam to work, you must place **tokens** from discord accounts in the file input\discord_accounts.txt
-
-**Done!**
 
 # 📌 SMS attack
 
@@ -293,8 +289,6 @@ then reinstall the **opentele** library.
   docker run -it un1cum/beast_bomber
   ```
 
-**Готово!**
-
 ## 📌 Вручную
 
 ![tutorial](https://user-images.githubusercontent.com/80776324/230665884-f52bb3d8-b20d-4275-9afc-0f5068eeaf82.gif)
@@ -331,8 +325,6 @@ then reinstall the **opentele** library.
 - Чтобы атака Telegram работала, необходимо поместить аккаунты Telegram в формате **tdata** (каждый аккаунт в отдельной папке) в папку input\telegram_accounts
 - Чтобы спам по электронной почте работал, вам нужно поместить учетные записи электронной почты в формате **email:пароль** в файл input\email_accounts.txt
 - Для того, чтобы работал спам в Discord, вы должны поместить **токены** от аккаунтов Discord в файл input\discord_accounts.txt
-
-**Готово!**
 
 # 📌 SMS атака
 
