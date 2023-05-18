@@ -192,17 +192,6 @@ pkg install pyqt5 python-pyqtwebengine
 
 then reinstall the **opentele** library.
 
-# 📌 Contributors
-
-| Sr.No. | Name | Date of contribution |
-|--------|------|----------------------|
-|1|[PalkerCode](https://github.com/PalkerCode)|Apr 10, 2022|
-|2|[hiikion](https://github.com/hiikion)|Jul 4, 2022|
-|3|[NameNami](https://github.com/NameNami)|Jul 27, 2022|
-|4|[xpghard](https://github.com/xpghard)|March 30, 2023|
-
-**Thank you all for your contributions to the project ❤️**
-
 # 📌 Donate for coffee
 
 `Patreon`
@@ -227,6 +216,18 @@ then reinstall the **opentele** library.
 
 
 * ![USDT](https://user-images.githubusercontent.com/80776324/230691044-44802059-c433-4de5-a221-0f69c0b7c660.png) **USDT (TRC-20): TKVs4Bt63mVGSYth7HSvNQBk8Xp1UKMH9Y**
+
+# 📌 Contributors
+
+<div align="center">
+  
+  
+[![contributors](https://contrib.rocks/image?repo=un1cum/Beast_Bomber)](https://github.com/un1cum/Beast_Bomber/graphs/contributors)
+
+  
+**Thank you all for your contributions to the project ❤️**
+
+</div>
 
 
 # 📌 RU
@@ -387,17 +388,6 @@ pkg install pyqt5 python-pyqtwebengine
 
 затем повторите установку **opentele**.
 
-# 📌 Вклады в проект
-
-| Строка | Имя | Дата вклада |
-|--------|------|----------------------|
-|1|[PalkerCode](https://github.com/PalkerCode)|Апрель 10, 2022|
-|2|[hiikion](https://github.com/hiikion)|Июль 4, 2022|
-|3|[NameNami](https://github.com/NameNami)|Июль 27, 2022|
-|4|[xpghard](https://github.com/xpghard)|Март 30, 2023|
-
-**Спасибо всем за ваши вклады в проект ❤️**
-
 # 📌 Автору на кофе
 
 `Patreon`
@@ -422,3 +412,14 @@ pkg install pyqt5 python-pyqtwebengine
 
 
 * ![USDT](https://user-images.githubusercontent.com/80776324/230691044-44802059-c433-4de5-a221-0f69c0b7c660.png) **USDT (TRC-20): TKVs4Bt63mVGSYth7HSvNQBk8Xp1UKMH9Y**
+
+# 📌 Вклады в проект
+
+<div align="center">
+  
+[![contributors](https://contrib.rocks/image?repo=un1cum/Beast_Bomber)](https://github.com/un1cum/Beast_Bomber/graphs/contributors)
+
+  
+**Спасибо всем за ваши вклады в проект ❤️**
+
+</div>
