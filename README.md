@@ -20,8 +20,8 @@
 - [<kbd>Email attack</kbd>](#-email-attack)
 - [<kbd>Telegram attack</kbd>](#-telegram-attack)
 - [<kbd>Problems and their solutions</kbd>](#-problems-and-their-solutions)
-- [<kbd>Contributors</kbd>](#-contributors)
 - [<kbd>Donate for coffee</kbd>](#-donate-for-coffee)
+- [<kbd>Contributors</kbd>](#-contributors)
 
 📌 [<kbd>RU</kbd>](#-ru)
 - [<kbd>Установка</kbd>](#-установка)
@@ -32,8 +32,8 @@
 - [<kbd>Email атака</kbd>](#-email-атака)
 - [<kbd>Telegram attack</kbd>](#-telegram-атака)
 - [<kbd>Проблемы и их решения</kbd>](#-проблемы-и-их-решения)
-- [<kbd>Вклады в проект</kbd>](#-вклады-в-проект)
 - [<kbd>Автору на кофе</kbd>](#-автору-на-кофе)
+- [<kbd>Вклады в проект</kbd>](#-вклады-в-проект)
 
 # 📌 EN
 
