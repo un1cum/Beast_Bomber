@@ -1,9 +1,9 @@
 <div align="center">
 
-# [![beast](https://user-images.githubusercontent.com/80776324/231096053-2c450689-a07d-46c7-a381-0c515cce601f.png)](https://t.me/beast_bomber_team)
+# [![beast](https://github.com/un1cum/Beast_Bomber/assets/80776324/8ddc6ebb-48a0-4235-a7a5-09bce7be2897)](https://t.me/beast_bomber_team)
 
 # Beast Bomber 💣
-  
+
 ​​​​​​</br> [![docker_hub](https://user-images.githubusercontent.com/80776324/234415063-3d7b273f-12ed-46a5-a481-5c78e7c4f99a.png)](https://hub.docker.com/r/un1cum/beast_bomber) [![Button](https://user-images.githubusercontent.com/80776324/234415330-0d86a492-5eb5-4126-9852-756acdec6dad.png)](https://github.com/un1cum) [![Button](https://user-images.githubusercontent.com/80776324/234415221-021db78d-8949-4da8-bf54-f9ae21628d41.png)](https://github.com/un1cum/Beast_Bomber/fork) [![Replit](https://user-images.githubusercontent.com/80776324/234414565-70197843-0005-4a8a-9dff-82ce40433d6d.png)](https://replit.com/@un1cum) 
 ​​​​​​</br>[![Discord](https://user-images.githubusercontent.com/80776324/234414710-496d8ec0-992f-409e-a0c7-bf70df85d948.png)](https://discord.gg/qkK4NG4ARU) [![Boosty](https://user-images.githubusercontent.com/80776324/234414752-98fd941d-6996-4c35-b2e3-a4c814663beb.png)](https://boosty.to/un1cum) [![Patreon](https://user-images.githubusercontent.com/80776324/234414592-554c8735-9280-404c-82b1-5cae245bd423.png)](https://www.patreon.com/un1cum)
 
