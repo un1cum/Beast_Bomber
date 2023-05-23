@@ -170,7 +170,7 @@ You can buy tdata telegram accounts here: [click](https://darkstore.biz/?search_
 
 ``If you see something like this:``
 
-![screenshot](https://i.ibb.co/XWNtL0S/Screenshot-1.png "no module named") 
+![error](https://github.com/un1cum/Beast_Bomber/assets/80776324/f6a72474-dc25-42bd-ba93-638270f4c77f)
 
 This means that you don't have the library that is specified in the error, in this case: "_ctypes". You need to enter in the terminal or cmd:
 
@@ -366,7 +366,7 @@ Beast Bomber входит в аккаунты, которые вы помест�
 
 ``Если у вас похожая ошибка:``
 
-![screenshot](https://i.ibb.co/XWNtL0S/Screenshot-1.png "no module named") 
+![error](https://github.com/un1cum/Beast_Bomber/assets/80776324/f6a72474-dc25-42bd-ba93-638270f4c77f)
 
 Это означает, что у вас отсутствует нужная библиотека pip, в этом случае: "_ctypes". Откройте терминал, cmd или что там у вас и пишите:
 
