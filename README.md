@@ -1,6 +1,6 @@
 <div align="center">
 
-# [![beast](https://github.com/un1cum/Beast_Bomber/assets/80776324/8ddc6ebb-48a0-4235-a7a5-09bce7be2897)](https://t.me/beast_bomber_team)
+# [![beast](https://github.com/un1cum/Beast_Bomber/assets/80776324/8f0983d1-e672-4822-b42d-627b3c447c6f)](https://t.me/beast_bomber_team)
 
 # Beast Bomber 💣
 
