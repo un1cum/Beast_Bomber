@@ -63,14 +63,6 @@ class Settings:
         elif option == '2':
             change_language()
             self.lang = get_lang()
-
-            if self.lang == 'ru':
-                text = '\nГотово'
-            else:
-                text = '\nDone'
-
-            print(Fore.GREEN + text)
-            time.sleep(2)
             self.settings_main()
 
         elif option == '3':
