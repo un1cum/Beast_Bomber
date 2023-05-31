@@ -1,7 +1,7 @@
 """
 ╔═════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                 ║
-║                                   Beast bomber                                  ║
+║                                   Beast Bomber                                  ║
 ║  Author:                                                                        ║
 ║  https://github.com/un1cum                                                      ║
 ║                                                                                 ║
@@ -207,13 +207,6 @@ def update_proxies():
         f.seek(0)
         f.close()
 
-    if platform == 'win32':
-        os.system("cls")
-    else:
-        os.system("clear")
-
-    logo_proxies()
-
     ua = UserAgent(verify_ssl=False)
     user = ua.random
 
@@ -261,13 +254,6 @@ def update_proxies():
                         file.write('\n')
     except requests.exceptions.RequestException as e:
         print(f"Error occurred: {e}")
-
-    if lang == "ru":
-        print(Fore.LIGHTGREEN_EX + 'Готово')
-    else:
-        print(Fore.LIGHTGREEN_EX + 'Success')
-
-    time.sleep(1)
 
 
 def get_lang():

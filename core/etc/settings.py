@@ -1,7 +1,7 @@
 """
 ╔═════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                 ║
-║                                   Beast bomber                                  ║
+║                                   Beast Bomber                                  ║
 ║  Author:                                                                        ║
 ║  https://github.com/un1cum                                                      ║
 ║                                                                                 ║
@@ -56,7 +56,8 @@ class Settings:
             else:
                 text = '\nDone'
 
-            time.sleep(1)
+            print(Fore.GREEN + text)
+            time.sleep(2)
             self.settings_main()
 
         elif option == '2':
@@ -68,7 +69,8 @@ class Settings:
             else:
                 text = '\nDone'
 
-            time.sleep(1)
+            print(Fore.GREEN + text)
+            time.sleep(2)
             self.settings_main()
 
         elif option == '3':
@@ -106,7 +108,8 @@ class Settings:
             else:
                 text = '\nDone'
 
-            time.sleep(1)
+            print(Fore.GREEN + text)
+            time.sleep(2)
             self.settings_main()
 
         else:
