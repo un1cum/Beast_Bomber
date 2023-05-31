@@ -1766,7 +1766,8 @@ class SMSAttack:
                         'sec-fetch-dest': 'empty',
                         'sec-fetch-mode': 'cors',
                         'sec-fetch-site': 'cross-site',
-                        'user-agent': user
+                        'user-agent': user,
+                        'Authorization': 'Bearer ODFlODkwNjM4YTdmN2E0ZWM1Yjk4YWU1NGY2NDFiZTJiNDFhNDJlZTM1ZDY0NDc5MDYyN2QzYjdlNzI5ZGNhMw'
                     }
 
                     payload = {
