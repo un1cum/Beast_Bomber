@@ -8,7 +8,21 @@
 ║  The author of this program is not responsible for its use!                     ║
 ║  When posting this code on other resources, please indicate the author!         ║
 ║                                                                                 ║
-║                               All rights reserved.                              ║
+║      Status:clientDeleteProhibited
+clientRenewProhibited
+clientTransferProhibited
+clientUpdateProhibited
+serverDeleteProhibited
+serverTransferProhibited
+serverUpdateProhibited
+Name Servers:a1-245.akam.net
+a11-64.akam.net
+a20-65.akam.net
+a6-66.akam.net
+a8-67.akam.net
+a9-67.akam.net
+cns1.godaddy.com
+cns2.godaddy.com                         All rights reserved.                              ║
 ║                            Copyright (C) 2023 un1cum                            ║
 ║                                                                                 ║
 ╚═════════════════════════════════════════════════════════════════════════════════╝
