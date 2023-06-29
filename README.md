@@ -135,7 +135,7 @@
 
 # 📌 SMS attack
 
-There are many spam services at your disposal! Beast Bomber supports **Russian and Kazakh** phone numbers.
+There are many spam services at your disposal! Beast Bomber supports **ONLY Russian and Kazakh** phone numbers.
 
 # 📌 Discord attack
 
@@ -333,7 +333,7 @@ then reinstall the **opentele** library.
 
 # 📌 SMS атака
 
-В вашем распоряжении множество спам сервисов! Beast Bomber поддерживает **русские и казахские** номера телефонов.
+В вашем распоряжении множество спам сервисов! Beast Bomber поддерживает **ТОЛЬКО русские и казахские** номера телефонов.
 
 # 📌 Discord атака
 
