@@ -39,7 +39,7 @@
 
 <div align="center">
   
-  ## **Use this script for educational purposes only and do not abuse it. All responsibility for its use rests with YOU**
+  ## **Use this script for educational purposes only and do not abuse it. Only YOU are responsible for its use**
 
 </div>
 
