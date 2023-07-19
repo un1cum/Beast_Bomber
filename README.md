@@ -133,9 +133,9 @@
 - To make email spam work, you need to put email accounts in the format **email:password** in the input\email_accounts.txt file
 - For discord spam to work, you must place **tokens** from discord accounts in the file input\discord_accounts.txt
 
-# 📌 SMS info.
+# 📌 SMS info
 
-There are many spam services at your disposal! Beast Bomber supports **ONLY Russian and Kazakh** phone numbers.
+Beast Bomber supports **ONLY Russian and Kazakh** phone numbers.
 
 # 📌 Discord info
 
@@ -156,7 +156,7 @@ To send messages in Discord, you need to specify the **ID of the target**, it ca
 
 # 📌 Email info
 
-Beast Bomber supports the following email services (from which spam will be sent): **mail.ru, yahoo, rambler.**
+Beast Bomber supports the following email services (from which spam will be sent): **mail.ru, yahoo, rambler**
 
 # 📌 Telegram info
 
@@ -331,18 +331,18 @@ then reinstall the **opentele** library.
 - Чтобы спам по электронной почте работал, вам нужно поместить учетные записи электронной почты в формате **email:пароль** в файл input\email_accounts.txt
 - Для того, чтобы работал спам в Discord, вы должны поместить **токены** от аккаунтов Discord в файл input\discord_accounts.txt
 
-# 📌 СМС инфо.
+# 📌 СМС инфо
 
 Beast Bomber поддерживает **ТОЛЬКО русские и казахские** номера телефонов.
 
-# 📌 Discord инфо.
+# 📌 Discord инфо
 
 Чтобы отправлять сообщения в Discord, вам нужно указать **ID цели**, его можно найти в url диалога discord в вашем браузере.
 
 
 ![discord](https://user-images.githubusercontent.com/80776324/230664016-2cb6d111-15fb-422e-ae3d-d38ead9bcbb2.png)
 
-# 📌 DDoS инфо.
+# 📌 DDoS инфо
 
 **Результаты теста с https://dstat.cc**
 
@@ -352,11 +352,11 @@ Beast Bomber поддерживает **ТОЛЬКО русские и каза�
 |---------|-------------|
 |   40    |  60 секунд  |
 
-# 📌 Email инфо.
+# 📌 Email инфо
 
 Beast Bomber поддерживает следующие почтовые сервисы: **mail.ru, yahoo, rambler**
 
-# 📌 Telegram инфо.
+# 📌 Telegram инфо
 
 Как скрипт отправляет сообщения:
 
