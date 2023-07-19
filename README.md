@@ -14,11 +14,11 @@
 📌 [<kbd>EN</kbd>](#-en)
 - [<kbd>Installation</kbd>](#-installation)
 - [<kbd>First setup</kbd>](#-first-setup)
-- [<kbd>SMS attack</kbd>](#-sms-attack)
-- [<kbd>Discord attack</kbd>](#-discord-attack)
-- [<kbd>DDoS attack</kbd>](#-ddos-attack)
-- [<kbd>Email attack</kbd>](#-email-attack)
-- [<kbd>Telegram attack</kbd>](#-telegram-attack)
+- [<kbd>SMS</kbd>](#-sms-attack)
+- [<kbd>Discord</kbd>](#-discord-attack)
+- [<kbd>DDoS</kbd>](#-ddos-attack)
+- [<kbd>Email</kbd>](#-email-attack)
+- [<kbd>Telegram</kbd>](#-telegram-attack)
 - [<kbd>Problems and their solutions</kbd>](#-problems-and-their-solutions)
 - [<kbd>Donate for coffee</kbd>](#-donate-for-coffee)
 - [<kbd>Contributors</kbd>](#-contributors)
@@ -26,11 +26,11 @@
 📌 [<kbd>RU</kbd>](#-ru)
 - [<kbd>Установка</kbd>](#-установка)
 - [<kbd>Первая настройка</kbd>](#-первая-настройка)
-- [<kbd>СМС атака</kbd>](#-sms-атака)
-- [<kbd>Discord атака</kbd>](#-discord-атака)
-- [<kbd>DDoS атака</kbd>](#-ddos-атака)
-- [<kbd>Email атака</kbd>](#-email-атака)
-- [<kbd>Telegram attack</kbd>](#-telegram-атака)
+- [<kbd>СМС</kbd>](#-sms-атака)
+- [<kbd>Discord</kbd>](#-discord-атака)
+- [<kbd>DDoS</kbd>](#-ddos-атака)
+- [<kbd>Email</kbd>](#-email-атака)
+- [<kbd>Telegram</kbd>](#-telegram-атака)
 - [<kbd>Проблемы и их решения</kbd>](#-проблемы-и-их-решения)
 - [<kbd>Автору на кофе</kbd>](#-автору-на-кофе)
 - [<kbd>Вклады в проект</kbd>](#-вклады-в-проект)
@@ -133,18 +133,18 @@
 - To make email spam work, you need to put email accounts in the format **email:password** in the input\email_accounts.txt file
 - For discord spam to work, you must place **tokens** from discord accounts in the file input\discord_accounts.txt
 
-# 📌 SMS attack
+# 📌 SMS
 
 There are many spam services at your disposal! Beast Bomber supports **ONLY Russian and Kazakh** phone numbers.
 
-# 📌 Discord attack
+# 📌 Discord
 
 To start a Discord attack, you need to specify the **target ID**, it can be found in the url of the discord dialog in your browser.
 
 
 ![discord](https://user-images.githubusercontent.com/80776324/230663913-d68dbf58-0738-4501-9539-17daf0d36753.png)
 
-# 📌 DDoS attack
+# 📌 DDoS
 
 **Test results from https://dstat.cc**
 
@@ -154,11 +154,11 @@ To start a Discord attack, you need to specify the **target ID**, it can be foun
 |---------|-------------|
 |   40    | 60 seconds  |
 
-# 📌 Email attack
+# 📌 Email
 
 Beast Bomber supports the following email services (from which spam will be sent): **mail.ru, yahoo, rambler.**
 
-# 📌 Telegram attack
+# 📌 Telegram
 
 The attack occurs as follows:
 
@@ -331,18 +331,18 @@ then reinstall the **opentele** library.
 - Чтобы спам по электронной почте работал, вам нужно поместить учетные записи электронной почты в формате **email:пароль** в файл input\email_accounts.txt
 - Для того, чтобы работал спам в Discord, вы должны поместить **токены** от аккаунтов Discord в файл input\discord_accounts.txt
 
-# 📌 SMS атака
+# 📌 SMS
 
 В вашем распоряжении множество спам сервисов! Beast Bomber поддерживает **ТОЛЬКО русские и казахские** номера телефонов.
 
-# 📌 Discord атака
+# 📌 Discord
 
 Чтобы начать атаку Discord, вам нужно указать **ID цели**, его можно найти в url диалога discord в вашем браузере.
 
 
 ![discord](https://user-images.githubusercontent.com/80776324/230664016-2cb6d111-15fb-422e-ae3d-d38ead9bcbb2.png)
 
-# 📌 DDoS атака
+# 📌 DDoS
 
 **Результаты теста с https://dstat.cc**
 
@@ -352,11 +352,11 @@ then reinstall the **opentele** library.
 |---------|-------------|
 |   40    |  60 секунд  |
 
-# 📌 Email атака
+# 📌 Email
 
 Beast Bomber поддерживает следующие почтовые сервисы (с которых будет рассылаться спам): **mail.ru, yahoo, rambler.**.
 
-# 📌 Telegram атака
+# 📌 Telegram
 
 Атака происходит следующим образом:
 
