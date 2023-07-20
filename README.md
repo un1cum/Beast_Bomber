@@ -47,7 +47,7 @@
 
 📌 **Beast Bomber in replit: https://replit.com/@un1cum/Beast-Bomber**
 
-📌 **Discord server: https://discord.gg/beast-bomber-team | https://discord.gg/qkK4NG4ARU**
+📌 **Discord server: https://discord.gg/qkK4NG4ARU**
 
 ![Screenshot_1](https://user-images.githubusercontent.com/80776324/231027275-749f1375-34c9-408c-9f7b-2f336a1a10d2.png)
 
@@ -244,7 +244,7 @@ then reinstall the **opentele** library.
 
 📌 **Beast Bomber на replit: https://replit.com/@un1cum/Beast-Bomber**
 
-📌 **Discord сервер: https://discord.gg/beast-bomber-team | https://discord.gg/qkK4NG4ARU**
+📌 **Discord сервер: https://discord.gg/qkK4NG4ARU**
 
 ![Screenshot_2](https://user-images.githubusercontent.com/80776324/231027466-e7715861-2145-4cb6-a996-464b3d3b1c7f.png)
 
