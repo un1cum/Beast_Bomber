@@ -77,7 +77,7 @@ The author would appreciate it if you would put a star on
 
     def main(self):
         if platform == 'win32':
-            ctypes.windll.kernel32.SetConsoleTitleW("Beast bomber 💣")
+            ctypes.windll.kernel32.SetConsoleTitleW("Beast Bomber 💣")
 
         if platform == 'win32':
             os.system("cls")
