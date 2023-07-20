@@ -40,16 +40,17 @@
 <div align="center">
   
   ## **Use this script for educational purposes only and do not abuse it. Only YOU are responsible for its use**
+  ![Screenshot_1](https://github.com/un1cum/Beast_Bomber/assets/80776324/50f44435-3431-4854-9de3-0f5a17803ea7)
 
 </div>
+
+`Social links`
 
 📌 **Beast Bomber in Telegram: https://t.me/idfhgsdwaefwe_caramel_bot**
 
 📌 **Beast Bomber in replit: https://replit.com/@un1cum/Beast-Bomber**
 
 📌 **Discord server: https://discord.gg/qkK4NG4ARU**
-
-![Screenshot_1](https://user-images.githubusercontent.com/80776324/231027275-749f1375-34c9-408c-9f7b-2f336a1a10d2.png)
 
 `Possibilities`
 * SMS attack
@@ -237,8 +238,11 @@ then reinstall the **opentele** library.
 <div align="center">
   
   ## **Используйте данный скрипт только в образовательных целях и не злоупотребляйте этим. Вся ответственность за его использование ложится НА ВАС**
+  ![Screenshot_1](https://github.com/un1cum/Beast_Bomber/assets/80776324/50f44435-3431-4854-9de3-0f5a17803ea7)
 
 </div>
+
+`Соц. сети`
   
 📌 **Beast Bomber в Telegram: https://t.me/idfhgsdwaefwe_caramel_bot**
 
@@ -246,15 +250,13 @@ then reinstall the **opentele** library.
 
 📌 **Discord сервер: https://discord.gg/qkK4NG4ARU**
 
-![Screenshot_2](https://user-images.githubusercontent.com/80776324/231027466-e7715861-2145-4cb6-a996-464b3d3b1c7f.png)
-
 `Возможности`
 * SMS атака
 * Email атака
 * Discord атака
 * Telegram атака
 * DDoS атака
-* Мультиязычность
+* Поддержка двух языков
 
 # 📌 Установка
 
