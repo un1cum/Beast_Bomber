@@ -46,7 +46,7 @@ class DDoSAttack:
         self.lang = get_lang()
         self.todo = 0
         self.started = 0
-        self.ua = UserAgent(verify_ssl=False)
+        self.ua = UserAgent()
         self.proxies = get_proxies()
         self.lib = "1234567890qwertyuiop[]asdfghjkl;'zxcvbnm,./_"
 
