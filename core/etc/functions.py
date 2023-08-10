@@ -207,7 +207,7 @@ def update_proxies():
         f.seek(0)
         f.close()
 
-    ua = UserAgent(verify_ssl=False)
+    ua = UserAgent()
     user = ua.random
 
     try:
