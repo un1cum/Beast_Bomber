@@ -44,7 +44,7 @@ class SMSAttack:
         self.lock = Lock()
         self.lang = get_lang()
         self.proxies = get_proxies()
-        self.ua = UserAgent(verify_ssl=False)
+        self.ua = UserAgent()
 
     def stat(self):
         if platform == 'win32':
