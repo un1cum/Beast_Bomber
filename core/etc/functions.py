@@ -37,7 +37,7 @@ def logo_main():
 ║╔═╗║ ═╣╔╗║══╣║ ║╔═╗║╔╗║╚╝║╔╗║ ═╣╔╝
 ║╚═╝║ ═╣╔╗╠══║╚╗║╚═╝║╚╝║║║║╚╝║ ═╣║ 
 ╚═══╩══╩╝╚╩══╩═╝╚═══╩══╩╩╩╩══╩══╩╝ 
-            By crut0i
+            By un1ucm
  https://t.me/beast_project_team
     """
     print(fade.water(text))
