@@ -98,7 +98,7 @@ To send messages in Discord, you need to specify the **ID of the target**, it ca
 
 # 📌 DDoS info
 
-**Test results from https://dstat.cc**
+**Test results from dstat.**
 
 ![screenshot](https://user-images.githubusercontent.com/80776324/214398918-81d488c7-e23a-4dc3-864b-3b82b1c55571.png)
 
@@ -237,7 +237,7 @@ Beast Bomber поддерживает **ТОЛЬКО русские и каза�
 
 # 📌 DDoS инфо
 
-**Результаты теста с https://dstat.cc**
+**Результаты теста с dstat.**
 
 ![screenshot](https://user-images.githubusercontent.com/80776324/214398918-81d488c7-e23a-4dc3-864b-3b82b1c55571.png)
 
